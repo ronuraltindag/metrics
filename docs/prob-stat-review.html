@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Week 3 Prob-Stat Review | EC282 INTRODUCITON TO ECONOMETRICS</title>
+  <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Week 3 Prob-Stat Review | EC282 INTRODUCITON TO ECONOMETRICS" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Week 3 Prob-Stat Review | EC282 INTRODUCITON TO ECONOMETRICS" />
+  
+  <meta name="twitter:description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
+  
+
+<meta name="author" content="Onur Altındağ" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html">
+<link rel="next" href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">EC282 INTRODUCTION TO ECONOMETRICS</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course Logistics and using R</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#goals"><i class="fa fa-check"></i><b>1.1</b> Goals</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-information"><i class="fa fa-check"></i><b>1.2</b> Course information</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#requirements"><i class="fa fa-check"></i><b>1.3</b> Requirements</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#goals-1"><i class="fa fa-check"></i><b>2.1</b> Goals</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#r-and-rstudio"><i class="fa fa-check"></i><b>2.2</b> R and RStudio</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction.html"><a href="introduction.html#notes"><i class="fa fa-check"></i><b>2.2.1</b> Notes</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction.html"><a href="introduction.html#install-r-and-r-studio"><i class="fa fa-check"></i><b>2.2.2</b> Install R and R studio</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introduction.html"><a href="introduction.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>2.2.3</b> Basic rules and best practices</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="prob-stat-review.html"><a href="prob-stat-review.html"><i class="fa fa-check"></i><b>3</b> Prob-Stat Review</a><ul>
+<li class="chapter" data-level="3.0.1" data-path="prob-stat-review.html"><a href="prob-stat-review.html#goals-2"><i class="fa fa-check"></i><b>3.0.1</b> Goals</a></li>
+<li class="chapter" data-level="3.0.2" data-path="prob-stat-review.html"><a href="prob-stat-review.html#flipping-a-coin"><i class="fa fa-check"></i><b>3.0.2</b> Flipping a coin</a></li>
+<li class="chapter" data-level="3.0.3" data-path="prob-stat-review.html"><a href="prob-stat-review.html#probability"><i class="fa fa-check"></i><b>3.0.3</b> Probability</a></li>
+<li class="chapter" data-level="3.0.4" data-path="prob-stat-review.html"><a href="prob-stat-review.html#expected-value-and-variance"><i class="fa fa-check"></i><b>3.0.4</b> Expected value and variance</a></li>
+<li class="chapter" data-level="3.0.5" data-path="prob-stat-review.html"><a href="prob-stat-review.html#law-of-large-numbers"><i class="fa fa-check"></i><b>3.0.5</b> Law of Large Numbers</a></li>
+<li class="chapter" data-level="3.0.6" data-path="prob-stat-review.html"><a href="prob-stat-review.html#central-limit-theorem"><i class="fa fa-check"></i><b>3.0.6</b> Central limit theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><i class="fa fa-check"></i><b>4</b> Generating (population) data, sampling from the population, and deriving sample estimates of population parameters</a><ul>
+<li class="chapter" data-level="4.1" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#goals-3"><i class="fa fa-check"></i><b>4.1</b> Goals</a></li>
+<li class="chapter" data-level="4.2" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#overview"><i class="fa fa-check"></i><b>4.2</b> Overview</a></li>
+<li class="chapter" data-level="4.3" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#generating-data-from-a-known-linear-univariate-dgp"><i class="fa fa-check"></i><b>4.3</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="4.4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#sampling-from-the-population"><i class="fa fa-check"></i><b>4.4</b> Sampling from the population</a></li>
+<li class="chapter" data-level="4.5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-sample-estimates"><i class="fa fa-check"></i><b>4.5</b> Calculating sample estimates</a></li>
+<li class="chapter" data-level="4.6" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#plot-the-data-with-the-fitted-line"><i class="fa fa-check"></i><b>4.6</b> Plot the data with the fitted line</a></li>
+<li class="chapter" data-level="4.7" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-tss-ess-and-r2"><i class="fa fa-check"></i><b>4.7</b> Calculating TSS, ESS, and <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="4.8" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#algebraic-properties-of-the-estimator"><i class="fa fa-check"></i><b>4.8</b> Algebraic properties of the estimator</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="partialling-out.html"><a href="partialling-out.html"><i class="fa fa-check"></i><b>5</b> Partialling out</a><ul>
+<li class="chapter" data-level="5.1" data-path="partialling-out.html"><a href="partialling-out.html#goals-4"><i class="fa fa-check"></i><b>5.1</b> Goals</a></li>
+<li class="chapter" data-level="5.2" data-path="partialling-out.html"><a href="partialling-out.html#overview-1"><i class="fa fa-check"></i><b>5.2</b> Overview</a></li>
+<li class="chapter" data-level="5.3" data-path="partialling-out.html"><a href="partialling-out.html#generating-data-from-a-known-linear-multivariate-dgp"><i class="fa fa-check"></i><b>5.3</b> Generating data from a known linear multivariate DGP</a></li>
+<li class="chapter" data-level="5.4" data-path="partialling-out.html"><a href="partialling-out.html#sampling-from-the-population-1"><i class="fa fa-check"></i><b>5.4</b> Sampling from the population</a></li>
+<li class="chapter" data-level="5.5" data-path="partialling-out.html"><a href="partialling-out.html#calculating-sample-estimates-1"><i class="fa fa-check"></i><b>5.5</b> Calculating sample estimates</a></li>
+<li class="chapter" data-level="5.6" data-path="partialling-out.html"><a href="partialling-out.html#partialling-out-extracting-the-unique-information-in-x_1"><i class="fa fa-check"></i><b>5.6</b> Partialling out: extracting the unique information in <span class="math inline">\(x_1\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sampling-distribution.html"><a href="sampling-distribution.html"><i class="fa fa-check"></i><b>6</b> Sampling distribution</a><ul>
+<li class="chapter" data-level="6.1" data-path="sampling-distribution.html"><a href="sampling-distribution.html#goals-5"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
+<li class="chapter" data-level="6.2" data-path="sampling-distribution.html"><a href="sampling-distribution.html#overview-2"><i class="fa fa-check"></i><b>6.2</b> Overview</a></li>
+<li class="chapter" data-level="6.3" data-path="sampling-distribution.html"><a href="sampling-distribution.html#generating-data-from-a-known-linear-univariate-dgp-1"><i class="fa fa-check"></i><b>6.3</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="6.4" data-path="sampling-distribution.html"><a href="sampling-distribution.html#sampling-from-the-population-2"><i class="fa fa-check"></i><b>6.4</b> Sampling from the population</a></li>
+<li class="chapter" data-level="6.5" data-path="sampling-distribution.html"><a href="sampling-distribution.html#properties-of-the-empirical-simulations"><i class="fa fa-check"></i><b>6.5</b> Properties of the empirical simulations</a></li>
+<li class="chapter" data-level="6.6" data-path="sampling-distribution.html"><a href="sampling-distribution.html#changing-the-error-variance"><i class="fa fa-check"></i><b>6.6</b> Changing the error variance</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>7</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="7.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-previous"><i class="fa fa-check"></i><b>7.1</b> Goals (previous)</a></li>
+<li class="chapter" data-level="7.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-current"><i class="fa fa-check"></i><b>7.2</b> Goals (current)</a></li>
+<li class="chapter" data-level="7.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#overview-3"><i class="fa fa-check"></i><b>7.3</b> Overview</a></li>
+<li class="chapter" data-level="7.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#generating-data-from-a-known-linear-univariate-dgp-2"><i class="fa fa-check"></i><b>7.4</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="7.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sampling-from-the-population-3"><i class="fa fa-check"></i><b>7.5</b> Sampling from the population</a></li>
+<li class="chapter" data-level="7.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#properties-of-the-empirical-simulations-1"><i class="fa fa-check"></i><b>7.6</b> Properties of the empirical simulations</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail"><i class="fa fa-check"></i><b>7.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
+<li class="chapter" data-level="7.6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats."><i class="fa fa-check"></i><b>7.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
+<li class="chapter" data-level="7.6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails."><i class="fa fa-check"></i><b>7.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="consistency.html"><a href="consistency.html"><i class="fa fa-check"></i><b>8</b> Consistency</a><ul>
+<li class="chapter" data-level="8.1" data-path="consistency.html"><a href="consistency.html#goals-previous-1"><i class="fa fa-check"></i><b>8.1</b> Goals (previous)</a></li>
+<li class="chapter" data-level="8.2" data-path="consistency.html"><a href="consistency.html#goals-current-1"><i class="fa fa-check"></i><b>8.2</b> Goals (current)</a></li>
+<li class="chapter" data-level="8.3" data-path="consistency.html"><a href="consistency.html#overview-4"><i class="fa fa-check"></i><b>8.3</b> Overview</a></li>
+<li class="chapter" data-level="8.4" data-path="consistency.html"><a href="consistency.html#generating-data-from-a-known-linear-univariate-dgp-3"><i class="fa fa-check"></i><b>8.4</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="8.5" data-path="consistency.html"><a href="consistency.html#sampling-from-the-population-4"><i class="fa fa-check"></i><b>8.5</b> Sampling from the population</a></li>
+<li class="chapter" data-level="8.6" data-path="consistency.html"><a href="consistency.html#properties-of-the-empirical-simulations-2"><i class="fa fa-check"></i><b>8.6</b> Properties of the empirical simulations</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="consistency.html"><a href="consistency.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail-1"><i class="fa fa-check"></i><b>8.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
+<li class="chapter" data-level="8.6.2" data-path="consistency.html"><a href="consistency.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats.-1"><i class="fa fa-check"></i><b>8.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
+<li class="chapter" data-level="8.6.3" data-path="consistency.html"><a href="consistency.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails.-1"><i class="fa fa-check"></i><b>8.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EC282 INTRODUCITON TO ECONOMETRICS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="prob-stat-review" class="section level1">
+<h1><span class="header-section-number">Week 3</span> Prob-Stat Review</h1>
+<style type="text/css">
+.badCode {
+background-color: #ffffcf;
+  color: black;
+}
+</style>
+<div id="goals-2" class="section level3">
+<h3><span class="header-section-number">3.0.1</span> Goals</h3>
+<ul>
+<li>Briefly review the concepts related to probability theory and statistics that we will frequently use in this class.</li>
+<li>Briefly review how to infer meaningful information about the population using random samples.</li>
+</ul>
+</div>
+<div id="flipping-a-coin" class="section level3">
+<h3><span class="header-section-number">3.0.2</span> Flipping a coin</h3>
+<p><strong>Task</strong>: Define the mutually exclusive outcomes for flipping a coin and flip the coin one time.</p>
+<p>Answer:</p>
+<pre><code>## [1] &quot;heads&quot;</code></pre>
+</div>
+<div id="probability" class="section level3">
+<h3><span class="header-section-number">3.0.3</span> Probability</h3>
+<p><strong>Task</strong>: Show that if you repeat the exercise many times (e.g. 1000), the coin will come up heads roughly half of the time. That is <strong>P(head) = 0.5</strong></p>
+<p>Answer:</p>
+<pre><code>## event.outcome
+## heads  tail 
+##   469   531</code></pre>
+<p>DIFFICULT answer:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">lln &lt;-<span class="st"> </span><span class="cf">function</span> (X){</a>
+<a class="sourceLine" id="cb7-2" title="2">  outcome.set &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;heads&quot;</span>,<span class="st">&quot;tail&quot;</span>)</a>
+<a class="sourceLine" id="cb7-3" title="3">  event.outcome &lt;-<span class="st"> </span><span class="kw">replicate</span>(X, <span class="kw">sample</span>(outcome.set, <span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb7-4" title="4">  y1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(event.outcome) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">trials=</span>X)</a>
+<a class="sourceLine" id="cb7-6" title="6">  <span class="kw">return</span>(y1)</a>
+<a class="sourceLine" id="cb7-7" title="7">}</a>
+<a class="sourceLine" id="cb7-8" title="8"></a>
+<a class="sourceLine" id="cb7-9" title="9">out1 &lt;-<span class="st"> </span><span class="kw">do.call</span>(rbind.data.frame,<span class="kw">lapply</span>(<span class="kw">seq</span>(<span class="dv">10</span>,<span class="dv">1000</span>,<span class="dv">10</span>), lln)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-10" title="10"><span class="st">  </span><span class="kw">group_by</span>(trials, event.outcome) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="st">  </span><span class="kw">count</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb7-12" title="12"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">frac=</span>n<span class="op">/</span>trials)</a>
+<a class="sourceLine" id="cb7-13" title="13"></a>
+<a class="sourceLine" id="cb7-14" title="14"></a>
+<a class="sourceLine" id="cb7-15" title="15">g1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>out1, <span class="kw">aes</span>(<span class="dt">x=</span>trials,<span class="dt">y=</span>frac, <span class="dt">colour=</span>event.outcome)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-16" title="16"><span class="kw">geom_segment</span>(<span class="kw">aes</span>(<span class="dt">x =</span> trials,<span class="dt">y =</span> frac, <span class="dt">xend =</span> trials, <span class="dt">yend =</span> <span class="dv">1</span><span class="op">-</span>frac), <span class="dt">size =</span> <span class="fl">0.3</span>, <span class="dt">colour=</span><span class="st">&#39;#969696&#39;</span>) <span class="op">+</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb7-17" title="17"><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="fl">1.5</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-18" title="18"><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="fl">0.5</span>, <span class="dt">colour=</span><span class="st">&#39;black&#39;</span>, <span class="dt">linetype=</span><span class="st">&#39;dashed&#39;</span>, <span class="dt">size=</span><span class="fl">0.5</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-19" title="19"><span class="kw">ylim</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-20" title="20"><span class="kw">theme_fivethirtyeight</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-21" title="21"><span class="kw">coord_flip</span>() <span class="op">+</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb7-22" title="22"><span class="kw">scale_colour_manual</span>(<span class="dt">name=</span><span class="st">&#39;&#39;</span>, <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&#39;#1FA67A&#39;</span>,<span class="st">&#39;red&#39;</span>))  <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-23" title="23"><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;number of coins flipped&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;fraction of heads and tails&quot;</span>)  <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb7-24" title="24"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</a>
+<a class="sourceLine" id="cb7-25" title="25"></a>
+<a class="sourceLine" id="cb7-26" title="26"></a>
+<a class="sourceLine" id="cb7-27" title="27"></a>
+<a class="sourceLine" id="cb7-28" title="28"><span class="kw">plot</span>(g1)</a></code></pre></div>
+<p><img src="EconometricsByExample_files/figure-html/ch3-1.png" width="480" /></p>
+</div>
+<div id="expected-value-and-variance" class="section level3">
+<h3><span class="header-section-number">3.0.4</span> Expected value and variance</h3>
+<p><strong>Task</strong>: Define a random variable X = {0,1} through assigning zero to heads and 1 to tails. Calculate the expected value, variance, and the standard deviation of the random variable X: <span class="math inline">\(\mu=E[X]=\sum_iX_iP(X_i)\)</span> and <span class="math inline">\(\sigma^2=E[(X-\mu)^2]=\sum_i[(X_i-\mu)^2 P(X_i)]\)</span></p>
+<p>Answer:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="co">#define an empty matrix 2 by 6 </span></a>
+<a class="sourceLine" id="cb8-2" title="2">df1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="ot">NA</span>, <span class="dt">nrow =</span> <span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="co">#transform this to a data set (easier to work with) </span></a>
+<a class="sourceLine" id="cb8-4" title="4">df1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(df1)</a>
+<a class="sourceLine" id="cb8-5" title="5"><span class="co">#change the col names </span></a>
+<a class="sourceLine" id="cb8-6" title="6"><span class="kw">names</span>(df1) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;outcome&quot;</span>, <span class="st">&quot;X&quot;</span>, <span class="st">&quot;P(X)&quot;</span>, <span class="st">&quot;X.P(X)&quot;</span>, <span class="st">&quot;X-E[X]&quot;</span>, <span class="st">&quot;(X-E[X])^2.P(X)&quot;</span>) </a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="co">#define the outcomes</span></a>
+<a class="sourceLine" id="cb8-8" title="8">df1<span class="op">$</span>outcome &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;heads&quot;</span>, <span class="st">&quot;tail&quot;</span>) </a>
+<a class="sourceLine" id="cb8-9" title="9"><span class="co">#define values assigned to each outcome</span></a>
+<a class="sourceLine" id="cb8-10" title="10">df1<span class="op">$</span>X &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>) </a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="co">#define the associated probabilities </span></a>
+<a class="sourceLine" id="cb8-12" title="12">df1<span class="op">$</span><span class="st">`</span><span class="dt">P(X)</span><span class="st">`</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>) </a>
+<a class="sourceLine" id="cb8-13" title="13"><span class="co">#weight each outcome with the assigned probability </span></a>
+<a class="sourceLine" id="cb8-14" title="14">df1<span class="op">$</span><span class="st">`</span><span class="dt">X.P(X)</span><span class="st">`</span> &lt;-<span class="st"> </span>df1<span class="op">$</span>X <span class="op">*</span><span class="st"> </span>df1<span class="op">$</span><span class="st">`</span><span class="dt">P(X)</span><span class="st">`</span></a>
+<a class="sourceLine" id="cb8-15" title="15"><span class="co">#calculate the expexted value </span></a>
+<a class="sourceLine" id="cb8-16" title="16">mu.x &lt;-<span class="st"> </span><span class="kw">sum</span>(df1<span class="op">$</span><span class="st">`</span><span class="dt">X.P(X)</span><span class="st">`</span>)</a>
+<a class="sourceLine" id="cb8-17" title="17"><span class="co">#calculate the dev. from mean for each outcome </span></a>
+<a class="sourceLine" id="cb8-18" title="18">df1<span class="op">$</span><span class="st">`</span><span class="dt">X-E[X]</span><span class="st">`</span> &lt;-<span class="st"> </span>df1<span class="op">$</span>X <span class="op">-</span><span class="st"> </span>mu.x </a>
+<a class="sourceLine" id="cb8-19" title="19"><span class="co">#weight the squared dev. from mean by the assigned probability </span></a>
+<a class="sourceLine" id="cb8-20" title="20">df1<span class="op">$</span><span class="st">`</span><span class="dt">(X-E[X])^2.P(X)</span><span class="st">`</span> &lt;-<span class="st"> </span>(df1<span class="op">$</span><span class="st">`</span><span class="dt">X-E[X]</span><span class="st">`</span>)<span class="op">^</span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>df1<span class="op">$</span><span class="st">`</span><span class="dt">P(X)</span><span class="st">`</span></a>
+<a class="sourceLine" id="cb8-21" title="21"><span class="co">#calculate the variance </span></a>
+<a class="sourceLine" id="cb8-22" title="22">var.x &lt;-<span class="st"> </span><span class="kw">sum</span>(df1<span class="op">$</span><span class="st">`</span><span class="dt">(X-E[X])^2.P(X)</span><span class="st">`</span>)</a>
+<a class="sourceLine" id="cb8-23" title="23"><span class="co">#std. dev </span></a>
+<a class="sourceLine" id="cb8-24" title="24">sigma.x &lt;-<span class="st"> </span><span class="kw">sqrt</span>(var.x)</a>
+<a class="sourceLine" id="cb8-25" title="25"><span class="co">#show the filled data set</span></a>
+<a class="sourceLine" id="cb8-26" title="26">df1 </a></code></pre></div>
+<pre><code>##   outcome X P(X) X.P(X) X-E[X] (X-E[X])^2.P(X)
+## 1   heads 0  0.5    0.0   -0.5           0.125
+## 2    tail 1  0.5    0.5    0.5           0.125</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co">#show the mean, variance, and standard deviation </span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="kw">rbind</span>(mu.x,var.x, sigma.x)  </a></code></pre></div>
+<pre><code>##         [,1]
+## mu.x    0.50
+## var.x   0.25
+## sigma.x 0.50</code></pre>
+</div>
+<div id="law-of-large-numbers" class="section level3">
+<h3><span class="header-section-number">3.0.5</span> Law of Large Numbers</h3>
+<p>Formally, the sample average, <span class="math inline">\(\bar{x}\)</span>, will <strong>almost surely</strong> converge in <strong>probablity</strong> to <span class="math inline">\(\mu\)</span> as <span class="math inline">\(N \rightarrow \infty\)</span>. In practice, here is what it looks like.</p>
+<p><strong>Task:</strong> Define the random variable X={0,1} as previously described. Flip the coin for an increasing number of times, n={1,2,3….,1000}, and calculate the average of each sample. Interpret the expected value.</p>
+<p>Answer: Law of Large Numbers (LLN) theorem predicts that if an experiment is repeated many times the average outcome should be very close to the expected value, observe how difference between the observed sample average and expected value approach each other as the number of coins that we experiment with increases. Expected value is therefore the long run average of a random variable.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">flips &lt;-<span class="st"> </span><span class="cf">function</span>(n,p,x1,x2) {</a>
+<a class="sourceLine" id="cb12-2" title="2">  out1 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dt">x=</span><span class="kw">c</span>(x1,x2), <span class="dt">prob =</span> <span class="kw">c</span>(p,<span class="dv">1</span><span class="op">-</span>p), <span class="dt">size=</span>n, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb12-3" title="3">  n.sample &lt;-<span class="st"> </span>n </a>
+<a class="sourceLine" id="cb12-4" title="4">  mean.sample &lt;-<span class="st"> </span><span class="kw">sum</span>(out1)<span class="op">/</span>n </a>
+<a class="sourceLine" id="cb12-5" title="5">  sd.sample &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">sum</span>((out1<span class="op">-</span>mean.sample)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span>n)</a>
+<a class="sourceLine" id="cb12-6" title="6">  out2 &lt;-<span class="st"> </span><span class="kw">cbind</span>(mean.sample, n.sample, sd.sample)</a>
+<a class="sourceLine" id="cb12-7" title="7">  <span class="kw">return</span>(out2)</a>
+<a class="sourceLine" id="cb12-8" title="8">}</a>
+<a class="sourceLine" id="cb12-9" title="9"></a>
+<a class="sourceLine" id="cb12-10" title="10">df1 &lt;-<span class="st"> </span><span class="kw">do.call</span>(rbind.data.frame,<span class="kw">lapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>, flips,<span class="dt">p=</span><span class="fl">0.5</span>,<span class="dt">x1=</span><span class="dv">0</span>,<span class="dt">x2=</span><span class="dv">1</span>)) </a>
+<a class="sourceLine" id="cb12-11" title="11"></a>
+<a class="sourceLine" id="cb12-12" title="12">p1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df1, <span class="kw">aes</span>(<span class="dt">x=</span>n.sample,<span class="dt">y=</span>mean.sample)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-13" title="13"><span class="st">      </span><span class="kw">theme_tufte</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-14" title="14"><span class="st">      </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-15" title="15"><span class="st">      </span><span class="kw">geom_hline</span>(<span class="dt">yintercept =</span> <span class="fl">0.5</span>, <span class="dt">colour=</span><span class="st">&#39;grey&#39;</span>, <span class="dt">linetype=</span><span class="st">&#39;dashed&#39;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-16" title="16"><span class="st">      </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;number of coins flipped&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;outcome mean&quot;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-17" title="17"><span class="st">      </span><span class="kw">transition_reveal</span>(n.sample) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-18" title="18"><span class="st">      </span><span class="kw">view_follow</span>() <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-19" title="19"><span class="st">      </span><span class="kw">xlim</span>(<span class="dv">1</span>,<span class="dv">1000</span> ) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-20" title="20"><span class="st">      </span><span class="kw">ylim</span>(<span class="fl">0.0</span>,<span class="fl">1.0</span>) </a>
+<a class="sourceLine" id="cb12-21" title="21"></a>
+<a class="sourceLine" id="cb12-22" title="22"></a>
+<a class="sourceLine" id="cb12-23" title="23"></a>
+<a class="sourceLine" id="cb12-24" title="24"><span class="kw">animate</span>(p1, <span class="dt">nframes=</span><span class="dv">200</span>, <span class="dt">fps=</span><span class="dv">5</span>)</a></code></pre></div>
+</div>
+<div id="central-limit-theorem" class="section level3">
+<h3><span class="header-section-number">3.0.6</span> Central limit theorem</h3>
+<p>CLT is a fundamental tool in data analysis, there are many versions with similar implications. We will demonstrate a simple one. Formally, assume that you have an <strong>identically and independently</strong> distributed random variable X. Notice that the shape of its outcome distibution does not matter.</p>
+<p>You draw a random sample of <span class="math inline">\(N\)</span> observations through repeated experimentation such as <span class="math inline">\(\{X_1,X_2,..,X_n\}\)</span>. Assume that you are interested in the sample average <span class="math inline">\(\bar{X}=\dfrac{X_1+X_2+...+X_n}{n}\)</span>. CLT states that, <strong>no matter what the initial distribution of X is</strong>, the sample average of X can be approximated with a <strong>normal distribution</strong> with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\dfrac{\sigma}{\sqrt{n}}\)</span> for sufficiently large <span class="math inline">\(n\)</span>. Here is how it works.</p>
+<p><strong>Task:</strong> Flip 10 coins using random variable <strong>X={0,1}</strong> as defined before and calculate the sample average <span class="math inline">\(\bar{X}\)</span>.</p>
+<p>Answer:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co">#define your sample size=10 </span></a>
+<a class="sourceLine" id="cb13-2" title="2">n &lt;-<span class="st"> </span><span class="dv">10</span> </a>
+<a class="sourceLine" id="cb13-3" title="3"><span class="co">#define the number times that you want to repeat the experiment r=1000</span></a>
+<a class="sourceLine" id="cb13-4" title="4">r &lt;-<span class="st"> </span><span class="dv">1000</span> </a>
+<a class="sourceLine" id="cb13-5" title="5"><span class="co">#define the possible outcomes X={0,1}</span></a>
+<a class="sourceLine" id="cb13-6" title="6">x1 &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb13-7" title="7">x2 &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb13-8" title="8"><span class="co">#define the probabilities for each outcome </span></a>
+<a class="sourceLine" id="cb13-9" title="9">p1 &lt;-<span class="st"> </span><span class="fl">0.5</span> </a>
+<a class="sourceLine" id="cb13-10" title="10">p2 &lt;-<span class="st"> </span><span class="fl">0.5</span> </a>
+<a class="sourceLine" id="cb13-11" title="11"><span class="co">#now run the experiment </span></a>
+<a class="sourceLine" id="cb13-12" title="12">exp.outcome &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dt">x=</span><span class="kw">c</span>(x1,x2), <span class="dt">prob=</span><span class="kw">c</span>(p1,p2), <span class="dt">size=</span><span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>) </a>
+<a class="sourceLine" id="cb13-13" title="13">exp.outcome</a></code></pre></div>
+<pre><code>##  [1] 0 1 0 1 0 0 0 1 0 0</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1"><span class="kw">mean</span>(exp.outcome)</a></code></pre></div>
+<pre><code>## [1] 0.3</code></pre>
+<p><strong>Task:</strong> Repeat the 10-coin experiment many times (e.g. ~ 10,000) and calculate the average of outcomes for each experiment. Graph a frequency <strong>histogram</strong> of these averages, that is the distribution of <span class="math inline">\(\bar{X}\)</span>.</p>
+<p>HARD answer:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="co">#write a small function </span></a>
+<a class="sourceLine" id="cb17-2" title="2">f.coins &lt;-<span class="st"> </span><span class="cf">function</span>(n) {</a>
+<a class="sourceLine" id="cb17-3" title="3">sample.n &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dt">x=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">prob=</span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="dt">size=</span>n, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb17-4" title="4">mean.sample &lt;-<span class="st"> </span><span class="kw">mean</span>(sample.n)</a>
+<a class="sourceLine" id="cb17-5" title="5"><span class="kw">return</span>(mean.sample)</a>
+<a class="sourceLine" id="cb17-6" title="6">}</a>
+<a class="sourceLine" id="cb17-7" title="7"></a>
+<a class="sourceLine" id="cb17-8" title="8"><span class="co">#now try if it is working </span></a>
+<a class="sourceLine" id="cb17-9" title="9"><span class="kw">f.coins</span>(<span class="dv">10</span>)</a></code></pre></div>
+<pre><code>## [1] 0.7</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="co">#replicate 10000 times </span></a>
+<a class="sourceLine" id="cb19-2" title="2">df1 &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">10000</span>, <span class="kw">f.coins</span>(<span class="dv">10</span>))</a>
+<a class="sourceLine" id="cb19-3" title="3"><span class="co">#see if the data looks right </span></a>
+<a class="sourceLine" id="cb19-4" title="4"><span class="kw">head</span>(df1)</a></code></pre></div>
+<pre><code>## [1] 0.5 0.5 0.3 0.6 0.5 0.6</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r badCode"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="co">#now plot </span></a>
+<a class="sourceLine" id="cb21-2" title="2">hist.df1 &lt;-<span class="st"> </span><span class="kw">hist</span>(df1,  <span class="dt">xlab=</span><span class="st">&#39;sample average of 10-coins&#39;</span>, <span class="dt">ylab=</span><span class="st">&#39;frequency (over 10000)&#39;</span>,<span class="dt">main=</span><span class="st">&#39;&#39;</span>)</a></code></pre></div>
+<p><img src="EconometricsByExample_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><strong>Task:</strong> Gradually increase your sample size from 10 to 100 and plot the <strong>frequency</strong> distribution of <span class="math inline">\(\bar{X}\)</span> with increasing <span class="math inline">\(n\)</span>.</p>
+<!-- DIFFICULT answer: -->
+<!-- ```{r ch6, message=FALSE, warning=FALSE, class.source="badCode", results='markup', tidy=FALSE} -->
+<!-- #write a small function  -->
+<!-- f.coins <- function(n1) { -->
+<!-- sample.n1 <- mean(sample(x=c(0,1), prob=c(0.5,0.5), size=n1, replace=TRUE)) -->
+<!-- return(sample.n1) -->
+<!-- } -->
+<!-- f.coins2 <- function(n2) { -->
+<!--   sample.n2 <- replicate(10000, f.coins(n2)) -->
+<!--   out1 <- cbind(sample.n2, rep(n2,n2)) -->
+<!-- } -->
+<!-- df1 <- do.call(rbind.data.frame,lapply(seq(10,100,1), f.coins2))  -->
+<!-- names(df1) <- c('xbar','n1') -->
+<!-- p1 <- ggplot(df1, aes(xbar)) + -->
+<!--       theme_tufte() + -->
+<!--       geom_histogram(binwidth=0.01, colour="black", fill="white") +  -->
+<!--       labs(title = "Number of coins (n): {current_frame}",  -->
+<!--             x = "sample average", y = "frequency") +  -->
+<!--       transition_manual(n1) -->
+<!--       #shadow_trail() -->
+<!--       #xlim(1,1000 ) +  -->
+<!--       #ylim(0.0,1.0)  -->
+<!-- animate(p1, nframes=200, fps=10) -->
+<!-- ``` -->
+<!-- **Task:** Plot the **density** distribution of the sample averages.     -->
+<!-- DIFFICULT answer: -->
+<!-- ```{r ch7, message=FALSE, warning=FALSE, class.source="badCode", results='markup', tidy=FALSE} -->
+<!-- p1 <- ggplot(df1, aes(xbar)) + -->
+<!--       theme_tufte() + -->
+<!--       geom_histogram(aes(y=..ndensity..), colour="black", fill="white", binwidth=0.01) +  -->
+<!--       geom_density(aes(y=..ndensity..), alpha=.2, fill="#FF6666", colour='red') + -->
+<!--       theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) +  -->
+<!--       labs(title = "Number of coins: {current_frame}",  -->
+<!--            x = "sample average", y = "density") +  -->
+<!--       transition_manual(n1) -->
+<!-- animate(p1, nframes=200, fps=5) -->
+<!-- ``` -->
+<!-- ### Standard normal distribution  -->
+<!-- **Task:** Standardize the outcomes from 100-coin experiment above (average of the 100-coins for X={0,1}) and plot the **density** distribution of the standardized random variable $Z=\dfrac{X-\mu}{\sigma/\sqrt{N}}$. Interpret Z={-2,0,2}.  -->
+<!-- DIFFICULT answer: -->
+<!-- ```{r ch8, message=FALSE, warning=FALSE, class.source="badCode", results='markup', tidy=FALSE} -->
+<!-- #write a small function  -->
+<!-- f.coins <- function(n1) { -->
+<!-- sample.n1 <- mean(sample(x=c(0,1), prob=c(0.5,0.5), size=n1, replace=TRUE)) -->
+<!-- sample.n1z <- (sample.n1-0.5)/(0.5/sqrt(n1)) -->
+<!-- return(sample.n1z) -->
+<!-- } -->
+<!-- f.coins2 <- function(n2) { -->
+<!--   sample.n2 <- replicate(10000, f.coins(n2)) -->
+<!--   out1 <- cbind(sample.n2, rep(n2,n2)) -->
+<!-- } -->
+<!-- df1 <- do.call(rbind.data.frame,lapply(seq(10,1000,10), f.coins2))  -->
+<!-- p1 <- ggplot(df1, aes(sample.n2)) + -->
+<!--       theme_tufte() + -->
+<!--       geom_histogram(aes(y=..density..), colour="black", fill="white", bw=0.01) +  -->
+<!--       #geom_density(alpha=.2, fill="#FF6666", colour='red') + -->
+<!--       stat_function(fun=dnorm, aes(x=rnorm(length(df1$sample.n2))), colour='red') +  -->
+<!--       labs(title = "Number of coins: {current_frame}",  -->
+<!--            x = "standardized outcome (z-score)", y = "density") +  -->
+<!--       transition_manual(V2) -->
+<!-- animate(p1, nframes=200, fps=5) -->
+<!-- ``` -->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["EconometricsByExample.pdf", "EconometricsByExample.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
