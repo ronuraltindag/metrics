@@ -1,121 +1,21 @@
+# Introduction {#intro}
 
-```{css, echo=FALSE}
-.badCode {
-background-color: #ffffcf;
-  color: black;
-}
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
 ```
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-#devtools::install_github("ropenscilabs/icon")
-library(icon)
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
 
-need <- c('glue', 'dplyr','readxl', 'haven', 'ggplot2','tidyr','zoo','ggrepel','gganimate',
-          'ggimage', 'ggthemes','tufte', 'formatR', 'magick', 'devtools')
-
-have <- need %in% rownames(installed.packages()) 
-if(any(!have)) install.packages(need[!have]) 
-invisible(lapply(need, library, character.only=T)) 
-
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
 ```
 
-# Introduction
-
-## Goals 
-
-* Install R and RStudio. TRYING NEW . 
-* Best practices relating to code/script development in the RStudio Integrated Development Environment (IDE).
-* Areas of caution and some never-do's. 
-
-## R and RStudio
-
-### Notes
-
-
-* I assume a basic familiarity with R and RStudio, or expect your effort to gain that familiarity  around the same time as this lesson is taught. 
-
-
-### Install R and R studio 
-
-* Here are the [instructions](https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/) for installing R and RStudio on your Windows or Mac desktop. Skip the third part and do not install "SDSFoundations Package"   
-
-### Basic rules and best practices 
-
-* All files should exist in a local folder that syncs to a cloud-storage service. No file you ever work on should be at risk of being lost if your computer ceases to function or be in your possesion. NEVER place any file on  "downloads" or "desktop" folders. 
-
-* Get a free cloud-storage service with a desktop application that syncs to a cloud-storage service. I like the [Dropbox desktop app](https://help.dropbox.com/installs-integrations/desktop/desktop-application-overview) but feel free to choose any other service. You don't need a lot of space so make sure that you don't pay. Under the Dropbox folder, create a designated folder for this course such as EC282. 
-
-* All subfolders under EC282 and files in them should have unique and descriptive construction: DON'T use spaces in file or folder names. Here is an example of a folder structure that might work for a student in this class: 
-
-
-```
-EC282
-│  
-│
-└───Course_docs
-│   │    SyllabusEC282.pdf
-│   │    LectureNotes.pdf 
-└───Assignments
-│   └───Assignment1
-│       │   dataset1name.Rda
-│       │   Lastname_Firstname_Assignment1_EC282.R
-│   └───Assignment2
-│       │   dataset2name.Rda
-│       │   Lastname_Firstname_Assignment1_EC282.R
-│   └───Assignment3
-│       │   dataset3name.Rda
-│       │   Lastname_Firstname_Assignment3_EC282.R
-│   └───Assignment4
-│       │   dataset4name.Rda
-│       │   Lastname_Firstname_Assignment4_EC282.R
-│       │   ...
-└───Exams
-│   └───Midterm1
-│       │   Midterm1Review.pdf
-│       │   Midterm1Review_myanswers.docx
-|       |   ...
-│   
-```
-
-
-
-* At the beginning of any R script, you should have a standard header that you use across all scripts tha clears the workspace, loads/installs packages as necessary, sets the working directory, etc. Here is an example that you can copy paste to the header of any script that you use:
-
-
-```{r echo = T, message=FALSE, warning=FALSE, results = 'hide'}
-###############################################################################
-# list the packages we need and loads them, installs them automatically if we don't have them
-# add any package that you need to the list  
-need <- c('glue', 'dplyr', 'ggplot2','tidyr', 'ggthemes','tidyr')
-
-have <- need %in% rownames(installed.packages()) 
-if(any(!have)) install.packages(need[!have]) 
-invisible(lapply(need, library, character.only=T)) 
-
-# To set up the working directory
-getwd()
-setwd(getwd()) #change getwd() here is you need to set a different working directory
-
-
-#this clears the workspace
-rm(list = ls()) 
-#this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
-###############################################################################
-```
-
-
-* When coding, use relative references to files. Typically, any script will begin looking for files in the working directory. At any time you can type `getwd()` on your Rstudio console to see the current working directory. The header above automatically sets the working directory to the folder that the R script is included. For example, if you are working on `Lastname_Firstname_Assignment1_EC282.R` script and need to load file `dataset1name.Rda` into an object, then you would simply run:
-
-```{r echo = T, eval=F}
-load(dataset1name.Rda)
-```
-
-
-However, if you were working in the same .R file, and needed to access `dataset2name.Rda`, you would need to point the program to a directory outside the current working directory -- so, you go up one level, over one folder, and look there:
-```{r echo = T, eval=F}
-load(../Assignment2/dataset2name.Rda)
-```
-
-* When learning R, the most important skill that you need to acquire is to be able to **google** stuff. There is probably not a single R question that you have yet has not been answered on [Stack Overflow](https://stackoverflow.com/). 
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].

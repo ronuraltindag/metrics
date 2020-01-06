@@ -1,6 +1,6 @@
-book_filename: "EconometricsByExample"
+book_filename: "projectX"
 delete_merged_file: true
 output_dir: "docs"
 language:
   ui:
-    chapter_name: "Week "
+    chapter_name: "Chapter "
