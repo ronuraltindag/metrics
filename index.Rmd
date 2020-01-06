@@ -1,5 +1,5 @@
 --- 
-title: "EC282 INTRODUCITON TO ECONOMETRICS"
+title: "EC282 INTRODUCTION TO ECONOMETRICS"
 author: "Onur Altındağ"
 date: "Last update: `r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -10,7 +10,7 @@ link-citations: yes
 description: "This book teaches econometrics like a 21st century humanoid would want to learn it."
 ---
 
-#I REALLY HATE TRYING TO FIGURE THIS OUT 
+
 # Course Logistics and using R   
 
 
