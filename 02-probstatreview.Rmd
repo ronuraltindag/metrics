@@ -1,6 +1,6 @@
 # Prob-Stat Review
 
-```{css, echo=FALSE}
+```{css, mesage=FALSE}
 .badCode {
 background-color: #ffffcf;
   color: black;
@@ -47,7 +47,7 @@ sample(outcome.set,1)
 
 
 Answer:
-```{r ch2, echo=FALSE, message=F, warning=F, class.source="badCode", results='markup', tidy=FALSE}
+```{r ch2, echo=TRUE, message=F, warning=F, class.source="badCode", results='markup', tidy=FALSE}
 #define the set of possible outcomes
 outcome.set <- c("heads","tail")
 #flip the coin 1000 times and save it into a list
@@ -134,7 +134,7 @@ Formally, the sample average, $\bar{x}$,  will **almost surely** converge in **p
 
 Answer: Law of Large Numbers (LLN) theorem predicts that if an experiment is repeated many times the average outcome should be very close to the expected value, observe how difference between the observed sample average and expected value approach each other as the number of coins that we experiment with increases. Expected value is therefore the long run average of a random variable.
 
-```{r ch5, message=FALSE, warning=FALSE, class.source="badCode", results=FALSE, tidy=FALSE, echo=TRUE}
+```{r ch5, message=FALSE, warning=FALSE, class.source="badCode", results=TRUE, tidy=FALSE, echo=TRUE}
 
 flips <- function(n,p,x1,x2) {
   out1 <- sample(x=c(x1,x2), prob = c(p,1-p), size=n, replace = TRUE)

@@ -1,4 +1,4 @@
-book_filename: "projectX"
+book_filename: "Metrics"
 delete_merged_file: true
 output_dir: "docs"
 language:

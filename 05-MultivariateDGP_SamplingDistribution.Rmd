@@ -1,0 +1,133 @@
+# Sampling distribution
+
+```{css, echo=FALSE}
+.badCode {
+background-color: #ffffcf;
+  color: black;
+}
+```
+
+```{r , include=FALSE}
+
+need <- c('glue', 'dplyr','readxl', 'haven', 'tidyr', 'tufte', 'formatR','knitr','rmdformats','ggplot2','broom')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+knitr::opts_chunk$set(echo = TRUE)
+rm(list=ls())
+#change path to whereever you place the models
+# script_folder = dirname(rstudioapi::getSourceEditorContext()$path)
+# setwd(glue('{script_folder}'))
+
+birthday<-"01011990" #january 1, 1990
+set.seed(as.integer(birthday))
+```
+
+## Goals 
+
+* Simulate a data-generating process (DGP) from scratch, given the population parameters 
+* Show how to sample from the DGP numerous times, with each sample generating a sample estimate
+* SHow that these sets of sampling estimates follow a distribution
+
+* **Note** : Code chunks with STUDENTS are for intented to teach students, CHALLENGE are challenging but students with some programming skills can easily learn, PROF are for students with advanced programming skills and instructors.
+
+## Overview
+
+* We follow the univariate DGP from before. We then loop our process to generate many samples, each with its own estimate of $\beta_1$. We then graph the distribution of the estimates and look at their properties.
+
+## Generating data from a known linear univariate DGP
+
+* So let's perform a data generating process for a dependent variable $$y$$ which is given by the linear function $$y = \beta_0 + \beta_1 * x +  u$$ where $\beta_0$ is the sum of the 1st and 2nd digit of my birthday, $\beta_1$ is the sum of the 3rd and 4th digit of my birthday, x is distributed normal with mean of 10 and variance of the first non-zero digit of my birthday, and u is (independently) distributed normal with mean 0 and variance of the last non-zero digit of your birthday. 
+
+* Let's say the "population" is 1MM observations.
+
+* So generate all the components, and then multiply and sum them to generate the column for Y, and combine all columns into a single dataframe.
+
+```{r}
+n <- 1000000
+u<-rnorm(n, 0, sqrt(9))
+x<-rnorm(n, 10,sqrt(1))
+beta0<-1
+beta1<-1
+y<-beta0+beta1*x+u
+df<-data.frame(y,x,u) 
+head(df)
+``` 
+
+## Sampling from the population 
+
+* Next, we will take 1,000 samples of 1,000 observation from the population data, with each sample yielding us a $\hat{\beta_0}$ and $\hat{\beta_1}$. 
+```{r}
+
+b_0<-c()
+b_1<-c()
+for(i in 1:1000){ 
+sff<- df[sample(nrow(df), 1000, replace=FALSE), ]
+estimates<-lm(y~x, sff)
+b_0[i]<-coef(estimates)[1]
+b_1[i]<-coef(estimates)[2]
+}
+coeff<-data.frame(b_0, b_1)
+head(coeff)
+
+
+ggplot(coeff, aes(x=b_0)) + 
+  geom_histogram(color="black", fill="pink", binwidth = 0.05)+
+   ggtitle('TKtitle') 
+
+ggplot(coeff, aes(x=b_1)) + 
+  geom_histogram(color="black", fill="pink", binwidth = 0.05)+
+   ggtitle('TKtitle') 
+
+```
+
+## Properties of the empirical simulations
+
+```{r}
+mean(coeff$b_0)
+mean(coeff$b_1)
+
+var(coeff$b_0)
+var(coeff$b_1)
+
+```
+
+## Changing the error variance
+
+```{r}
+u50<-rnorm(n, 0, sqrt(50))
+u1<-rnorm(n, 0, sqrt(1))
+y2<-beta0+beta1*x+u50
+y3<-beta0+beta1*x+u1
+df<-data.frame(y,y2,y3,x,u) 
+head(df)
+
+b_0_u50<-c()
+b_1_u50<-c()
+b_0_u1<-c()
+b_1_u1<-c()
+for(i in 1:1000){ 
+sff<- df[sample(nrow(df), 1000, replace=FALSE), ]
+estimates50<-lm(y2~x, sff)
+b_0_u50[i]<-coef(estimates50)[1]
+b_1_u50[i]<-coef(estimates50)[2]
+estimates1<-lm(y3~x, sff)
+b_0_u1[i]<-coef(estimates1)[1]
+b_1_u1[i]<-coef(estimates1)[2]
+}
+coeff<-data.frame(b_0_u50, b_1_u50, b_0_u1, b_1_u1)
+head(coeff)
+
+
+ggplot(coeff, aes(x=b_1_u50)) + 
+  geom_histogram(color="black", fill="pink", binwidth = 0.05)+
+   ggtitle('TKtitle') 
+
+ggplot(coeff, aes(x=b_1_u1)) + 
+  geom_histogram(color="black", fill="pink", binwidth = 0.05)+
+   ggtitle('TKtitle') 
+
+``` 
+
