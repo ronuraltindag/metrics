@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>EC282 INTRODUCTION TO ECONOMETRICS</title>
+  <title>EC282: Homework Assignments</title>
   <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="EC282 INTRODUCTION TO ECONOMETRICS" />
+  <meta property="og:title" content="EC282: Homework Assignments" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="EC282 INTRODUCTION TO ECONOMETRICS" />
+  <meta name="twitter:title" content="EC282: Homework Assignments" />
   
   <meta name="twitter:description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
   
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="introduction.html">
+<link rel="next" href="homework-assigment-i.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,9 +49,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -60,16 +60,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -78,9 +76,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -126,82 +124,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">EC 282 Homework Assignments</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course Logistics and using R</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#goals"><i class="fa fa-check"></i><b>1.1</b> Goals</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#course-information"><i class="fa fa-check"></i><b>1.2</b> Course information</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#requirements"><i class="fa fa-check"></i><b>1.3</b> Requirements</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> General Rules and Principles</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>1.1</b> Installing R and RStudio</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>1.2</b> Basic rules and best practices</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#header"><i class="fa fa-check"></i><b>1.3</b> Header</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-submit-the-homework-assignment"><i class="fa fa-check"></i><b>1.4</b> How to submit the homework assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
-<li class="chapter" data-level="3" data-path="introduction-1.html"><a href="introduction-1.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction-1.html"><a href="introduction-1.html#goals-1"><i class="fa fa-check"></i><b>3.1</b> Goals</a></li>
-<li class="chapter" data-level="3.2" data-path="introduction-1.html"><a href="introduction-1.html#r-and-rstudio"><i class="fa fa-check"></i><b>3.2</b> R and RStudio</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="introduction-1.html"><a href="introduction-1.html#notes"><i class="fa fa-check"></i><b>3.2.1</b> Notes</a></li>
-<li class="chapter" data-level="3.2.2" data-path="introduction-1.html"><a href="introduction-1.html#install-r-and-r-studio"><i class="fa fa-check"></i><b>3.2.2</b> Install R and R studio</a></li>
-<li class="chapter" data-level="3.2.3" data-path="introduction-1.html"><a href="introduction-1.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>3.2.3</b> Basic rules and best practices</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="prob-stat-review.html"><a href="prob-stat-review.html"><i class="fa fa-check"></i><b>4</b> Prob-Stat Review</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="prob-stat-review.html"><a href="prob-stat-review.html#goals-2"><i class="fa fa-check"></i><b>4.0.1</b> Goals</a></li>
-<li class="chapter" data-level="4.0.2" data-path="prob-stat-review.html"><a href="prob-stat-review.html#flipping-a-coin"><i class="fa fa-check"></i><b>4.0.2</b> Flipping a coin</a></li>
-<li class="chapter" data-level="4.0.3" data-path="prob-stat-review.html"><a href="prob-stat-review.html#probability"><i class="fa fa-check"></i><b>4.0.3</b> Probability</a></li>
-<li class="chapter" data-level="4.0.4" data-path="prob-stat-review.html"><a href="prob-stat-review.html#expected-value-and-variance"><i class="fa fa-check"></i><b>4.0.4</b> Expected value and variance</a></li>
-<li class="chapter" data-level="4.0.5" data-path="prob-stat-review.html"><a href="prob-stat-review.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.0.5</b> Law of Large Numbers</a></li>
-<li class="chapter" data-level="4.0.6" data-path="prob-stat-review.html"><a href="prob-stat-review.html#central-limit-theorem"><i class="fa fa-check"></i><b>4.0.6</b> Central limit theorem</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><i class="fa fa-check"></i><b>5</b> Generating (population) data, sampling from the population, and deriving sample estimates of population parameters</a><ul>
-<li class="chapter" data-level="5.1" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#goals-3"><i class="fa fa-check"></i><b>5.1</b> Goals</a></li>
-<li class="chapter" data-level="5.2" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#overview"><i class="fa fa-check"></i><b>5.2</b> Overview</a></li>
-<li class="chapter" data-level="5.3" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#generating-data-from-a-known-linear-univariate-dgp"><i class="fa fa-check"></i><b>5.3</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="5.4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#sampling-from-the-population"><i class="fa fa-check"></i><b>5.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="5.5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-sample-estimates"><i class="fa fa-check"></i><b>5.5</b> Calculating sample estimates</a></li>
-<li class="chapter" data-level="5.6" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#plot-the-data-with-the-fitted-line"><i class="fa fa-check"></i><b>5.6</b> Plot the data with the fitted line</a></li>
-<li class="chapter" data-level="5.7" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-tss-ess-and-r2"><i class="fa fa-check"></i><b>5.7</b> Calculating TSS, ESS, and <span class="math inline">\(R^2\)</span></a></li>
-<li class="chapter" data-level="5.8" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#algebraic-properties-of-the-estimator"><i class="fa fa-check"></i><b>5.8</b> Algebraic properties of the estimator</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="partialling-out.html"><a href="partialling-out.html"><i class="fa fa-check"></i><b>6</b> Partialling out</a><ul>
-<li class="chapter" data-level="6.1" data-path="partialling-out.html"><a href="partialling-out.html#goals-4"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
-<li class="chapter" data-level="6.2" data-path="partialling-out.html"><a href="partialling-out.html#overview-1"><i class="fa fa-check"></i><b>6.2</b> Overview</a></li>
-<li class="chapter" data-level="6.3" data-path="partialling-out.html"><a href="partialling-out.html#generating-data-from-a-known-linear-multivariate-dgp"><i class="fa fa-check"></i><b>6.3</b> Generating data from a known linear multivariate DGP</a></li>
-<li class="chapter" data-level="6.4" data-path="partialling-out.html"><a href="partialling-out.html#sampling-from-the-population-1"><i class="fa fa-check"></i><b>6.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="6.5" data-path="partialling-out.html"><a href="partialling-out.html#calculating-sample-estimates-1"><i class="fa fa-check"></i><b>6.5</b> Calculating sample estimates</a></li>
-<li class="chapter" data-level="6.6" data-path="partialling-out.html"><a href="partialling-out.html#partialling-out-extracting-the-unique-information-in-x_1"><i class="fa fa-check"></i><b>6.6</b> Partialling out: extracting the unique information in <span class="math inline">\(x_1\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="sampling-distribution.html"><a href="sampling-distribution.html"><i class="fa fa-check"></i><b>7</b> Sampling distribution</a><ul>
-<li class="chapter" data-level="7.1" data-path="sampling-distribution.html"><a href="sampling-distribution.html#goals-5"><i class="fa fa-check"></i><b>7.1</b> Goals</a></li>
-<li class="chapter" data-level="7.2" data-path="sampling-distribution.html"><a href="sampling-distribution.html#overview-2"><i class="fa fa-check"></i><b>7.2</b> Overview</a></li>
-<li class="chapter" data-level="7.3" data-path="sampling-distribution.html"><a href="sampling-distribution.html#generating-data-from-a-known-linear-univariate-dgp-1"><i class="fa fa-check"></i><b>7.3</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="7.4" data-path="sampling-distribution.html"><a href="sampling-distribution.html#sampling-from-the-population-2"><i class="fa fa-check"></i><b>7.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="7.5" data-path="sampling-distribution.html"><a href="sampling-distribution.html#properties-of-the-empirical-simulations"><i class="fa fa-check"></i><b>7.5</b> Properties of the empirical simulations</a></li>
-<li class="chapter" data-level="7.6" data-path="sampling-distribution.html"><a href="sampling-distribution.html#changing-the-error-variance"><i class="fa fa-check"></i><b>7.6</b> Changing the error variance</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis testing</a><ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-previous"><i class="fa fa-check"></i><b>8.1</b> Goals (previous)</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-current"><i class="fa fa-check"></i><b>8.2</b> Goals (current)</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#overview-3"><i class="fa fa-check"></i><b>8.3</b> Overview</a></li>
-<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#generating-data-from-a-known-linear-univariate-dgp-2"><i class="fa fa-check"></i><b>8.4</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sampling-from-the-population-3"><i class="fa fa-check"></i><b>8.5</b> Sampling from the population</a></li>
-<li class="chapter" data-level="8.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#properties-of-the-empirical-simulations-1"><i class="fa fa-check"></i><b>8.6</b> Properties of the empirical simulations</a><ul>
-<li class="chapter" data-level="8.6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail"><i class="fa fa-check"></i><b>8.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
-<li class="chapter" data-level="8.6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats."><i class="fa fa-check"></i><b>8.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
-<li class="chapter" data-level="8.6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails."><i class="fa fa-check"></i><b>8.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="consistency.html"><a href="consistency.html"><i class="fa fa-check"></i><b>9</b> Consistency</a><ul>
-<li class="chapter" data-level="9.1" data-path="consistency.html"><a href="consistency.html#goals-previous-1"><i class="fa fa-check"></i><b>9.1</b> Goals (previous)</a></li>
-<li class="chapter" data-level="9.2" data-path="consistency.html"><a href="consistency.html#goals-current-1"><i class="fa fa-check"></i><b>9.2</b> Goals (current)</a></li>
-<li class="chapter" data-level="9.3" data-path="consistency.html"><a href="consistency.html#overview-4"><i class="fa fa-check"></i><b>9.3</b> Overview</a></li>
-<li class="chapter" data-level="9.4" data-path="consistency.html"><a href="consistency.html#generating-data-from-a-known-linear-univariate-dgp-3"><i class="fa fa-check"></i><b>9.4</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="9.5" data-path="consistency.html"><a href="consistency.html#sampling-from-the-population-4"><i class="fa fa-check"></i><b>9.5</b> Sampling from the population</a></li>
-<li class="chapter" data-level="9.6" data-path="consistency.html"><a href="consistency.html#properties-of-the-empirical-simulations-2"><i class="fa fa-check"></i><b>9.6</b> Properties of the empirical simulations</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="consistency.html"><a href="consistency.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail-1"><i class="fa fa-check"></i><b>9.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
-<li class="chapter" data-level="9.6.2" data-path="consistency.html"><a href="consistency.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats.-1"><i class="fa fa-check"></i><b>9.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
-<li class="chapter" data-level="9.6.3" data-path="consistency.html"><a href="consistency.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails.-1"><i class="fa fa-check"></i><b>9.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="2" data-path="homework-assigment-i.html"><a href="homework-assigment-i.html"><i class="fa fa-check"></i><b>2</b> Homework Assigment I</a></li>
+<li class="chapter" data-level="3" data-path="homework-assignment-ii.html"><a href="homework-assignment-ii.html"><i class="fa fa-check"></i><b>3</b> Homework Assignment II</a></li>
+<li class="chapter" data-level="4" data-path="homework-assignment-iii.html"><a href="homework-assignment-iii.html"><i class="fa fa-check"></i><b>4</b> Homework Assignment III</a></li>
+<li class="chapter" data-level="5" data-path="homework-assignment-iv.html"><a href="homework-assignment-iv.html"><i class="fa fa-check"></i><b>5</b> Homework Assignment IV</a></li>
+<li class="chapter" data-level="6" data-path="homework-assignment-v.html"><a href="homework-assignment-v.html"><i class="fa fa-check"></i><b>6</b> Homework Assignment V</a></li>
+<li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -214,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EC282 INTRODUCTION TO ECONOMETRICS</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EC282: Homework Assignments</a>
           </h1>
         </div>
 
@@ -223,33 +160,86 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">EC282 INTRODUCTION TO ECONOMETRICS</h1>
+<h1 class="title">EC282: Homework Assignments</h1>
 <p class="author"><em>Onur Altındağ</em></p>
-<p class="date"><em>Last update: 2020-01-06</em></p>
+<p class="date"><em>Last update: 2020-01-08</em></p>
 </div>
-<div id="course-logistics-and-using-r" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Course Logistics and using R</h1>
-<div id="goals" class="section level2">
-<h2><span class="header-section-number">1.1</span> Goals</h2>
-<ul>
-<li>Course introduction, syllabus, general logistics, etc.</li>
-<li>Install R and RStudio. Some pep talk on “how to cope with coding frustration”.</li>
-<li>Best practices relating to code/script development in the RStudio Integrated Development Environment (IDE).</li>
-<li>Areas of caution and some never-do’s.</li>
-</ul>
+<div id="general-rules-and-principles" class="section level1">
+<h1><span class="header-section-number"> 1</span> General Rules and Principles</h1>
+<div id="installing-r-and-rstudio" class="section level2">
+<h2><span class="header-section-number">1.1</span> Installing R and RStudio</h2>
+<style type="text/css">
+.badCode {
+background-color: #ffffcf;
+  color: black;
+}
+</style>
+<p>Here are the <a href="https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/">instructions</a> for installing R and RStudio on your Windows or Mac desktop. Skip the third part and do not install “SDSFoundations Package”.</p>
 </div>
-<div id="course-information" class="section level2">
-<h2><span class="header-section-number">1.2</span> Course information</h2>
-<p>This is an <strong>introductory</strong> econometrics course that aims to provide you the basic set of tools to conduct <strong>data analysis and interpretation</strong> based on economic theory. The focus of the course is the theoretical and empirical foundations of statistical inference and modeling. We will study the basic mechanics of multivariate regression, problems related to its implementation and how to solve them. Towards the end of the semester, subject to a time constraint, we will also discuss issues related to in-sample and out-of-sample prediction problems. The course aims to be application oriented and you should develop, to the extend possible, some programming skills in <strong>R</strong>. At the end of the semester, I expect you to be familar with RStudio interface, basic data manipulation, obtaining and interpreting the sample statistics, conduct meaningful regression analysis and prediction. Importantly, we will not talk much about the elephant in the room: causal interpretation of any empirical analysis, which is left for the next metrics class that you will take.</p>
+<div id="basic-rules-and-best-practices" class="section level2">
+<h2><span class="header-section-number">1.2</span> Basic rules and best practices</h2>
+<p>All files should exist in a local folder that syncs to a cloud-storage service. No file you ever work on should be at risk of being lost if your computer ceases to function or be in your possesion. NEVER place any file on “downloads” or “desktop” folders.</p>
+<p>Get a free cloud-storage service with a desktop application that syncs to a cloud-storage service. I like the <a href="https://help.dropbox.com/installs-integrations/desktop/desktop-application-overview">Dropbox desktop app</a> but feel free to choose any other service. You don’t need a lot of space so free version of any desktop cloud app would work. Under the Dropbox folder, create a designated folder for this course such as EC282.</p>
+<p>All subfolders under EC282 and files in them should have unique and descriptive construction: DON’T use spaces in file or folder names. Here is an example of a folder structure that might work for a student in this class:</p>
+<pre><code>EC282
+│  
+│
+└───Course_docs
+│   │    SyllabusEC282.pdf
+│   │    LectureNotes.pdf 
+└───Assignments
+│   └───Assignment1
+│       │   dataset1name.Rda
+│       │   Lastname_Firstname_Assignment1_EC282.R
+│   └───Assignment2
+│       │   dataset2name.Rda
+│       │   Lastname_Firstname_Assignment1_EC282.R
+│   └───Assignment3
+│       │   dataset3name.Rda
+│       │   Lastname_Firstname_Assignment3_EC282.R
+│   └───Assignment4
+│       │   dataset4name.Rda
+│       │   Lastname_Firstname_Assignment4_EC282.R
+│       │   ...
+└───Exams
+│   └───Midterm1
+│       │   Midterm1Review.pdf
+│       │   Midterm1Review_myanswers.docx
+|       |   ...
+│   </code></pre>
 </div>
-<div id="requirements" class="section level2">
-<h2><span class="header-section-number">1.3</span> Requirements</h2>
-<p><strong>Textbook</strong>:</p>
-<p>I will mainly use this web page and upload my hand to provide you some material and upload my hand-written lecture notes as well. There are two main textbooks that I heavily rely on to explain the theoretical framework: <br>
-<a href="https://www.amazon.com/Using-Econometrics-Practical-Guide-7th/dp/013418274X"><em>Studenmund’s Using Econometrics: A Practical Guide</em></a>. <br>
-<a href="https://www.amazon.com/Introductory-Econometrics-Modern-Approach-MindTap/dp/1337558869/ref=sr_1_3?crid=2NY3RCI1XN2JY&amp;keywords=wooldridge+introductory+econometrics&amp;qid=1578184923&amp;s=books&amp;sprefix=wooldri%2Cstripbooks%2C141&amp;sr=1-3"><em>Introductory Econometrics: A Modern Approach</em></a>. <br></p>
-<p>Feel free to purchase an older edition or rent them. The</p>
-
+<div id="header" class="section level2">
+<h2><span class="header-section-number">1.3</span> Header</h2>
+<p>At the beginning of any R script, you should have a standard header that you use across all scripts that clears the workspace, loads/installs packages as necessary, sets the working directory, etc. Here is an example that you can copy paste to the header of any script that you use:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co">###############################################################################</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co"># list the packages we need and loads them, installs them automatically if we don&#39;t have them</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co"># add any package that you need to the list  </span></a>
+<a class="sourceLine" id="cb2-4" title="4">need &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;glue&#39;</span>, <span class="st">&#39;dplyr&#39;</span>,<span class="st">&#39;readxl&#39;</span>, <span class="st">&#39;MASS&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>,<span class="st">&#39;tidyr&#39;</span>,<span class="st">&#39;AER&#39;</span>,<span class="st">&#39;scales&#39;</span>,<span class="st">&#39;mvtnorm&#39;</span>, </a>
+<a class="sourceLine" id="cb2-5" title="5">          <span class="st">&#39;stargazer&#39;</span>,<span class="st">&#39;httr&#39;</span>)</a>
+<a class="sourceLine" id="cb2-6" title="6"></a>
+<a class="sourceLine" id="cb2-7" title="7">have &lt;-<span class="st"> </span>need <span class="op">%in%</span><span class="st"> </span><span class="kw">rownames</span>(<span class="kw">installed.packages</span>()) </a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="cf">if</span>(<span class="kw">any</span>(<span class="op">!</span>have)) <span class="kw">install.packages</span>(need[<span class="op">!</span>have]) </a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="kw">invisible</span>(<span class="kw">lapply</span>(need, library, <span class="dt">character.only=</span>T)) </a>
+<a class="sourceLine" id="cb2-10" title="10"></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="co"># To set up the working directory</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="kw">setwd</span>(<span class="kw">getwd</span>()) <span class="co">#change getwd() here is you need to set a different working directory</span></a>
+<a class="sourceLine" id="cb2-14" title="14"></a>
+<a class="sourceLine" id="cb2-15" title="15"></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="co">#this clears the workspace</span></a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) </a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="co">#this sets the random number generator seed to your birthday for replication</span></a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="kw">set.seed</span>(<span class="dv">01011999</span>)</a>
+<a class="sourceLine" id="cb2-20" title="20"><span class="co">###############################################################################</span></a></code></pre></div>
+<p>When coding, use relative references to files. Typically, any script will begin looking for files in the working directory. At any time you can type <code>getwd()</code> on your Rstudio console to see the current working directory. The header above automatically sets the working directory to the folder that the R script is included. For example, if you are working on <code>Lastname_Firstname_Assignment1_EC282.R</code> script and need to load file <code>dataset1name.Rda</code> into an object, then you would simply run:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">load</span>(dataset1name.Rda)</a></code></pre></div>
+<p>However, if you were working in the same .R file, and needed to access <code>dataset2name.Rda</code>, you would need to point the program to a directory outside the current working directory – so, you go up one level, over one folder, and look there:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">load</span>(..<span class="op">/</span>Assignment2<span class="op">/</span>dataset2name.Rda)</a></code></pre></div>
+<p>When learning R, the most important skill that you need to acquire is to be able to <strong>google</strong> your problem. There is probably not a single R question that you have yet has not been answered on <a href="https://stackoverflow.com/">Stack Overflow</a>.</p>
+</div>
+<div id="how-to-submit-the-homework-assignment" class="section level2">
+<h2><span class="header-section-number">1.4</span> How to submit the homework assignment</h2>
+<p>You can use a snipping tool to copy and paste the relevant output and figures from RStudio console to a word file, type the answers, save everything and upload it on BlackBoard/Assignments. If you want to have a more elegant looking homework output the <code>stargazer</code> package is very powerful in transforming your analysis into publishable formats.</p>
 </div>
 </div>
             </section>
@@ -258,7 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="homework-assigment-i.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Sampling distribution | EC282 INTRODUCTION TO ECONOMETRICS</title>
+  <title>Chapter 6 Sampling distribution | EC282 INTRODUCTION TO ECONOMETRICS</title>
   <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Sampling distribution | EC282 INTRODUCTION TO ECONOMETRICS" />
+  <meta property="og:title" content="Chapter 6 Sampling distribution | EC282 INTRODUCTION TO ECONOMETRICS" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Sampling distribution | EC282 INTRODUCTION TO ECONOMETRICS" />
+  <meta name="twitter:title" content="Chapter 6 Sampling distribution | EC282 INTRODUCTION TO ECONOMETRICS" />
   
   <meta name="twitter:description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
   
@@ -49,9 +49,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -60,16 +60,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -78,9 +76,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,62 +141,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.3" data-path="introduction-1.html"><a href="introduction-1.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>3.2.3</b> Basic rules and best practices</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="prob-stat-review.html"><a href="prob-stat-review.html"><i class="fa fa-check"></i><b>4</b> Prob-Stat Review</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="prob-stat-review.html"><a href="prob-stat-review.html#goals-2"><i class="fa fa-check"></i><b>4.0.1</b> Goals</a></li>
-<li class="chapter" data-level="4.0.2" data-path="prob-stat-review.html"><a href="prob-stat-review.html#flipping-a-coin"><i class="fa fa-check"></i><b>4.0.2</b> Flipping a coin</a></li>
-<li class="chapter" data-level="4.0.3" data-path="prob-stat-review.html"><a href="prob-stat-review.html#probability"><i class="fa fa-check"></i><b>4.0.3</b> Probability</a></li>
-<li class="chapter" data-level="4.0.4" data-path="prob-stat-review.html"><a href="prob-stat-review.html#expected-value-and-variance"><i class="fa fa-check"></i><b>4.0.4</b> Expected value and variance</a></li>
-<li class="chapter" data-level="4.0.5" data-path="prob-stat-review.html"><a href="prob-stat-review.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.0.5</b> Law of Large Numbers</a></li>
-<li class="chapter" data-level="4.0.6" data-path="prob-stat-review.html"><a href="prob-stat-review.html#central-limit-theorem"><i class="fa fa-check"></i><b>4.0.6</b> Central limit theorem</a></li>
+<li class="chapter" data-level="4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><i class="fa fa-check"></i><b>4</b> Generating (population) data, sampling from the population, and deriving sample estimates of population parameters</a><ul>
+<li class="chapter" data-level="4.1" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#goals-2"><i class="fa fa-check"></i><b>4.1</b> Goals</a></li>
+<li class="chapter" data-level="4.2" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#overview"><i class="fa fa-check"></i><b>4.2</b> Overview</a></li>
+<li class="chapter" data-level="4.3" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#generating-data-from-a-known-linear-univariate-dgp"><i class="fa fa-check"></i><b>4.3</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="4.4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#sampling-from-the-population"><i class="fa fa-check"></i><b>4.4</b> Sampling from the population</a></li>
+<li class="chapter" data-level="4.5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-sample-estimates"><i class="fa fa-check"></i><b>4.5</b> Calculating sample estimates</a></li>
+<li class="chapter" data-level="4.6" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#plot-the-data-with-the-fitted-line"><i class="fa fa-check"></i><b>4.6</b> Plot the data with the fitted line</a></li>
+<li class="chapter" data-level="4.7" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-tss-ess-and-r2"><i class="fa fa-check"></i><b>4.7</b> Calculating TSS, ESS, and <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="4.8" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#algebraic-properties-of-the-estimator"><i class="fa fa-check"></i><b>4.8</b> Algebraic properties of the estimator</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><i class="fa fa-check"></i><b>5</b> Generating (population) data, sampling from the population, and deriving sample estimates of population parameters</a><ul>
-<li class="chapter" data-level="5.1" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#goals-3"><i class="fa fa-check"></i><b>5.1</b> Goals</a></li>
-<li class="chapter" data-level="5.2" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#overview"><i class="fa fa-check"></i><b>5.2</b> Overview</a></li>
-<li class="chapter" data-level="5.3" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#generating-data-from-a-known-linear-univariate-dgp"><i class="fa fa-check"></i><b>5.3</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="5.4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#sampling-from-the-population"><i class="fa fa-check"></i><b>5.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="5.5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-sample-estimates"><i class="fa fa-check"></i><b>5.5</b> Calculating sample estimates</a></li>
-<li class="chapter" data-level="5.6" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#plot-the-data-with-the-fitted-line"><i class="fa fa-check"></i><b>5.6</b> Plot the data with the fitted line</a></li>
-<li class="chapter" data-level="5.7" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-tss-ess-and-r2"><i class="fa fa-check"></i><b>5.7</b> Calculating TSS, ESS, and <span class="math inline">\(R^2\)</span></a></li>
-<li class="chapter" data-level="5.8" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#algebraic-properties-of-the-estimator"><i class="fa fa-check"></i><b>5.8</b> Algebraic properties of the estimator</a></li>
+<li class="chapter" data-level="5" data-path="partialling-out.html"><a href="partialling-out.html"><i class="fa fa-check"></i><b>5</b> Partialling out</a><ul>
+<li class="chapter" data-level="5.1" data-path="partialling-out.html"><a href="partialling-out.html#goals-3"><i class="fa fa-check"></i><b>5.1</b> Goals</a></li>
+<li class="chapter" data-level="5.2" data-path="partialling-out.html"><a href="partialling-out.html#overview-1"><i class="fa fa-check"></i><b>5.2</b> Overview</a></li>
+<li class="chapter" data-level="5.3" data-path="partialling-out.html"><a href="partialling-out.html#generating-data-from-a-known-linear-multivariate-dgp"><i class="fa fa-check"></i><b>5.3</b> Generating data from a known linear multivariate DGP</a></li>
+<li class="chapter" data-level="5.4" data-path="partialling-out.html"><a href="partialling-out.html#sampling-from-the-population-1"><i class="fa fa-check"></i><b>5.4</b> Sampling from the population</a></li>
+<li class="chapter" data-level="5.5" data-path="partialling-out.html"><a href="partialling-out.html#calculating-sample-estimates-1"><i class="fa fa-check"></i><b>5.5</b> Calculating sample estimates</a></li>
+<li class="chapter" data-level="5.6" data-path="partialling-out.html"><a href="partialling-out.html#partialling-out-extracting-the-unique-information-in-x_1"><i class="fa fa-check"></i><b>5.6</b> Partialling out: extracting the unique information in <span class="math inline">\(x_1\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="partialling-out.html"><a href="partialling-out.html"><i class="fa fa-check"></i><b>6</b> Partialling out</a><ul>
-<li class="chapter" data-level="6.1" data-path="partialling-out.html"><a href="partialling-out.html#goals-4"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
-<li class="chapter" data-level="6.2" data-path="partialling-out.html"><a href="partialling-out.html#overview-1"><i class="fa fa-check"></i><b>6.2</b> Overview</a></li>
-<li class="chapter" data-level="6.3" data-path="partialling-out.html"><a href="partialling-out.html#generating-data-from-a-known-linear-multivariate-dgp"><i class="fa fa-check"></i><b>6.3</b> Generating data from a known linear multivariate DGP</a></li>
-<li class="chapter" data-level="6.4" data-path="partialling-out.html"><a href="partialling-out.html#sampling-from-the-population-1"><i class="fa fa-check"></i><b>6.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="6.5" data-path="partialling-out.html"><a href="partialling-out.html#calculating-sample-estimates-1"><i class="fa fa-check"></i><b>6.5</b> Calculating sample estimates</a></li>
-<li class="chapter" data-level="6.6" data-path="partialling-out.html"><a href="partialling-out.html#partialling-out-extracting-the-unique-information-in-x_1"><i class="fa fa-check"></i><b>6.6</b> Partialling out: extracting the unique information in <span class="math inline">\(x_1\)</span></a></li>
+<li class="chapter" data-level="6" data-path="sampling-distribution.html"><a href="sampling-distribution.html"><i class="fa fa-check"></i><b>6</b> Sampling distribution</a><ul>
+<li class="chapter" data-level="6.1" data-path="sampling-distribution.html"><a href="sampling-distribution.html#goals-4"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
+<li class="chapter" data-level="6.2" data-path="sampling-distribution.html"><a href="sampling-distribution.html#overview-2"><i class="fa fa-check"></i><b>6.2</b> Overview</a></li>
+<li class="chapter" data-level="6.3" data-path="sampling-distribution.html"><a href="sampling-distribution.html#generating-data-from-a-known-linear-univariate-dgp-1"><i class="fa fa-check"></i><b>6.3</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="6.4" data-path="sampling-distribution.html"><a href="sampling-distribution.html#sampling-from-the-population-2"><i class="fa fa-check"></i><b>6.4</b> Sampling from the population</a></li>
+<li class="chapter" data-level="6.5" data-path="sampling-distribution.html"><a href="sampling-distribution.html#properties-of-the-empirical-simulations"><i class="fa fa-check"></i><b>6.5</b> Properties of the empirical simulations</a></li>
+<li class="chapter" data-level="6.6" data-path="sampling-distribution.html"><a href="sampling-distribution.html#changing-the-error-variance"><i class="fa fa-check"></i><b>6.6</b> Changing the error variance</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="sampling-distribution.html"><a href="sampling-distribution.html"><i class="fa fa-check"></i><b>7</b> Sampling distribution</a><ul>
-<li class="chapter" data-level="7.1" data-path="sampling-distribution.html"><a href="sampling-distribution.html#goals-5"><i class="fa fa-check"></i><b>7.1</b> Goals</a></li>
-<li class="chapter" data-level="7.2" data-path="sampling-distribution.html"><a href="sampling-distribution.html#overview-2"><i class="fa fa-check"></i><b>7.2</b> Overview</a></li>
-<li class="chapter" data-level="7.3" data-path="sampling-distribution.html"><a href="sampling-distribution.html#generating-data-from-a-known-linear-univariate-dgp-1"><i class="fa fa-check"></i><b>7.3</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="7.4" data-path="sampling-distribution.html"><a href="sampling-distribution.html#sampling-from-the-population-2"><i class="fa fa-check"></i><b>7.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="7.5" data-path="sampling-distribution.html"><a href="sampling-distribution.html#properties-of-the-empirical-simulations"><i class="fa fa-check"></i><b>7.5</b> Properties of the empirical simulations</a></li>
-<li class="chapter" data-level="7.6" data-path="sampling-distribution.html"><a href="sampling-distribution.html#changing-the-error-variance"><i class="fa fa-check"></i><b>7.6</b> Changing the error variance</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis testing</a><ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-previous"><i class="fa fa-check"></i><b>8.1</b> Goals (previous)</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-current"><i class="fa fa-check"></i><b>8.2</b> Goals (current)</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#overview-3"><i class="fa fa-check"></i><b>8.3</b> Overview</a></li>
-<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#generating-data-from-a-known-linear-univariate-dgp-2"><i class="fa fa-check"></i><b>8.4</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sampling-from-the-population-3"><i class="fa fa-check"></i><b>8.5</b> Sampling from the population</a></li>
-<li class="chapter" data-level="8.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#properties-of-the-empirical-simulations-1"><i class="fa fa-check"></i><b>8.6</b> Properties of the empirical simulations</a><ul>
-<li class="chapter" data-level="8.6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail"><i class="fa fa-check"></i><b>8.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
-<li class="chapter" data-level="8.6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats."><i class="fa fa-check"></i><b>8.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
-<li class="chapter" data-level="8.6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails."><i class="fa fa-check"></i><b>8.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
+<li class="chapter" data-level="7" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>7</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="7.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-previous"><i class="fa fa-check"></i><b>7.1</b> Goals (previous)</a></li>
+<li class="chapter" data-level="7.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-current"><i class="fa fa-check"></i><b>7.2</b> Goals (current)</a></li>
+<li class="chapter" data-level="7.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#overview-3"><i class="fa fa-check"></i><b>7.3</b> Overview</a></li>
+<li class="chapter" data-level="7.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#generating-data-from-a-known-linear-univariate-dgp-2"><i class="fa fa-check"></i><b>7.4</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="7.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sampling-from-the-population-3"><i class="fa fa-check"></i><b>7.5</b> Sampling from the population</a></li>
+<li class="chapter" data-level="7.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#properties-of-the-empirical-simulations-1"><i class="fa fa-check"></i><b>7.6</b> Properties of the empirical simulations</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail"><i class="fa fa-check"></i><b>7.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
+<li class="chapter" data-level="7.6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats."><i class="fa fa-check"></i><b>7.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
+<li class="chapter" data-level="7.6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails."><i class="fa fa-check"></i><b>7.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="consistency.html"><a href="consistency.html"><i class="fa fa-check"></i><b>9</b> Consistency</a><ul>
-<li class="chapter" data-level="9.1" data-path="consistency.html"><a href="consistency.html#goals-previous-1"><i class="fa fa-check"></i><b>9.1</b> Goals (previous)</a></li>
-<li class="chapter" data-level="9.2" data-path="consistency.html"><a href="consistency.html#goals-current-1"><i class="fa fa-check"></i><b>9.2</b> Goals (current)</a></li>
-<li class="chapter" data-level="9.3" data-path="consistency.html"><a href="consistency.html#overview-4"><i class="fa fa-check"></i><b>9.3</b> Overview</a></li>
-<li class="chapter" data-level="9.4" data-path="consistency.html"><a href="consistency.html#generating-data-from-a-known-linear-univariate-dgp-3"><i class="fa fa-check"></i><b>9.4</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="9.5" data-path="consistency.html"><a href="consistency.html#sampling-from-the-population-4"><i class="fa fa-check"></i><b>9.5</b> Sampling from the population</a></li>
-<li class="chapter" data-level="9.6" data-path="consistency.html"><a href="consistency.html#properties-of-the-empirical-simulations-2"><i class="fa fa-check"></i><b>9.6</b> Properties of the empirical simulations</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="consistency.html"><a href="consistency.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail-1"><i class="fa fa-check"></i><b>9.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
-<li class="chapter" data-level="9.6.2" data-path="consistency.html"><a href="consistency.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats.-1"><i class="fa fa-check"></i><b>9.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
-<li class="chapter" data-level="9.6.3" data-path="consistency.html"><a href="consistency.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails.-1"><i class="fa fa-check"></i><b>9.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
+<li class="chapter" data-level="8" data-path="consistency.html"><a href="consistency.html"><i class="fa fa-check"></i><b>8</b> Consistency</a><ul>
+<li class="chapter" data-level="8.1" data-path="consistency.html"><a href="consistency.html#goals-previous-1"><i class="fa fa-check"></i><b>8.1</b> Goals (previous)</a></li>
+<li class="chapter" data-level="8.2" data-path="consistency.html"><a href="consistency.html#goals-current-1"><i class="fa fa-check"></i><b>8.2</b> Goals (current)</a></li>
+<li class="chapter" data-level="8.3" data-path="consistency.html"><a href="consistency.html#overview-4"><i class="fa fa-check"></i><b>8.3</b> Overview</a></li>
+<li class="chapter" data-level="8.4" data-path="consistency.html"><a href="consistency.html#generating-data-from-a-known-linear-univariate-dgp-3"><i class="fa fa-check"></i><b>8.4</b> Generating data from a known linear univariate DGP</a></li>
+<li class="chapter" data-level="8.5" data-path="consistency.html"><a href="consistency.html#sampling-from-the-population-4"><i class="fa fa-check"></i><b>8.5</b> Sampling from the population</a></li>
+<li class="chapter" data-level="8.6" data-path="consistency.html"><a href="consistency.html#properties-of-the-empirical-simulations-2"><i class="fa fa-check"></i><b>8.6</b> Properties of the empirical simulations</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="consistency.html"><a href="consistency.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail-1"><i class="fa fa-check"></i><b>8.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
+<li class="chapter" data-level="8.6.2" data-path="consistency.html"><a href="consistency.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats.-1"><i class="fa fa-check"></i><b>8.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
+<li class="chapter" data-level="8.6.3" data-path="consistency.html"><a href="consistency.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails.-1"><i class="fa fa-check"></i><b>8.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -223,15 +213,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="sampling-distribution" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Sampling distribution</h1>
+<h1><span class="header-section-number">Chapter 6</span> Sampling distribution</h1>
 <style type="text/css">
 .badCode {
 background-color: #ffffcf;
   color: black;
 }
 </style>
-<div id="goals-5" class="section level2">
-<h2><span class="header-section-number">7.1</span> Goals</h2>
+<div id="goals-4" class="section level2">
+<h2><span class="header-section-number">6.1</span> Goals</h2>
 <ul>
 <li><p>Simulate a data-generating process (DGP) from scratch, given the population parameters</p></li>
 <li><p>Show how to sample from the DGP numerous times, with each sample generating a sample estimate</p></li>
@@ -240,26 +230,26 @@ background-color: #ffffcf;
 </ul>
 </div>
 <div id="overview-2" class="section level2">
-<h2><span class="header-section-number">7.2</span> Overview</h2>
+<h2><span class="header-section-number">6.2</span> Overview</h2>
 <ul>
 <li>We follow the univariate DGP from before. We then loop our process to generate many samples, each with its own estimate of <span class="math inline">\(\beta_1\)</span>. We then graph the distribution of the estimates and look at their properties.</li>
 </ul>
 </div>
 <div id="generating-data-from-a-known-linear-univariate-dgp-1" class="section level2">
-<h2><span class="header-section-number">7.3</span> Generating data from a known linear univariate DGP</h2>
+<h2><span class="header-section-number">6.3</span> Generating data from a known linear univariate DGP</h2>
 <ul>
 <li><p>So let’s perform a data generating process for a dependent variable <span class="math display">\[y\]</span> which is given by the linear function <span class="math display">\[y = \beta_0 + \beta_1 * x +  u\]</span> where <span class="math inline">\(\beta_0\)</span> is the sum of the 1st and 2nd digit of my birthday, <span class="math inline">\(\beta_1\)</span> is the sum of the 3rd and 4th digit of my birthday, x is distributed normal with mean of 10 and variance of the first non-zero digit of my birthday, and u is (independently) distributed normal with mean 0 and variance of the last non-zero digit of your birthday.</p></li>
 <li><p>Let’s say the “population” is 1MM observations.</p></li>
 <li><p>So generate all the components, and then multiply and sum them to generate the column for Y, and combine all columns into a single dataframe.</p></li>
 </ul>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="sampling-distribution.html#cb58-1"></a>n &lt;-<span class="st"> </span><span class="dv">1000000</span></span>
-<span id="cb58-2"><a href="sampling-distribution.html#cb58-2"></a>u&lt;-<span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="kw">sqrt</span>(<span class="dv">9</span>))</span>
-<span id="cb58-3"><a href="sampling-distribution.html#cb58-3"></a>x&lt;-<span class="kw">rnorm</span>(n, <span class="dv">10</span>,<span class="kw">sqrt</span>(<span class="dv">1</span>))</span>
-<span id="cb58-4"><a href="sampling-distribution.html#cb58-4"></a>beta0&lt;-<span class="dv">1</span></span>
-<span id="cb58-5"><a href="sampling-distribution.html#cb58-5"></a>beta1&lt;-<span class="dv">1</span></span>
-<span id="cb58-6"><a href="sampling-distribution.html#cb58-6"></a>y&lt;-beta0<span class="op">+</span>beta1<span class="op">*</span>x<span class="op">+</span>u</span>
-<span id="cb58-7"><a href="sampling-distribution.html#cb58-7"></a>df&lt;-<span class="kw">data.frame</span>(y,x,u) </span>
-<span id="cb58-8"><a href="sampling-distribution.html#cb58-8"></a><span class="kw">head</span>(df)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1">n &lt;-<span class="st"> </span><span class="dv">1000000</span></a>
+<a class="sourceLine" id="cb39-2" title="2">u&lt;-<span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="kw">sqrt</span>(<span class="dv">9</span>))</a>
+<a class="sourceLine" id="cb39-3" title="3">x&lt;-<span class="kw">rnorm</span>(n, <span class="dv">10</span>,<span class="kw">sqrt</span>(<span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb39-4" title="4">beta0&lt;-<span class="dv">1</span></a>
+<a class="sourceLine" id="cb39-5" title="5">beta1&lt;-<span class="dv">1</span></a>
+<a class="sourceLine" id="cb39-6" title="6">y&lt;-beta0<span class="op">+</span>beta1<span class="op">*</span>x<span class="op">+</span>u</a>
+<a class="sourceLine" id="cb39-7" title="7">df&lt;-<span class="kw">data.frame</span>(y,x,u) </a>
+<a class="sourceLine" id="cb39-8" title="8"><span class="kw">head</span>(df)</a></code></pre></div>
 <pre><code>##           y        x          u
 ## 1 10.708070 10.49637 -0.7882969
 ## 2 12.450647 10.45746  0.9931879
@@ -269,20 +259,20 @@ background-color: #ffffcf;
 ## 6 17.616721 10.03691  6.5798110</code></pre>
 </div>
 <div id="sampling-from-the-population-2" class="section level2">
-<h2><span class="header-section-number">7.4</span> Sampling from the population</h2>
+<h2><span class="header-section-number">6.4</span> Sampling from the population</h2>
 <ul>
 <li>Next, we will take 1,000 samples of 1,000 observation from the population data, with each sample yielding us a <span class="math inline">\(\hat{\beta_0}\)</span> and <span class="math inline">\(\hat{\beta_1}\)</span>.</li>
 </ul>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="sampling-distribution.html#cb60-1"></a>b_<span class="dv">0</span>&lt;-<span class="kw">c</span>()</span>
-<span id="cb60-2"><a href="sampling-distribution.html#cb60-2"></a>b_<span class="dv">1</span>&lt;-<span class="kw">c</span>()</span>
-<span id="cb60-3"><a href="sampling-distribution.html#cb60-3"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>){ </span>
-<span id="cb60-4"><a href="sampling-distribution.html#cb60-4"></a>sff&lt;-<span class="st"> </span>df[<span class="kw">sample</span>(<span class="kw">nrow</span>(df), <span class="dv">1000</span>, <span class="dt">replace=</span><span class="ot">FALSE</span>), ]</span>
-<span id="cb60-5"><a href="sampling-distribution.html#cb60-5"></a>estimates&lt;-<span class="kw">lm</span>(y<span class="op">~</span>x, sff)</span>
-<span id="cb60-6"><a href="sampling-distribution.html#cb60-6"></a>b_<span class="dv">0</span>[i]&lt;-<span class="kw">coef</span>(estimates)[<span class="dv">1</span>]</span>
-<span id="cb60-7"><a href="sampling-distribution.html#cb60-7"></a>b_<span class="dv">1</span>[i]&lt;-<span class="kw">coef</span>(estimates)[<span class="dv">2</span>]</span>
-<span id="cb60-8"><a href="sampling-distribution.html#cb60-8"></a>}</span>
-<span id="cb60-9"><a href="sampling-distribution.html#cb60-9"></a>coeff&lt;-<span class="kw">data.frame</span>(b_<span class="dv">0</span>, b_<span class="dv">1</span>)</span>
-<span id="cb60-10"><a href="sampling-distribution.html#cb60-10"></a><span class="kw">head</span>(coeff)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1">b_<span class="dv">0</span>&lt;-<span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb41-2" title="2">b_<span class="dv">1</span>&lt;-<span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb41-3" title="3"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>){ </a>
+<a class="sourceLine" id="cb41-4" title="4">sff&lt;-<span class="st"> </span>df[<span class="kw">sample</span>(<span class="kw">nrow</span>(df), <span class="dv">1000</span>, <span class="dt">replace=</span><span class="ot">FALSE</span>), ]</a>
+<a class="sourceLine" id="cb41-5" title="5">estimates&lt;-<span class="kw">lm</span>(y<span class="op">~</span>x, sff)</a>
+<a class="sourceLine" id="cb41-6" title="6">b_<span class="dv">0</span>[i]&lt;-<span class="kw">coef</span>(estimates)[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb41-7" title="7">b_<span class="dv">1</span>[i]&lt;-<span class="kw">coef</span>(estimates)[<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb41-8" title="8">}</a>
+<a class="sourceLine" id="cb41-9" title="9">coeff&lt;-<span class="kw">data.frame</span>(b_<span class="dv">0</span>, b_<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb41-10" title="10"><span class="kw">head</span>(coeff)</a></code></pre></div>
 <pre><code>##          b_0       b_1
 ## 1  0.5865453 1.0408402
 ## 2  1.4482701 0.9514253
@@ -290,34 +280,34 @@ background-color: #ffffcf;
 ## 4 -0.0979289 1.1108554
 ## 5  2.5829476 0.8484714
 ## 6  0.4448188 1.0627064</code></pre>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="sampling-distribution.html#cb62-1"></a><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">0</span>)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb62-2"><a href="sampling-distribution.html#cb62-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></span>
-<span id="cb62-3"><a href="sampling-distribution.html#cb62-3"></a><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </span></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="sampling-distribution.html#cb63-1"></a><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">1</span>)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb63-2"><a href="sampling-distribution.html#cb63-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></span>
-<span id="cb63-3"><a href="sampling-distribution.html#cb63-3"></a><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </span></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-28-2.png" width="672" /></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">0</span>)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb43-2" title="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb43-3" title="3"><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">1</span>)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb44-2" title="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb44-3" title="3"><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
 </div>
 <div id="properties-of-the-empirical-simulations" class="section level2">
-<h2><span class="header-section-number">7.5</span> Properties of the empirical simulations</h2>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="sampling-distribution.html#cb64-1"></a><span class="kw">mean</span>(coeff<span class="op">$</span>b_<span class="dv">0</span>)</span></code></pre></div>
+<h2><span class="header-section-number">6.5</span> Properties of the empirical simulations</h2>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1"><span class="kw">mean</span>(coeff<span class="op">$</span>b_<span class="dv">0</span>)</a></code></pre></div>
 <pre><code>## [1] 0.9607526</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="sampling-distribution.html#cb66-1"></a><span class="kw">mean</span>(coeff<span class="op">$</span>b_<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1"><span class="kw">mean</span>(coeff<span class="op">$</span>b_<span class="dv">1</span>)</a></code></pre></div>
 <pre><code>## [1] 1.003667</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="sampling-distribution.html#cb68-1"></a><span class="kw">var</span>(coeff<span class="op">$</span>b_<span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">var</span>(coeff<span class="op">$</span>b_<span class="dv">0</span>)</a></code></pre></div>
 <pre><code>## [1] 0.9214121</code></pre>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="sampling-distribution.html#cb70-1"></a><span class="kw">var</span>(coeff<span class="op">$</span>b_<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1"><span class="kw">var</span>(coeff<span class="op">$</span>b_<span class="dv">1</span>)</a></code></pre></div>
 <pre><code>## [1] 0.009174074</code></pre>
 </div>
 <div id="changing-the-error-variance" class="section level2">
-<h2><span class="header-section-number">7.6</span> Changing the error variance</h2>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="sampling-distribution.html#cb72-1"></a>u50&lt;-<span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="kw">sqrt</span>(<span class="dv">50</span>))</span>
-<span id="cb72-2"><a href="sampling-distribution.html#cb72-2"></a>u1&lt;-<span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="kw">sqrt</span>(<span class="dv">1</span>))</span>
-<span id="cb72-3"><a href="sampling-distribution.html#cb72-3"></a>y2&lt;-beta0<span class="op">+</span>beta1<span class="op">*</span>x<span class="op">+</span>u50</span>
-<span id="cb72-4"><a href="sampling-distribution.html#cb72-4"></a>y3&lt;-beta0<span class="op">+</span>beta1<span class="op">*</span>x<span class="op">+</span>u1</span>
-<span id="cb72-5"><a href="sampling-distribution.html#cb72-5"></a>df&lt;-<span class="kw">data.frame</span>(y,y2,y3,x,u) </span>
-<span id="cb72-6"><a href="sampling-distribution.html#cb72-6"></a><span class="kw">head</span>(df)</span></code></pre></div>
+<h2><span class="header-section-number">6.6</span> Changing the error variance</h2>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">u50&lt;-<span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="kw">sqrt</span>(<span class="dv">50</span>))</a>
+<a class="sourceLine" id="cb53-2" title="2">u1&lt;-<span class="kw">rnorm</span>(n, <span class="dv">0</span>, <span class="kw">sqrt</span>(<span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb53-3" title="3">y2&lt;-beta0<span class="op">+</span>beta1<span class="op">*</span>x<span class="op">+</span>u50</a>
+<a class="sourceLine" id="cb53-4" title="4">y3&lt;-beta0<span class="op">+</span>beta1<span class="op">*</span>x<span class="op">+</span>u1</a>
+<a class="sourceLine" id="cb53-5" title="5">df&lt;-<span class="kw">data.frame</span>(y,y2,y3,x,u) </a>
+<a class="sourceLine" id="cb53-6" title="6"><span class="kw">head</span>(df)</a></code></pre></div>
 <pre><code>##           y        y2        y3        x          u
 ## 1 10.708070 10.123984 11.822746 10.49637 -0.7882969
 ## 2 12.450647 11.042329 13.280761 10.45746  0.9931879
@@ -325,21 +315,21 @@ background-color: #ffffcf;
 ## 4  9.882678  8.961635  9.944481 10.14413 -1.2614506
 ## 5 11.508339  5.451122  9.761655 10.01319  0.4951523
 ## 6 17.616721 13.849249 10.486425 10.03691  6.5798110</code></pre>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="sampling-distribution.html#cb74-1"></a>b_<span class="dv">0</span>_u50&lt;-<span class="kw">c</span>()</span>
-<span id="cb74-2"><a href="sampling-distribution.html#cb74-2"></a>b_<span class="dv">1</span>_u50&lt;-<span class="kw">c</span>()</span>
-<span id="cb74-3"><a href="sampling-distribution.html#cb74-3"></a>b_<span class="dv">0</span>_u1&lt;-<span class="kw">c</span>()</span>
-<span id="cb74-4"><a href="sampling-distribution.html#cb74-4"></a>b_<span class="dv">1</span>_u1&lt;-<span class="kw">c</span>()</span>
-<span id="cb74-5"><a href="sampling-distribution.html#cb74-5"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>){ </span>
-<span id="cb74-6"><a href="sampling-distribution.html#cb74-6"></a>sff&lt;-<span class="st"> </span>df[<span class="kw">sample</span>(<span class="kw">nrow</span>(df), <span class="dv">1000</span>, <span class="dt">replace=</span><span class="ot">FALSE</span>), ]</span>
-<span id="cb74-7"><a href="sampling-distribution.html#cb74-7"></a>estimates50&lt;-<span class="kw">lm</span>(y2<span class="op">~</span>x, sff)</span>
-<span id="cb74-8"><a href="sampling-distribution.html#cb74-8"></a>b_<span class="dv">0</span>_u50[i]&lt;-<span class="kw">coef</span>(estimates50)[<span class="dv">1</span>]</span>
-<span id="cb74-9"><a href="sampling-distribution.html#cb74-9"></a>b_<span class="dv">1</span>_u50[i]&lt;-<span class="kw">coef</span>(estimates50)[<span class="dv">2</span>]</span>
-<span id="cb74-10"><a href="sampling-distribution.html#cb74-10"></a>estimates1&lt;-<span class="kw">lm</span>(y3<span class="op">~</span>x, sff)</span>
-<span id="cb74-11"><a href="sampling-distribution.html#cb74-11"></a>b_<span class="dv">0</span>_u1[i]&lt;-<span class="kw">coef</span>(estimates1)[<span class="dv">1</span>]</span>
-<span id="cb74-12"><a href="sampling-distribution.html#cb74-12"></a>b_<span class="dv">1</span>_u1[i]&lt;-<span class="kw">coef</span>(estimates1)[<span class="dv">2</span>]</span>
-<span id="cb74-13"><a href="sampling-distribution.html#cb74-13"></a>}</span>
-<span id="cb74-14"><a href="sampling-distribution.html#cb74-14"></a>coeff&lt;-<span class="kw">data.frame</span>(b_<span class="dv">0</span>_u50, b_<span class="dv">1</span>_u50, b_<span class="dv">0</span>_u1, b_<span class="dv">1</span>_u1)</span>
-<span id="cb74-15"><a href="sampling-distribution.html#cb74-15"></a><span class="kw">head</span>(coeff)</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" title="1">b_<span class="dv">0</span>_u50&lt;-<span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb55-2" title="2">b_<span class="dv">1</span>_u50&lt;-<span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb55-3" title="3">b_<span class="dv">0</span>_u1&lt;-<span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb55-4" title="4">b_<span class="dv">1</span>_u1&lt;-<span class="kw">c</span>()</a>
+<a class="sourceLine" id="cb55-5" title="5"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>){ </a>
+<a class="sourceLine" id="cb55-6" title="6">sff&lt;-<span class="st"> </span>df[<span class="kw">sample</span>(<span class="kw">nrow</span>(df), <span class="dv">1000</span>, <span class="dt">replace=</span><span class="ot">FALSE</span>), ]</a>
+<a class="sourceLine" id="cb55-7" title="7">estimates50&lt;-<span class="kw">lm</span>(y2<span class="op">~</span>x, sff)</a>
+<a class="sourceLine" id="cb55-8" title="8">b_<span class="dv">0</span>_u50[i]&lt;-<span class="kw">coef</span>(estimates50)[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb55-9" title="9">b_<span class="dv">1</span>_u50[i]&lt;-<span class="kw">coef</span>(estimates50)[<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb55-10" title="10">estimates1&lt;-<span class="kw">lm</span>(y3<span class="op">~</span>x, sff)</a>
+<a class="sourceLine" id="cb55-11" title="11">b_<span class="dv">0</span>_u1[i]&lt;-<span class="kw">coef</span>(estimates1)[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb55-12" title="12">b_<span class="dv">1</span>_u1[i]&lt;-<span class="kw">coef</span>(estimates1)[<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb55-13" title="13">}</a>
+<a class="sourceLine" id="cb55-14" title="14">coeff&lt;-<span class="kw">data.frame</span>(b_<span class="dv">0</span>_u50, b_<span class="dv">1</span>_u50, b_<span class="dv">0</span>_u1, b_<span class="dv">1</span>_u1)</a>
+<a class="sourceLine" id="cb55-15" title="15"><span class="kw">head</span>(coeff)</a></code></pre></div>
 <pre><code>##      b_0_u50   b_1_u50    b_0_u1    b_1_u1
 ## 1 -0.5737496 1.1367457 0.8919822 1.0120075
 ## 2 -1.6615207 1.2792027 1.2172898 0.9790788
@@ -347,14 +337,14 @@ background-color: #ffffcf;
 ## 4  5.4433421 0.5786502 1.0783725 0.9893487
 ## 5 -1.8864498 1.2727719 1.2892258 0.9722462
 ## 6  0.4815144 1.0847731 0.8847833 1.0125480</code></pre>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="sampling-distribution.html#cb76-1"></a><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">1</span>_u50)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb76-2"><a href="sampling-distribution.html#cb76-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></span>
-<span id="cb76-3"><a href="sampling-distribution.html#cb76-3"></a><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </span></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="sampling-distribution.html#cb77-1"></a><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">1</span>_u1)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb77-2"><a href="sampling-distribution.html#cb77-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></span>
-<span id="cb77-3"><a href="sampling-distribution.html#cb77-3"></a><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </span></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-30-2.png" width="672" /></p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" title="1"><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">1</span>_u50)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb57-2" title="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb57-3" title="3"><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1"><span class="kw">ggplot</span>(coeff, <span class="kw">aes</span>(<span class="dt">x=</span>b_<span class="dv">1</span>_u1)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb58-2" title="2"><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;pink&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">0.05</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb58-3" title="3"><span class="st">   </span><span class="kw">ggtitle</span>(<span class="st">&#39;TKtitle&#39;</span>) </a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-26-2.png" width="672" /></p>
 
 </div>
 </div>

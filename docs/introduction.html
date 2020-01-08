@@ -49,9 +49,9 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -60,16 +60,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -78,9 +76,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,65 +141,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.3" data-path="introduction-1.html"><a href="introduction-1.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>3.2.3</b> Basic rules and best practices</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="prob-stat-review.html"><a href="prob-stat-review.html"><i class="fa fa-check"></i><b>4</b> Prob-Stat Review</a><ul>
-<li class="chapter" data-level="4.0.1" data-path="prob-stat-review.html"><a href="prob-stat-review.html#goals-2"><i class="fa fa-check"></i><b>4.0.1</b> Goals</a></li>
-<li class="chapter" data-level="4.0.2" data-path="prob-stat-review.html"><a href="prob-stat-review.html#flipping-a-coin"><i class="fa fa-check"></i><b>4.0.2</b> Flipping a coin</a></li>
-<li class="chapter" data-level="4.0.3" data-path="prob-stat-review.html"><a href="prob-stat-review.html#probability"><i class="fa fa-check"></i><b>4.0.3</b> Probability</a></li>
-<li class="chapter" data-level="4.0.4" data-path="prob-stat-review.html"><a href="prob-stat-review.html#expected-value-and-variance"><i class="fa fa-check"></i><b>4.0.4</b> Expected value and variance</a></li>
-<li class="chapter" data-level="4.0.5" data-path="prob-stat-review.html"><a href="prob-stat-review.html#law-of-large-numbers"><i class="fa fa-check"></i><b>4.0.5</b> Law of Large Numbers</a></li>
-<li class="chapter" data-level="4.0.6" data-path="prob-stat-review.html"><a href="prob-stat-review.html#central-limit-theorem"><i class="fa fa-check"></i><b>4.0.6</b> Central limit theorem</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><i class="fa fa-check"></i><b>5</b> Generating (population) data, sampling from the population, and deriving sample estimates of population parameters</a><ul>
-<li class="chapter" data-level="5.1" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#goals-3"><i class="fa fa-check"></i><b>5.1</b> Goals</a></li>
-<li class="chapter" data-level="5.2" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#overview"><i class="fa fa-check"></i><b>5.2</b> Overview</a></li>
-<li class="chapter" data-level="5.3" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#generating-data-from-a-known-linear-univariate-dgp"><i class="fa fa-check"></i><b>5.3</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="5.4" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#sampling-from-the-population"><i class="fa fa-check"></i><b>5.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="5.5" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-sample-estimates"><i class="fa fa-check"></i><b>5.5</b> Calculating sample estimates</a></li>
-<li class="chapter" data-level="5.6" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#plot-the-data-with-the-fitted-line"><i class="fa fa-check"></i><b>5.6</b> Plot the data with the fitted line</a></li>
-<li class="chapter" data-level="5.7" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#calculating-tss-ess-and-r2"><i class="fa fa-check"></i><b>5.7</b> Calculating TSS, ESS, and <span class="math inline">\(R^2\)</span></a></li>
-<li class="chapter" data-level="5.8" data-path="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html"><a href="generating-population-data-sampling-from-the-population-and-deriving-sample-estimates-of-population-parameters.html#algebraic-properties-of-the-estimator"><i class="fa fa-check"></i><b>5.8</b> Algebraic properties of the estimator</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="partialling-out.html"><a href="partialling-out.html"><i class="fa fa-check"></i><b>6</b> Partialling out</a><ul>
-<li class="chapter" data-level="6.1" data-path="partialling-out.html"><a href="partialling-out.html#goals-4"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
-<li class="chapter" data-level="6.2" data-path="partialling-out.html"><a href="partialling-out.html#overview-1"><i class="fa fa-check"></i><b>6.2</b> Overview</a></li>
-<li class="chapter" data-level="6.3" data-path="partialling-out.html"><a href="partialling-out.html#generating-data-from-a-known-linear-multivariate-dgp"><i class="fa fa-check"></i><b>6.3</b> Generating data from a known linear multivariate DGP</a></li>
-<li class="chapter" data-level="6.4" data-path="partialling-out.html"><a href="partialling-out.html#sampling-from-the-population-1"><i class="fa fa-check"></i><b>6.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="6.5" data-path="partialling-out.html"><a href="partialling-out.html#calculating-sample-estimates-1"><i class="fa fa-check"></i><b>6.5</b> Calculating sample estimates</a></li>
-<li class="chapter" data-level="6.6" data-path="partialling-out.html"><a href="partialling-out.html#partialling-out-extracting-the-unique-information-in-x_1"><i class="fa fa-check"></i><b>6.6</b> Partialling out: extracting the unique information in <span class="math inline">\(x_1\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="sampling-distribution.html"><a href="sampling-distribution.html"><i class="fa fa-check"></i><b>7</b> Sampling distribution</a><ul>
-<li class="chapter" data-level="7.1" data-path="sampling-distribution.html"><a href="sampling-distribution.html#goals-5"><i class="fa fa-check"></i><b>7.1</b> Goals</a></li>
-<li class="chapter" data-level="7.2" data-path="sampling-distribution.html"><a href="sampling-distribution.html#overview-2"><i class="fa fa-check"></i><b>7.2</b> Overview</a></li>
-<li class="chapter" data-level="7.3" data-path="sampling-distribution.html"><a href="sampling-distribution.html#generating-data-from-a-known-linear-univariate-dgp-1"><i class="fa fa-check"></i><b>7.3</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="7.4" data-path="sampling-distribution.html"><a href="sampling-distribution.html#sampling-from-the-population-2"><i class="fa fa-check"></i><b>7.4</b> Sampling from the population</a></li>
-<li class="chapter" data-level="7.5" data-path="sampling-distribution.html"><a href="sampling-distribution.html#properties-of-the-empirical-simulations"><i class="fa fa-check"></i><b>7.5</b> Properties of the empirical simulations</a></li>
-<li class="chapter" data-level="7.6" data-path="sampling-distribution.html"><a href="sampling-distribution.html#changing-the-error-variance"><i class="fa fa-check"></i><b>7.6</b> Changing the error variance</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis testing</a><ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-previous"><i class="fa fa-check"></i><b>8.1</b> Goals (previous)</a></li>
-<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#goals-current"><i class="fa fa-check"></i><b>8.2</b> Goals (current)</a></li>
-<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#overview-3"><i class="fa fa-check"></i><b>8.3</b> Overview</a></li>
-<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#generating-data-from-a-known-linear-univariate-dgp-2"><i class="fa fa-check"></i><b>8.4</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="8.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sampling-from-the-population-3"><i class="fa fa-check"></i><b>8.5</b> Sampling from the population</a></li>
-<li class="chapter" data-level="8.6" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#properties-of-the-empirical-simulations-1"><i class="fa fa-check"></i><b>8.6</b> Properties of the empirical simulations</a><ul>
-<li class="chapter" data-level="8.6.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail"><i class="fa fa-check"></i><b>8.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
-<li class="chapter" data-level="8.6.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats."><i class="fa fa-check"></i><b>8.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
-<li class="chapter" data-level="8.6.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails."><i class="fa fa-check"></i><b>8.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="consistency.html"><a href="consistency.html"><i class="fa fa-check"></i><b>9</b> Consistency</a><ul>
-<li class="chapter" data-level="9.1" data-path="consistency.html"><a href="consistency.html#goals-previous-1"><i class="fa fa-check"></i><b>9.1</b> Goals (previous)</a></li>
-<li class="chapter" data-level="9.2" data-path="consistency.html"><a href="consistency.html#goals-current-1"><i class="fa fa-check"></i><b>9.2</b> Goals (current)</a></li>
-<li class="chapter" data-level="9.3" data-path="consistency.html"><a href="consistency.html#overview-4"><i class="fa fa-check"></i><b>9.3</b> Overview</a></li>
-<li class="chapter" data-level="9.4" data-path="consistency.html"><a href="consistency.html#generating-data-from-a-known-linear-univariate-dgp-3"><i class="fa fa-check"></i><b>9.4</b> Generating data from a known linear univariate DGP</a></li>
-<li class="chapter" data-level="9.5" data-path="consistency.html"><a href="consistency.html#sampling-from-the-population-4"><i class="fa fa-check"></i><b>9.5</b> Sampling from the population</a></li>
-<li class="chapter" data-level="9.6" data-path="consistency.html"><a href="consistency.html#properties-of-the-empirical-simulations-2"><i class="fa fa-check"></i><b>9.6</b> Properties of the empirical simulations</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="consistency.html"><a href="consistency.html#what-values-of-b1-hat-define-the-cutoff-for-the-5-of-observations-in-either-tail-1"><i class="fa fa-check"></i><b>9.6.1</b> What values of B1 hat define the cutoff for the 5% of observations in either tail?</a></li>
-<li class="chapter" data-level="9.6.2" data-path="consistency.html"><a href="consistency.html#divide-all-values-of-b1-hat-by-the-standard-deviation-of-the-distribution-of-b1-hats.-1"><i class="fa fa-check"></i><b>9.6.2</b> Divide all values of B1 hat by the standard deviation of the distribution of b1 hats.</a></li>
-<li class="chapter" data-level="9.6.3" data-path="consistency.html"><a href="consistency.html#randomly-sample-coefficients-from-the-distribution-until-you-get-one-that-is-in-the-5-tails.-1"><i class="fa fa-check"></i><b>9.6.3</b> Randomly sample coefficients from the distribution until you get one that is in the 5% tails.</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -282,19 +221,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

@@ -1,0 +1,329 @@
+---
+title: "Spring 2020 Econ 320 Assignments"
+author: "Professor O'Connell"
+output: 
+  html_document: 
+    toc: yes
+    highlight: tango
+    toc_float:
+      collapsed: false 
+      smooth_scroll: false
+---
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 16px;
+  }
+h1.title {
+  font-size: 38px;
+  color: DarkRed;
+}
+h1 { /* Header 1 */
+  font-size: 25px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: gray;
+}
+</style>
+
+# Assignment 1
+Due: January 15 at 11:59 pm
+
+## Part I
+
+* Objective: Basics of workspace and good practices: folders, working directories, clearing workspace, saving objects, saving outputs.*
+
+1). Create an object in R and save it as an .Rda file. 
+
+2). Close R. Open the .Rda file with a script. 
+
+3). Construct your own personal header to use for all scripts from thereon.
+
+4). Set the seed to your birthday in your personal header.
+
+5). Create an object in the header called "birthday" which is a character vector formatted as "DDMMYYYY".
+
+## Part II
+
+* Objective: Perform steps in empirical economic analysis.*
+
+* Reference: Wooldridge (7th edition), Chapter 1, Section 2*
+
+1). Write a script that flips a fair coin 10 times and generates a mean when heads = 1 and tails = 0. Then perform that process 1000 times, plot the distribution of those means, and report the mean of the means and the standard deviation of the means. 
+
+2). Write a script that flips a fair coin 100 times and generates a mean, as above. Then perform that process 1000 times, plot the distribution of those means and report the mean of the means and the standard deviation of the means.
+
+# Assignment 2
+Due: January 20 at 11:59 pm
+
+## Part I
+
+* Objective: Introduction to the Simple Regression model and derivation from a research question to a Simple Regression Model.*
+
+* Reference: Wooldridge (7th edition), Chapter 2, Section 1*
+
+Perform a data generating process of $$y = \beta_0 + \beta_1 * x +  u$$ where $\beta_0$ is the sum of the 3rd and 4th digit of your birthday, x is the distributed normal with mean of 10 and variance of the first non-zero digit of your birthday, and u is (independently) distributed normal with mean 0 and variance of the last non-zero digit of your birthday.
+
+Perform this process for a "population" of 1 million observations.
+
+## Part II
+
+* Objective: Warm up and perform the calculation step-by-step based on the formula for sample var/cov; do not use the buit-in fuctions in R var(x) and cov(x,y).*
+
+Suppose that you observe the following sample with the values of random variables X and Y given in the cells. 
+
+Observation | X | Y |
+----------|-----|----------
+1 | 1 | 5
+2 | 2 | 7
+3 | 3 | 8
+4 | 4 | 8
+5 | 5 | 10
+6 | 6 | 12
+7 | 7 | 11
+8 | 8 | 15
+9 | 9 | 19 
+10| 10 | 18
+
+
+Suppose you have a different sample (not necessarily measuring the same things) of random variables J and K:
+
+Observation | J | K 
+----------|-----|----------
+1 | 7 | 18
+2 | 7 | 16
+3 | 7 | 15
+4 | 8 | 16
+5 | 8 | 10
+6 | 7 | 11
+7 | 8 | 11
+8 | 8 | 9
+9 | 7 | 11 
+10| 6 | 19
+11| 9 | 8
+12| 9 | 8
+13| 8 | 6
+14| 9 | 4
+15| 7 | 9
+16| 8 | 10
+17| 9 | 7
+18| 6 | 15
+19| 10 | 10
+20| 10 | 7
+21| 9 | 5
+
+Complete questions below, showing all calculations (where applicable).
+
+Upon visual inspection, which random variable looks like it would have a greater variance: X or J? Why?
+
+Show step-by-step calculations for the following:
+
+a. Find the sample var(X), sample var(Y).
+	
+b. Find sample cov(X,Y).
+	
+c. Find the sample var(J), sample var(K).
+	
+d. Find sample cov(J,K).
+
+Present scatterplots of {X,Y} and {J,K}. Y and K should be on the vertical axes. Do not place any trend lines. Be sure to label axes.
+
+
+# Assignment 3
+Due: January 27 at 11:59 pm
+
+## Part I
+
+* Objective: Demonstrate your understanding of the 'Population Regression Function,' and the Orindary Least Squares Estimates.*
+
+* Reference: Wooldridge (7th edition), Chapter 2, Section 2&3*
+
+Following the DGP from Assignment 2, take a sample of 1000 observations from the population data. Manually calculate $\beta_0$ and $\beta_1$ using the functions sum() and var() in R.
+
+## Part II
+
+* Objective: Understand the useful algebraic properties of OLS estimates and their associated statistics.*
+
+* Reference: Wooldridge (7th edition), Chapter 2, Section 2&3*
+
+Using $\beta_0$ and $\beta_1$ from previous, manually calculate the predicted line and the residuals and plot it in a graph.
+
+
+# Assignment 4
+Due: February 3 at 11:59 pm
+
+## Part I
+
+* Objective: Consider the properties of OLS on any sample of data.*
+
+* Reference: Wooldridge (7th edition), Chapter 2, Section 3*
+
+Using all of the previous up to this point, calculate TSS, ESS and RSS in your sample.
+
+a. Calculate $R^2$, which is ESS/TSS. 
+
+b. Show that for any individual observation, $$Tss_i \neq ESS_i + RSS_i$$ but it works across all observations.
+
+c. Show that sum(U) from previous problem $\approx$ 0. Show that sum(X*u) $\approx$ 0.
+
+
+# Assignment 5
+Due: February 10 at 11:59 pm
+
+
+## Part I
+
+* Objective: Introduction to Multiple Regression Analysis and demonstrate your understanding of the mechanics.*
+
+* Reference: Wooldridge (7th edition), Chapter 3, Section 1*
+
+Using all of the previous up to this point, how close is your coefficient to the population value? Is it the same or different? Why or why not, do you think?
+
+##Part II
+
+*Objective: Motivation for Multiple Regression and build your own model.*
+
+*Reference: Wooldridge (7th edition), Chapter 3, Section 1*
+
+Perform a data generating process of $$y = \beta_0 + \beta_1 * x_1 +  \beta_2 * x_2 + u$$ where $\beta_1$ is the sum of the 3rd and 4th digit of your birthday, X is distributed normal with mean of 10 and with variance of the first non-zero digit of your birthday, and U is (independently) distributed normal with mean 0 and variance of the last non-zero digit of your birthday, and X2 is ~N(last nonzero of birthday, sum first two).
+
+Perform this process for a "population" of 1 million observations.
+
+# Assignment 6
+Due: February 17 at 11:59 pm
+
+## Part I
+
+* Objective: Report the partial effects in a linear regression model.*
+
+* Reference: Wooldridge (7th edition), Chapter 3, Section 2*
+
+Take a sample of 1000 observations and estimte a linear model that accords with the population model. 
+
+Are the estimates close or different? Then, perform the partialling out approach for $\beta_1$ and $\beta_2$. Show that you achieve the same coefficients as in the `lm()` command.
+
+# Assignment 7
+Due: February 24 at 11:59 pm
+
+## Part I
+
+* Objective: Simulate data, draw 1,000 random samples, and generate sample estimates, show sampling distribution of the estimated parameter.*
+
+* Reference: Wooldridge (7th edition), Chapter 3, Section 3*
+
+Consider the following data-generating process (population regression function):
+$$y_i = 2.5 + 1.5 * x_i + u_i$$
+where X ~ N(10,10) and U ~ N(0,5). X and U are independent.
+
+a. Generate a dataset of 100,000 observations from this DGP. Call this the “population data”.
+
+b. Draw a random sample of 1,000 observations from the population data. Estimate the parameters $β_0$ and $β_1$.
+
+
+c. Repeat step b 1,000 times, and save the estimated parameters from each draw.
+
+
+d. Present histograms of the sampling distribution of the estimates of $β_0$ and $β_1$. Call these Figures 1 and 2 (with appropriate titles).
+
+e. What happens to the sampling distribution of the estimate of $β_1$ if U ~ N(0,50) or U ~ N(0,1)? Present two more histograms, Figures 3 and 4.
+
+# Assignment 8
+Due: March 4 at 11:59 pm
+
+## Part I
+
+* Objective: Turn to the statistical properties of OLS for estimating the parameters in an underlying population model.*
+
+* Reference: Wooldridge (7th edition), Chapter 4, Section 1*
+
+Return to the previous setup. Set $β_1$ = 0 and rerun the DGP and the 1,000 samples of 1,000 observations each. Plot the sampling distribution for when U~N(0,5).
+
+# Assignment 9
+Due: March 16 at 11:59 pm
+
+## Part I
+
+* Objective: Testing hypotheses about a single population parameter.*
+
+* Reference: Wooldridge (7th edition), Chapter 4, Section 2*
+
+Return to the previous simulation where $β_1=0$ in the DGP. What value of $\hatβ_1$ defines the cutoff for the 5% of observations with the largest absolute value you get in the sampling distribution? Randomly sample coefficients from the distribution until you get one that is in the 5% tails. How many tries does it take to get a coefficient in the 5% tails?
+
+## Part II
+
+* Objective: Testing hypotheses about a single population parameter.*
+
+* Reference: Wooldridge (7th edition), Chapter 4, Section 2*
+
+Draw one random value of $\hat\beta_1$ from your sampling distribution, and perform a two-sided hypothesis test on it at the 10%, 5%, and 1% level of significance under $H_0: \beta_1=0$. State whether you reject or fail to reject the $H_0$.
+
+# Assignment 10
+Due: March 23 at 11:59 pm
+
+## Part I
+
+* Objective: Testing hypotheses about a single population parameter.*
+
+* Reference: Wooldridge (7th edition), Chapter 4, Section 2*
+
+Draw one random value of $\hatβ_1$ from your sampling distribution, and perform a two-sided hypothesis test on it at the 10% level of significance under $$H_0: β_1=0$$ State whether you reject or fail to reject the $H_0$
+
+## Part II
+
+* Objective: Sampling distribution of the OLS estimators.*
+
+* Reference: Wooldridge (7th edition), Chapter 4, Section 1*
+
+You generated sampling distributions of $\hatβ_1$ when U ~ N(0,5), and were taking 1,000 samples of 1,000 observations each. 
+
+a. Construct a “population” dataset with 1,000,000 observations with this same DGP (all other parameters of the setup stay the same).
+
+b. Take 1,000 samples (and get the empirical variance of $\hatβ_1$ based on sampling 10,, 100, 1,000, and 10,000 observations each time (so, 1,000 samples of 10 observations, 1000 samples of 100 observations, etc.).
+
+c. Plot the 4 histograms (or density plots) that result from these simulations. Either place all 4 histograms on the same plot, or make the x-axis on all 4 the same range.
+
+d. Make another plot, which on the x-axis has the sample size you were using, and on the y-axis you have the empirical variance across the 1,000 draws.
+
+**Advanced-extra credit** on this PS. Iterate through equally-spaced bins of sample size (instead of 10, 100, 1000, etc. start at 500, then 1000, then 1500, up to some high number) so that you can get the shape of the curve in part (c) instead of just 4 (x,y) points to plot. 
+
+
+# Assignment 11
+Due: March 30 at 11:59 pm
+
+## Part I
+
+* Objective: Report regression results; understand the difference between analytical variance and empirical variance.*
+
+* Reference: Wooldridge (7th edition), Chapter 4, Section 6*
+
+Finally, perform a DGP which is the same in all respects as Assignment 9 above where U~N(0,5). Now adjust the distribution of U to be a function of $$X: U’ = U*X$$
+
+Use U’ instead of U in the DGP generation of Y. What is the expected variance of U’, and thus the expected (analytical) variance of $\hatβ_1$? What is the empirical variance of $\hatβ_1$ after 1,000 samples/estimations using this DGP? Present this result in another short table. 
+
+## Part II
+
+* Objective: Multiple Regression Analysis with qualitative information (dummy variables).*
+
+* Reference: Wooldridge (7th edition), Chapter 7, Section 1*
+
+Perform a DGP with dummy variables. Sample once, estimate model, interpret coefficients.
+
+# Assignment 12
+Due: April 6 at 11:59 pm
+
+## Part I
+
+
+* Objective: See the consequences of heteroskedasticity for OLS; perform heteroskedasticity-Robust Inference after OLS estimation.*
+
+* Reference: Wooldridge (7th edition), Chapter 8, Section 1&2*
+
+Return to the simulations you performed in Assignment 10 where U~N(0,5); specifically, the situation in which you set distribution of U to be a function of $$X: U’ = U*X$$ and you used U’ instead of U in the DGP generation of Y. 
+
+a. Show visually that the data appear heteroskedastic when using U’, but not when using U in the DGP. Confirm that this transformation does nothing to the algebraic properties of OLS.
+
+b. Perform a Breusch-Pagan test of heteroskedasticity when using U’ and then when using U in the DGP. What does the test statistic yield in each case, and what do you conclude?
+
+c. Estimate the model using heteroskedasticity-robust standard errors for each DGP. What is the variance of $\hatβ_1$, and how does this compare to the empirical and analytical variance you found in Assignment 10?
