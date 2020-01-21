@@ -135,7 +135,7 @@ You can use a snipping tool to copy and paste the relevant output and figures fr
 
 **Question I** 
 
-**a.** Compute the sample mean for average hourly earnings (```ahe```) in 1992 and 2012. Construct a 95% confidence internal for the population means of ```ahe``` in 1992 and 2008 and the change between 1992 and 2008. 
+**a.** Compute the sample mean for average hourly earnings (```ahe```) in 1992 and 2008. Construct a 95% confidence internal for the population means of ```ahe``` in 1992 and 2008 and the change between 1992 and 2008. 
 
 **b.** In 2008, the values of the Consumer Price Index (CPI) was 215.2. In 1992, the value of the CPI was 140.3. Repeat (a) but use AHE measured in real 2008 dollars ($2008); that is, adjust the 1992 data for the price inflation that occured between 1992 and 2008. 
 
@@ -479,4 +479,37 @@ head(df1)
 
 # Lecture notes, updates, and corrections: 
 
-I will periodically update this page with classroom lecture notes, answer to your questions, additional code, tips, etc. 
+## Week1 D2-handout 
+
+Define a binary random variable $Y$ for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for $\times 10$ and $\times 10000$, calculate the sample mean and sample variance. 
+
+```{r echo = T, eval=T}
+
+#Bernouilli trails 
+coin <- c("H","T")
+#flip a coin 
+sample(coin,1)
+
+#flip a coin 10 times
+sample(coin,10, replace=TRUE)
+
+#create the random variable Y 
+
+out1 <- sample(coin,10, replace=TRUE)
+Y1 <- as.data.frame(out1)
+Y1$val <- 0 
+Y1$val[Y1$out1=="T"] <- 1 
+
+out2 <- sample(coin,10000, replace=TRUE)
+Y2 <- as.data.frame(out2)
+Y2$val <- 0 
+Y2$val[Y2$out2=="T"] <- 1 
+
+mean(Y1$val)
+var(Y1$val)
+
+mean(Y2$val)
+var(Y2$val)
+
+
+```

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 7 Lecture notes, updates, and corrections: | EC282: Homework Assignments</title>
   <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 7 Lecture notes, updates, and corrections: | EC282: Homework Assignments" />
   <meta property="og:type" content="book" />
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="homework-assignment-v.html">
+<link rel="prev" href="homework-assignment-v.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -39,6 +39,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -65,7 +68,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(title);
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -138,7 +141,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="homework-assignment-iii.html"><a href="homework-assignment-iii.html"><i class="fa fa-check"></i><b>4</b> Homework Assignment III</a></li>
 <li class="chapter" data-level="5" data-path="homework-assignment-iv.html"><a href="homework-assignment-iv.html"><i class="fa fa-check"></i><b>5</b> Homework Assignment IV</a></li>
 <li class="chapter" data-level="6" data-path="homework-assignment-v.html"><a href="homework-assignment-v.html"><i class="fa fa-check"></i><b>6</b> Homework Assignment V</a></li>
-<li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a></li>
+<li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a><ul>
+<li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1-d2-handout"><i class="fa fa-check"></i><b>7.1</b> Week1 D2-handout</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -161,8 +166,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="lecture-notes-updates-and-corrections" class="section level1">
 <h1><span class="header-section-number"> 7</span> Lecture notes, updates, and corrections:</h1>
-<p>I will periodically update this page with classroom lecture notes, answer to your questions, additional code, tips, etc.</p>
+<div id="week1-d2-handout" class="section level2">
+<h2><span class="header-section-number">7.1</span> Week1 D2-handout</h2>
+<p>Define a binary random variable <span class="math inline">\(Y\)</span> for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for <span class="math inline">\(\times 10\)</span> and <span class="math inline">\(\times 10000\)</span>, calculate the sample mean and sample variance.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="co">#Bernouilli trails </span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">coin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;H&quot;</span>,<span class="st">&quot;T&quot;</span>)</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#flip a coin </span></a>
+<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="kw">sample</span>(coin,<span class="dv">1</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;H&quot;</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co">#flip a coin 10 times</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">sample</span>(coin,<span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>##  [1] &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot;</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co">#create the random variable Y </span></a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb14-3" data-line-number="3">out1 &lt;-<span class="st"> </span><span class="kw">sample</span>(coin,<span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb14-4" data-line-number="4">Y1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(out1)</a>
+<a class="sourceLine" id="cb14-5" data-line-number="5">Y1<span class="op">$</span>val &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb14-6" data-line-number="6">Y1<span class="op">$</span>val[Y1<span class="op">$</span>out1<span class="op">==</span><span class="st">&quot;T&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb14-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb14-8" data-line-number="8">out2 &lt;-<span class="st"> </span><span class="kw">sample</span>(coin,<span class="dv">10000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb14-9" data-line-number="9">Y2 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(out2)</a>
+<a class="sourceLine" id="cb14-10" data-line-number="10">Y2<span class="op">$</span>val &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb14-11" data-line-number="11">Y2<span class="op">$</span>val[Y2<span class="op">$</span>out2<span class="op">==</span><span class="st">&quot;T&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb14-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="kw">mean</span>(Y1<span class="op">$</span>val)</a></code></pre></div>
+<pre><code>## [1] 0.3</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">var</span>(Y1<span class="op">$</span>val)</a></code></pre></div>
+<pre><code>## [1] 0.2333333</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">mean</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
+<pre><code>## [1] 0.5066</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">var</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
+<pre><code>## [1] 0.2499814</code></pre>
 
+</div>
 </div>
             </section>
 
@@ -175,11 +211,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -187,12 +225,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -204,6 +241,10 @@ gitbook.start({
 "text": null
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -222,8 +263,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
