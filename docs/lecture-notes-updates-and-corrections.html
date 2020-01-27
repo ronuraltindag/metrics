@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 7 Lecture notes, updates, and corrections: | EC282: Homework Assignments</title>
   <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 7 Lecture notes, updates, and corrections: | EC282: Homework Assignments" />
   <meta property="og:type" content="book" />
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="homework-assignment-v.html"/>
+<link rel="prev" href="homework-assignment-v.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -39,9 +39,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -68,7 +65,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -142,7 +139,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="homework-assignment-iv.html"><a href="homework-assignment-iv.html"><i class="fa fa-check"></i><b>5</b> Homework Assignment IV</a></li>
 <li class="chapter" data-level="6" data-path="homework-assignment-v.html"><a href="homework-assignment-v.html"><i class="fa fa-check"></i><b>6</b> Homework Assignment V</a></li>
 <li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a><ul>
-<li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1-d2-handout"><i class="fa fa-check"></i><b>7.1</b> Week1 D2-handout</a></li>
+<li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1d2"><i class="fa fa-check"></i><b>7.1</b> Week1D2</a></li>
+<li class="chapter" data-level="7.2" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d1"><i class="fa fa-check"></i><b>7.2</b> Week2D1</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -166,37 +164,186 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="lecture-notes-updates-and-corrections" class="section level1">
 <h1><span class="header-section-number"> 7</span> Lecture notes, updates, and corrections:</h1>
-<div id="week1-d2-handout" class="section level2">
-<h2><span class="header-section-number">7.1</span> Week1 D2-handout</h2>
+<div id="week1d2" class="section level2">
+<h2><span class="header-section-number">7.1</span> Week1D2</h2>
 <p>Define a binary random variable <span class="math inline">\(Y\)</span> for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for <span class="math inline">\(\times 10\)</span> and <span class="math inline">\(\times 10000\)</span>, calculate the sample mean and sample variance.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="co">#Bernouilli trails </span></a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">coin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;H&quot;</span>,<span class="st">&quot;T&quot;</span>)</a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#flip a coin </span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="kw">sample</span>(coin,<span class="dv">1</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co">#Bernouilli trails </span></a>
+<a class="sourceLine" id="cb10-2" title="2">coin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;H&quot;</span>,<span class="st">&quot;T&quot;</span>)</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="co">#flip a coin </span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="kw">sample</span>(coin,<span class="dv">1</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;H&quot;</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co">#flip a coin 10 times</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">sample</span>(coin,<span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="co">#flip a coin 10 times</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="kw">sample</span>(coin,<span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>##  [1] &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot;</code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="co">#create the random variable Y </span></a>
-<a class="sourceLine" id="cb14-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">out1 &lt;-<span class="st"> </span><span class="kw">sample</span>(coin,<span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb14-4" data-line-number="4">Y1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(out1)</a>
-<a class="sourceLine" id="cb14-5" data-line-number="5">Y1<span class="op">$</span>val &lt;-<span class="st"> </span><span class="dv">0</span> </a>
-<a class="sourceLine" id="cb14-6" data-line-number="6">Y1<span class="op">$</span>val[Y1<span class="op">$</span>out1<span class="op">==</span><span class="st">&quot;T&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
-<a class="sourceLine" id="cb14-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb14-8" data-line-number="8">out2 &lt;-<span class="st"> </span><span class="kw">sample</span>(coin,<span class="dv">10000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb14-9" data-line-number="9">Y2 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(out2)</a>
-<a class="sourceLine" id="cb14-10" data-line-number="10">Y2<span class="op">$</span>val &lt;-<span class="st"> </span><span class="dv">0</span> </a>
-<a class="sourceLine" id="cb14-11" data-line-number="11">Y2<span class="op">$</span>val[Y2<span class="op">$</span>out2<span class="op">==</span><span class="st">&quot;T&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
-<a class="sourceLine" id="cb14-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb14-13" data-line-number="13"><span class="kw">mean</span>(Y1<span class="op">$</span>val)</a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co">#create the random variable Y </span></a>
+<a class="sourceLine" id="cb14-2" title="2"></a>
+<a class="sourceLine" id="cb14-3" title="3">out1 &lt;-<span class="st"> </span><span class="kw">sample</span>(coin,<span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb14-4" title="4">Y1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(out1)</a>
+<a class="sourceLine" id="cb14-5" title="5">Y1<span class="op">$</span>val &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb14-6" title="6">Y1<span class="op">$</span>val[Y1<span class="op">$</span>out1<span class="op">==</span><span class="st">&quot;T&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb14-7" title="7"></a>
+<a class="sourceLine" id="cb14-8" title="8">out2 &lt;-<span class="st"> </span><span class="kw">sample</span>(coin,<span class="dv">10000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb14-9" title="9">Y2 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(out2)</a>
+<a class="sourceLine" id="cb14-10" title="10">Y2<span class="op">$</span>val &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb14-11" title="11">Y2<span class="op">$</span>val[Y2<span class="op">$</span>out2<span class="op">==</span><span class="st">&quot;T&quot;</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb14-12" title="12"></a>
+<a class="sourceLine" id="cb14-13" title="13"><span class="kw">mean</span>(Y1<span class="op">$</span>val)</a></code></pre></div>
 <pre><code>## [1] 0.3</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">var</span>(Y1<span class="op">$</span>val)</a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">var</span>(Y1<span class="op">$</span>val)</a></code></pre></div>
 <pre><code>## [1] 0.2333333</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">mean</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">mean</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
 <pre><code>## [1] 0.5066</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">var</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">var</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
 <pre><code>## [1] 0.2499814</code></pre>
+</div>
+<div id="week2d1" class="section level2">
+<h2><span class="header-section-number">7.2</span> Week2D1</h2>
+<p>If <span class="math inline">\(Y \sim N(1,4)\)</span>, standardize Y, interpret and calculate <span class="math inline">\(Pr \leq 2\)</span> Find the upper and lower tail range that yield 95% probability within the interval of these two values. Calculate <span class="math inline">\(Pr(1\leq Y \leq 2)\)</span>.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">pnorm</span>(<span class="dv">2</span>,<span class="dt">mean=</span><span class="dv">1</span>,<span class="dt">sd=</span><span class="dv">2</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] 0.6914625</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">pnorm</span>(<span class="dv">2</span>,<span class="dt">mean=</span><span class="dv">1</span>,<span class="dt">sd=</span><span class="dv">2</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">1</span>,<span class="dt">mean=</span><span class="dv">1</span>,<span class="dt">sd=</span><span class="dv">2</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] 0.1914625</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="co">#the tails </span></a>
+<a class="sourceLine" id="cb26-2" title="2"><span class="kw">qnorm</span>(<span class="fl">0.025</span>, <span class="dt">mean=</span><span class="dv">1</span>, <span class="dt">sd=</span><span class="dv">2</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] -2.919928</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="kw">qnorm</span>(<span class="fl">0.975</span>, <span class="dt">mean=</span><span class="dv">1</span>, <span class="dt">sd=</span><span class="dv">2</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] 4.919928</code></pre>
+<p>Generate normally distributed random variables and variable with chi-squared</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="co">#x1 is a normally distributed RV</span></a>
+<a class="sourceLine" id="cb30-2" title="2">x1 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100000</span>,<span class="dv">0</span>,<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb30-3" title="3"><span class="co">#x2 is a normally distributed RV </span></a>
+<a class="sourceLine" id="cb30-4" title="4">x2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100000</span>,<span class="dv">0</span>,<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb30-5" title="5"><span class="co">#z1 is the square of x1 </span></a>
+<a class="sourceLine" id="cb30-6" title="6">z1 &lt;-<span class="st"> </span>x1<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb30-7" title="7"><span class="co">#z2 is the sum of squared xs</span></a>
+<a class="sourceLine" id="cb30-8" title="8">z2 &lt;-<span class="st"> </span>x1<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>x2<span class="op">^</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb30-9" title="9"></a>
+<a class="sourceLine" id="cb30-10" title="10"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb30-11" title="11"><span class="kw">hist</span>(x1, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb30-12" title="12"><span class="kw">hist</span>(x2, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb30-13" title="13"><span class="kw">hist</span>(z1, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb30-14" title="14"><span class="kw">hist</span>(z2, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="co"># plot the density for M=1</span></a>
+<a class="sourceLine" id="cb31-2" title="2"><span class="kw">curve</span>(<span class="kw">dchisq</span>(x, <span class="dt">df =</span> <span class="dv">1</span>), </a>
+<a class="sourceLine" id="cb31-3" title="3">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">15</span>), </a>
+<a class="sourceLine" id="cb31-4" title="4">      <span class="dt">xlab =</span> <span class="st">&quot;x&quot;</span>, </a>
+<a class="sourceLine" id="cb31-5" title="5">      <span class="dt">ylab =</span> <span class="st">&quot;Density&quot;</span>, </a>
+<a class="sourceLine" id="cb31-6" title="6">      <span class="dt">main =</span> <span class="st">&quot;Chi-Square Distributed Random Variables&quot;</span>)</a>
+<a class="sourceLine" id="cb31-7" title="7"></a>
+<a class="sourceLine" id="cb31-8" title="8"><span class="co"># add densities for M=2,...,7 to the plot using a &#39;for()&#39; loop </span></a>
+<a class="sourceLine" id="cb31-9" title="9"><span class="cf">for</span> (M <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="dv">7</span>) {</a>
+<a class="sourceLine" id="cb31-10" title="10">  <span class="kw">curve</span>(<span class="kw">dchisq</span>(x, <span class="dt">df =</span> M),</a>
+<a class="sourceLine" id="cb31-11" title="11">        <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">15</span>), </a>
+<a class="sourceLine" id="cb31-12" title="12">        <span class="dt">add =</span> T, </a>
+<a class="sourceLine" id="cb31-13" title="13">        <span class="dt">col =</span> M)</a>
+<a class="sourceLine" id="cb31-14" title="14">}</a>
+<a class="sourceLine" id="cb31-15" title="15"></a>
+<a class="sourceLine" id="cb31-16" title="16"><span class="co"># add a legend</span></a>
+<a class="sourceLine" id="cb31-17" title="17"><span class="kw">legend</span>(<span class="st">&quot;topright&quot;</span>, </a>
+<a class="sourceLine" id="cb31-18" title="18">       <span class="kw">as.character</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>), </a>
+<a class="sourceLine" id="cb31-19" title="19">       <span class="dt">col =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">7</span> , </a>
+<a class="sourceLine" id="cb31-20" title="20">       <span class="dt">lty =</span> <span class="dv">1</span>, </a>
+<a class="sourceLine" id="cb31-21" title="21">       <span class="dt">title =</span> <span class="st">&quot;D.F.&quot;</span>)</a>
+<a class="sourceLine" id="cb31-22" title="22"></a>
+<a class="sourceLine" id="cb31-23" title="23"></a>
+<a class="sourceLine" id="cb31-24" title="24"><span class="co"># plot the standard normal density</span></a>
+<a class="sourceLine" id="cb31-25" title="25"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x), </a>
+<a class="sourceLine" id="cb31-26" title="26">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb31-27" title="27">      <span class="dt">xlab =</span> <span class="st">&quot;x&quot;</span>, </a>
+<a class="sourceLine" id="cb31-28" title="28">      <span class="dt">lty =</span> <span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb31-29" title="29">      <span class="dt">ylab =</span> <span class="st">&quot;Density&quot;</span>, </a>
+<a class="sourceLine" id="cb31-30" title="30">      <span class="dt">main =</span> <span class="st">&quot;Densities of t Distributions&quot;</span>)</a>
+<a class="sourceLine" id="cb31-31" title="31"></a>
+<a class="sourceLine" id="cb31-32" title="32"><span class="co"># plot the t density for M=2</span></a>
+<a class="sourceLine" id="cb31-33" title="33"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">2</span>), </a>
+<a class="sourceLine" id="cb31-34" title="34">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb31-35" title="35">      <span class="dt">col =</span> <span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb31-36" title="36">      <span class="dt">add =</span> T)</a>
+<a class="sourceLine" id="cb31-37" title="37"></a>
+<a class="sourceLine" id="cb31-38" title="38"><span class="co"># plot the t density for M=4</span></a>
+<a class="sourceLine" id="cb31-39" title="39"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb31-40" title="40">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb31-41" title="41">      <span class="dt">col =</span> <span class="dv">3</span>, </a>
+<a class="sourceLine" id="cb31-42" title="42">      <span class="dt">add =</span> T)</a>
+<a class="sourceLine" id="cb31-43" title="43"></a>
+<a class="sourceLine" id="cb31-44" title="44"><span class="co"># plot the t density for M=25</span></a>
+<a class="sourceLine" id="cb31-45" title="45"><span class="kw">curve</span>(<span class="kw">dt</span>(x, <span class="dt">df =</span> <span class="dv">25</span>), </a>
+<a class="sourceLine" id="cb31-46" title="46">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>), </a>
+<a class="sourceLine" id="cb31-47" title="47">      <span class="dt">col =</span> <span class="dv">4</span>, </a>
+<a class="sourceLine" id="cb31-48" title="48">      <span class="dt">add =</span> T)</a>
+<a class="sourceLine" id="cb31-49" title="49"></a>
+<a class="sourceLine" id="cb31-50" title="50"><span class="co"># add a legend</span></a>
+<a class="sourceLine" id="cb31-51" title="51"><span class="kw">legend</span>(<span class="st">&quot;topright&quot;</span>, </a>
+<a class="sourceLine" id="cb31-52" title="52">       <span class="kw">c</span>(<span class="st">&quot;N(0, 1)&quot;</span>, <span class="st">&quot;M=2&quot;</span>, <span class="st">&quot;M=4&quot;</span>, <span class="st">&quot;M=25&quot;</span>), </a>
+<a class="sourceLine" id="cb31-53" title="53">       <span class="dt">col =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, </a>
+<a class="sourceLine" id="cb31-54" title="54">       <span class="dt">lty =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb31-55" title="55"></a>
+<a class="sourceLine" id="cb31-56" title="56"></a>
+<a class="sourceLine" id="cb31-57" title="57"><span class="co"># define coordinate vectors for vertices of the polygon</span></a>
+<a class="sourceLine" id="cb31-58" title="58">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="kw">seq</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="fl">0.01</span>), <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb31-59" title="59">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">df</span>(<span class="kw">seq</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="fl">0.01</span>), <span class="dv">3</span>, <span class="dv">14</span>), <span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb31-60" title="60"></a>
+<a class="sourceLine" id="cb31-61" title="61"><span class="co"># draw density of F_{3, 14}</span></a>
+<a class="sourceLine" id="cb31-62" title="62"><span class="kw">curve</span>(<span class="kw">df</span>(x ,<span class="dv">3</span> ,<span class="dv">14</span>), </a>
+<a class="sourceLine" id="cb31-63" title="63">      <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.8</span>), </a>
+<a class="sourceLine" id="cb31-64" title="64">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">10</span>), </a>
+<a class="sourceLine" id="cb31-65" title="65">      <span class="dt">ylab =</span> <span class="st">&quot;Density&quot;</span>,</a>
+<a class="sourceLine" id="cb31-66" title="66">      <span class="dt">main =</span> <span class="st">&quot;Density Function&quot;</span>)</a>
+<a class="sourceLine" id="cb31-67" title="67"></a>
+<a class="sourceLine" id="cb31-68" title="68"><span class="co"># draw the polygon</span></a>
+<a class="sourceLine" id="cb31-69" title="69"><span class="kw">polygon</span>(x, y, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-28-2.png" width="672" /></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># Vector of outcomes</span></a>
+<a class="sourceLine" id="cb32-2" title="2">S &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">12</span></a>
+<a class="sourceLine" id="cb32-3" title="3"></a>
+<a class="sourceLine" id="cb32-4" title="4"><span class="co"># Vector of probabilities</span></a>
+<a class="sourceLine" id="cb32-5" title="5">PS &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">5</span><span class="op">:</span><span class="dv">1</span>) <span class="op">/</span><span class="st"> </span><span class="dv">36</span></a>
+<a class="sourceLine" id="cb32-6" title="6"></a>
+<a class="sourceLine" id="cb32-7" title="7"><span class="co"># divide the plotting area into one row with two columns</span></a>
+<a class="sourceLine" id="cb32-8" title="8"><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb32-9" title="9"></a>
+<a class="sourceLine" id="cb32-10" title="10"><span class="co"># plot the distribution of S</span></a>
+<a class="sourceLine" id="cb32-11" title="11"><span class="kw">barplot</span>(PS, </a>
+<a class="sourceLine" id="cb32-12" title="12">        <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>), </a>
+<a class="sourceLine" id="cb32-13" title="13">        <span class="dt">xlab =</span> <span class="st">&quot;S&quot;</span>, </a>
+<a class="sourceLine" id="cb32-14" title="14">        <span class="dt">ylab =</span> <span class="st">&quot;Probability&quot;</span>, </a>
+<a class="sourceLine" id="cb32-15" title="15">        <span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, </a>
+<a class="sourceLine" id="cb32-16" title="16">        <span class="dt">space =</span> <span class="dv">0</span>, </a>
+<a class="sourceLine" id="cb32-17" title="17">        <span class="dt">main =</span> <span class="st">&quot;Sum of Two Dice Rolls&quot;</span>)</a>
+<a class="sourceLine" id="cb32-18" title="18"></a>
+<a class="sourceLine" id="cb32-19" title="19"><span class="co"># plot the distribution of D </span></a>
+<a class="sourceLine" id="cb32-20" title="20">probability &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">6</span>, <span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb32-21" title="21"><span class="kw">names</span>(probability) &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">6</span></a>
+<a class="sourceLine" id="cb32-22" title="22"></a>
+<a class="sourceLine" id="cb32-23" title="23"><span class="kw">barplot</span>(probability, </a>
+<a class="sourceLine" id="cb32-24" title="24">        <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>), </a>
+<a class="sourceLine" id="cb32-25" title="25">        <span class="dt">xlab =</span> <span class="st">&quot;D&quot;</span>, </a>
+<a class="sourceLine" id="cb32-26" title="26">        <span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, </a>
+<a class="sourceLine" id="cb32-27" title="27">        <span class="dt">space =</span> <span class="dv">0</span>, </a>
+<a class="sourceLine" id="cb32-28" title="28">        <span class="dt">main =</span> <span class="st">&quot;Outcome of a Single Dice Roll&quot;</span>)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="co"># set sample size and number of samples</span></a>
+<a class="sourceLine" id="cb33-2" title="2">n &lt;-<span class="st"> </span><span class="dv">10000</span></a>
+<a class="sourceLine" id="cb33-3" title="3">reps &lt;-<span class="st"> </span><span class="dv">20000</span></a>
+<a class="sourceLine" id="cb33-4" title="4"></a>
+<a class="sourceLine" id="cb33-5" title="5"><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">10</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>##  [1] 6 1 5 1 5 2 4 6 3 3</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1"><span class="co"># perform random sampling</span></a>
+<a class="sourceLine" id="cb35-2" title="2">samples &lt;-<span class="st"> </span><span class="kw">replicate</span>(reps,<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>,n,<span class="dt">replace=</span><span class="ot">TRUE</span>)) <span class="co"># 10 x 10000 sample matrix</span></a>
+<a class="sourceLine" id="cb35-3" title="3"></a>
+<a class="sourceLine" id="cb35-4" title="4"><span class="co"># compute sample means</span></a>
+<a class="sourceLine" id="cb35-5" title="5">sample.avgs &lt;-<span class="st"> </span><span class="kw">colMeans</span>(samples)</a>
+<a class="sourceLine" id="cb35-6" title="6"><span class="kw">hist</span>(sample.avgs, <span class="dt">freq=</span><span class="ot">FALSE</span>)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">hist</span>((sample.avgs<span class="fl">-3.5</span>)<span class="op">/</span><span class="kw">sqrt</span>(<span class="fl">2.91</span><span class="op">/</span>n), <span class="dt">freq=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb36-2" title="2"></a>
+<a class="sourceLine" id="cb36-3" title="3"></a>
+<a class="sourceLine" id="cb36-4" title="4"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x, <span class="dt">sd =</span> <span class="dv">1</span>), </a>
+<a class="sourceLine" id="cb36-5" title="5">      <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, </a>
+<a class="sourceLine" id="cb36-6" title="6">      <span class="dt">lwd =</span> <span class="st">&quot;2&quot;</span>, </a>
+<a class="sourceLine" id="cb36-7" title="7">      <span class="dt">add =</span> T)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-30-2.png" width="672" /></p>
 
 </div>
 </div>
@@ -211,13 +358,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -225,11 +370,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -241,10 +387,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },
@@ -263,9 +405,8 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

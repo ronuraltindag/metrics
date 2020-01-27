@@ -1,14 +1,17 @@
 --- 
-title: "EC282: Homework Assignments"
+title: 'EC282: Homework Assignments'
 author: "Onur Altındağ"
-date: "Last update: `r Sys.Date()`"
-geometry: margin=2cm
-site: bookdown::bookdown_site
+date: 'Last update: `r Sys.Date()`'
+bibliography:
+- book.bib
+- packages.bib
+description: This book teaches econometrics like a 21st century humanoid would want
+  to learn it.
 documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
+geometry: margin=2cm
 link-citations: yes
-description: "This book teaches econometrics like a 21st century humanoid would want to learn it."
+site: bookdown::bookdown_site
+biblio-style: apalike
 ---
 
 
@@ -479,7 +482,7 @@ head(df1)
 
 # Lecture notes, updates, and corrections: 
 
-## Week1 D2-handout 
+## Week1D2
 
 Define a binary random variable $Y$ for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for $\times 10$ and $\times 10000$, calculate the sample mean and sample variance. 
 
@@ -511,5 +514,178 @@ var(Y1$val)
 mean(Y2$val)
 var(Y2$val)
 
+
+```
+
+## Week2D1 
+
+If $Y \sim N(1,4)$, standardize Y, interpret and calculate $Pr \leq 2$ Find the upper and lower tail range that yield 95% probability within the interval of these two values. Calculate $Pr(1\leq Y \leq 2)$.
+
+
+```{r echo = T, eval=T}
+
+
+pnorm(2,mean=1,sd=2, lower.tail = TRUE)
+pnorm(2,mean=1,sd=2, lower.tail = TRUE) - pnorm(1,mean=1,sd=2, lower.tail = TRUE)
+
+#the tails 
+qnorm(0.025, mean=1, sd=2, lower.tail = TRUE)
+qnorm(0.975, mean=1, sd=2, lower.tail = TRUE)
+
+
+
+
+
+```
+
+
+Generate normally distributed random variables and variable with chi-squared 
+
+```{r echo = T, eval=T}
+#x1 is a normally distributed RV
+x1 <- rnorm(100000,0,1)
+#x2 is a normally distributed RV 
+x2 <- rnorm(100000,0,1)
+#z1 is the square of x1 
+z1 <- x1^2
+#z2 is the sum of squared xs
+z2 <- x1^2 + x2^2
+
+par(mfrow=c(2,2))
+hist(x1, prob=TRUE)
+hist(x2, prob=TRUE)
+hist(z1, prob=TRUE)
+hist(z2, prob=TRUE)
+
+# plot the density for M=1
+curve(dchisq(x, df = 1), 
+      xlim = c(0, 15), 
+      xlab = "x", 
+      ylab = "Density", 
+      main = "Chi-Square Distributed Random Variables")
+
+# add densities for M=2,...,7 to the plot using a 'for()' loop 
+for (M in 2:7) {
+  curve(dchisq(x, df = M),
+        xlim = c(0, 15), 
+        add = T, 
+        col = M)
+}
+
+# add a legend
+legend("topright", 
+       as.character(1:7), 
+       col = 1:7 , 
+       lty = 1, 
+       title = "D.F.")
+
+
+# plot the standard normal density
+curve(dnorm(x), 
+      xlim = c(-4, 4), 
+      xlab = "x", 
+      lty = 2, 
+      ylab = "Density", 
+      main = "Densities of t Distributions")
+
+# plot the t density for M=2
+curve(dt(x, df = 2), 
+      xlim = c(-4, 4), 
+      col = 2, 
+      add = T)
+
+# plot the t density for M=4
+curve(dt(x, df = 4), 
+      xlim = c(-4, 4), 
+      col = 3, 
+      add = T)
+
+# plot the t density for M=25
+curve(dt(x, df = 25), 
+      xlim = c(-4, 4), 
+      col = 4, 
+      add = T)
+
+# add a legend
+legend("topright", 
+       c("N(0, 1)", "M=2", "M=4", "M=25"), 
+       col = 1:4, 
+       lty = c(2, 1, 1, 1))
+
+
+# define coordinate vectors for vertices of the polygon
+x <- c(2, seq(2, 10, 0.01), 10)
+y <- c(0, df(seq(2, 10, 0.01), 3, 14), 0)
+
+# draw density of F_{3, 14}
+curve(df(x ,3 ,14), 
+      ylim = c(0, 0.8), 
+      xlim = c(0, 10), 
+      ylab = "Density",
+      main = "Density Function")
+
+# draw the polygon
+polygon(x, y, col = "orange")
+
+```
+
+
+
+
+
+```{r echo = T, eval=T}
+# Vector of outcomes
+S <- 2:12
+
+# Vector of probabilities
+PS <- c(1:6, 5:1) / 36
+
+# divide the plotting area into one row with two columns
+par(mfrow = c(1, 2))
+
+# plot the distribution of S
+barplot(PS, 
+        ylim = c(0, 0.2), 
+        xlab = "S", 
+        ylab = "Probability", 
+        col = "white", 
+        space = 0, 
+        main = "Sum of Two Dice Rolls")
+
+# plot the distribution of D 
+probability <- rep(1/6, 6)
+names(probability) <- 1:6
+
+barplot(probability, 
+        ylim = c(0, 0.2), 
+        xlab = "D", 
+        col = "white", 
+        space = 0, 
+        main = "Outcome of a Single Dice Roll")
+
+```
+
+
+```{r echo = T, eval=T}
+# set sample size and number of samples
+n <- 10000
+reps <- 20000
+
+sample(1:6, 10, replace=TRUE)
+
+# perform random sampling
+samples <- replicate(reps,sample(1:6,n,replace=TRUE)) # 10 x 10000 sample matrix
+
+# compute sample means
+sample.avgs <- colMeans(samples)
+hist(sample.avgs, freq=FALSE)
+
+hist((sample.avgs-3.5)/sqrt(2.91/n), freq=FALSE)
+
+
+curve(dnorm(x, sd = 1), 
+      col = "red", 
+      lwd = "2", 
+      add = T)
 
 ```
