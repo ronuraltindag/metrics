@@ -61,7 +61,7 @@ head(df)
 
 * Next, we will take a sample from the population data of 1,000 observation. 
 ```{r}
-sample<- df[sample(nrow(df), 1000), ]
+sample<- df[sample(nrow(df), 1000, replace = FALSE), ]
 nrow(sample)
 ```
 
@@ -70,7 +70,9 @@ nrow(sample)
 * And let's manually calculate b0 and b1 using the functions sum() and var() in R.
 ```{r}
 ybar<-mean(sample$y)
+ybar
 xbar<-mean(sample$x)
+xbar
 
 beta1_hat<-cov(sample$y,sample$x)/var(sample$x)
 beta0_hat<-ybar-beta1_hat*xbar

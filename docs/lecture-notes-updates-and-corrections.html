@@ -141,6 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a><ul>
 <li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1d2"><i class="fa fa-check"></i><b>7.1</b> Week1D2</a></li>
 <li class="chapter" data-level="7.2" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d1"><i class="fa fa-check"></i><b>7.2</b> Week2D1</a></li>
+<li class="chapter" data-level="7.3" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d2"><i class="fa fa-check"></i><b>7.3</b> Week2D2</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -223,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb30-12" title="12"><span class="kw">hist</span>(x2, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb30-13" title="13"><span class="kw">hist</span>(z1, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb30-14" title="14"><span class="kw">hist</span>(z2, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="co"># plot the density for M=1</span></a>
 <a class="sourceLine" id="cb31-2" title="2"><span class="kw">curve</span>(<span class="kw">dchisq</span>(x, <span class="dt">df =</span> <span class="dv">1</span>), </a>
 <a class="sourceLine" id="cb31-3" title="3">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">15</span>), </a>
@@ -293,7 +294,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb31-67" title="67"></a>
 <a class="sourceLine" id="cb31-68" title="68"><span class="co"># draw the polygon</span></a>
 <a class="sourceLine" id="cb31-69" title="69"><span class="kw">polygon</span>(x, y, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-28-2.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-68-2.png" width="672" /></p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># Vector of outcomes</span></a>
 <a class="sourceLine" id="cb32-2" title="2">S &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">12</span></a>
 <a class="sourceLine" id="cb32-3" title="3"></a>
@@ -322,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb32-26" title="26">        <span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, </a>
 <a class="sourceLine" id="cb32-27" title="27">        <span class="dt">space =</span> <span class="dv">0</span>, </a>
 <a class="sourceLine" id="cb32-28" title="28">        <span class="dt">main =</span> <span class="st">&quot;Outcome of a Single Dice Roll&quot;</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="co"># set sample size and number of samples</span></a>
 <a class="sourceLine" id="cb33-2" title="2">n &lt;-<span class="st"> </span><span class="dv">10000</span></a>
 <a class="sourceLine" id="cb33-3" title="3">reps &lt;-<span class="st"> </span><span class="dv">20000</span></a>
@@ -335,7 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb35-4" title="4"><span class="co"># compute sample means</span></a>
 <a class="sourceLine" id="cb35-5" title="5">sample.avgs &lt;-<span class="st"> </span><span class="kw">colMeans</span>(samples)</a>
 <a class="sourceLine" id="cb35-6" title="6"><span class="kw">hist</span>(sample.avgs, <span class="dt">freq=</span><span class="ot">FALSE</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">hist</span>((sample.avgs<span class="fl">-3.5</span>)<span class="op">/</span><span class="kw">sqrt</span>(<span class="fl">2.91</span><span class="op">/</span>n), <span class="dt">freq=</span><span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb36-2" title="2"></a>
 <a class="sourceLine" id="cb36-3" title="3"></a>
@@ -343,7 +344,68 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb36-5" title="5">      <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, </a>
 <a class="sourceLine" id="cb36-6" title="6">      <span class="dt">lwd =</span> <span class="st">&quot;2&quot;</span>, </a>
 <a class="sourceLine" id="cb36-7" title="7">      <span class="dt">add =</span> T)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-30-2.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-70-2.png" width="672" /></p>
+</div>
+<div id="week2d2" class="section level2">
+<h2><span class="header-section-number">7.3</span> Week2D2</h2>
+<ul>
+<li>Handout answer Q2 (h-l)</li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="co"># Generate the data for coin experiment </span></a>
+<a class="sourceLine" id="cb37-2" title="2">n &lt;-<span class="st"> </span><span class="dv">100</span></a>
+<a class="sourceLine" id="cb37-3" title="3">n1 &lt;-<span class="st"> </span><span class="dv">61</span> </a>
+<a class="sourceLine" id="cb37-4" title="4">n2 &lt;-<span class="st"> </span><span class="dv">39</span> </a>
+<a class="sourceLine" id="cb37-5" title="5"></a>
+<a class="sourceLine" id="cb37-6" title="6"><span class="co">#create the data of 100 obs with 61=1 and 39=0 </span></a>
+<a class="sourceLine" id="cb37-7" title="7">df1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,n1),<span class="kw">rep</span>(<span class="dv">0</span>,n2))) </a>
+<a class="sourceLine" id="cb37-8" title="8"><span class="kw">names</span>(df1) &lt;-<span class="st"> &quot;Y&quot;</span></a>
+<a class="sourceLine" id="cb37-9" title="9"><span class="co">#scramble so it looks random </span></a>
+<a class="sourceLine" id="cb37-10" title="10"></a>
+<a class="sourceLine" id="cb37-11" title="11">df1<span class="op">$</span>Y &lt;-<span class="st"> </span><span class="kw">sample</span>(df1<span class="op">$</span>Y)</a>
+<a class="sourceLine" id="cb37-12" title="12"><span class="kw">View</span>(df1)</a>
+<a class="sourceLine" id="cb37-13" title="13"></a>
+<a class="sourceLine" id="cb37-14" title="14">df1<span class="op">$</span>Y.bar &lt;-<span class="st"> </span><span class="kw">mean</span>(df1<span class="op">$</span>Y) </a>
+<a class="sourceLine" id="cb37-15" title="15">df1<span class="op">$</span>sq.dev &lt;-<span class="st"> </span>(df1<span class="op">$</span>Y <span class="op">-</span><span class="st"> </span>df1<span class="op">$</span>Y.bar)<span class="op">^</span><span class="dv">2</span> </a>
+<a class="sourceLine" id="cb37-16" title="16"></a>
+<a class="sourceLine" id="cb37-17" title="17">sample.mean &lt;-<span class="st"> </span><span class="kw">mean</span>(df1<span class="op">$</span>Y)</a>
+<a class="sourceLine" id="cb37-18" title="18">sample.var &lt;-<span class="st"> </span><span class="kw">sum</span>(df1<span class="op">$</span>sq.dev)<span class="op">/</span>(n<span class="dv">-1</span>)</a>
+<a class="sourceLine" id="cb37-19" title="19">sample.std &lt;-<span class="st"> </span><span class="kw">sqrt</span>(sample.var)</a>
+<a class="sourceLine" id="cb37-20" title="20">sample.se &lt;-<span class="st"> </span>sample.std<span class="op">/</span><span class="kw">sqrt</span>(n)</a>
+<a class="sourceLine" id="cb37-21" title="21"></a>
+<a class="sourceLine" id="cb37-22" title="22"><span class="kw">mean</span>(df1<span class="op">$</span>Y)</a></code></pre></div>
+<pre><code>## [1] 0.61</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1"><span class="kw">var</span>(df1<span class="op">$</span>Y)</a></code></pre></div>
+<pre><code>## [1] 0.240303</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1"><span class="kw">library</span>(psych)</a>
+<a class="sourceLine" id="cb41-2" title="2"><span class="kw">describe</span>(df1<span class="op">$</span>Y)</a></code></pre></div>
+<pre><code>##    vars   n mean   sd median trimmed mad min max range  skew kurtosis   se
+## X1    1 100 0.61 0.49      1    0.64   0   0   1     1 -0.44    -1.82 0.05</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="co">#t-statistic </span></a>
+<a class="sourceLine" id="cb43-2" title="2">t.statistic &lt;-<span class="st"> </span><span class="op">-</span>((sample.mean<span class="fl">-0.5</span>)<span class="op">/</span>sample.se)</a>
+<a class="sourceLine" id="cb43-3" title="3"><span class="kw">print</span>(t.statistic)</a></code></pre></div>
+<pre><code>## [1] -2.243949</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1"><span class="kw">pt</span>(t.statistic, n<span class="dv">-1</span>,<span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)<span class="op">*</span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 0.02706281</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1"><span class="kw">qt</span>(<span class="fl">0.025</span>, n<span class="dv">-1</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] -1.984217</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="co">#much easier way to do it </span></a>
+<a class="sourceLine" id="cb49-2" title="2"><span class="kw">t.test</span>(df1<span class="op">$</span>Y,<span class="dt">mu=</span><span class="fl">0.5</span>)</a></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  df1$Y
+## t = 2.2439, df = 99, p-value = 0.02706
+## alternative hypothesis: true mean is not equal to 0.5
+## 95 percent confidence interval:
+##  0.5127323 0.7072677
+## sample estimates:
+## mean of x 
+##      0.61</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">lb95&lt;-<span class="st"> </span>sample.mean <span class="op">+</span><span class="st"> </span><span class="kw">qt</span>(<span class="fl">0.025</span>, n<span class="dv">-1</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)<span class="op">*</span>sample.se</a>
+<a class="sourceLine" id="cb51-2" title="2">ub95&lt;-<span class="st"> </span>sample.mean <span class="op">-</span><span class="st"> </span><span class="kw">qt</span>(<span class="fl">0.025</span>, n<span class="dv">-1</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)<span class="op">*</span>sample.se</a>
+<a class="sourceLine" id="cb51-3" title="3"></a>
+<a class="sourceLine" id="cb51-4" title="4"><span class="kw">print</span>(<span class="kw">c</span>(lb95,ub95))</a></code></pre></div>
+<pre><code>## [1] 0.5127323 0.7072677</code></pre>
 
 </div>
 </div>

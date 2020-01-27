@@ -689,3 +689,57 @@ curve(dnorm(x, sd = 1),
       add = T)
 
 ```
+
+
+## Week2D2
+
+* Handout answer Q2 (h-l) 
+
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+
+# Generate the data for coin experiment 
+n <- 100
+n1 <- 61 
+n2 <- 39 
+
+#create the data of 100 obs with 61=1 and 39=0 
+df1 <- as.data.frame(c(rep(1,n1),rep(0,n2))) 
+names(df1) <- "Y"
+#scramble so it looks random 
+
+df1$Y <- sample(df1$Y)
+View(df1)
+
+df1$Y.bar <- mean(df1$Y) 
+df1$sq.dev <- (df1$Y - df1$Y.bar)^2 
+
+sample.mean <- mean(df1$Y)
+sample.var <- sum(df1$sq.dev)/(n-1)
+sample.std <- sqrt(sample.var)
+sample.se <- sample.std/sqrt(n)
+
+mean(df1$Y)
+var(df1$Y)
+
+library(psych)
+describe(df1$Y)
+
+#t-statistic 
+t.statistic <- -((sample.mean-0.5)/sample.se)
+print(t.statistic)
+
+pt(t.statistic, n-1,lower.tail = TRUE)*2
+
+qt(0.025, n-1, lower.tail = TRUE)
+
+#much easier way to do it 
+t.test(df1$Y,mu=0.5)
+
+lb95<- sample.mean + qt(0.025, n-1, lower.tail = TRUE)*sample.se
+ub95<- sample.mean - qt(0.025, n-1, lower.tail = TRUE)*sample.se
+
+print(c(lb95,ub95))
+
+```
