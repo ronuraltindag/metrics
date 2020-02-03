@@ -142,6 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1d2"><i class="fa fa-check"></i><b>7.1</b> Week1D2</a></li>
 <li class="chapter" data-level="7.2" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d1"><i class="fa fa-check"></i><b>7.2</b> Week2D1</a></li>
 <li class="chapter" data-level="7.3" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d2"><i class="fa fa-check"></i><b>7.3</b> Week2D2</a></li>
+<li class="chapter" data-level="7.4" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week3d1"><i class="fa fa-check"></i><b>7.4</b> Week3D1</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -224,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb30-12" title="12"><span class="kw">hist</span>(x2, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb30-13" title="13"><span class="kw">hist</span>(z1, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb30-14" title="14"><span class="kw">hist</span>(z2, <span class="dt">prob=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1"><span class="co"># plot the density for M=1</span></a>
 <a class="sourceLine" id="cb31-2" title="2"><span class="kw">curve</span>(<span class="kw">dchisq</span>(x, <span class="dt">df =</span> <span class="dv">1</span>), </a>
 <a class="sourceLine" id="cb31-3" title="3">      <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">15</span>), </a>
@@ -294,7 +295,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb31-67" title="67"></a>
 <a class="sourceLine" id="cb31-68" title="68"><span class="co"># draw the polygon</span></a>
 <a class="sourceLine" id="cb31-69" title="69"><span class="kw">polygon</span>(x, y, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-68-2.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># Vector of outcomes</span></a>
 <a class="sourceLine" id="cb32-2" title="2">S &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">12</span></a>
 <a class="sourceLine" id="cb32-3" title="3"></a>
@@ -323,7 +324,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb32-26" title="26">        <span class="dt">col =</span> <span class="st">&quot;white&quot;</span>, </a>
 <a class="sourceLine" id="cb32-27" title="27">        <span class="dt">space =</span> <span class="dv">0</span>, </a>
 <a class="sourceLine" id="cb32-28" title="28">        <span class="dt">main =</span> <span class="st">&quot;Outcome of a Single Dice Roll&quot;</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1"><span class="co"># set sample size and number of samples</span></a>
 <a class="sourceLine" id="cb33-2" title="2">n &lt;-<span class="st"> </span><span class="dv">10000</span></a>
 <a class="sourceLine" id="cb33-3" title="3">reps &lt;-<span class="st"> </span><span class="dv">20000</span></a>
@@ -336,7 +337,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb35-4" title="4"><span class="co"># compute sample means</span></a>
 <a class="sourceLine" id="cb35-5" title="5">sample.avgs &lt;-<span class="st"> </span><span class="kw">colMeans</span>(samples)</a>
 <a class="sourceLine" id="cb35-6" title="6"><span class="kw">hist</span>(sample.avgs, <span class="dt">freq=</span><span class="ot">FALSE</span>)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">hist</span>((sample.avgs<span class="fl">-3.5</span>)<span class="op">/</span><span class="kw">sqrt</span>(<span class="fl">2.91</span><span class="op">/</span>n), <span class="dt">freq=</span><span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb36-2" title="2"></a>
 <a class="sourceLine" id="cb36-3" title="3"></a>
@@ -344,7 +345,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb36-5" title="5">      <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, </a>
 <a class="sourceLine" id="cb36-6" title="6">      <span class="dt">lwd =</span> <span class="st">&quot;2&quot;</span>, </a>
 <a class="sourceLine" id="cb36-7" title="7">      <span class="dt">add =</span> T)</a></code></pre></div>
-<p><img src="Metrics_files/figure-html/unnamed-chunk-70-2.png" width="672" /></p>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
 </div>
 <div id="week2d2" class="section level2">
 <h2><span class="header-section-number">7.3</span> Week2D2</h2>
@@ -406,6 +407,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb51-3" title="3"></a>
 <a class="sourceLine" id="cb51-4" title="4"><span class="kw">print</span>(<span class="kw">c</span>(lb95,ub95))</a></code></pre></div>
 <pre><code>## [1] 0.5127323 0.7072677</code></pre>
+</div>
+<div id="week3d1" class="section level2">
+<h2><span class="header-section-number">7.4</span> Week3D1</h2>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">df1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://www.dropbox.com/s/c9aj0kjftso7qzi/birth19682002.csv?dl=1&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb53-2" title="2"><span class="st">  </span><span class="kw">filter</span>(bwei<span class="op">&lt;</span><span class="dv">9000</span> <span class="op">&amp;</span><span class="st"> </span><span class="kw">is.na</span>(bwei)<span class="op">==</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb53-3" title="3"></a>
+<a class="sourceLine" id="cb53-4" title="4">df2 &lt;-<span class="st"> </span>df1[df1<span class="op">$</span>yearb<span class="op">==</span><span class="dv">1968</span> <span class="op">&amp;</span><span class="st"> </span>df1<span class="op">$</span>race<span class="op">==</span><span class="st">&#39;black&#39;</span>, ]</a>
+<a class="sourceLine" id="cb53-5" title="5">df3 &lt;-<span class="st"> </span>df2[df1<span class="op">$</span>yearb<span class="op">==</span><span class="dv">1968</span> <span class="op">&amp;</span><span class="st"> </span>df1<span class="op">$</span>race<span class="op">==</span><span class="st">&#39;white&#39;</span>, ]</a>
+<a class="sourceLine" id="cb53-6" title="6"></a>
+<a class="sourceLine" id="cb53-7" title="7">black.mean<span class="fl">.1968</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(df2<span class="op">$</span>bwei, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb53-8" title="8">black.var<span class="fl">.1968</span> &lt;-<span class="st"> </span><span class="kw">var</span>(df2<span class="op">$</span>bwei, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb53-9" title="9">white.mean<span class="fl">.1968</span> &lt;-<span class="st"> </span><span class="kw">mean</span>(df3<span class="op">$</span>bwei, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb53-10" title="10">white.var<span class="fl">.1968</span> &lt;-<span class="st"> </span><span class="kw">var</span>(df3<span class="op">$</span>bwei, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb53-11" title="11"></a>
+<a class="sourceLine" id="cb53-12" title="12"></a>
+<a class="sourceLine" id="cb53-13" title="13"></a>
+<a class="sourceLine" id="cb53-14" title="14">race.gap<span class="fl">.1968</span> &lt;-<span class="st">  </span>white.mean<span class="fl">.1968</span> <span class="op">-</span><span class="st"> </span>black.mean<span class="fl">.1968</span></a>
+<a class="sourceLine" id="cb53-15" title="15">race.gap.<span class="fl">1968.</span>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>((black.var<span class="fl">.1968</span><span class="op">/</span><span class="dv">447</span>) <span class="op">+</span><span class="st"> </span>(white.var<span class="fl">.1968</span><span class="op">/</span><span class="dv">2462</span>)) </a>
+<a class="sourceLine" id="cb53-16" title="16">race.gap.<span class="fl">1968.</span>ub &lt;-<span class="st"> </span>race.gap<span class="fl">.1968</span> <span class="op">+</span><span class="st"> </span>(<span class="fl">1.96</span><span class="op">*</span>race.gap.<span class="fl">1968.</span>se)</a>
+<a class="sourceLine" id="cb53-17" title="17">race.gap.<span class="fl">1968.</span>lb &lt;-<span class="st"> </span>race.gap<span class="fl">.1968</span> <span class="op">-</span><span class="st"> </span>(<span class="fl">1.96</span><span class="op">*</span>race.gap.<span class="fl">1968.</span>se)</a>
+<a class="sourceLine" id="cb53-18" title="18"></a>
+<a class="sourceLine" id="cb53-19" title="19">res &lt;-<span class="st"> </span><span class="kw">c</span>(black.mean<span class="fl">.1968</span>,white.mean<span class="fl">.1968</span>,race.gap<span class="fl">.1968</span>, race.gap.<span class="fl">1968.</span>lb, race.gap.<span class="fl">1968.</span>ub  )</a>
+<a class="sourceLine" id="cb53-20" title="20"><span class="kw">print</span>(<span class="kw">round</span>(res,<span class="dv">0</span>))</a></code></pre></div>
+<pre><code>## [1] 3090 3231  141   81  201</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" title="1">t1 &lt;-<span class="st"> </span><span class="kw">t.test</span>(df1<span class="op">$</span>bwei, df2<span class="op">$</span>bwei, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb55-2" title="2">t1<span class="op">$</span>estimate</a></code></pre></div>
+<pre><code>## mean of x mean of y 
+##  3324.193  3089.745</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" title="1">t1<span class="op">$</span>stderr</a></code></pre></div>
+<pre><code>## [1] 29.44446</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" title="1">t1<span class="op">$</span>conf.int</a></code></pre></div>
+<pre><code>## [1] 176.5824 292.3142
+## attr(,&quot;conf.level&quot;)
+## [1] 0.95</code></pre>
 
 </div>
 </div>

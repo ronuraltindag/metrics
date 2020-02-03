@@ -787,3 +787,6 @@ df5 <- cbind(df4[df4$race3=='black',], df4[df4$race3=='white',] )
 
 ```
 
+
+<!--chapter:end:index.Rmd-->
+
