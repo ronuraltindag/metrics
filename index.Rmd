@@ -723,7 +723,7 @@ sample.se <- sample.std/sqrt(n)
 mean(df1$Y)
 var(df1$Y)
 
-describe(df1$Y)
+#describe(df1$Y)
 
 #t-statistic 
 t.statistic <- -((sample.mean-0.5)/sample.se)
@@ -777,13 +777,25 @@ t1$estimate
 t1$stderr
 t1$conf.int
 
+
+
 df4 <- df1 %>%
   filter(race3!='oth') %>%
-  select(yearb,bwei,race3) %>%
+  dplyr::select(yearb,bwei,race3) %>%
   group_by(race3,yearb) %>%
-  summarise_each(funs(mean,sd,se=sd(.)/sqrt(n()))) 
+  summarise_each(funs(mean,n(),sd,se=sd(.)/sqrt(n()))) 
 
-df5 <- cbind(df4[df4$race3=='black',], df4[df4$race3=='white',] )
+df5 <- cbind(df4[df4$race3=='black',], df4[df4$race3=='white',] ) %>%
+  mutate(dif=mean1-mean) %>%
+  mutate(dif.se=sqrt((sd1^2/n1 + sd^2/n))) %>%
+  ggplot(aes(x=yearb,y=dif)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin=dif-1.96*dif.se, ymax=dif+1.96*dif.se), width=0.5) +
+  theme_bw() + 
+  ylim(c(50,450))
+
+df5
+
 
 ```
 
