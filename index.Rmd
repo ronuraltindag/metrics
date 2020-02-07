@@ -144,7 +144,7 @@ You can use a snipping tool to copy and paste the relevant output and figures fr
 
 **c.** If you were interested in the change in workers' purchasing power from 1992 to 2008, would you use the results from (a) or (b)? Explain. 
 
-**d.** Use the 2008 data to construct a 95% confidence internal for the mean of ```ahe``` for workers with a college degree. Construct a 95% confidence interval for the difference between the two means. 
+**d.** Use the 2008 data to construct a 95% confidence interval for the mean of ```ahe``` for high school graduates. Construct a 95% confidence interval for the mean of ```ahe``` for workers with a college degree. Construct a 95% confidence interval for the difference between the two means. 
 
 **e.** Repeat (d) using the 1992 data expressed in $2008. 
 

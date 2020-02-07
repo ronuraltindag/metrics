@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title> 4 Homework Assignment III | EC282: Homework Assignments</title>
   <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
   <meta property="og:title" content=" 4 Homework Assignment III | EC282: Homework Assignments" />
   <meta property="og:type" content="book" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="homework-assignment-ii.html"/>
-<link rel="next" href="homework-assignment-iv.html"/>
+<link rel="prev" href="homework-assignment-ii.html">
+<link rel="next" href="homework-assignment-iv.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -39,9 +39,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -68,7 +65,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -182,40 +179,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>b.</strong> Is the estimated coefficient significant? That is, can you reject the null hypothesis <span class="math inline">\(H_0: \beta_1 = 0\)</span> versus a two-sided alternative at the 10%, 5%, or 1% significance level? What is the <span class="math inline">\(p\)</span>-value associated with coefficient’s <span class="math inline">\(t\)</span>-statistic?</p>
 <p><strong>Header for the R script</strong></p>
 <p>Start a new R script, copy/paste the header below and save it to <code>Dropbox\EC282\Assignment3</code> or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data sets <code>df1</code> and <code>df2</code> in your enviroment. Conduct the analysis below the header.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co">###############################################################################</span></a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co"># list the packages we need and loads them, installs them automatically if we don&#39;t have them</span></a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co"># add any package that you need to the list  </span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4">need &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;glue&#39;</span>, <span class="st">&#39;dplyr&#39;</span>,<span class="st">&#39;readxl&#39;</span>, <span class="st">&#39;MASS&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>,<span class="st">&#39;tidyr&#39;</span>,<span class="st">&#39;AER&#39;</span>,<span class="st">&#39;scales&#39;</span>,<span class="st">&#39;mvtnorm&#39;</span>, </a>
-<a class="sourceLine" id="cb7-5" data-line-number="5">          <span class="st">&#39;stargazer&#39;</span>,<span class="st">&#39;httr&#39;</span>)</a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb7-7" data-line-number="7">have &lt;-<span class="st"> </span>need <span class="op">%in%</span><span class="st"> </span><span class="kw">rownames</span>(<span class="kw">installed.packages</span>()) </a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="cf">if</span>(<span class="kw">any</span>(<span class="op">!</span>have)) <span class="kw">install.packages</span>(need[<span class="op">!</span>have]) </a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="kw">invisible</span>(<span class="kw">lapply</span>(need, library, <span class="dt">character.only=</span>T)) </a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co"># Save the R script to the assignment 1 folder before this</span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co"># To set up the working directory</span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="kw">setwd</span>(<span class="kw">getwd</span>()) <span class="co">#change getwd() here is you need to set a different working directory</span></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15"></a>
-<a class="sourceLine" id="cb7-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb7-17" data-line-number="17"><span class="co">#this clears the workspace</span></a>
-<a class="sourceLine" id="cb7-18" data-line-number="18"><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) </a>
-<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="co">#this sets the random number generator seed to my birthday for replication</span></a>
-<a class="sourceLine" id="cb7-20" data-line-number="20"><span class="kw">set.seed</span>(<span class="dv">06061983</span>)</a>
-<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">###############################################################################</span></a>
-<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#get the data urls </span></a>
-<a class="sourceLine" id="cb7-23" data-line-number="23">df1.url &lt;-<span class="st"> &#39;https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx&#39;</span></a>
-<a class="sourceLine" id="cb7-24" data-line-number="24">df2.url &lt;-<span class="st"> &#39;https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings.xls&#39;</span></a>
-<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#download the data </span></a>
-<a class="sourceLine" id="cb7-26" data-line-number="26"><span class="kw">GET</span>(df1.url, <span class="kw">write_disk</span>(tdf1 &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.xlsx&quot;</span>)))</a>
-<a class="sourceLine" id="cb7-27" data-line-number="27"><span class="kw">GET</span>(df2.url, <span class="kw">write_disk</span>(tdf2 &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.xls&quot;</span>)))</a>
-<a class="sourceLine" id="cb7-28" data-line-number="28"><span class="co">#check if it worked</span></a>
-<a class="sourceLine" id="cb7-29" data-line-number="29">df1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(tdf1)</a>
-<a class="sourceLine" id="cb7-30" data-line-number="30">df2 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(tdf2)</a>
-<a class="sourceLine" id="cb7-31" data-line-number="31"><span class="kw">head</span>(df1)</a>
-<a class="sourceLine" id="cb7-32" data-line-number="32"><span class="kw">head</span>(df2)</a>
-<a class="sourceLine" id="cb7-33" data-line-number="33"></a>
-<a class="sourceLine" id="cb7-34" data-line-number="34"><span class="co">#CONDUCT THE ANALYSIS BELOW</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="co">###############################################################################</span></a>
+<a class="sourceLine" id="cb7-2" title="2"><span class="co"># list the packages we need and loads them, installs them automatically if we don&#39;t have them</span></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="co"># add any package that you need to the list  </span></a>
+<a class="sourceLine" id="cb7-4" title="4">need &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;glue&#39;</span>, <span class="st">&#39;dplyr&#39;</span>,<span class="st">&#39;readxl&#39;</span>, <span class="st">&#39;MASS&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>,<span class="st">&#39;tidyr&#39;</span>,<span class="st">&#39;AER&#39;</span>,<span class="st">&#39;scales&#39;</span>,<span class="st">&#39;mvtnorm&#39;</span>, </a>
+<a class="sourceLine" id="cb7-5" title="5">          <span class="st">&#39;stargazer&#39;</span>,<span class="st">&#39;httr&#39;</span>)</a>
+<a class="sourceLine" id="cb7-6" title="6"></a>
+<a class="sourceLine" id="cb7-7" title="7">have &lt;-<span class="st"> </span>need <span class="op">%in%</span><span class="st"> </span><span class="kw">rownames</span>(<span class="kw">installed.packages</span>()) </a>
+<a class="sourceLine" id="cb7-8" title="8"><span class="cf">if</span>(<span class="kw">any</span>(<span class="op">!</span>have)) <span class="kw">install.packages</span>(need[<span class="op">!</span>have]) </a>
+<a class="sourceLine" id="cb7-9" title="9"><span class="kw">invisible</span>(<span class="kw">lapply</span>(need, library, <span class="dt">character.only=</span>T)) </a>
+<a class="sourceLine" id="cb7-10" title="10"></a>
+<a class="sourceLine" id="cb7-11" title="11"><span class="co"># Save the R script to the assignment 1 folder before this</span></a>
+<a class="sourceLine" id="cb7-12" title="12"><span class="co"># To set up the working directory</span></a>
+<a class="sourceLine" id="cb7-13" title="13"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb7-14" title="14"><span class="kw">setwd</span>(<span class="kw">getwd</span>()) <span class="co">#change getwd() here is you need to set a different working directory</span></a>
+<a class="sourceLine" id="cb7-15" title="15"></a>
+<a class="sourceLine" id="cb7-16" title="16"></a>
+<a class="sourceLine" id="cb7-17" title="17"><span class="co">#this clears the workspace</span></a>
+<a class="sourceLine" id="cb7-18" title="18"><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) </a>
+<a class="sourceLine" id="cb7-19" title="19"><span class="co">#this sets the random number generator seed to my birthday for replication</span></a>
+<a class="sourceLine" id="cb7-20" title="20"><span class="kw">set.seed</span>(<span class="dv">06061983</span>)</a>
+<a class="sourceLine" id="cb7-21" title="21"><span class="co">###############################################################################</span></a>
+<a class="sourceLine" id="cb7-22" title="22"><span class="co">#get the data urls </span></a>
+<a class="sourceLine" id="cb7-23" title="23">df1.url &lt;-<span class="st"> &#39;https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx&#39;</span></a>
+<a class="sourceLine" id="cb7-24" title="24">df2.url &lt;-<span class="st"> &#39;https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings.xls&#39;</span></a>
+<a class="sourceLine" id="cb7-25" title="25"><span class="co">#download the data </span></a>
+<a class="sourceLine" id="cb7-26" title="26"><span class="kw">GET</span>(df1.url, <span class="kw">write_disk</span>(tdf1 &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.xlsx&quot;</span>)))</a>
+<a class="sourceLine" id="cb7-27" title="27"><span class="kw">GET</span>(df2.url, <span class="kw">write_disk</span>(tdf2 &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.xls&quot;</span>)))</a>
+<a class="sourceLine" id="cb7-28" title="28"><span class="co">#check if it worked</span></a>
+<a class="sourceLine" id="cb7-29" title="29">df1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(tdf1)</a>
+<a class="sourceLine" id="cb7-30" title="30">df2 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(tdf2)</a>
+<a class="sourceLine" id="cb7-31" title="31"><span class="kw">head</span>(df1)</a>
+<a class="sourceLine" id="cb7-32" title="32"><span class="kw">head</span>(df2)</a>
+<a class="sourceLine" id="cb7-33" title="33"></a>
+<a class="sourceLine" id="cb7-34" title="34"><span class="co">#CONDUCT THE ANALYSIS BELOW</span></a></code></pre></div>
 </div>
             </section>
 
@@ -228,13 +225,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -242,11 +237,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -258,10 +254,6 @@ gitbook.start({
 "text": null
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },
@@ -280,9 +272,8 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
