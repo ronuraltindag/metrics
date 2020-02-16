@@ -2,14 +2,17 @@
 title: 'EC282: Homework Assignments'
 author: "Onur Altındağ"
 date: 'Last update: `r Sys.Date()`'
-bibliography:
-- book.bib
-- packages.bib
+output:
+  html_document:
+    df_print: paged
 description: This book teaches econometrics like a 21st century humanoid would want
   to learn it.
 documentclass: book
 geometry: margin=2cm
 link-citations: yes
+bibliography:
+- book.bib
+- packages.bib
 site: bookdown::bookdown_site
 biblio-style: apalike
 ---
@@ -798,4 +801,70 @@ df5
 
 
 ```
+
+
+## Week4D1
+
+* See the data called Anscombe's Quartet below for four pairs of $x$ and $y$: $(x1,y1), (x2,y2), (x3, y3), (x4,y4)$
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+df1 <- anscombe
+print(df1)
+
+```
+
+
+* Interpret the estimated sample covariance and correlation coefficients below. 
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+#summarize the variables in the data set 
+df1.summary <- df1 %>%
+  summarise_all(list(mean,sd)) 
+
+df1.s1 <- as.data.frame(round(df1.summary,2))
+print(df1.s1)
+
+#calculate sample covariance and correlatio between pairs of 
+#(x1,y1), (x2,y2), (x3,y3), and (x4,y4)
+
+
+df1.s2 <- round(c(cov(df1$x1,df1$y1), cov(df1$x2,df1$y2), cov(df1$x3,df1$y3), cov(df1$x4,df1$y4)),2)
+df1.s3 <- round(c(cor(df1$x1,df1$y1), cor(df1$x2,df1$y2), cor(df1$x3,df1$y3), cor(df1$x4,df1$y4)),2)
+
+print(df1.s2)
+print(df1.s3)
+
+
+
+```
+
+
+* Below is the scatter plot for each pair of $x$ and $y$, how do you reconcile the difference in graphs and the correlation coefficients shown above? 
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+par(mfrow=c(2,2))
+plot(df1$x1,df1$y1)
+plot(df1$x2,df1$y2)
+plot(df1$x3,df1$y3)
+plot(df1$x4,df1$y4)
+
+x <- 11:35 
+x <- sample(x,size=10,replace=FALSE)
+y <- round(690 - 3.1*x + rnorm(10,mean=10,sd=5))
+
+ggplot() +
+geom_point(aes(x,y), size=2) + 
+geom_smooth(method = "lm", se = FALSE) +
+theme_bw()  
+
+df2 <- foreign::read.dta('http://fmwww.bc.edu/ec-p/data/stockwatson/caschool.dta')
+
+par(mfrow=c(1,2))
+hist(df2$str)
+hist(df2$testscr)
+ 
+```
+
+
 
