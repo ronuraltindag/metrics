@@ -1218,6 +1218,70 @@ Generate normally distributed random variables and variable with chi-squared
 
 \includegraphics{Metrics_files/figure-latex/unnamed-chunk-19-3.pdf}
 
+\hypertarget{week5d1}{%
+\section{Week5D1}\label{week5d1}}
+
+Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#set the model parameters}
+\NormalTok{n <-}\StringTok{ }\DecValTok{100}  
+\NormalTok{b0_hat <-}\StringTok{ }\FloatTok{520.4} 
+\NormalTok{b1_hat <-}\StringTok{ }\FloatTok{-5.82} 
+\NormalTok{u_hat <-}\StringTok{  }\KeywordTok{rnorm}\NormalTok{(n, }\DataTypeTok{mean =} \DecValTok{0}\NormalTok{, }\DataTypeTok{sd =} \DecValTok{100}\NormalTok{)}
+\NormalTok{CS <-}\StringTok{ }\KeywordTok{sample}\NormalTok{(}\DecValTok{10}\OperatorTok{:}\DecValTok{30}\NormalTok{,n,}\OtherTok{TRUE}\NormalTok{ )}
+\NormalTok{TestScore <-}\StringTok{  }\NormalTok{b0_hat }\OperatorTok{+}\StringTok{ }\NormalTok{b1_hat}\OperatorTok{*}\NormalTok{CS }\OperatorTok{+}\StringTok{ }\NormalTok{u_hat}
+
+\NormalTok{mo1 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(TestScore}\OperatorTok{~}\NormalTok{CS)}
+\KeywordTok{summary}\NormalTok{(mo1) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = TestScore ~ CS)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -203.499  -65.818    4.716   66.224  264.018 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  558.636     33.618  16.617  < 2e-16 ***
+## CS            -7.861      1.646  -4.775 6.29e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 96.13 on 98 degrees of freedom
+## Multiple R-squared:  0.1888, Adjusted R-squared:  0.1805 
+## F-statistic:  22.8 on 1 and 98 DF,  p-value: 6.288e-06
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(CS)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   10.00   15.00   19.00   19.57   24.00   30.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{confint.lm}\NormalTok{(mo1,}\DataTypeTok{level=}\FloatTok{0.99}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                 0.5 %     99.5 %
+## (Intercept) 470.32444 646.948493
+## CS          -12.18471  -3.536322
+\end{verbatim}
+
 \backmatter
   \bibliography{book.bib,packages.bib}
 

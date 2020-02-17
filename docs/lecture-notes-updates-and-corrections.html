@@ -144,6 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d2"><i class="fa fa-check"></i><b>7.3</b> Week2D2</a></li>
 <li class="chapter" data-level="7.4" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week3d1"><i class="fa fa-check"></i><b>7.4</b> Week3D1</a></li>
 <li class="chapter" data-level="7.5" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week4d1"><i class="fa fa-check"></i><b>7.5</b> Week4D1</a></li>
+<li class="chapter" data-level="7.6" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week5d1"><i class="fa fa-check"></i><b>7.6</b> Week5D1</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -525,6 +526,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb70-4" title="4"><span class="kw">hist</span>(df2<span class="op">$</span>str)</a>
 <a class="sourceLine" id="cb70-5" title="5"><span class="kw">hist</span>(df2<span class="op">$</span>testscr)</a></code></pre></div>
 <p><img src="Metrics_files/figure-html/unnamed-chunk-19-3.png" width="672" /></p>
+</div>
+<div id="week5d1" class="section level2">
+<h2><span class="header-section-number">7.6</span> Week5D1</h2>
+<p>Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1"><span class="co">#set the model parameters</span></a>
+<a class="sourceLine" id="cb71-2" title="2">n &lt;-<span class="st"> </span><span class="dv">100</span>  </a>
+<a class="sourceLine" id="cb71-3" title="3">b0_hat &lt;-<span class="st"> </span><span class="fl">520.4</span> </a>
+<a class="sourceLine" id="cb71-4" title="4">b1_hat &lt;-<span class="st"> </span><span class="fl">-5.82</span> </a>
+<a class="sourceLine" id="cb71-5" title="5">u_hat &lt;-<span class="st">  </span><span class="kw">rnorm</span>(n, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb71-6" title="6">CS &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span><span class="op">:</span><span class="dv">30</span>,n,<span class="ot">TRUE</span> )</a>
+<a class="sourceLine" id="cb71-7" title="7">TestScore &lt;-<span class="st">  </span>b0_hat <span class="op">+</span><span class="st"> </span>b1_hat<span class="op">*</span>CS <span class="op">+</span><span class="st"> </span>u_hat</a>
+<a class="sourceLine" id="cb71-8" title="8"></a>
+<a class="sourceLine" id="cb71-9" title="9">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(TestScore<span class="op">~</span>CS)</a>
+<a class="sourceLine" id="cb71-10" title="10"><span class="kw">summary</span>(mo1) </a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = TestScore ~ CS)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -203.499  -65.818    4.716   66.224  264.018 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  558.636     33.618  16.617  &lt; 2e-16 ***
+## CS            -7.861      1.646  -4.775 6.29e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 96.13 on 98 degrees of freedom
+## Multiple R-squared:  0.1888, Adjusted R-squared:  0.1805 
+## F-statistic:  22.8 on 1 and 98 DF,  p-value: 6.288e-06</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1"><span class="kw">summary</span>(CS)</a></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   10.00   15.00   19.00   19.57   24.00   30.00</code></pre>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" title="1"><span class="kw">confint.lm</span>(mo1,<span class="dt">level=</span><span class="fl">0.99</span>)</a></code></pre></div>
+<pre><code>##                 0.5 %     99.5 %
+## (Intercept) 470.32444 646.948493
+## CS          -12.18471  -3.536322</code></pre>
 
 </div>
 </div>

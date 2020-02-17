@@ -867,4 +867,24 @@ hist(df2$testscr)
 ```
 
 
+## Week5D1
 
+Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression: 
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+#set the model parameters
+n <- 100  
+b0_hat <- 520.4 
+b1_hat <- -5.82 
+u_hat <-  rnorm(n, mean = 0, sd = 100)
+CS <- sample(10:30,n,TRUE )
+TestScore <-  b0_hat + b1_hat*CS + u_hat
+
+mo1 <- lm(TestScore~CS)
+summary(mo1) 
+
+summary(CS)
+confint.lm(mo1,level=0.99)
+
+```
