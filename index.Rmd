@@ -874,6 +874,7 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
 
 #set the model parameters
+set.seed(01012000)
 n <- 100  
 b0_hat <- 520.4 
 b1_hat <- -5.82 
@@ -881,10 +882,25 @@ u_hat <-  rnorm(n, mean = 0, sd = 100)
 CS <- sample(10:30,n,TRUE )
 TestScore <-  b0_hat + b1_hat*CS + u_hat
 
+df1 <- as.data.frame(cbind(TestScore,CS)) 
 mo1 <- lm(TestScore~CS)
 summary(mo1) 
 
 summary(CS)
 confint.lm(mo1,level=0.99)
 
+
+df1$small.CS <- 0 
+df1$small.CS[df1$CS<20] <- 1
+
+head(df1)
+
+mo2 <- lm(df1$TestScore~df1$small.CS)
+summary(mo2) 
+
 ```
+
+
+## Week6D1
+
+

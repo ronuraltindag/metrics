@@ -531,40 +531,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.6</span> Week5D1</h2>
 <p>Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression:</p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1"><span class="co">#set the model parameters</span></a>
-<a class="sourceLine" id="cb71-2" title="2">n &lt;-<span class="st"> </span><span class="dv">100</span>  </a>
-<a class="sourceLine" id="cb71-3" title="3">b0_hat &lt;-<span class="st"> </span><span class="fl">520.4</span> </a>
-<a class="sourceLine" id="cb71-4" title="4">b1_hat &lt;-<span class="st"> </span><span class="fl">-5.82</span> </a>
-<a class="sourceLine" id="cb71-5" title="5">u_hat &lt;-<span class="st">  </span><span class="kw">rnorm</span>(n, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">100</span>)</a>
-<a class="sourceLine" id="cb71-6" title="6">CS &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span><span class="op">:</span><span class="dv">30</span>,n,<span class="ot">TRUE</span> )</a>
-<a class="sourceLine" id="cb71-7" title="7">TestScore &lt;-<span class="st">  </span>b0_hat <span class="op">+</span><span class="st"> </span>b1_hat<span class="op">*</span>CS <span class="op">+</span><span class="st"> </span>u_hat</a>
-<a class="sourceLine" id="cb71-8" title="8"></a>
-<a class="sourceLine" id="cb71-9" title="9">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(TestScore<span class="op">~</span>CS)</a>
-<a class="sourceLine" id="cb71-10" title="10"><span class="kw">summary</span>(mo1) </a></code></pre></div>
+<a class="sourceLine" id="cb71-2" title="2"><span class="kw">set.seed</span>(<span class="dv">01012000</span>)</a>
+<a class="sourceLine" id="cb71-3" title="3">n &lt;-<span class="st"> </span><span class="dv">100</span>  </a>
+<a class="sourceLine" id="cb71-4" title="4">b0_hat &lt;-<span class="st"> </span><span class="fl">520.4</span> </a>
+<a class="sourceLine" id="cb71-5" title="5">b1_hat &lt;-<span class="st"> </span><span class="fl">-5.82</span> </a>
+<a class="sourceLine" id="cb71-6" title="6">u_hat &lt;-<span class="st">  </span><span class="kw">rnorm</span>(n, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb71-7" title="7">CS &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span><span class="op">:</span><span class="dv">30</span>,n,<span class="ot">TRUE</span> )</a>
+<a class="sourceLine" id="cb71-8" title="8">TestScore &lt;-<span class="st">  </span>b0_hat <span class="op">+</span><span class="st"> </span>b1_hat<span class="op">*</span>CS <span class="op">+</span><span class="st"> </span>u_hat</a>
+<a class="sourceLine" id="cb71-9" title="9"></a>
+<a class="sourceLine" id="cb71-10" title="10">df1 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">cbind</span>(TestScore,CS)) </a>
+<a class="sourceLine" id="cb71-11" title="11">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(TestScore<span class="op">~</span>CS)</a>
+<a class="sourceLine" id="cb71-12" title="12"><span class="kw">summary</span>(mo1) </a></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = TestScore ~ CS)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -203.499  -65.818    4.716   66.224  264.018 
+## -258.058  -68.062   -1.417   69.704  297.534 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  558.636     33.618  16.617  &lt; 2e-16 ***
-## CS            -7.861      1.646  -4.775 6.29e-06 ***
+## (Intercept)  523.756     38.011  13.779  &lt; 2e-16 ***
+## CS            -6.479      1.741  -3.721 0.000331 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 96.13 on 98 degrees of freedom
-## Multiple R-squared:  0.1888, Adjusted R-squared:  0.1805 
-## F-statistic:  22.8 on 1 and 98 DF,  p-value: 6.288e-06</code></pre>
+## Residual standard error: 103.8 on 98 degrees of freedom
+## Multiple R-squared:  0.1238, Adjusted R-squared:  0.1149 
+## F-statistic: 13.85 on 1 and 98 DF,  p-value: 0.0003311</code></pre>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1"><span class="kw">summary</span>(CS)</a></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   10.00   15.00   19.00   19.57   24.00   30.00</code></pre>
+##   10.00   15.75   21.50   21.00   26.00   30.00</code></pre>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" title="1"><span class="kw">confint.lm</span>(mo1,<span class="dt">level=</span><span class="fl">0.99</span>)</a></code></pre></div>
-<pre><code>##                 0.5 %     99.5 %
-## (Intercept) 470.32444 646.948493
-## CS          -12.18471  -3.536322</code></pre>
+<pre><code>##                 0.5 %    99.5 %
+## (Intercept) 423.90261 623.60884
+## CS          -11.05307  -1.90493</code></pre>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" title="1">df1<span class="op">$</span>small.CS &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb77-2" title="2">df1<span class="op">$</span>small.CS[df1<span class="op">$</span>CS<span class="op">&lt;</span><span class="dv">20</span>] &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb77-3" title="3"></a>
+<a class="sourceLine" id="cb77-4" title="4"><span class="kw">head</span>(df1)</a></code></pre></div>
+<pre><code>##   TestScore CS small.CS
+## 1  378.6047 30        0
+## 2  468.6586 21        0
+## 3  331.0196 29        0
+## 4  292.1520 23        0
+## 5  388.1037 30        0
+## 6  479.7165 20        0</code></pre>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" title="1">mo2 &lt;-<span class="st"> </span><span class="kw">lm</span>(df1<span class="op">$</span>TestScore<span class="op">~</span>df1<span class="op">$</span>small.CS)</a>
+<a class="sourceLine" id="cb79-2" title="2"><span class="kw">summary</span>(mo2) </a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = df1$TestScore ~ df1$small.CS)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -298.588  -76.795    4.799   73.665  309.736 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    369.92      14.04  26.355   &lt;2e-16 ***
+## df1$small.CS    44.45      22.19   2.003   0.0479 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 108.7 on 98 degrees of freedom
+## Multiple R-squared:  0.03933,    Adjusted R-squared:  0.02953 
+## F-statistic: 4.012 on 1 and 98 DF,  p-value: 0.04793</code></pre>
 
 </div>
 </div>
