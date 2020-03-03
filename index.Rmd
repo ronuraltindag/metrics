@@ -34,8 +34,8 @@ knitr::opts_chunk$set(echo = TRUE)
 #devtools::install_github("ropenscilabs/icon")
 library(icon)
 
-need <- c('glue', 'dplyr','readxl', 'haven', 'ggplot2','tidyr','zoo','ggrepel','gganimate',
-          'ggimage', 'ggthemes','tufte', 'formatR', 'magick', 'devtools', 'ISLR')
+need <- c('glue', 'dplyr','readxl', 'haven', 'ggplot2','tidyr','zoo','ggrepel','gganimate', 'tseries',
+          'ggimage', 'ggthemes','tufte', 'formatR', 'magick', 'devtools', 'ISLR', 'AER', 'sandwich', 'het.test')
 
 have <- need %in% rownames(installed.packages()) 
 if(any(!have)) install.packages(need[!have],repos = "http://cran.us.r-project.org") 
@@ -485,7 +485,7 @@ head(df1)
 
 # Lecture notes, updates, and corrections: 
 
-## Week1D2
+## Week1
 
 Define a binary random variable $Y$ for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for $\times 10$ and $\times 10000$, calculate the sample mean and sample variance. 
 
@@ -520,7 +520,7 @@ var(Y2$val)
 
 ```
 
-## Week2D1 
+## Week2 
 
 If $Y \sim N(1,4)$, standardize Y, interpret and calculate $Pr \leq 2$ Find the upper and lower tail range that yield 95% probability within the interval of these two values. Calculate $Pr(1\leq Y \leq 2)$.
 
@@ -694,7 +694,6 @@ curve(dnorm(x, sd = 1),
 ```
 
 
-## Week2D2
 
 * Handout answer Q2 (h-l) 
 
@@ -746,7 +745,7 @@ print(c(lb95,ub95))
 
 ```
 
-## Week3D1 
+## Week3
 
 
 
@@ -803,7 +802,7 @@ df5
 ```
 
 
-## Week4D1
+## Week4
 
 * See the data called Anscombe's Quartet below for four pairs of $x$ and $y$: $(x1,y1), (x2,y2), (x3, y3), (x4,y4)$
 
@@ -867,7 +866,7 @@ hist(df2$testscr)
 ```
 
 
-## Week5D1
+## Week5
 
 Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression: 
 
@@ -901,6 +900,101 @@ summary(mo2)
 ```
 
 
-## Week6D1
+## Week 6
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+data("CASchools")
+
+View(CASchools)
+
+CASchools$str <- CASchools$students/CASchools$teachers
+
+mo1 <- lm(CASchools$math~CASchools$str)
+summary(mo1)
+CASchools$math.hat <- predict.lm(mo1)
+
+g1 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=str,y=math),   size=2) + 
+  geom_line(aes(x=str,y=math.hat),   size=2, colour='red') 
+
+CASchools$small <- 0 
+CASchools$small[CASchools$str>=20] <- 1
+
+plot(g1)
+
+mo2 <- lm(CASchools$math~CASchools$small)
+summary(mo2)
+
+CASchools$math.hat2 <- predict.lm(mo2)
+
+g2 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=str,y=math),   size=2) + 
+  geom_line(aes(x=str,y=math.hat2),   size=2, colour='red') + 
+  geom_point(aes(x=str,y=math.hat),   shape=1, size=2, colour='blue') 
+
+plot(g2)  
+
+table(CASchools$math.hat2)
+
+```
+
+## Week 7
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+data("CPS1988") 
+df1 <- CPS1988 %>%
+  filter(experience==10)
+
+g2 <- ggplot(data=df1) + 
+  geom_point(aes(x=education,y=wage),   size=2) 
+
+plot(g2)
+
+mo1 <- lm(data=df1, formula=wage ~ education)
+
+summary(mo1)
+
+#homoskedastic
+coeftest(mo1)
+
+#Breusch-Pagan test 
+bptest(mo1)
+
+coeftest(mo1, vcov = vcovHC(mo1, "HC1"))  
+
+data(CASchools)
+
+CASchools$str <- CASchools$students/CASchools$teachers
+
+g2 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=english,y=read),   size=2) 
+
+plot(g2)
+
+g2 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=english,y=str),   size=2) 
+
+plot(g2)
+
+CASchools$small <- 0 
+CASchools$small[CASchools$str<20] <- 1 
+
+mo1 <- lm(data=CASchools, formula=read~small)
+summary(mo1)
 
 
+mo2 <- lm(data=CASchools[CASchools$english<1.9,], formula=read~small)
+mo3 <- lm(data=CASchools[CASchools$english>1.9 & CASchools$english<8.8,], formula=read~small)
+mo4 <- lm(data=CASchools[CASchools$english>8.8 & CASchools$english<23,], formula=read~small)
+mo5 <- lm(data=CASchools[CASchools$english<23,], formula=read~small)
+
+summary(mo2)
+summary(mo3)
+summary(mo4)
+summary(mo5)
+
+
+
+```

@@ -114,7 +114,7 @@
 
 \title{EC282: Homework Assignments}
 \author{Onur Altındağ}
-\date{Last update: 2020-02-19}
+\date{Last update: 2020-03-02}
 
 \begin{document}
 \frontmatter
@@ -582,8 +582,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \hypertarget{lecture-notes-updates-and-corrections}{%
 \chapter{Lecture notes, updates, and corrections:}\label{lecture-notes-updates-and-corrections}}
 
-\hypertarget{week1d2}{%
-\section{Week1D2}\label{week1d2}}
+\hypertarget{week1}{%
+\section{Week1}\label{week1}}
 
 Define a binary random variable \(Y\) for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for \(\times 10\) and \(\times 10000\), calculate the sample mean and sample variance.
 
@@ -663,8 +663,8 @@ Define a binary random variable \(Y\) for flipping a fair coin. Calculate the ex
 ## [1] 0.2499814
 \end{verbatim}
 
-\hypertarget{week2d1}{%
-\section{Week2D1}\label{week2d1}}
+\hypertarget{week2}{%
+\section{Week2}\label{week2}}
 
 If \(Y \sim N(1,4)\), standardize Y, interpret and calculate \(Pr \leq 2\) Find the upper and lower tail range that yield 95\% probability within the interval of these two values. Calculate \(Pr(1\leq Y \leq 2)\).
 
@@ -884,9 +884,6 @@ Generate normally distributed random variables and variable with chi-squared
 
 \includegraphics{Metrics_files/figure-latex/unnamed-chunk-14-2.pdf}
 
-\hypertarget{week2d2}{%
-\section{Week2D2}\label{week2d2}}
-
 \begin{itemize}
 \tightlist
 \item
@@ -1002,8 +999,8 @@ Generate normally distributed random variables and variable with chi-squared
 ## [1] 0.5127323 0.7072677
 \end{verbatim}
 
-\hypertarget{week3d1}{%
-\section{Week3D1}\label{week3d1}}
+\hypertarget{week3}{%
+\section{Week3}\label{week3}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1091,8 +1088,8 @@ Generate normally distributed random variables and variable with chi-squared
 
 \includegraphics{Metrics_files/figure-latex/unnamed-chunk-16-1.pdf}
 
-\hypertarget{week4d1}{%
-\section{Week4D1}\label{week4d1}}
+\hypertarget{week4}{%
+\section{Week4}\label{week4}}
 
 \begin{itemize}
 \tightlist
@@ -1218,8 +1215,8 @@ Generate normally distributed random variables and variable with chi-squared
 
 \includegraphics{Metrics_files/figure-latex/unnamed-chunk-19-3.pdf}
 
-\hypertarget{week5d1}{%
-\section{Week5D1}\label{week5d1}}
+\hypertarget{week5}{%
+\section{Week5}\label{week5}}
 
 Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression:
 
@@ -1329,6 +1326,386 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## Residual standard error: 108.7 on 98 degrees of freedom
 ## Multiple R-squared:  0.03933,    Adjusted R-squared:  0.02953 
 ## F-statistic: 4.012 on 1 and 98 DF,  p-value: 0.04793
+\end{verbatim}
+
+\hypertarget{week-6}{%
+\section{Week 6}\label{week-6}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{data}\NormalTok{(}\StringTok{"CASchools"}\NormalTok{)}
+
+\KeywordTok{View}\NormalTok{(CASchools)}
+
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{str <-}\StringTok{ }\NormalTok{CASchools}\OperatorTok{$}\NormalTok{students}\OperatorTok{/}\NormalTok{CASchools}\OperatorTok{$}\NormalTok{teachers}
+
+\NormalTok{mo1 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(CASchools}\OperatorTok{$}\NormalTok{math}\OperatorTok{~}\NormalTok{CASchools}\OperatorTok{$}\NormalTok{str)}
+\KeywordTok{summary}\NormalTok{(mo1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = CASchools$math ~ CASchools$str)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -44.615 -13.374  -0.828  12.728  52.711 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)   691.4174     9.3825  73.692  < 2e-16 ***
+## CASchools$str  -1.9386     0.4755  -4.077 5.47e-05 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 18.41 on 418 degrees of freedom
+## Multiple R-squared:  0.03824,    Adjusted R-squared:  0.03594 
+## F-statistic: 16.62 on 1 and 418 DF,  p-value: 5.467e-05
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{math.hat <-}\StringTok{ }\KeywordTok{predict.lm}\NormalTok{(mo1)}
+
+\NormalTok{g1 <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{str,}\DataTypeTok{y=}\NormalTok{math),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_line}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{str,}\DataTypeTok{y=}\NormalTok{math.hat),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{, }\DataTypeTok{colour=}\StringTok{'red'}\NormalTok{) }
+
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{small <-}\StringTok{ }\DecValTok{0} 
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{small[CASchools}\OperatorTok{$}\NormalTok{str}\OperatorTok{>=}\DecValTok{20}\NormalTok{] <-}\StringTok{ }\DecValTok{1}
+
+\KeywordTok{plot}\NormalTok{(g1)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Metrics_files/figure-latex/unnamed-chunk-21-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mo2 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(CASchools}\OperatorTok{$}\NormalTok{math}\OperatorTok{~}\NormalTok{CASchools}\OperatorTok{$}\NormalTok{small)}
+\KeywordTok{summary}\NormalTok{(mo2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = CASchools$math ~ CASchools$small)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -46.756 -13.456  -0.706  12.769  53.744 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)      655.756      1.201  545.93  < 2e-16 ***
+## CASchools$small   -5.599      1.830   -3.06  0.00235 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 18.57 on 418 degrees of freedom
+## Multiple R-squared:  0.02191,    Adjusted R-squared:  0.01957 
+## F-statistic: 9.364 on 1 and 418 DF,  p-value: 0.002355
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{math.hat2 <-}\StringTok{ }\KeywordTok{predict.lm}\NormalTok{(mo2)}
+
+\NormalTok{g2 <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{str,}\DataTypeTok{y=}\NormalTok{math),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_line}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{str,}\DataTypeTok{y=}\NormalTok{math.hat2),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{, }\DataTypeTok{colour=}\StringTok{'red'}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{str,}\DataTypeTok{y=}\NormalTok{math.hat),   }\DataTypeTok{shape=}\DecValTok{1}\NormalTok{, }\DataTypeTok{size=}\DecValTok{2}\NormalTok{, }\DataTypeTok{colour=}\StringTok{'blue'}\NormalTok{) }
+
+\KeywordTok{plot}\NormalTok{(g2)  }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Metrics_files/figure-latex/unnamed-chunk-21-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{table}\NormalTok{(CASchools}\OperatorTok{$}\NormalTok{math.hat2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## 650.156355546983 655.755646135019 
+##              181              239
+\end{verbatim}
+
+\hypertarget{week-7}{%
+\section{Week 7}\label{week-7}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{data}\NormalTok{(}\StringTok{"CPS1988"}\NormalTok{) }
+\NormalTok{df1 <-}\StringTok{ }\NormalTok{CPS1988 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{filter}\NormalTok{(experience}\OperatorTok{==}\DecValTok{10}\NormalTok{)}
+
+\NormalTok{g2 <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data=}\NormalTok{df1) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{education,}\DataTypeTok{y=}\NormalTok{wage),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{) }
+
+\KeywordTok{plot}\NormalTok{(g2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Metrics_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mo1 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{df1, }\DataTypeTok{formula=}\NormalTok{wage }\OperatorTok{~}\StringTok{ }\NormalTok{education)}
+
+\KeywordTok{summary}\NormalTok{(mo1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = wage ~ education, data = df1)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -689.3 -186.9  -44.4  133.4 2920.3 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) -295.803     58.635  -5.045 5.49e-07 ***
+## education     65.941      4.303  15.326  < 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 317 on 901 degrees of freedom
+## Multiple R-squared:  0.2068, Adjusted R-squared:  0.2059 
+## F-statistic: 234.9 on 1 and 901 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#homoskedastic}
+\KeywordTok{coeftest}\NormalTok{(mo1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## t test of coefficients:
+## 
+##              Estimate Std. Error t value  Pr(>|t|)    
+## (Intercept) -295.8033    58.6348 -5.0448 5.489e-07 ***
+## education     65.9409     4.3026 15.3257 < 2.2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#Breusch-Pagan test }
+\KeywordTok{bptest}\NormalTok{(mo1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  studentized Breusch-Pagan test
+## 
+## data:  mo1
+## BP = 11.6, df = 1, p-value = 0.0006596
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{coeftest}\NormalTok{(mo1, }\DataTypeTok{vcov =} \KeywordTok{vcovHC}\NormalTok{(mo1, }\StringTok{"HC1"}\NormalTok{))  }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## t test of coefficients:
+## 
+##              Estimate Std. Error t value  Pr(>|t|)    
+## (Intercept) -295.8033    68.8836 -4.2942 1.943e-05 ***
+## education     65.9409     5.3622 12.2974 < 2.2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{data}\NormalTok{(CASchools)}
+
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{str <-}\StringTok{ }\NormalTok{CASchools}\OperatorTok{$}\NormalTok{students}\OperatorTok{/}\NormalTok{CASchools}\OperatorTok{$}\NormalTok{teachers}
+
+\NormalTok{g2 <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{english,}\DataTypeTok{y=}\NormalTok{read),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{) }
+
+\KeywordTok{plot}\NormalTok{(g2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Metrics_files/figure-latex/unnamed-chunk-22-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g2 <-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{english,}\DataTypeTok{y=}\NormalTok{str),   }\DataTypeTok{size=}\DecValTok{2}\NormalTok{) }
+
+\KeywordTok{plot}\NormalTok{(g2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Metrics_files/figure-latex/unnamed-chunk-22-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{small <-}\StringTok{ }\DecValTok{0} 
+\NormalTok{CASchools}\OperatorTok{$}\NormalTok{small[CASchools}\OperatorTok{$}\NormalTok{str}\OperatorTok{<}\DecValTok{20}\NormalTok{] <-}\StringTok{ }\DecValTok{1} 
+
+\NormalTok{mo1 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{small)}
+\KeywordTok{summary}\NormalTok{(mo1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = read ~ small, data = CASchools)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -54.237 -14.637   1.013  13.703  47.903 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  649.997      1.461 444.824  < 2e-16 ***
+## small          8.740      1.937   4.512 8.37e-06 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 19.66 on 418 degrees of freedom
+## Multiple R-squared:  0.04644,    Adjusted R-squared:  0.04416 
+## F-statistic: 20.36 on 1 and 418 DF,  p-value: 8.368e-06
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mo2 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools[CASchools}\OperatorTok{$}\NormalTok{english}\OperatorTok{<}\FloatTok{1.9}\NormalTok{,], }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{small)}
+\NormalTok{mo3 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools[CASchools}\OperatorTok{$}\NormalTok{english}\OperatorTok{>}\FloatTok{1.9} \OperatorTok{&}\StringTok{ }\NormalTok{CASchools}\OperatorTok{$}\NormalTok{english}\OperatorTok{<}\FloatTok{8.8}\NormalTok{,], }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{small)}
+\NormalTok{mo4 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools[CASchools}\OperatorTok{$}\NormalTok{english}\OperatorTok{>}\FloatTok{8.8} \OperatorTok{&}\StringTok{ }\NormalTok{CASchools}\OperatorTok{$}\NormalTok{english}\OperatorTok{<}\DecValTok{23}\NormalTok{,], }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{small)}
+\NormalTok{mo5 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools[CASchools}\OperatorTok{$}\NormalTok{english}\OperatorTok{<}\DecValTok{23}\NormalTok{,], }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{small)}
+
+\KeywordTok{summary}\NormalTok{(mo2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english < 
+##     1.9, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -33.042 -10.142  -0.196  11.108  31.458 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) 667.8963     2.8032 238.258   <2e-16 ***
+## small        -0.2542     3.2634  -0.078    0.938    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 14.57 on 101 degrees of freedom
+## Multiple R-squared:  6.007e-05,  Adjusted R-squared:  -0.00984 
+## F-statistic: 0.006067 on 1 and 101 DF,  p-value: 0.9381
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(mo3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english > 
+##     1.9 & CASchools$english < 8.8, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -30.570 -10.768   0.031   8.832  36.830 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  662.368      2.374 279.062   <2e-16 ***
+## small          4.802      3.083   1.557    0.122    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 15.74 on 106 degrees of freedom
+## Multiple R-squared:  0.02237,    Adjusted R-squared:  0.01315 
+## F-statistic: 2.426 on 1 and 106 DF,  p-value: 0.1223
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(mo4)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english > 
+##     8.8 & CASchools$english < 23, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -43.980 -12.098  -0.217  10.371  38.346 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  649.680      2.211 293.774   <2e-16 ***
+## small          5.774      3.069   1.881   0.0628 .  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 15.64 on 102 degrees of freedom
+## Multiple R-squared:  0.03353,    Adjusted R-squared:  0.02406 
+## F-statistic: 3.539 on 1 and 102 DF,  p-value: 0.06279
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(mo5)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english < 
+##     23, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -52.659 -11.176   0.106  10.524  39.906 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  658.359      1.500 439.017   <2e-16 ***
+## small          5.735      1.911   3.001   0.0029 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 16.5 on 313 degrees of freedom
+## Multiple R-squared:  0.02797,    Adjusted R-squared:  0.02487 
+## F-statistic: 9.008 on 1 and 313 DF,  p-value: 0.002905
 \end{verbatim}
 
 \backmatter

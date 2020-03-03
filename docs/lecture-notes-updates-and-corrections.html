@@ -139,12 +139,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="homework-assignment-iv.html"><a href="homework-assignment-iv.html"><i class="fa fa-check"></i><b>5</b> Homework Assignment IV</a></li>
 <li class="chapter" data-level="6" data-path="homework-assignment-v.html"><a href="homework-assignment-v.html"><i class="fa fa-check"></i><b>6</b> Homework Assignment V</a></li>
 <li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a><ul>
-<li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1d2"><i class="fa fa-check"></i><b>7.1</b> Week1D2</a></li>
-<li class="chapter" data-level="7.2" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d1"><i class="fa fa-check"></i><b>7.2</b> Week2D1</a></li>
-<li class="chapter" data-level="7.3" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2d2"><i class="fa fa-check"></i><b>7.3</b> Week2D2</a></li>
-<li class="chapter" data-level="7.4" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week3d1"><i class="fa fa-check"></i><b>7.4</b> Week3D1</a></li>
-<li class="chapter" data-level="7.5" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week4d1"><i class="fa fa-check"></i><b>7.5</b> Week4D1</a></li>
-<li class="chapter" data-level="7.6" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week5d1"><i class="fa fa-check"></i><b>7.6</b> Week5D1</a></li>
+<li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1"><i class="fa fa-check"></i><b>7.1</b> Week1</a></li>
+<li class="chapter" data-level="7.2" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2"><i class="fa fa-check"></i><b>7.2</b> Week2</a></li>
+<li class="chapter" data-level="7.3" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week3"><i class="fa fa-check"></i><b>7.3</b> Week3</a></li>
+<li class="chapter" data-level="7.4" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week4"><i class="fa fa-check"></i><b>7.4</b> Week4</a></li>
+<li class="chapter" data-level="7.5" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week5"><i class="fa fa-check"></i><b>7.5</b> Week5</a></li>
+<li class="chapter" data-level="7.6" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-6"><i class="fa fa-check"></i><b>7.6</b> Week 6</a></li>
+<li class="chapter" data-level="7.7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-7"><i class="fa fa-check"></i><b>7.7</b> Week 7</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -168,8 +169,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="lecture-notes-updates-and-corrections" class="section level1">
 <h1><span class="header-section-number"> 7</span> Lecture notes, updates, and corrections:</h1>
-<div id="week1d2" class="section level2">
-<h2><span class="header-section-number">7.1</span> Week1D2</h2>
+<div id="week1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Week1</h2>
 <p>Define a binary random variable <span class="math inline">\(Y\)</span> for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for <span class="math inline">\(\times 10\)</span> and <span class="math inline">\(\times 10000\)</span>, calculate the sample mean and sample variance.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co">#Bernouilli trails </span></a>
 <a class="sourceLine" id="cb10-2" title="2">coin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;H&quot;</span>,<span class="st">&quot;T&quot;</span>)</a>
@@ -200,8 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">var</span>(Y2<span class="op">$</span>val)</a></code></pre></div>
 <pre><code>## [1] 0.2499814</code></pre>
 </div>
-<div id="week2d1" class="section level2">
-<h2><span class="header-section-number">7.2</span> Week2D1</h2>
+<div id="week2" class="section level2">
+<h2><span class="header-section-number">7.2</span> Week2</h2>
 <p>If <span class="math inline">\(Y \sim N(1,4)\)</span>, standardize Y, interpret and calculate <span class="math inline">\(Pr \leq 2\)</span> Find the upper and lower tail range that yield 95% probability within the interval of these two values. Calculate <span class="math inline">\(Pr(1\leq Y \leq 2)\)</span>.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">pnorm</span>(<span class="dv">2</span>,<span class="dt">mean=</span><span class="dv">1</span>,<span class="dt">sd=</span><span class="dv">2</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>## [1] 0.6914625</code></pre>
@@ -348,9 +349,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb36-6" title="6">      <span class="dt">lwd =</span> <span class="st">&quot;2&quot;</span>, </a>
 <a class="sourceLine" id="cb36-7" title="7">      <span class="dt">add =</span> T)</a></code></pre></div>
 <p><img src="Metrics_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
-</div>
-<div id="week2d2" class="section level2">
-<h2><span class="header-section-number">7.3</span> Week2D2</h2>
 <ul>
 <li>Handout answer Q2 (h-l)</li>
 </ul>
@@ -408,8 +406,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb49-4" title="4"><span class="kw">print</span>(<span class="kw">c</span>(lb95,ub95))</a></code></pre></div>
 <pre><code>## [1] 0.5127323 0.7072677</code></pre>
 </div>
-<div id="week3d1" class="section level2">
-<h2><span class="header-section-number">7.4</span> Week3D1</h2>
+<div id="week3" class="section level2">
+<h2><span class="header-section-number">7.3</span> Week3</h2>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">df1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://www.dropbox.com/s/c9aj0kjftso7qzi/birth19682002.csv?dl=1&quot;</span>) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb51-2" title="2"><span class="st">  </span><span class="kw">filter</span>(bwei<span class="op">&lt;</span><span class="dv">9000</span> <span class="op">&amp;</span><span class="st"> </span><span class="kw">is.na</span>(bwei)<span class="op">==</span><span class="ot">FALSE</span>)</a>
 <a class="sourceLine" id="cb51-3" title="3"></a>
@@ -459,8 +457,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb59-16" title="16">df5</a></code></pre></div>
 <p><img src="Metrics_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
-<div id="week4d1" class="section level2">
-<h2><span class="header-section-number">7.5</span> Week4D1</h2>
+<div id="week4" class="section level2">
+<h2><span class="header-section-number">7.4</span> Week4</h2>
 <ul>
 <li>See the data called Anscombe’s Quartet below for four pairs of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math inline">\((x1,y1), (x2,y2), (x3, y3), (x4,y4)\)</span></li>
 </ul>
@@ -527,8 +525,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb70-5" title="5"><span class="kw">hist</span>(df2<span class="op">$</span>testscr)</a></code></pre></div>
 <p><img src="Metrics_files/figure-html/unnamed-chunk-19-3.png" width="672" /></p>
 </div>
-<div id="week5d1" class="section level2">
-<h2><span class="header-section-number">7.6</span> Week5D1</h2>
+<div id="week5" class="section level2">
+<h2><span class="header-section-number">7.5</span> Week5</h2>
 <p>Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression:</p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1"><span class="co">#set the model parameters</span></a>
 <a class="sourceLine" id="cb71-2" title="2"><span class="kw">set.seed</span>(<span class="dv">01012000</span>)</a>
@@ -598,6 +596,260 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Residual standard error: 108.7 on 98 degrees of freedom
 ## Multiple R-squared:  0.03933,    Adjusted R-squared:  0.02953 
 ## F-statistic: 4.012 on 1 and 98 DF,  p-value: 0.04793</code></pre>
+</div>
+<div id="week-6" class="section level2">
+<h2><span class="header-section-number">7.6</span> Week 6</h2>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" title="1"><span class="kw">data</span>(<span class="st">&quot;CASchools&quot;</span>)</a>
+<a class="sourceLine" id="cb81-2" title="2"></a>
+<a class="sourceLine" id="cb81-3" title="3"><span class="kw">View</span>(CASchools)</a>
+<a class="sourceLine" id="cb81-4" title="4"></a>
+<a class="sourceLine" id="cb81-5" title="5">CASchools<span class="op">$</span>str &lt;-<span class="st"> </span>CASchools<span class="op">$</span>students<span class="op">/</span>CASchools<span class="op">$</span>teachers</a>
+<a class="sourceLine" id="cb81-6" title="6"></a>
+<a class="sourceLine" id="cb81-7" title="7">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(CASchools<span class="op">$</span>math<span class="op">~</span>CASchools<span class="op">$</span>str)</a>
+<a class="sourceLine" id="cb81-8" title="8"><span class="kw">summary</span>(mo1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = CASchools$math ~ CASchools$str)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -44.615 -13.374  -0.828  12.728  52.711 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   691.4174     9.3825  73.692  &lt; 2e-16 ***
+## CASchools$str  -1.9386     0.4755  -4.077 5.47e-05 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 18.41 on 418 degrees of freedom
+## Multiple R-squared:  0.03824,    Adjusted R-squared:  0.03594 
+## F-statistic: 16.62 on 1 and 418 DF,  p-value: 5.467e-05</code></pre>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb83-1" title="1">CASchools<span class="op">$</span>math.hat &lt;-<span class="st"> </span><span class="kw">predict.lm</span>(mo1)</a>
+<a class="sourceLine" id="cb83-2" title="2"></a>
+<a class="sourceLine" id="cb83-3" title="3">g1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>CASchools) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb83-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>str,<span class="dt">y=</span>math),   <span class="dt">size=</span><span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb83-5" title="5"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>str,<span class="dt">y=</span>math.hat),   <span class="dt">size=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&#39;red&#39;</span>) </a>
+<a class="sourceLine" id="cb83-6" title="6"></a>
+<a class="sourceLine" id="cb83-7" title="7">CASchools<span class="op">$</span>small &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb83-8" title="8">CASchools<span class="op">$</span>small[CASchools<span class="op">$</span>str<span class="op">&gt;=</span><span class="dv">20</span>] &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb83-9" title="9"></a>
+<a class="sourceLine" id="cb83-10" title="10"><span class="kw">plot</span>(g1)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" title="1">mo2 &lt;-<span class="st"> </span><span class="kw">lm</span>(CASchools<span class="op">$</span>math<span class="op">~</span>CASchools<span class="op">$</span>small)</a>
+<a class="sourceLine" id="cb84-2" title="2"><span class="kw">summary</span>(mo2)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = CASchools$math ~ CASchools$small)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -46.756 -13.456  -0.706  12.769  53.744 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)      655.756      1.201  545.93  &lt; 2e-16 ***
+## CASchools$small   -5.599      1.830   -3.06  0.00235 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 18.57 on 418 degrees of freedom
+## Multiple R-squared:  0.02191,    Adjusted R-squared:  0.01957 
+## F-statistic: 9.364 on 1 and 418 DF,  p-value: 0.002355</code></pre>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" title="1">CASchools<span class="op">$</span>math.hat2 &lt;-<span class="st"> </span><span class="kw">predict.lm</span>(mo2)</a>
+<a class="sourceLine" id="cb86-2" title="2"></a>
+<a class="sourceLine" id="cb86-3" title="3">g2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>CASchools) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb86-4" title="4"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>str,<span class="dt">y=</span>math),   <span class="dt">size=</span><span class="dv">2</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb86-5" title="5"><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">x=</span>str,<span class="dt">y=</span>math.hat2),   <span class="dt">size=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&#39;red&#39;</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb86-6" title="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>str,<span class="dt">y=</span>math.hat),   <span class="dt">shape=</span><span class="dv">1</span>, <span class="dt">size=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&#39;blue&#39;</span>) </a>
+<a class="sourceLine" id="cb86-7" title="7"></a>
+<a class="sourceLine" id="cb86-8" title="8"><span class="kw">plot</span>(g2)  </a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-21-2.png" width="672" /></p>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb87-1" title="1"><span class="kw">table</span>(CASchools<span class="op">$</span>math.hat2)</a></code></pre></div>
+<pre><code>## 
+## 650.156355546983 655.755646135019 
+##              181              239</code></pre>
+</div>
+<div id="week-7" class="section level2">
+<h2><span class="header-section-number">7.7</span> Week 7</h2>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" title="1"><span class="kw">data</span>(<span class="st">&quot;CPS1988&quot;</span>) </a>
+<a class="sourceLine" id="cb89-2" title="2">df1 &lt;-<span class="st"> </span>CPS1988 <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb89-3" title="3"><span class="st">  </span><span class="kw">filter</span>(experience<span class="op">==</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb89-4" title="4"></a>
+<a class="sourceLine" id="cb89-5" title="5">g2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>df1) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb89-6" title="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>education,<span class="dt">y=</span>wage),   <span class="dt">size=</span><span class="dv">2</span>) </a>
+<a class="sourceLine" id="cb89-7" title="7"></a>
+<a class="sourceLine" id="cb89-8" title="8"><span class="kw">plot</span>(g2)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" title="1">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>df1, <span class="dt">formula=</span>wage <span class="op">~</span><span class="st"> </span>education)</a>
+<a class="sourceLine" id="cb90-2" title="2"></a>
+<a class="sourceLine" id="cb90-3" title="3"><span class="kw">summary</span>(mo1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = wage ~ education, data = df1)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -689.3 -186.9  -44.4  133.4 2920.3 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -295.803     58.635  -5.045 5.49e-07 ***
+## education     65.941      4.303  15.326  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 317 on 901 degrees of freedom
+## Multiple R-squared:  0.2068, Adjusted R-squared:  0.2059 
+## F-statistic: 234.9 on 1 and 901 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" title="1"><span class="co">#homoskedastic</span></a>
+<a class="sourceLine" id="cb92-2" title="2"><span class="kw">coeftest</span>(mo1)</a></code></pre></div>
+<pre><code>## 
+## t test of coefficients:
+## 
+##              Estimate Std. Error t value  Pr(&gt;|t|)    
+## (Intercept) -295.8033    58.6348 -5.0448 5.489e-07 ***
+## education     65.9409     4.3026 15.3257 &lt; 2.2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" title="1"><span class="co">#Breusch-Pagan test </span></a>
+<a class="sourceLine" id="cb94-2" title="2"><span class="kw">bptest</span>(mo1)</a></code></pre></div>
+<pre><code>## 
+##  studentized Breusch-Pagan test
+## 
+## data:  mo1
+## BP = 11.6, df = 1, p-value = 0.0006596</code></pre>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb96-1" title="1"><span class="kw">coeftest</span>(mo1, <span class="dt">vcov =</span> <span class="kw">vcovHC</span>(mo1, <span class="st">&quot;HC1&quot;</span>))  </a></code></pre></div>
+<pre><code>## 
+## t test of coefficients:
+## 
+##              Estimate Std. Error t value  Pr(&gt;|t|)    
+## (Intercept) -295.8033    68.8836 -4.2942 1.943e-05 ***
+## education     65.9409     5.3622 12.2974 &lt; 2.2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb98-1" title="1"><span class="kw">data</span>(CASchools)</a>
+<a class="sourceLine" id="cb98-2" title="2"></a>
+<a class="sourceLine" id="cb98-3" title="3">CASchools<span class="op">$</span>str &lt;-<span class="st"> </span>CASchools<span class="op">$</span>students<span class="op">/</span>CASchools<span class="op">$</span>teachers</a>
+<a class="sourceLine" id="cb98-4" title="4"></a>
+<a class="sourceLine" id="cb98-5" title="5">g2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>CASchools) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb98-6" title="6"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>english,<span class="dt">y=</span>read),   <span class="dt">size=</span><span class="dv">2</span>) </a>
+<a class="sourceLine" id="cb98-7" title="7"></a>
+<a class="sourceLine" id="cb98-8" title="8"><span class="kw">plot</span>(g2)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb99-1" title="1">g2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>CASchools) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb99-2" title="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>english,<span class="dt">y=</span>str),   <span class="dt">size=</span><span class="dv">2</span>) </a>
+<a class="sourceLine" id="cb99-3" title="3"></a>
+<a class="sourceLine" id="cb99-4" title="4"><span class="kw">plot</span>(g2)</a></code></pre></div>
+<p><img src="Metrics_files/figure-html/unnamed-chunk-22-3.png" width="672" /></p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb100-1" title="1">CASchools<span class="op">$</span>small &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb100-2" title="2">CASchools<span class="op">$</span>small[CASchools<span class="op">$</span>str<span class="op">&lt;</span><span class="dv">20</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb100-3" title="3"></a>
+<a class="sourceLine" id="cb100-4" title="4">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools, <span class="dt">formula=</span>read<span class="op">~</span>small)</a>
+<a class="sourceLine" id="cb100-5" title="5"><span class="kw">summary</span>(mo1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ small, data = CASchools)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -54.237 -14.637   1.013  13.703  47.903 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  649.997      1.461 444.824  &lt; 2e-16 ***
+## small          8.740      1.937   4.512 8.37e-06 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 19.66 on 418 degrees of freedom
+## Multiple R-squared:  0.04644,    Adjusted R-squared:  0.04416 
+## F-statistic: 20.36 on 1 and 418 DF,  p-value: 8.368e-06</code></pre>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb102-1" title="1">mo2 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools[CASchools<span class="op">$</span>english<span class="op">&lt;</span><span class="fl">1.9</span>,], <span class="dt">formula=</span>read<span class="op">~</span>small)</a>
+<a class="sourceLine" id="cb102-2" title="2">mo3 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools[CASchools<span class="op">$</span>english<span class="op">&gt;</span><span class="fl">1.9</span> <span class="op">&amp;</span><span class="st"> </span>CASchools<span class="op">$</span>english<span class="op">&lt;</span><span class="fl">8.8</span>,], <span class="dt">formula=</span>read<span class="op">~</span>small)</a>
+<a class="sourceLine" id="cb102-3" title="3">mo4 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools[CASchools<span class="op">$</span>english<span class="op">&gt;</span><span class="fl">8.8</span> <span class="op">&amp;</span><span class="st"> </span>CASchools<span class="op">$</span>english<span class="op">&lt;</span><span class="dv">23</span>,], <span class="dt">formula=</span>read<span class="op">~</span>small)</a>
+<a class="sourceLine" id="cb102-4" title="4">mo5 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools[CASchools<span class="op">$</span>english<span class="op">&lt;</span><span class="dv">23</span>,], <span class="dt">formula=</span>read<span class="op">~</span>small)</a>
+<a class="sourceLine" id="cb102-5" title="5"></a>
+<a class="sourceLine" id="cb102-6" title="6"><span class="kw">summary</span>(mo2)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english &lt; 
+##     1.9, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -33.042 -10.142  -0.196  11.108  31.458 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 667.8963     2.8032 238.258   &lt;2e-16 ***
+## small        -0.2542     3.2634  -0.078    0.938    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 14.57 on 101 degrees of freedom
+## Multiple R-squared:  6.007e-05,  Adjusted R-squared:  -0.00984 
+## F-statistic: 0.006067 on 1 and 101 DF,  p-value: 0.9381</code></pre>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" title="1"><span class="kw">summary</span>(mo3)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english &gt; 
+##     1.9 &amp; CASchools$english &lt; 8.8, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -30.570 -10.768   0.031   8.832  36.830 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  662.368      2.374 279.062   &lt;2e-16 ***
+## small          4.802      3.083   1.557    0.122    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.74 on 106 degrees of freedom
+## Multiple R-squared:  0.02237,    Adjusted R-squared:  0.01315 
+## F-statistic: 2.426 on 1 and 106 DF,  p-value: 0.1223</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" title="1"><span class="kw">summary</span>(mo4)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english &gt; 
+##     8.8 &amp; CASchools$english &lt; 23, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -43.980 -12.098  -0.217  10.371  38.346 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  649.680      2.211 293.774   &lt;2e-16 ***
+## small          5.774      3.069   1.881   0.0628 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.64 on 102 degrees of freedom
+## Multiple R-squared:  0.03353,    Adjusted R-squared:  0.02406 
+## F-statistic: 3.539 on 1 and 102 DF,  p-value: 0.06279</code></pre>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" title="1"><span class="kw">summary</span>(mo5)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ small, data = CASchools[CASchools$english &lt; 
+##     23, ])
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -52.659 -11.176   0.106  10.524  39.906 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  658.359      1.500 439.017   &lt;2e-16 ***
+## small          5.735      1.911   3.001   0.0029 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 16.5 on 313 degrees of freedom
+## Multiple R-squared:  0.02797,    Adjusted R-squared:  0.02487 
+## F-statistic: 9.008 on 1 and 313 DF,  p-value: 0.002905</code></pre>
 
 </div>
 </div>
