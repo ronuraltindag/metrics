@@ -997,4 +997,14 @@ summary(mo5)
 
 
 
+mo2 <- lm(data=CASchools, formula=read~str)
+summary(mo2)
+
+mo3 <- lm(data=CASchools, formula=read~str+english)
+summary(mo3)
+
+mo4 <- lm(data=CASchools, formula=english~str)
+summary(mo4)
+
+
 ```
