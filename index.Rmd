@@ -108,7 +108,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to your birthday for replication
-set.seed(06081998)
+set.seed(01011999)
 ###############################################################################
 ```
 
@@ -264,7 +264,7 @@ head(df2)
 
 # Homework Assignment III 
 
-**Deadline**: March 22, 2020
+**Deadline**: April 5th, 2020
 
 **Source:** Stock and Watson, 3rd Updated Edition. Exercises 5.1 and 5.2   
 
@@ -313,7 +313,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(0122124)
+set.seed(06061983)
 ###############################################################################
 #get the data urls 
 df1.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx'
@@ -334,7 +334,7 @@ head(df2)
 
 # Homework Assignment IV 
 
-**Deadline**: April 12, 2020, 11 PM
+**Deadline**: April 19, 2020, 11 PM
 
 **Source:** Stock and Watson, 3rd Updated Edition. Exercises 6.1 and 6.3.   
 
@@ -997,34 +997,13 @@ summary(mo5)
 
 
 
-
-```
-
-## Week 9
-
-```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
-
-data("CASchools")
-
-CASchools$str <- CASchools$students/CASchools$teachers
-
-mo1 <- lm(data=CASchools, formula=read~str)
-summary(mo1)
-
-mo2 <- lm(data=CASchools, formula=read~str+english)
+mo2 <- lm(data=CASchools, formula=read~str)
 summary(mo2)
 
-
-
-mo3 <- lm(data=CASchools, formula=english~str)
+mo3 <- lm(data=CASchools, formula=read~str+english)
 summary(mo3)
 
-RMSE <- sqrt(mean(mo2$residuals^2))
-print(RMSE)
-
-CASchools$noise <- sample(200, size = nrow(CASchools), replace = TRUE)
-
-mo4 <- lm(data=CASchools, formula=read~str+english+noise)
+mo4 <- lm(data=CASchools, formula=english~str)
 summary(mo4)
 
 

@@ -114,15 +114,17 @@
 
 \title{EC282: Homework Assignments}
 \author{Onur Altındağ}
-\date{Last update: 2020-03-23}
+\date{Last update: 2020-03-29}
 
 \begin{document}
+\frontmatter
 \maketitle
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\mainmatter
 \hypertarget{general-rules-and-principles}{%
 \chapter{General Rules and Principles}\label{general-rules-and-principles}}
 
@@ -194,7 +196,7 @@ At the beginning of any R script, you should have a standard header that you use
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to your birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06081998}\NormalTok{)}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{01011999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \end{Highlighting}
 \end{Shaded}
@@ -357,7 +359,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \hypertarget{homework-assignment-iii}{%
 \chapter{Homework Assignment III}\label{homework-assignment-iii}}
 
-\textbf{Deadline}: March 22, 2020
+\textbf{Deadline}: April 5th, 2020
 
 \textbf{Source:} Stock and Watson, 3rd Updated Edition. Exercises 5.1 and 5.2
 
@@ -404,7 +406,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{0122124}\NormalTok{)}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data urls }
 \NormalTok{df1.url <-}\StringTok{ 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx'}
@@ -425,7 +427,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \hypertarget{homework-assignment-iv}{%
 \chapter{Homework Assignment IV}\label{homework-assignment-iv}}
 
-\textbf{Deadline}: April 12, 2020, 11 PM
+\textbf{Deadline}: April 19, 2020, 11 PM
 
 \textbf{Source:} Stock and Watson, 3rd Updated Edition. Exercises 6.1 and 6.3.
 
@@ -606,7 +608,7 @@ Define a binary random variable \(Y\) for flipping a fair coin. Calculate the ex
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "H" "T" "T" "T" "H" "T" "H" "T" "H" "H"
+##  [1] "H" "H" "T" "T" "T" "H" "H" "T" "T" "T"
 \end{verbatim}
 
 \begin{Shaded}
@@ -628,7 +630,7 @@ Define a binary random variable \(Y\) for flipping a fair coin. Calculate the ex
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5
+## [1] 0.3
 \end{verbatim}
 
 \begin{Shaded}
@@ -638,7 +640,7 @@ Define a binary random variable \(Y\) for flipping a fair coin. Calculate the ex
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.2777778
+## [1] 0.2333333
 \end{verbatim}
 
 \begin{Shaded}
@@ -648,7 +650,7 @@ Define a binary random variable \(Y\) for flipping a fair coin. Calculate the ex
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.4963
+## [1] 0.5066
 \end{verbatim}
 
 \begin{Shaded}
@@ -658,7 +660,7 @@ Define a binary random variable \(Y\) for flipping a fair coin. Calculate the ex
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.2500113
+## [1] 0.2499814
 \end{verbatim}
 
 \hypertarget{week2}{%
@@ -852,7 +854,7 @@ Generate normally distributed random variables and variable with chi-squared
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 2 1 4 2 1 3 1 5 6 2
+##  [1] 6 1 5 1 5 2 4 6 3 3
 \end{verbatim}
 
 \begin{Shaded}
@@ -1706,17 +1708,10 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## F-statistic: 9.008 on 1 and 313 DF,  p-value: 0.002905
 \end{verbatim}
 
-\hypertarget{week-9}{%
-\section{Week 9}\label{week-9}}
-
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{data}\NormalTok{(}\StringTok{"CASchools"}\NormalTok{)}
-
-\NormalTok{CASchools}\OperatorTok{$}\NormalTok{str <-}\StringTok{ }\NormalTok{CASchools}\OperatorTok{$}\NormalTok{students}\OperatorTok{/}\NormalTok{CASchools}\OperatorTok{$}\NormalTok{teachers}
-
-\NormalTok{mo1 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{str)}
-\KeywordTok{summary}\NormalTok{(mo1)}
+\NormalTok{mo2 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{str)}
+\KeywordTok{summary}\NormalTok{(mo2)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1743,8 +1738,8 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mo2 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{str}\OperatorTok{+}\NormalTok{english)}
-\KeywordTok{summary}\NormalTok{(mo2)}
+\NormalTok{mo3 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{str}\OperatorTok{+}\NormalTok{english)}
+\KeywordTok{summary}\NormalTok{(mo3)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1772,8 +1767,8 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mo3 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{english}\OperatorTok{~}\NormalTok{str)}
-\KeywordTok{summary}\NormalTok{(mo3)}
+\NormalTok{mo4 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{english}\OperatorTok{~}\NormalTok{str)}
+\KeywordTok{summary}\NormalTok{(mo4)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1798,49 +1793,7 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## F-statistic: 15.25 on 1 and 418 DF,  p-value: 0.0001095
 \end{verbatim}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{RMSE <-}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\KeywordTok{mean}\NormalTok{(mo2}\OperatorTok{$}\NormalTok{residuals}\OperatorTok{^}\DecValTok{2}\NormalTok{))}
-\KeywordTok{print}\NormalTok{(RMSE)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 14.33303
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{CASchools}\OperatorTok{$}\NormalTok{noise <-}\StringTok{ }\KeywordTok{sample}\NormalTok{(}\DecValTok{200}\NormalTok{, }\DataTypeTok{size =} \KeywordTok{nrow}\NormalTok{(CASchools), }\DataTypeTok{replace =} \OtherTok{TRUE}\NormalTok{)}
-
-\NormalTok{mo4 <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(}\DataTypeTok{data=}\NormalTok{CASchools, }\DataTypeTok{formula=}\NormalTok{read}\OperatorTok{~}\NormalTok{str}\OperatorTok{+}\NormalTok{english}\OperatorTok{+}\NormalTok{noise)}
-\KeywordTok{summary}\NormalTok{(mo4)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Call:
-## lm(formula = read ~ str + english + noise, data = CASchools)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -48.821 -10.489  -0.403   9.854  39.315 
-## 
-## Coefficients:
-##               Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) 690.796982   7.501590  92.087  < 2e-16 ***
-## str          -1.285530   0.378389  -3.397 0.000746 ***
-## english      -0.735135   0.039169 -18.768  < 2e-16 ***
-## noise         0.009862   0.012614   0.782 0.434766    
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 14.39 on 416 degrees of freedom
-## Multiple R-squared:  0.4914, Adjusted R-squared:  0.4878 
-## F-statistic:   134 on 3 and 416 DF,  p-value: < 2.2e-16
-\end{verbatim}
-
+\backmatter
   \bibliography{book.bib,packages.bib}
 
 \end{document}
