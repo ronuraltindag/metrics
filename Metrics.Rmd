@@ -1097,3 +1097,6 @@ linearHypothesis(mo7, c("str=0", "expenditure=0"))
 
 
 
+
+<!--chapter:end:index.Rmd-->
+

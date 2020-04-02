@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="homework-assignment-v.html">
-
+<link rel="next" href="post-covid-syllabus-update.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -146,7 +146,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week5"><i class="fa fa-check"></i><b>7.5</b> Week5</a></li>
 <li class="chapter" data-level="7.6" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-6"><i class="fa fa-check"></i><b>7.6</b> Week 6</a></li>
 <li class="chapter" data-level="7.7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-7"><i class="fa fa-check"></i><b>7.7</b> Week 7</a></li>
+<li class="chapter" data-level="7.8" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-10"><i class="fa fa-check"></i><b>7.8</b> Week 10</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="post-covid-syllabus-update.html"><a href="post-covid-syllabus-update.html"><i class="fa fa-check"></i><b>8</b> Post-covid syllabus update</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -911,7 +913,211 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Residual standard error: 17.98 on 418 degrees of freedom
 ## Multiple R-squared:  0.03521,    Adjusted R-squared:  0.0329 
 ## F-statistic: 15.25 on 1 and 418 DF,  p-value: 0.0001095</code></pre>
-
+</div>
+<div id="week-10" class="section level2">
+<h2><span class="header-section-number">7.8</span> Week 10</h2>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" title="1"><span class="kw">options</span>(<span class="dt">scipen=</span><span class="dv">999</span>)</a>
+<a class="sourceLine" id="cb116-2" title="2"><span class="kw">data</span>(CASchools)</a>
+<a class="sourceLine" id="cb116-3" title="3"><span class="kw">set.seed</span>(<span class="dv">03302020</span>)</a>
+<a class="sourceLine" id="cb116-4" title="4"></a>
+<a class="sourceLine" id="cb116-5" title="5">CASchools<span class="op">$</span>noise1 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1000</span>, <span class="dt">size =</span> <span class="kw">nrow</span>(CASchools), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb116-6" title="6">CASchools<span class="op">$</span>noise2 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1000</span>, <span class="dt">size =</span> <span class="kw">nrow</span>(CASchools), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb116-7" title="7">CASchools<span class="op">$</span>noise3 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">1000</span>, <span class="dt">size =</span> <span class="kw">nrow</span>(CASchools), <span class="dt">replace =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb116-8" title="8">CASchools<span class="op">$</span>str &lt;-<span class="st"> </span>CASchools<span class="op">$</span>students<span class="op">/</span>CASchools<span class="op">$</span>teachers</a>
+<a class="sourceLine" id="cb116-9" title="9"></a>
+<a class="sourceLine" id="cb116-10" title="10">CASchools1 &lt;-<span class="st"> </span>CASchools <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb116-11" title="11"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(read,str, english, lunch, expenditure)</a>
+<a class="sourceLine" id="cb116-12" title="12"></a>
+<a class="sourceLine" id="cb116-13" title="13"></a>
+<a class="sourceLine" id="cb116-14" title="14"></a>
+<a class="sourceLine" id="cb116-15" title="15">mo1 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools, <span class="dt">formula=</span>read<span class="op">~</span>str<span class="op">+</span>english)</a>
+<a class="sourceLine" id="cb116-16" title="16"><span class="kw">summary</span>(mo1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ str + english, data = CASchools)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -49.46 -10.28  -0.32   9.64  38.63 
+## 
+## Coefficients:
+##              Estimate Std. Error t value             Pr(&gt;|t|)    
+## (Intercept) 691.87505    7.37033   93.87 &lt; 0.0000000000000002 ***
+## str          -1.28970    0.37818   -3.41             0.000712 ***
+## english      -0.73403    0.03912  -18.76 &lt; 0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 14.38 on 417 degrees of freedom
+## Multiple R-squared:  0.4907, Adjusted R-squared:  0.4883 
+## F-statistic: 200.9 on 2 and 417 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" title="1">mo2 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools, <span class="dt">formula=</span>read<span class="op">~</span>str<span class="op">+</span>english<span class="op">+</span>noise1<span class="op">+</span>noise2<span class="op">+</span>noise3)</a>
+<a class="sourceLine" id="cb118-2" title="2"><span class="kw">summary</span>(mo2)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ str + english + noise1 + noise2 + noise3, 
+##     data = CASchools)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -49.389 -10.345  -0.396   9.594  39.131 
+## 
+## Coefficients:
+##                 Estimate   Std. Error t value             Pr(&gt;|t|)    
+## (Intercept) 691.21388413   7.69423712  89.835 &lt; 0.0000000000000002 ***
+## str          -1.28629862   0.38078358  -3.378             0.000799 ***
+## english      -0.73389786   0.03927138 -18.688 &lt; 0.0000000000000002 ***
+## noise1       -0.00002182   0.00246661  -0.009             0.992947    
+## noise2        0.00036962   0.00238187   0.155             0.876754    
+## noise3        0.00085814   0.00247389   0.347             0.728857    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 14.43 on 414 degrees of freedom
+## Multiple R-squared:  0.4909, Adjusted R-squared:  0.4847 
+## F-statistic: 79.83 on 5 and 414 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" title="1"><span class="kw">data</span>(<span class="st">&quot;CPS1988&quot;</span>) </a>
+<a class="sourceLine" id="cb120-2" title="2"></a>
+<a class="sourceLine" id="cb120-3" title="3">CPS1988<span class="op">$</span>educ2 &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">*</span>CPS1988<span class="op">$</span>education </a>
+<a class="sourceLine" id="cb120-4" title="4">CPS1988<span class="op">$</span>white &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb120-5" title="5">CPS1988<span class="op">$</span>white[CPS1988<span class="op">$</span>ethnicity<span class="op">==</span><span class="st">&#39;cauc&#39;</span>] &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb120-6" title="6">CPS1988<span class="op">$</span>non.white &lt;-<span class="st"> </span><span class="dv">0</span> </a>
+<a class="sourceLine" id="cb120-7" title="7">CPS1988<span class="op">$</span>non.white[CPS1988<span class="op">$</span>white<span class="op">==</span><span class="dv">0</span>] &lt;-<span class="st"> </span><span class="dv">1</span> </a>
+<a class="sourceLine" id="cb120-8" title="8">  </a>
+<a class="sourceLine" id="cb120-9" title="9">mo3 &lt;-<span class="st">  </span><span class="kw">lm</span>(<span class="dt">data=</span>CPS1988, <span class="dt">formula=</span>wage<span class="op">~</span>education)</a>
+<a class="sourceLine" id="cb120-10" title="10">mo4 &lt;-<span class="st">  </span><span class="kw">lm</span>(<span class="dt">data=</span>CPS1988, <span class="dt">formula=</span>wage<span class="op">~</span>education <span class="op">+</span><span class="st"> </span>educ2)</a>
+<a class="sourceLine" id="cb120-11" title="11"></a>
+<a class="sourceLine" id="cb120-12" title="12"><span class="kw">summary</span>(mo3)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = wage ~ education, data = CPS1988)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+##  -786.0  -264.9   -54.8   174.5 18035.1 
+## 
+## Coefficients:
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept) -12.8281    11.8970  -1.078               0.281    
+## education    47.1810     0.8888  53.085 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 432.4 on 28153 degrees of freedom
+## Multiple R-squared:  0.09099,    Adjusted R-squared:  0.09096 
+## F-statistic:  2818 on 1 and 28153 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" title="1"><span class="kw">summary</span>(mo4)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = wage ~ education + educ2, data = CPS1988)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+##  -786.0  -264.9   -54.8   174.5 18035.1 
+## 
+## Coefficients: (1 not defined because of singularities)
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept) -12.8281    11.8970  -1.078               0.281    
+## education    47.1810     0.8888  53.085 &lt;0.0000000000000002 ***
+## educ2             NA         NA      NA                  NA    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 432.4 on 28153 degrees of freedom
+## Multiple R-squared:  0.09099,    Adjusted R-squared:  0.09096 
+## F-statistic:  2818 on 1 and 28153 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" title="1">mo5 &lt;-<span class="st">  </span><span class="kw">lm</span>(<span class="dt">data=</span>CPS1988, <span class="dt">formula=</span>wage<span class="op">~</span>education<span class="op">+</span>white)</a>
+<a class="sourceLine" id="cb124-2" title="2"><span class="kw">summary</span>(mo5)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = wage ~ education + white, data = CPS1988)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+##  -792.0  -256.3   -57.1   173.6 18027.3 
+## 
+## Coefficients:
+##              Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept) -123.2581    14.2508  -8.649 &lt;0.0000000000000002 ***
+## education     46.2504     0.8882  52.070 &lt;0.0000000000000002 ***
+## white        133.1458     9.5332  13.967 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 430.9 on 28152 degrees of freedom
+## Multiple R-squared:  0.09724,    Adjusted R-squared:  0.09718 
+## F-statistic:  1516 on 2 and 28152 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" title="1">mo6 &lt;-<span class="st">  </span><span class="kw">lm</span>(<span class="dt">data=</span>CPS1988, <span class="dt">formula=</span>wage<span class="op">~</span><span class="st"> </span>education <span class="op">+</span><span class="st"> </span>non.white <span class="op">+</span><span class="st"> </span>white)</a>
+<a class="sourceLine" id="cb126-2" title="2"><span class="kw">summary</span>(mo6)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = wage ~ education + non.white + white, data = CPS1988)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+##  -792.0  -256.3   -57.1   173.6 18027.3 
+## 
+## Coefficients: (1 not defined because of singularities)
+##              Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)    9.8877    11.9672   0.826               0.409    
+## education     46.2504     0.8882  52.070 &lt;0.0000000000000002 ***
+## non.white   -133.1458     9.5332 -13.967 &lt;0.0000000000000002 ***
+## white              NA         NA      NA                  NA    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 430.9 on 28152 degrees of freedom
+## Multiple R-squared:  0.09724,    Adjusted R-squared:  0.09718 
+## F-statistic:  1516 on 2 and 28152 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" title="1">mo7 &lt;-<span class="st"> </span><span class="kw">lm</span>(<span class="dt">data=</span>CASchools, <span class="dt">formula=</span>read<span class="op">~</span>str<span class="op">+</span>english<span class="op">+</span>lunch<span class="op">+</span>expenditure)</a>
+<a class="sourceLine" id="cb128-2" title="2"></a>
+<a class="sourceLine" id="cb128-3" title="3"><span class="kw">summary</span>(mo7)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = read ~ str + english + lunch + expenditure, data = CASchools)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -31.181  -5.353  -0.028   5.247  31.735 
+## 
+## Coefficients:
+##                Estimate  Std. Error t value             Pr(&gt;|t|)    
+## (Intercept) 662.0903950   9.0716578  72.984 &lt; 0.0000000000000002 ***
+## str          -0.2031297   0.2860344  -0.710                0.478    
+## english      -0.2105934   0.0304482  -6.916      0.0000000000176 ***
+## lunch        -0.5502143   0.0203238 -27.072 &lt; 0.0000000000000002 ***
+## expenditure   0.0046660   0.0008406   5.551      0.0000000508161 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 8.544 on 415 degrees of freedom
+## Multiple R-squared:  0.8212, Adjusted R-squared:  0.8195 
+## F-statistic: 476.5 on 4 and 415 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb130-1" title="1"><span class="kw">cor</span>(CASchools1)</a></code></pre></div>
+<pre><code>##                   read        str     english       lunch expenditure
+## read         1.0000000 -0.2465930 -0.69028587 -0.87880769  0.21792682
+## str         -0.2465930  1.0000000  0.18764237  0.13520340 -0.61998216
+## english     -0.6902859  0.1876424  1.00000000  0.65306072 -0.07139604
+## lunch       -0.8788077  0.1352034  0.65306072  1.00000000 -0.06103871
+## expenditure  0.2179268 -0.6199822 -0.07139604 -0.06103871  1.00000000</code></pre>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb132-1" title="1"><span class="kw">vif</span>(mo7)</a></code></pre></div>
+<pre><code>##         str     english       lunch expenditure 
+##    1.680861    1.779490    1.744355    1.630108</code></pre>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" title="1"><span class="kw">linearHypothesis</span>(mo7, <span class="kw">c</span>(<span class="st">&quot;str=0&quot;</span>, <span class="st">&quot;expenditure=0&quot;</span>))</a></code></pre></div>
+<pre><code>## Linear hypothesis test
+## 
+## Hypothesis:
+## str = 0
+## expenditure = 0
+## 
+## Model 1: restricted model
+## Model 2: read ~ str + english + lunch + expenditure
+## 
+##   Res.Df   RSS Df Sum of Sq     F            Pr(&gt;F)    
+## 1    417 34575                                         
+## 2    415 30292  2    4283.2 29.34 0.000000000001207 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
 </div>
             </section>
@@ -919,8 +1125,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="homework-assignment-v.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="homework-assignment-v.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="post-covid-syllabus-update.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
