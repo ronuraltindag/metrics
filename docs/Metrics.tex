@@ -114,15 +114,17 @@
 
 \title{EC282: Homework Assignments}
 \author{Onur Altındağ}
-\date{Last update: 2020-04-01}
+\date{Last update: 2020-04-02}
 
 \begin{document}
+\frontmatter
 \maketitle
 
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\mainmatter
 \hypertarget{general-rules-and-principles}{%
 \chapter{General Rules and Principles}\label{general-rules-and-principles}}
 
@@ -1245,9 +1247,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -258.058  -68.062   -1.417   69.704  297.534 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  523.756     38.011  13.779  < 2e-16 ***
-## CS            -6.479      1.741  -3.721 0.000331 ***
+##             Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept)  523.756     38.011  13.779 < 0.0000000000000002 ***
+## CS            -6.479      1.741  -3.721             0.000331 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1315,9 +1317,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -298.588  -76.795    4.799   73.665  309.736 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)    369.92      14.04  26.355   <2e-16 ***
-## df1$small.CS    44.45      22.19   2.003   0.0479 *  
+##              Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept)    369.92      14.04  26.355 <0.0000000000000002 ***
+## df1$small.CS    44.45      22.19   2.003              0.0479 *  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1352,15 +1354,15 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -44.615 -13.374  -0.828  12.728  52.711 
 ## 
 ## Coefficients:
-##               Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)   691.4174     9.3825  73.692  < 2e-16 ***
-## CASchools$str  -1.9386     0.4755  -4.077 5.47e-05 ***
+##               Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept)   691.4174     9.3825  73.692 < 0.0000000000000002 ***
+## CASchools$str  -1.9386     0.4755  -4.077            0.0000547 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 18.41 on 418 degrees of freedom
 ## Multiple R-squared:  0.03824,    Adjusted R-squared:  0.03594 
-## F-statistic: 16.62 on 1 and 418 DF,  p-value: 5.467e-05
+## F-statistic: 16.62 on 1 and 418 DF,  p-value: 0.00005467
 \end{verbatim}
 
 \begin{Shaded}
@@ -1397,9 +1399,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -46.756 -13.456  -0.706  12.769  53.744 
 ## 
 ## Coefficients:
-##                 Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)      655.756      1.201  545.93  < 2e-16 ***
-## CASchools$small   -5.599      1.830   -3.06  0.00235 ** 
+##                 Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept)      655.756      1.201  545.93 < 0.0000000000000002 ***
+## CASchools$small   -5.599      1.830   -3.06              0.00235 ** 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1471,15 +1473,15 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -689.3 -186.9  -44.4  133.4 2920.3 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) -295.803     58.635  -5.045 5.49e-07 ***
-## education     65.941      4.303  15.326  < 2e-16 ***
+##             Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept) -295.803     58.635  -5.045          0.000000549 ***
+## education     65.941      4.303  15.326 < 0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 317 on 901 degrees of freedom
 ## Multiple R-squared:  0.2068, Adjusted R-squared:  0.2059 
-## F-statistic: 234.9 on 1 and 901 DF,  p-value: < 2.2e-16
+## F-statistic: 234.9 on 1 and 901 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1493,9 +1495,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## 
 ## t test of coefficients:
 ## 
-##              Estimate Std. Error t value  Pr(>|t|)    
-## (Intercept) -295.8033    58.6348 -5.0448 5.489e-07 ***
-## education     65.9409     4.3026 15.3257 < 2.2e-16 ***
+##              Estimate Std. Error t value              Pr(>|t|)    
+## (Intercept) -295.8033    58.6348 -5.0448          0.0000005489 ***
+## education     65.9409     4.3026 15.3257 < 0.00000000000000022 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
@@ -1525,9 +1527,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## 
 ## t test of coefficients:
 ## 
-##              Estimate Std. Error t value  Pr(>|t|)    
-## (Intercept) -295.8033    68.8836 -4.2942 1.943e-05 ***
-## education     65.9409     5.3622 12.2974 < 2.2e-16 ***
+##              Estimate Std. Error t value              Pr(>|t|)    
+## (Intercept) -295.8033    68.8836 -4.2942            0.00001943 ***
+## education     65.9409     5.3622 12.2974 < 0.00000000000000022 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
@@ -1578,15 +1580,15 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -54.237 -14.637   1.013  13.703  47.903 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  649.997      1.461 444.824  < 2e-16 ***
-## small          8.740      1.937   4.512 8.37e-06 ***
+##             Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept)  649.997      1.461 444.824 < 0.0000000000000002 ***
+## small          8.740      1.937   4.512           0.00000837 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 19.66 on 418 degrees of freedom
 ## Multiple R-squared:  0.04644,    Adjusted R-squared:  0.04416 
-## F-statistic: 20.36 on 1 and 418 DF,  p-value: 8.368e-06
+## F-statistic: 20.36 on 1 and 418 DF,  p-value: 0.000008368
 \end{verbatim}
 
 \begin{Shaded}
@@ -1611,9 +1613,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -33.042 -10.142  -0.196  11.108  31.458 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) 667.8963     2.8032 238.258   <2e-16 ***
-## small        -0.2542     3.2634  -0.078    0.938    
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept) 667.8963     2.8032 238.258 <0.0000000000000002 ***
+## small        -0.2542     3.2634  -0.078               0.938    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1639,9 +1641,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -30.570 -10.768   0.031   8.832  36.830 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  662.368      2.374 279.062   <2e-16 ***
-## small          4.802      3.083   1.557    0.122    
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept)  662.368      2.374 279.062 <0.0000000000000002 ***
+## small          4.802      3.083   1.557               0.122    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1667,9 +1669,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -43.980 -12.098  -0.217  10.371  38.346 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  649.680      2.211 293.774   <2e-16 ***
-## small          5.774      3.069   1.881   0.0628 .  
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept)  649.680      2.211 293.774 <0.0000000000000002 ***
+## small          5.774      3.069   1.881              0.0628 .  
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1695,9 +1697,9 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -52.659 -11.176   0.106  10.524  39.906 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  658.359      1.500 439.017   <2e-16 ***
-## small          5.735      1.911   3.001   0.0029 ** 
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept)  658.359      1.500 439.017 <0.0000000000000002 ***
+## small          5.735      1.911   3.001              0.0029 ** 
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -1723,15 +1725,15 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -50.839 -14.479   1.121  14.495  44.370 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) 706.4485     9.9410  71.064  < 2e-16 ***
-## str          -2.6210     0.5038  -5.202 3.09e-07 ***
+##             Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept) 706.4485     9.9410  71.064 < 0.0000000000000002 ***
+## str          -2.6210     0.5038  -5.202          0.000000309 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 19.51 on 418 degrees of freedom
 ## Multiple R-squared:  0.06081,    Adjusted R-squared:  0.05856 
-## F-statistic: 27.06 on 1 and 418 DF,  p-value: 3.091e-07
+## F-statistic: 27.06 on 1 and 418 DF,  p-value: 0.0000003091
 \end{verbatim}
 
 \begin{Shaded}
@@ -1751,16 +1753,16 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -49.46 -10.28  -0.32   9.64  38.63 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) 691.87505    7.37033   93.87  < 2e-16 ***
-## str          -1.28970    0.37818   -3.41 0.000712 ***
-## english      -0.73403    0.03912  -18.76  < 2e-16 ***
+##              Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept) 691.87505    7.37033   93.87 < 0.0000000000000002 ***
+## str          -1.28970    0.37818   -3.41             0.000712 ***
+## english      -0.73403    0.03912  -18.76 < 0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 14.38 on 417 degrees of freedom
 ## Multiple R-squared:  0.4907, Adjusted R-squared:  0.4883 
-## F-statistic: 200.9 on 2 and 417 DF,  p-value: < 2.2e-16
+## F-statistic: 200.9 on 2 and 417 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1796,6 +1798,7 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \KeywordTok{data}\NormalTok{(CASchools)}
 \KeywordTok{set.seed}\NormalTok{(}\DecValTok{03302020}\NormalTok{)}
 
@@ -1824,16 +1827,16 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -49.46 -10.28  -0.32   9.64  38.63 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) 691.87505    7.37033   93.87  < 2e-16 ***
-## str          -1.28970    0.37818   -3.41 0.000712 ***
-## english      -0.73403    0.03912  -18.76  < 2e-16 ***
+##              Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept) 691.87505    7.37033   93.87 < 0.0000000000000002 ***
+## str          -1.28970    0.37818   -3.41             0.000712 ***
+## english      -0.73403    0.03912  -18.76 < 0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 14.38 on 417 degrees of freedom
 ## Multiple R-squared:  0.4907, Adjusted R-squared:  0.4883 
-## F-statistic: 200.9 on 2 and 417 DF,  p-value: < 2.2e-16
+## F-statistic: 200.9 on 2 and 417 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1854,19 +1857,19 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -49.389 -10.345  -0.396   9.594  39.131 
 ## 
 ## Coefficients:
-##               Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  6.912e+02  7.694e+00  89.835  < 2e-16 ***
-## str         -1.286e+00  3.808e-01  -3.378 0.000799 ***
-## english     -7.339e-01  3.927e-02 -18.688  < 2e-16 ***
-## noise1      -2.182e-05  2.467e-03  -0.009 0.992947    
-## noise2       3.696e-04  2.382e-03   0.155 0.876754    
-## noise3       8.581e-04  2.474e-03   0.347 0.728857    
+##                 Estimate   Std. Error t value             Pr(>|t|)    
+## (Intercept) 691.21388413   7.69423712  89.835 < 0.0000000000000002 ***
+## str          -1.28629862   0.38078358  -3.378             0.000799 ***
+## english      -0.73389786   0.03927138 -18.688 < 0.0000000000000002 ***
+## noise1       -0.00002182   0.00246661  -0.009             0.992947    
+## noise2        0.00036962   0.00238187   0.155             0.876754    
+## noise3        0.00085814   0.00247389   0.347             0.728857    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 14.43 on 414 degrees of freedom
 ## Multiple R-squared:  0.4909, Adjusted R-squared:  0.4847 
-## F-statistic: 79.83 on 5 and 414 DF,  p-value: < 2.2e-16
+## F-statistic: 79.83 on 5 and 414 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1896,15 +1899,15 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ##  -786.0  -264.9   -54.8   174.5 18035.1 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) -12.8281    11.8970  -1.078    0.281    
-## education    47.1810     0.8888  53.085   <2e-16 ***
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept) -12.8281    11.8970  -1.078               0.281    
+## education    47.1810     0.8888  53.085 <0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 432.4 on 28153 degrees of freedom
 ## Multiple R-squared:  0.09099,    Adjusted R-squared:  0.09096 
-## F-statistic:  2818 on 1 and 28153 DF,  p-value: < 2.2e-16
+## F-statistic:  2818 on 1 and 28153 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1923,16 +1926,16 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ##  -786.0  -264.9   -54.8   174.5 18035.1 
 ## 
 ## Coefficients: (1 not defined because of singularities)
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) -12.8281    11.8970  -1.078    0.281    
-## education    47.1810     0.8888  53.085   <2e-16 ***
-## educ2             NA         NA      NA       NA    
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept) -12.8281    11.8970  -1.078               0.281    
+## education    47.1810     0.8888  53.085 <0.0000000000000002 ***
+## educ2             NA         NA      NA                  NA    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 432.4 on 28153 degrees of freedom
 ## Multiple R-squared:  0.09099,    Adjusted R-squared:  0.09096 
-## F-statistic:  2818 on 1 and 28153 DF,  p-value: < 2.2e-16
+## F-statistic:  2818 on 1 and 28153 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1952,16 +1955,16 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ##  -792.0  -256.3   -57.1   173.6 18027.3 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) -123.2581    14.2508  -8.649   <2e-16 ***
-## education     46.2504     0.8882  52.070   <2e-16 ***
-## white        133.1458     9.5332  13.967   <2e-16 ***
+##              Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept) -123.2581    14.2508  -8.649 <0.0000000000000002 ***
+## education     46.2504     0.8882  52.070 <0.0000000000000002 ***
+## white        133.1458     9.5332  13.967 <0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 430.9 on 28152 degrees of freedom
 ## Multiple R-squared:  0.09724,    Adjusted R-squared:  0.09718 
-## F-statistic:  1516 on 2 and 28152 DF,  p-value: < 2.2e-16
+## F-statistic:  1516 on 2 and 28152 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -1981,17 +1984,17 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ##  -792.0  -256.3   -57.1   173.6 18027.3 
 ## 
 ## Coefficients: (1 not defined because of singularities)
-##              Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)    9.8877    11.9672   0.826    0.409    
-## education     46.2504     0.8882  52.070   <2e-16 ***
-## non.white   -133.1458     9.5332 -13.967   <2e-16 ***
-## white              NA         NA      NA       NA    
+##              Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept)    9.8877    11.9672   0.826               0.409    
+## education     46.2504     0.8882  52.070 <0.0000000000000002 ***
+## non.white   -133.1458     9.5332 -13.967 <0.0000000000000002 ***
+## white              NA         NA      NA                  NA    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 430.9 on 28152 degrees of freedom
 ## Multiple R-squared:  0.09724,    Adjusted R-squared:  0.09718 
-## F-statistic:  1516 on 2 and 28152 DF,  p-value: < 2.2e-16
+## F-statistic:  1516 on 2 and 28152 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -2012,18 +2015,18 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 ## -31.181  -5.353  -0.028   5.247  31.735 
 ## 
 ## Coefficients:
-##               Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  6.621e+02  9.072e+00  72.984  < 2e-16 ***
-## str         -2.031e-01  2.860e-01  -0.710    0.478    
-## english     -2.106e-01  3.045e-02  -6.916 1.76e-11 ***
-## lunch       -5.502e-01  2.032e-02 -27.072  < 2e-16 ***
-## expenditure  4.666e-03  8.406e-04   5.551 5.08e-08 ***
+##                Estimate  Std. Error t value             Pr(>|t|)    
+## (Intercept) 662.0903950   9.0716578  72.984 < 0.0000000000000002 ***
+## str          -0.2031297   0.2860344  -0.710                0.478    
+## english      -0.2105934   0.0304482  -6.916      0.0000000000176 ***
+## lunch        -0.5502143   0.0203238 -27.072 < 0.0000000000000002 ***
+## expenditure   0.0046660   0.0008406   5.551      0.0000000508161 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 8.544 on 415 degrees of freedom
 ## Multiple R-squared:  0.8212, Adjusted R-squared:  0.8195 
-## F-statistic: 476.5 on 4 and 415 DF,  p-value: < 2.2e-16
+## F-statistic: 476.5 on 4 and 415 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \begin{Shaded}
@@ -2050,6 +2053,29 @@ Suppose that a researcher, using data on class size (CS) and average test scores
 \begin{verbatim}
 ##         str     english       lunch expenditure 
 ##    1.680861    1.779490    1.744355    1.630108
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{linearHypothesis}\NormalTok{(mo7, }\KeywordTok{c}\NormalTok{(}\StringTok{"str=0"}\NormalTok{, }\StringTok{"expenditure=0"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Linear hypothesis test
+## 
+## Hypothesis:
+## str = 0
+## expenditure = 0
+## 
+## Model 1: restricted model
+## Model 2: read ~ str + english + lunch + expenditure
+## 
+##   Res.Df   RSS Df Sum of Sq     F            Pr(>F)    
+## 1    417 34575                                         
+## 2    415 30292  2    4283.2 29.34 0.000000000001207 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 \end{verbatim}
 
 \hypertarget{post-covid-syllabus-update}{%
@@ -2119,6 +2145,7 @@ Suppose that a researcher, using data on class size (CS) and average test scores
   \end{itemize}
 \end{itemize}
 
+\backmatter
   \bibliography{book.bib,packages.bib}
 
 \end{document}
