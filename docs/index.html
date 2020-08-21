@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>EC282: Homework Assignments</title>
+  <title>EC282: Introduction to Econometrics</title>
   <meta name="description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="EC282: Homework Assignments" />
+  <meta property="og:title" content="EC282: Introduction to Econometrics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="EC282: Homework Assignments" />
+  <meta name="twitter:title" content="EC282: Introduction to Econometrics" />
   
   <meta name="twitter:description" content="This book teaches econometrics like a 21st century humanoid would want to learn it." />
   
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="homework-assigment-i.html">
+<link rel="next" href="general-rules-and-principles.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -39,6 +39,7 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -46,12 +47,15 @@
 
 
 
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -60,14 +64,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -76,9 +82,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -124,31 +130,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">EC 282 Homework Assignments</a></li>
+<li><a href="./">EC 282 Introduction to Econometrics</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> General Rules and Principles</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>1.1</b> Installing R and RStudio</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>1.2</b> Basic rules and best practices</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#header"><i class="fa fa-check"></i><b>1.3</b> Header</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#how-to-submit-the-homework-assignment"><i class="fa fa-check"></i><b>1.4</b> How to submit the homework assignment</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Syllabus</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-desctiption"><i class="fa fa-check"></i>Course description</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#knowledge"><i class="fa fa-check"></i>Knowledge and Skills</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#perspectives"><i class="fa fa-check"></i>Perspectives</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="homework-assigment-i.html"><a href="homework-assigment-i.html"><i class="fa fa-check"></i><b>2</b> Homework Assigment I</a></li>
-<li class="chapter" data-level="3" data-path="homework-assignment-ii.html"><a href="homework-assignment-ii.html"><i class="fa fa-check"></i><b>3</b> Homework Assignment II</a></li>
-<li class="chapter" data-level="4" data-path="homework-assignment-iii.html"><a href="homework-assignment-iii.html"><i class="fa fa-check"></i><b>4</b> Homework Assignment III</a></li>
-<li class="chapter" data-level="5" data-path="homework-assignment-iv.html"><a href="homework-assignment-iv.html"><i class="fa fa-check"></i><b>5</b> Homework Assignment IV</a></li>
-<li class="chapter" data-level="6" data-path="homework-assignment-v.html"><a href="homework-assignment-v.html"><i class="fa fa-check"></i><b>6</b> Homework Assignment V</a></li>
-<li class="chapter" data-level="7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html"><i class="fa fa-check"></i><b>7</b> Lecture notes, updates, and corrections:</a><ul>
-<li class="chapter" data-level="7.1" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week1"><i class="fa fa-check"></i><b>7.1</b> Week1</a></li>
-<li class="chapter" data-level="7.2" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week2"><i class="fa fa-check"></i><b>7.2</b> Week2</a></li>
-<li class="chapter" data-level="7.3" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week3"><i class="fa fa-check"></i><b>7.3</b> Week3</a></li>
-<li class="chapter" data-level="7.4" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week4"><i class="fa fa-check"></i><b>7.4</b> Week4</a></li>
-<li class="chapter" data-level="7.5" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week5"><i class="fa fa-check"></i><b>7.5</b> Week5</a></li>
-<li class="chapter" data-level="7.6" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-6"><i class="fa fa-check"></i><b>7.6</b> Week 6</a></li>
-<li class="chapter" data-level="7.7" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-7"><i class="fa fa-check"></i><b>7.7</b> Week 7</a></li>
-<li class="chapter" data-level="7.8" data-path="lecture-notes-updates-and-corrections.html"><a href="lecture-notes-updates-and-corrections.html#week-10"><i class="fa fa-check"></i><b>7.8</b> Week 10</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#class-information"><i class="fa fa-check"></i>Class Information</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#contact-information"><i class="fa fa-check"></i>Contact</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#office-hours"><i class="fa fa-check"></i>Office hours</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#textbook"><i class="fa fa-check"></i>Textbook</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#important-dates"><i class="fa fa-check"></i>Important Dates</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#evaluation"><i class="fa fa-check"></i>Evaluation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#software-and-collaborative-work"><i class="fa fa-check"></i>Software and Collaborative Work</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i>Grading</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#academic-integrity"><i class="fa fa-check"></i>Academic Integrity</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#diversity-inclusion-and-support"><i class="fa fa-check"></i>Diversity Inclusion and Support</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#online-attendance"><i class="fa fa-check"></i>Online Attendance</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="post-covid-syllabus-update.html"><a href="post-covid-syllabus-update.html"><i class="fa fa-check"></i><b>8</b> Post-covid syllabus update</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tentative-schedule"><i class="fa fa-check"></i>Tentative Schedule</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html"><i class="fa fa-check"></i><b>1</b> General Rules and Principles</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>1.1</b> Installing R and RStudio</a></li>
+<li class="chapter" data-level="1.2" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>1.2</b> Basic rules and best practices</a></li>
+<li class="chapter" data-level="1.3" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#header"><i class="fa fa-check"></i><b>1.3</b> Header</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -161,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EC282: Homework Assignments</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EC282: Introduction to Econometrics</a>
           </h1>
         </div>
 
@@ -170,86 +178,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">EC282: Homework Assignments</h1>
+<h1 class="title">EC282: Introduction to Econometrics</h1>
 <p class="author"><em>Onur Altındağ</em></p>
-<p class="date"><em>Last update: 2020-04-02</em></p>
+<p class="date"><em>Last update: 2020-08-21</em></p>
 </div>
-<div id="general-rules-and-principles" class="section level1">
-<h1><span class="header-section-number"> 1</span> General Rules and Principles</h1>
-<div id="installing-r-and-rstudio" class="section level2">
-<h2><span class="header-section-number">1.1</span> Installing R and RStudio</h2>
-<style type="text/css">
-.badCode {
-background-color: #ffffcf;
-  color: black;
-}
-</style>
-<p>Here are the <a href="https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/">instructions</a> for installing R and RStudio on your Windows or Mac desktop. Skip the third part and do not install “SDSFoundations Package”.</p>
+<div id="syllabus" class="section level1 unnumbered">
+<h1>Syllabus</h1>
+<div id="course-desctiption" class="section level2 unnumbered">
+<h2>Course description</h2>
+<p>This course aims to introduce 21st century econometric analysis to business students. It provides tools to infer meaningful information from data using descriptive and regression analyses. In the first half of the semester, we will review the basic statistics used in econometrics and introduce mechanics of univariate and multivariate regressions. In the second half, we will focus on two central issues in econometric analysis:</p>
+<ul>
+<li>causal interpretation of a statistical relationship</li>
+<li>overfitting a prediction model</li>
+</ul>
+<p>These two problems are the most common ones that you will need to tackle when analyzing either cause and effect or predicting an outcome using the existing data. At the end of the semester, I expect you to be familiar with <strong>R</strong> and <strong>RStudio</strong> interface, basic data manipulation, obtaining and interpreting sample statistics, conduct meaningful regression analysis and prediction. Importantly, I expect you to have a clear understanding of the distinction between correlation and causation, and in what conditions the former implies the latter.</p>
+<div id="knowledge" class="section level3 unnumbered">
+<h3>Knowledge and Skills</h3>
+<ul>
+<li>Compute and interpret the descriptive statistics of a sample.</li>
+<li>Understand the statistical uncertainty, construct and interpret the confidence intervals.</li>
+<li>Conduct hypothesis testing, interpret the test statistic and the results of a statistical test.</li>
+<li>Construct a multivariate regression model, empirically estimate the model and interpret the results.</li>
+<li>Basic understanding of the randomized controlled trials and the causal inference.</li>
+<li>Choose and modify the functional form of a relationship between the output and the input variables.</li>
+<li>Interpret the regression coefficients on models with interaction variables.</li>
+<li>Comparing a prediction model based on in-sample and out-of-sample performance.</li>
+</ul>
 </div>
-<div id="basic-rules-and-best-practices" class="section level2">
-<h2><span class="header-section-number">1.2</span> Basic rules and best practices</h2>
-<p>All files should exist in a local folder that syncs to a cloud-storage service. No file you ever work on should be at risk of being lost if your computer ceases to function or be in your possesion. NEVER place any file on “downloads” or “desktop” folders.</p>
-<p>Get a free cloud-storage service with a desktop application that syncs to a cloud-storage service. I like the <a href="https://help.dropbox.com/installs-integrations/desktop/desktop-application-overview">Dropbox desktop app</a> but feel free to choose any other service. You don’t need a lot of space so free version of any desktop cloud app would work. Under the Dropbox folder, create a designated folder for this course such as EC282.</p>
-<p>All subfolders under EC282 and files in them should have unique and descriptive construction: DON’T use spaces in file or folder names. Here is an example of a folder structure that might work for a student in this class:</p>
-<pre><code>EC282
-│  
-│
-└───Course_docs
-│   │    SyllabusEC282.pdf
-│   │    LectureNotes.pdf 
-└───Assignments
-│   └───Assignment1
-│       │   dataset1name.Rda
-│       │   Lastname_Firstname_Assignment1_EC282.R
-│   └───Assignment2
-│       │   dataset2name.Rda
-│       │   Lastname_Firstname_Assignment1_EC282.R
-│   └───Assignment3
-│       │   dataset3name.Rda
-│       │   Lastname_Firstname_Assignment3_EC282.R
-│   └───Assignment4
-│       │   dataset4name.Rda
-│       │   Lastname_Firstname_Assignment4_EC282.R
-│       │   ...
-└───Exams
-│   └───Midterm1
-│       │   Midterm1Review.pdf
-│       │   Midterm1Review_myanswers.docx
-|       |   ...
-│   </code></pre>
+<div id="perspectives" class="section level3 unnumbered">
+<h3>Perspectives</h3>
+<ul>
+<li>Learn how to conduct a regression analysis, understands its limitation in inferring a causal relationship, generalizing its results, and power in prediction an outcome that is unknown to the researcher.</li>
+<li>Understand the regression diagnostics to choose the most appropriate definition of predictors, outcome, functional form, and</li>
+</ul>
 </div>
-<div id="header" class="section level2">
-<h2><span class="header-section-number">1.3</span> Header</h2>
-<p>At the beginning of any R script, you should have a standard header that you use across all scripts that clears the workspace, loads/installs packages as necessary, sets the working directory, etc. Here is an example that you can copy paste to the header of any script that you use:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co">###############################################################################</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="co"># list the packages we need and loads them, installs them automatically if we don&#39;t have them</span></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="co"># add any package that you need to the list  </span></a>
-<a class="sourceLine" id="cb2-4" title="4">need &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;glue&#39;</span>, <span class="st">&#39;dplyr&#39;</span>,<span class="st">&#39;readxl&#39;</span>, <span class="st">&#39;MASS&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>,<span class="st">&#39;tidyr&#39;</span>,<span class="st">&#39;AER&#39;</span>,<span class="st">&#39;scales&#39;</span>,<span class="st">&#39;mvtnorm&#39;</span>, </a>
-<a class="sourceLine" id="cb2-5" title="5">          <span class="st">&#39;stargazer&#39;</span>,<span class="st">&#39;httr&#39;</span>)</a>
-<a class="sourceLine" id="cb2-6" title="6"></a>
-<a class="sourceLine" id="cb2-7" title="7">have &lt;-<span class="st"> </span>need <span class="op">%in%</span><span class="st"> </span><span class="kw">rownames</span>(<span class="kw">installed.packages</span>()) </a>
-<a class="sourceLine" id="cb2-8" title="8"><span class="cf">if</span>(<span class="kw">any</span>(<span class="op">!</span>have)) <span class="kw">install.packages</span>(need[<span class="op">!</span>have]) </a>
-<a class="sourceLine" id="cb2-9" title="9"><span class="kw">invisible</span>(<span class="kw">lapply</span>(need, library, <span class="dt">character.only=</span>T)) </a>
-<a class="sourceLine" id="cb2-10" title="10"></a>
-<a class="sourceLine" id="cb2-11" title="11"><span class="co"># To set up the working directory</span></a>
-<a class="sourceLine" id="cb2-12" title="12"><span class="kw">getwd</span>()</a>
-<a class="sourceLine" id="cb2-13" title="13"><span class="kw">setwd</span>(<span class="kw">getwd</span>()) <span class="co">#change getwd() here is you need to set a different working directory</span></a>
-<a class="sourceLine" id="cb2-14" title="14"></a>
-<a class="sourceLine" id="cb2-15" title="15"></a>
-<a class="sourceLine" id="cb2-16" title="16"><span class="co">#this clears the workspace</span></a>
-<a class="sourceLine" id="cb2-17" title="17"><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) </a>
-<a class="sourceLine" id="cb2-18" title="18"><span class="co">#this sets the random number generator seed to your birthday for replication</span></a>
-<a class="sourceLine" id="cb2-19" title="19"><span class="kw">set.seed</span>(<span class="dv">01011999</span>)</a>
-<a class="sourceLine" id="cb2-20" title="20"><span class="co">###############################################################################</span></a></code></pre></div>
-<p>When coding, use relative references to files. Typically, any script will begin looking for files in the working directory. At any time you can type <code>getwd()</code> on your Rstudio console to see the current working directory. The header above automatically sets the working directory to the folder that the R script is included. For example, if you are working on <code>Lastname_Firstname_Assignment1_EC282.R</code> script and need to load file <code>dataset1name.Rda</code> into an object, then you would simply run:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">load</span>(dataset1name.Rda)</a></code></pre></div>
-<p>However, if you were working in the same .R file, and needed to access <code>dataset2name.Rda</code>, you would need to point the program to a directory outside the current working directory – so, you go up one level, over one folder, and look there:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">load</span>(..<span class="op">/</span>Assignment2<span class="op">/</span>dataset2name.Rda)</a></code></pre></div>
-<p>When learning R, the most important skill that you need to acquire is to be able to <strong>google</strong> your problem. There is probably not a single R question that you have yet has not been answered on <a href="https://stackoverflow.com/">Stack Overflow</a>.</p>
 </div>
-<div id="how-to-submit-the-homework-assignment" class="section level2">
-<h2><span class="header-section-number">1.4</span> How to submit the homework assignment</h2>
-<p>You can use a snipping tool to copy and paste the relevant output and figures from RStudio console to a word file, type the answers, save everything and upload it on BlackBoard/Assignments. If you want to have a more elegant looking homework output the <code>stargazer</code> package is very powerful in transforming your analysis into publishable formats.</p>
+<div id="class-information" class="section level2 unnumbered">
+<h2>Class Information</h2>
+<div id="contact-information" class="section level3 unnumbered">
+<h3>Contact</h3>
+<ul>
+<li><strong>Instructor</strong>: Onur Altındağ</li>
+<li><strong>Course web</strong>: <a href="https://ronuraltindag.github.io/metrics/" class="uri">https://ronuraltindag.github.io/metrics/</a></li>
+<li><strong>Personal web</strong> : <a href="https://www.onuraltindag.info/">www.onuraltindag.info</a></li>
+<li><strong>Office</strong>: AAC 181 - <em>currently NA due to pandemic</em></li>
+<li><strong>Email</strong>: <code>oaltindag@bentley.edu</code></li>
+</ul>
+</div>
+<div id="office-hours" class="section level3 unnumbered">
+<h3>Office hours</h3>
+<p>Please go to <a href="https://calendly.com/ronuraltindag/ec282?month=2020-08">my calendar</a> and book a virtual office hour to meet me (30 minutes maximum). Email me if you need to talk to me urgently or there is no availability on my calendar.</p>
+</div>
+<div id="textbook" class="section level3 unnumbered">
+<h3>Textbook</h3>
+<ul>
+<li>Stock, J. H., &amp; Watson, M. W. Introduction to Econometrics, any edition. Pearson Education Limited. – <strong>required</strong></li>
+<li>E-book: <a href="https://www.econometrics-with-r.org/">https://www.econometrics-with-r.org/</a> – <strong>optional</strong></li>
+</ul>
+</div>
+<div id="important-dates" class="section level3 unnumbered">
+<h3>Important Dates</h3>
+<ul>
+<li>Weekly homework assignments: before our Monday meetings.</li>
+<li>Midterm exam:</li>
+<li>Empirical project due:</li>
+<li>Final exam:</li>
+</ul>
+</div>
+<div id="evaluation" class="section level3 unnumbered">
+<h3>Evaluation</h3>
+<ul>
+<li>Midterm exam: 20%</li>
+<li>Empirical project: 20%</li>
+<li>Final exam: 30%</li>
+<li>Assignments: 20%</li>
+<li>Participation: 10%</li>
+</ul>
+</div>
+<div id="software-and-collaborative-work" class="section level3 unnumbered">
+<h3>Software and Collaborative Work</h3>
+<ul>
+<li><p><strong>R</strong> and <strong>RStudio</strong>: I assume that you have a basic familiarity with or expect your effort to gain familiarity throughout the semester. The instructions installation, some basic rules and best practices on coding are on this web page. Keep in mind that this course is <strong>not</strong> designed to teach you R and more than anything, the best way to learn programming is to actually work on assigned problems.</p></li>
+<li><p><strong>Github</strong>: To create a collaborative and interactive teaching environment, you need to create an account on <a href="https://github.com/">GitHub</a> using your Bentley email address and accept the project invitation that you will receive from me for EC282. You will only use the very basic tools on <a href="https://github.com/">GitHub</a>, mainly issues tab to share your empirical work in progress, ask questions about the homework assignments, post an answer, and learn R from me and your peers through sharing your code.</p></li>
+</ul>
+</div>
+<div id="grading" class="section level3 unnumbered">
+<h3>Grading</h3>
+<ul>
+<li><strong>High stake assessments</strong>
+<ul>
+<li><strong>Midterm</strong> + <strong>Final</strong>: Constitute half of your final grade. I will post the exams on <strong>Black Board</strong> and you will have <strong>24 hours</strong> to work on them and submit <strong>DO NOT</strong> try to submit the exams on last minute as the system will close after the deadline and I will not accept it.
+You <strong>MUST</strong> attend the midterm and the final as there will be no make-up exams. The midterm and the final are <strong>both</strong> cumulative. If you miss or are likely to miss the <strong>midterm</strong> due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse. If you miss the final exam due to an emergency, you will receive an <strong>incomplete</strong> for this course. <strong>DO NOT</strong> take this class if you know that you will not be able to attend the final exam.</li>
+</ul></li>
+<li><strong>Low stake assessments</strong>
+<ul>
+<li><p><strong>Empirical project:</strong> a short empirical essay that you will develop throughout the semester and execute by using the tools that you learn in this class. On Github, I will post a few topics on this web page that you can choose from that are mainly in my area of interest: health, migration, inequality, etc. If you don’t like any of those, you can also choose your own. You will need to find data, clean and organize it, conduct a small scale econometrics analysis to answer an interesting empirical question. The final output should be between 1500-2500 words and 3-4 graphs/tables combined, and submitted through BlackBoard. Your interaction with me and your peers is a significant part of your grade for preparing the empirical assignment. Here is a <a href="https://www.onuraltindag.info/pt-tr/posts/excess_mortality_eng/">blog post</a> that I wrote in spring 2020 which was covered by <a href="https://www.nytimes.com/2020/04/20/world/middleeast/coronavirus-turkey-deaths.html">New York Times</a>, <a href="https://www.ft.com/content/80bb222c-b6eb-40ea-8014-563cbe9e0117">Financial Times</a>, <a href="https://tr.euronews.com/2020/04/23/saglik-bakaninin-new-york-timesa-verdigi-yanit-olumlerdeki-artis-acikliyor-mu-covid-19">Euro News</a>, <a href="https://elpais.com/sociedad/2020-04-27/el-misterio-turco-uno-de-los-paises-con-mas-casos-de-covid-19-y-menos-muertes.html">El Pais</a>, and in addition to many Turkish media outlets. While I don’t expect you to conduct an analysis like a seasoned econometrician, I do want you to do provide mini empirical-investigation and report your findings in a similar format.<br />
+</p></li>
+<li><p><strong>Weekly homework assignments:</strong> The homework assignments are posted on this web page with the deadlines. They can be completed in groups of <strong>maximum three</strong> students and self-graded on pass/fail basis by you after the deadline. You can miss up to <strong>2</strong> assignment with no grade penalty. I will average the rest as your final assignment grade. You will assign yourself a pass/fail grade if you think that you have done enough effort to complete the assignment on this <a href="Link%20here">google sheet</a> before Monday meeting after the deadline. I will go over these problems in the classroom and randomly ask students to “help” me with the assignment. If what you know substantially contradicts with your self-grade, I will change your grade to zero and you will receive a significant penalty on your participation grade. In other words, do the best you can with these assignments, work consistently, and do not cheat.</p></li>
+<li><p><strong>Collaborative participation to <a href="https://github.com/">GitHub</a> and classroom discussions:</strong> You must sign up for a free account on <a href="https://github.com/">GitHub</a>. Github is an eco-system for web development and version control using Git. You will only need to use the <code>issues</code> tab through either creating an issue to ask or answer a question on your or your peer’s empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. Your interaction on Github through receiving feedback from me and your friends on your empirical project is also part of your empirical assignment grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="academic-integrity" class="section level3 unnumbered">
+<h3>Academic Integrity</h3>
+<p>Learning is a privilege that demands responsibility. At Bentley, students and faculty are members of an academic community that supports integrity both inside and outside the classroom. The expectation at Bentley is that students will take advantage of the opportunity for intellectual development and, in doing so, will conduct themselves in a manner consistent with the standards of academic integrity. When these standards are violated or compromised, individuals and the entire Bentley community suffer. Students who engage in acts of academic dishonesty not only face university censure but also may harm their future educational and employment opportunities. In other words, don’t bring unauthorized materials into exams, don’t plagiarize someone else’s work, and make sure that your collaborations are conducted in accordance with university and course policy.</p>
+<p>All students have access to Bentley’s academic integrity policy on Blackboard (via the Academic Integrity course page) and the Undergraduate Student Handbook/Graduate Catalog. The best way to avoid a problem is to consult with your instructor before taking any action that might constitute a violation.</p>
+</div>
+<div id="diversity-inclusion-and-support" class="section level3 unnumbered">
+<h3>Diversity Inclusion and Support</h3>
+<p><strong>Statement of Diversity and Inclusion</strong></p>
+<p>My goal in this class is to create a teaching environment that is inclusive for all of the members of our small community independent of their race, gender, age, disability status, and political or religious views. Our differences strengthen our ability for perspective taking, being critical about our default believes,and enhance learning.</p>
+<p>I will try to reach this goal within my best capacity by respect and professionalism in our class-related engagements and I anticipate students to do the same. These standards of appropriate conduct are well summarized by <a href="https://www.bentley.edu/about/mission-and-values">Bentley’s Core Values</a> in our institution’s mission statement. If you feel that I or anyone in this class has acted outside these values, please come to me so that we may discuss your experience. If you do not feel comfortable coming to me with your concerns, I encourage you to speak with someone in the Office of Academic Advising: 781.891.2803, <a href="mailto:academic_services@bentley.edu" class="email">academic_services@bentley.edu</a>, Jennison 336.</p>
+<p><strong>Bias Incident Response</strong></p>
+<p>The Bias Incident Response Team (BIRT) provides students affected by bias or bias-related incidents with access to appropriate resources. Where appropriate, BIRT assists the University in its response to situations that may impact the overall campus climate related to diversity and inclusion. Working closely with appropriate students, faculty, committees, organizations, and staff, BIRT plays an educational role in fostering an inclusive campus community and supporting targeted individuals when bias or bias-related incidents occur. More information about BIRT and how to file a bias incident report can be found at: <a href="https://www.bentley.edu/offices/student-affairs/birt" class="uri">https://www.bentley.edu/offices/student-affairs/birt</a></p>
+<p><strong>Disability Services</strong></p>
+<p>Bentley University abides by Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act of 1990 which stipulate no student shall be denied the benefits of an education solely by reason of a disability. If you have a hidden or visible disability which may require classroom accommodations, please call (if you are a residential student or on online student) Disability Services within the first 4 weeks of the semester to schedule an appointment. Disability Services is located in the Office of Academic Services (JEN 336, 781.891.2004). Disability Services is responsible for managing accommodations and services for all students with disabilities.</p>
+<p><strong>Eco-Fi-Stat Learning Center</strong></p>
+<p>The center provides additional support for students on course materials and learning. Each semester, I nominate a few students from EC282 to tutor the students on my next class. For those who need additional support for programming and statistics review, this might be a good option. For additional information, please visit:</p>
+<p><a href="https://www.bentley.edu/offices/academic-services/eco-fi-stat-learning-center" class="uri">https://www.bentley.edu/offices/academic-services/eco-fi-stat-learning-center</a></p>
+</div>
+<div id="online-attendance" class="section level3 unnumbered">
+<h3>Online Attendance</h3>
+<p><strong>Zoom Protocol and Online Attendance</strong></p>
+<p>Students <strong>must</strong> join classes through their Bentley Zoom account. Go to <a href="https://bentley.zoom.us">bentley.zoom.us</a> and enter the course meeting number to join the session.</p>
+<p>I expect you to attend class with a functioning microphone and camera. Cameras should be on to effectively engage in class and participate throughout the course. If you have an impediment to keeping your camera on, please let me know so that we can work to arrive at a mutually agreeable solution.</p>
+<p>You are expected to be able to access all electronic course materials. It is your responsibility to review the course syllabus as soon as possible to determine what resources or materials I expect you to use in the course. If you are a student in an international location that may limit access to certain internet resources, please let me know immediately so you can find a solution.</p>
+<p>Students are expected to attend classes synchronously despite potential time zone hurdles. Solely watching recorded classes is not deemed to be acceptable course participation or completion. Course recordings are for the benefit of students who miss an occasional class or would like to watch the recording for further edification of materials. Class recordings that are posted to BB are for the sole purpose of this course. Disseminating any portion of this video in any manner is strictly prohibited.</p>
+<p><strong>Lecture notes</strong></p>
+<p>During the online lectures, I use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester.</p>
+<p><strong>Lecture videos</strong>
+I will record and post the lecture videos on Black Board.</p>
+</div>
+</div>
+<div id="tentative-schedule" class="section level2 unnumbered">
+<h2>Tentative Schedule</h2>
+<p><strong><em>Week 1</em></strong></p>
 </div>
 </div>
             </section>
@@ -258,16 +321,18 @@ background-color: #ffffcf;
         </div>
       </div>
 
-<a href="homework-assigment-i.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="general-rules-and-principles.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -275,12 +340,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -295,6 +359,10 @@ gitbook.start({
 "link": null,
 "text": null
 },
+"view": {
+"link": null,
+"text": null
+},
 "download": ["Metrics.pdf", "Metrics.epub"],
 "toc": {
 "collapse": "subsection"
@@ -303,19 +371,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
