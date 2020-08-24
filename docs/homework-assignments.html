@@ -498,6 +498,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>c.</strong> Does <code>lead</code> have a statistically significant effect on infant mortality? Explain.</p>
 <p><strong>d.</strong> Does the effect of <code>lead</code> on infant mortality depend on <code>ph</code>? Is this dependence statistically significant?</p>
 <p><strong>e.</strong> Construct a 95% confidence interval for the effect of <code>lead</code> on infant mortality when <code>ph</code> is 6.5</p>
+<p><strong>Header for the R script</strong></p>
+<p>Start a new R script, copy/paste the header below and save it to <code>Dropbox\EC282\Assignment7</code> or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data <code>df1</code> in your enviroment. Conduct the analysis below the header.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="homework-assignments.html#cb11-1"></a><span class="co">###############################################################################</span></span>
+<span id="cb11-2"><a href="homework-assignments.html#cb11-2"></a><span class="co"># list the packages we need and loads them, installs them automatically if we don&#39;t have them</span></span>
+<span id="cb11-3"><a href="homework-assignments.html#cb11-3"></a><span class="co"># add any package that you need to the list  </span></span>
+<span id="cb11-4"><a href="homework-assignments.html#cb11-4"></a>need &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;glue&#39;</span>, <span class="st">&#39;dplyr&#39;</span>,<span class="st">&#39;readxl&#39;</span>, <span class="st">&#39;MASS&#39;</span>, <span class="st">&#39;ggplot2&#39;</span>,<span class="st">&#39;tidyr&#39;</span>,<span class="st">&#39;AER&#39;</span>,<span class="st">&#39;scales&#39;</span>,<span class="st">&#39;mvtnorm&#39;</span>, </span>
+<span id="cb11-5"><a href="homework-assignments.html#cb11-5"></a>          <span class="st">&#39;stargazer&#39;</span>,<span class="st">&#39;httr&#39;</span>, <span class="st">&#39;repmis&#39;</span>)</span>
+<span id="cb11-6"><a href="homework-assignments.html#cb11-6"></a></span>
+<span id="cb11-7"><a href="homework-assignments.html#cb11-7"></a>have &lt;-<span class="st"> </span>need <span class="op">%in%</span><span class="st"> </span><span class="kw">rownames</span>(<span class="kw">installed.packages</span>()) </span>
+<span id="cb11-8"><a href="homework-assignments.html#cb11-8"></a><span class="cf">if</span>(<span class="kw">any</span>(<span class="op">!</span>have)) <span class="kw">install.packages</span>(need[<span class="op">!</span>have]) </span>
+<span id="cb11-9"><a href="homework-assignments.html#cb11-9"></a><span class="kw">invisible</span>(<span class="kw">lapply</span>(need, library, <span class="dt">character.only=</span>T)) </span>
+<span id="cb11-10"><a href="homework-assignments.html#cb11-10"></a></span>
+<span id="cb11-11"><a href="homework-assignments.html#cb11-11"></a><span class="co"># Save the R script to the assignment 1 folder before this</span></span>
+<span id="cb11-12"><a href="homework-assignments.html#cb11-12"></a><span class="co"># To set up the working directory</span></span>
+<span id="cb11-13"><a href="homework-assignments.html#cb11-13"></a><span class="kw">getwd</span>()</span>
+<span id="cb11-14"><a href="homework-assignments.html#cb11-14"></a><span class="kw">setwd</span>(<span class="kw">getwd</span>()) <span class="co">#change getwd() here is you need to set a different working directory</span></span>
+<span id="cb11-15"><a href="homework-assignments.html#cb11-15"></a></span>
+<span id="cb11-16"><a href="homework-assignments.html#cb11-16"></a></span>
+<span id="cb11-17"><a href="homework-assignments.html#cb11-17"></a><span class="co">#this clears the workspace</span></span>
+<span id="cb11-18"><a href="homework-assignments.html#cb11-18"></a><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) </span>
+<span id="cb11-19"><a href="homework-assignments.html#cb11-19"></a><span class="co">#this sets the random number generator seed to my birthday for replication</span></span>
+<span id="cb11-20"><a href="homework-assignments.html#cb11-20"></a><span class="kw">set.seed</span>(<span class="dv">06061983</span>)</span>
+<span id="cb11-21"><a href="homework-assignments.html#cb11-21"></a><span class="kw">options</span>(<span class="dt">scipen=</span><span class="dv">999</span>)</span>
+<span id="cb11-22"><a href="homework-assignments.html#cb11-22"></a><span class="co">###############################################################################</span></span>
+<span id="cb11-23"><a href="homework-assignments.html#cb11-23"></a><span class="co">#get the data url </span></span>
+<span id="cb11-24"><a href="homework-assignments.html#cb11-24"></a>df1.url &lt;-<span class="st"> &#39;https://www.dropbox.com/s/5nszqnejl7uu9f5/lead_mortality.xlsx?dl=1&#39;</span></span>
+<span id="cb11-25"><a href="homework-assignments.html#cb11-25"></a><span class="co">#download the data </span></span>
+<span id="cb11-26"><a href="homework-assignments.html#cb11-26"></a><span class="kw">GET</span>(df1.url, <span class="kw">write_disk</span>(tdf &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.xlsx&quot;</span>)))</span>
+<span id="cb11-27"><a href="homework-assignments.html#cb11-27"></a><span class="co">#check if it worked</span></span>
+<span id="cb11-28"><a href="homework-assignments.html#cb11-28"></a>df1 &lt;-<span class="st"> </span><span class="kw">read_excel</span>(tdf)</span>
+<span id="cb11-29"><a href="homework-assignments.html#cb11-29"></a></span>
+<span id="cb11-30"><a href="homework-assignments.html#cb11-30"></a></span>
+<span id="cb11-31"><a href="homework-assignments.html#cb11-31"></a></span>
+<span id="cb11-32"><a href="homework-assignments.html#cb11-32"></a><span class="kw">head</span>(df1)</span>
+<span id="cb11-33"><a href="homework-assignments.html#cb11-33"></a></span>
+<span id="cb11-34"><a href="homework-assignments.html#cb11-34"></a><span class="co">#CONDUCT THE ANALYSIS BELOW</span></span></code></pre></div>
 
 </div>
 </div>
