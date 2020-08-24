@@ -1,0 +1,1244 @@
+--- 
+title: 'EC282: Introduction to Econometrics'
+author: "Onur Altındağ"
+date: 'Last update: `r Sys.Date()`'
+output:
+  html_document:
+    df_print: paged
+description: This book teaches econometrics like a 21st century humanoid would want
+  to learn it.
+documentclass: book
+geometry: margin=2cm
+link-citations: yes
+bibliography:
+- book.bib
+- packages.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
+---
+
+# Syllabus 
+This is a course 
+
+
+# General Rules and Principles 
+
+## Installing R and RStudio 
+
+```{css, echo=FALSE}
+.badCode {
+background-color: #ffffcf;
+  color: black;
+}
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#devtools::install_github("ropenscilabs/icon")
+library(icon)
+
+need <- c('glue', 'dplyr','readxl', 'haven', 'ggplot2','zoo','ggrepel','gganimate', 'tseries', 'devtools',
+          'ggimage', 'ggthemes','tufte', 'formatR', 'magick', 'devtools', 'ISLR', 'AER', 'sandwich', 'het.test')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have],repos = "http://cran.us.r-project.org") 
+invisible(lapply(need, library, character.only=T)) 
+
+```
+
+
+Here are the [instructions](https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/) for installing R and RStudio on your Windows or Mac desktop. Skip the third part and do not install "SDSFoundations Package". 
+
+## Basic rules and best practices 
+
+All files should exist in a local folder that syncs to a cloud-storage service. No file you ever work on should be at risk of being lost if your computer ceases to function or be in your possesion. NEVER place any file on  "downloads" or "desktop" folders. 
+
+Get a free cloud-storage service with a desktop application that syncs to a cloud-storage service. I like the [Dropbox desktop app](https://help.dropbox.com/installs-integrations/desktop/desktop-application-overview) but feel free to choose any other service. You don't need a lot of space so free version of any desktop cloud app would work. Under the Dropbox folder, create a designated folder for this course such as EC282. 
+
+All subfolders under EC282 and files in them should have unique and descriptive construction: DON'T use spaces in file or folder names. Here is an example of a folder structure that might work for a student in this class: 
+
+
+```
+EC282
+│  
+│
+└───Course_docs
+│   │    SyllabusEC282.pdf
+│   │    LectureNotes.pdf 
+└───Assignments
+│   └───Assignment1
+│       │   dataset1name.Rda
+│       │   Lastname_Firstname_Assignment1_EC282.R
+│   └───Assignment2
+│       │   dataset2name.Rda
+│       │   Lastname_Firstname_Assignment1_EC282.R
+│   └───Assignment3
+│       │   dataset3name.Rda
+│       │   Lastname_Firstname_Assignment3_EC282.R
+│   └───Assignment4
+│       │   dataset4name.Rda
+│       │   Lastname_Firstname_Assignment4_EC282.R
+│       │   ...
+└───Exams
+│   └───Midterm1
+│       │   Midterm1Review.pdf
+│       │   Midterm1Review_myanswers.docx
+|       |   ...
+│   
+```
+
+## Header
+
+At the beginning of any R script, you should have a standard header that you use across all scripts that clears the workspace, loads/installs packages as necessary, sets the working directory, etc. Here is an example that you can copy paste to the header of any script that you use:
+
+
+```{r echo = T, message=FALSE, warning=FALSE, results = 'hide'}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to your birthday for replication
+set.seed(01011999)
+###############################################################################
+```
+
+
+When coding, use relative references to files. Typically, any script will begin looking for files in the working directory. At any time you can type `getwd()` on your Rstudio console to see the current working directory. The header above automatically sets the working directory to the folder that the R script is included. For example, if you are working on `Lastname_Firstname_Assignment1_EC282.R` script and need to load file `dataset1name.Rda` into an object, then you would simply run:
+
+```{r echo = T, eval=F}
+load(dataset1name.Rda)
+```
+
+
+However, if you were working in the same .R file, and needed to access `dataset2name.Rda`, you would need to point the program to a directory outside the current working directory -- so, you go up one level, over one folder, and look there:
+```{r echo = T, eval=F}
+load(../Assignment2/dataset2name.Rda)
+```
+
+When learning R, the most important skill that you need to acquire is to be able to **google** your problem. There is probably not a single R question that you have yet has not been answered on [Stack Overflow](https://stackoverflow.com/). 
+
+## How to submit the homework assignment 
+
+You can use a snipping tool to copy and paste the relevant output and figures from RStudio console to a word file, type the answers, save everything and upload it on BlackBoard/Assignments. If you want to have a more elegant looking homework output the ```stargazer``` package is very powerful in transforming your analysis into publishable formats.    
+
+
+# Homework Assigment I 
+**Deadline**: Feb 16, 2020, 11 PM
+
+**Source:** Stock and Watson, 3rd Updated Edition. Exercise 3.1  
+
+**Data description:** You can find the data description  [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/CPS92_08_Description.pdf). 
+
+**Question I** 
+
+**a.** Compute the sample mean for average hourly earnings (```ahe```) in 1992 and 2008. Construct a 95% confidence internal for the population means of ```ahe``` in 1992 and 2008 and the change between 1992 and 2008. 
+
+**b.** In 2008, the values of the Consumer Price Index (CPI) was 215.2. In 1992, the value of the CPI was 140.3. Repeat (a) but use AHE measured in real 2008 dollars ($2008); that is, adjust the 1992 data for the price inflation that occured between 1992 and 2008. 
+
+**c.** If you were interested in the change in workers' purchasing power from 1992 to 2008, would you use the results from (a) or (b)? Explain. 
+
+**d.** Use the 2008 data to construct a 95% confidence interval for the mean of ```ahe``` for high school graduates. Construct a 95% confidence interval for the mean of ```ahe``` for workers with a college degree. Construct a 95% confidence interval for the difference between the two means. 
+
+**e.** Repeat (d) using the 1992 data expressed in $2008. 
+
+**f.** Did real (inflation-adjusted) wages of high school graduates increased from 1992 to 2008? Explain. Did real wages of college graduates increase? Did the gap between earnings of college and highschool graduates increase? Explain, using appropriate estimates, confidence intervals, and test statistics. 
+
+**Header for the R script** 
+
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment1``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+
+```{r echo = T, eval=F}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# Save the R script to the assignment 1 folder before this
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to my birthday for replication
+set.seed(06061983)
+###############################################################################
+#get the data url 
+df1.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps92_08.xlsx'
+#download the data 
+GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
+#check if it worked
+df1 <- read_excel(tdf)
+head(df1)
+
+#CONDUCT THE ANALYSIS BELOW
+
+```
+
+# Homework Assignment II 
+
+**Deadline**: March 8, 2020, 11 PM
+
+**Source:** Stock and Watson, 3rd Updated Edition. Exercises 4.1 and 4.2   
+
+**Data description:** You can find the data descriptions for Question I   [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/CPS08_Description.pdf) and for Question II [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings_Description.pdf). 
+
+**Question I**  
+
+**a.** Run a regression of average hourly earnings (```ahe```) on ```age```. Report the estimated intercept and the slope. Interpret each of the estimated coefficients. 
+
+**b.** Bob is a 26-year-old worker. Predict Bob's earnings using the estimated regression. Alexis is a 30-year-old worker. Predict Alex's earnings using the estimated regression. 
+
+**c.** Does age explain a large fraction of the variation in earnings across individuals? Explain. 
+
+
+**Question II**
+
+**a.** Construct a scatterplot of average course evaluations -- ```course_eval``` on the professor's ```beauty```. Interpret the relationship based on your graph. 
+
+**b.** Run a regression of average course evaluations ```course_eval``` on the professor's beauty ```beauty```. Report the estimated intercept and the slope. Report the sample means of ```beauty``` and ```course_eval```. Explain why the estimated intercept is equal to the sample mean of ```course_eval```. 
+
+**c.** Predict a course evaluation for a professor whose ```beauty``` is one standard deviation above the average. Compare this to the estimated intercept in (b) and explain the difference.
+
+**d.** Interpret the size of the slope coefficient in (b). Is the estimated ``effect'' of beauty on course evaluations large or small? 
+
+
+**Header for the R script** 
+
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment2``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data sets ```df1``` and ```df2``` in your enviroment. Conduct the analysis below the header. 
+
+```{r echo = T, eval=F}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# Save the R script to the assignment 1 folder before this
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to my birthday for replication
+set.seed(06061983)
+###############################################################################
+#get the data urls 
+df1.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx'
+df2.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings.xls'
+#download the data 
+GET(df1.url, write_disk(tdf1 <- tempfile(fileext = ".xlsx")))
+GET(df2.url, write_disk(tdf2 <- tempfile(fileext = ".xls")))
+#check if it worked
+df1 <- read_excel(tdf1)
+df2 <- read_excel(tdf2)
+head(df1)
+head(df2)
+
+#CONDUCT THE ANALYSIS BELOW
+
+```
+
+
+# Homework Assignment III 
+
+**Deadline**: April 5th, 2020
+
+**Source:** Stock and Watson, 3rd Updated Edition. Exercises 5.1 and 5.2   
+
+**Data description:** You can find the data descriptions for Question I   [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/CPS92_08_Description.pdf) and for Question II [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings_Description.pdf). 
+
+**Question I**  
+
+**a.** Run a regression of average hourly earnings ```ahe``` on ```age``` and report the regression output. 
+
+**b.** Is the estimated coefficient significant? That is, can you reject the null hypothesis $H_0: \beta_1 = 0$ versus a two-sided alternative at the 10%, 5%, or 1% significance level? What is the $p$-value associated with coefficient's $t$-statistic? 
+
+**c.** Construct a 95% confidence interval for the slope coefficient. 
+
+**d.** Repeat (a) and (b) only using the data for college graduates.  
+
+
+**Question II**
+
+**a.** Run a regression of ```course_eval``` on ```beauty``` and report the regression output.
+
+**b.** Is the estimated coefficient significant? That is, can you reject the null hypothesis $H_0: \beta_1 = 0$ versus a two-sided alternative at the 10%, 5%, or 1% significance level? What is the $p$-value associated with coefficient's $t$-statistic? 
+
+**Header for the R script** 
+
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment3``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data sets ```df1``` and ```df2``` in your enviroment. Conduct the analysis below the header. 
+
+
+
+```{r echo = T, eval=F}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# Save the R script to the assignment 1 folder before this
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to my birthday for replication
+set.seed(06061983)
+###############################################################################
+#get the data urls 
+df1.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx'
+df2.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings.xls'
+#download the data 
+GET(df1.url, write_disk(tdf1 <- tempfile(fileext = ".xlsx")))
+GET(df2.url, write_disk(tdf2 <- tempfile(fileext = ".xls")))
+#check if it worked
+df1 <- read_excel(tdf1)
+df2 <- read_excel(tdf2)
+head(df1)
+head(df2)
+
+#CONDUCT THE ANALYSIS BELOW
+
+```
+
+
+# Homework Assignment IV 
+
+**Deadline**: April 19, 2020, 11 PM
+
+**Source:** Stock and Watson, 3rd Updated Edition. Exercises 6.1 and 6.3.   
+
+**Data description:** You can find the data descriptions for Question I   [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings_Description.pdf) and for Question II [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/Growth_Description.pdf). 
+
+**Question I**  
+
+**a.** Run a regression of ```course_eval``` on ```beauty```. On a second regression, add the following control variables: ```intro```, ```onecredit```, ```female```, ```minority``` and ```nnenglish```. Report both regression outputs. Compare the estimated "effect" of ```beauty``` in the first to the second regression? Does the first estimated slope change substantially after adding the control variables to the model? What does that indicate? 
+
+
+**b.** Predict the outcome for a black male professor with average beauty and is a native English speaker. He teaches a three-credit upper-divisiocourse. 
+
+
+**Question II** 
+
+**a.** Drop the observation for Malta from the analysis data set. 
+
+**b.** Construct a table that shows the sample mean, standard deviation, and minimum and maximum values for the series ```growth```, ```tradeshare```, ```yearsschool```, ```oil```, ```rev_coups```, ```assasinations```, and ```rgdp60```.  
+
+**c.** Run a regression of ```growth``` on ```tradeshare```, ```yearsschool```,  ```rev_coups```, ```assasinations```, and ```rgdp60```. Report the regression results in a table and interpret the coefficient on ```rev_coups```. 
+
+**d.** Use the regression results to predict the average annual growth rate for a country that has average values for all regressors. 
+
+**e.** Include ```oil``` to regression (c) and interpret any **major** changes in regression (c). 
+
+
+**Header for the R script** 
+
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment4``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data sets ```df1``` and ```df2``` in your enviroment. Conduct the analysis below the header. 
+
+
+
+```{r echo = T, eval=F}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# Save the R script to the assignment 1 folder before this
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to my birthday for replication
+set.seed(06061983)
+###############################################################################
+#get the data urls 
+df1.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/TeachingRatings.xls'
+df2.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/Growth.xls'
+
+#download the data 
+GET(df1.url, write_disk(tdf1 <- tempfile(fileext = ".xls")))
+GET(df2.url, write_disk(tdf2 <- tempfile(fileext = ".xls")))
+
+#check if it worked
+df1 <- read_excel(tdf1)
+df2 <- read_excel(tdf2)
+head(df1)
+head(df2)
+
+#CONDUCT THE ANALYSIS BELOW
+
+```
+
+
+# Homework Assignment V 
+
+**Deadline**: April 26, 2020, 11 PM 
+
+**Source:** Stock and Watson, 3rd Updated Edition. Exercise 8.1   
+
+**Data description:** You can find the data descriptions for Question I   [here](https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/CPS08_Description.pdf). 
+
+**QUESTION I**
+
+**a.** Run a regression of average hourly earnings (```ahe```) on ```age```,```female```, and ```bachelor``` and report the output. If ```age``` increases from 
+25 to 26, how are earnings expected to change? If ```age``` increases from 33 to 34, how are earnings expected to change? 
+
+**b.** Run a regression of the **logarithm** of average hourly earnings (```ln_ahe```) on ```age```,```female```, and ```bachelor``` and report the output. If ```age``` increases from 
+25 to 26, how are earnings expected to change? If ```age``` increases from 33 to 34, how are earnings expected to change? 
+
+
+**c.** Run a regression of the **logarithm** of average hourly earnings (```ln_ahe```) on the **logarithm** of  ```ln_age```,```female```, and ```bachelor``` and report the output. If ```age``` increases from 
+25 to 26, how are earnings expected to change? If ```age``` increases from 33 to 34, how are earnings expected to change? 
+
+**d.** Run a regression of the **logarithm** of average hourly earnings (```ln_ahe```) on ```age```, square of age (```age_sq```),  ```female```, and ```bachelor``` and report the output. If ```age``` increases from 
+25 to 26, how are earnings expected to change? If ```age``` increases from 33 to 34, how are earnings expected to change? 
+
+**e.** Comparing the regression results from (a),(b),(c),(d), choose one of the empirical models based on economic theory. Briefly explain why you choose the preferred model.  
+
+**f.** Run a regression of the **logarithm** of average hourly earnings (```ln_ahe```) on ```age```, square of age (```age_sq```),  ```female```, and ```bachelor``` and the interaction term ```female``` $\times$ ```bachelor```. Report the output. Consider the following individuals: 
+
+* Alexis: 30-year-old female with a bachelor's degree.
+* Jane: 30-year-old female with a high school degree.
+* Bob: 30-year-old male with a bachelor degree. 
+* Jim: 30-year-old male with a high school degree. 
+
+Using the regression results, predict ```ln_ahe``` and ```ahe``` for each individual. Calculate the college premium (predicted difference in log wage) for females and college premium for males. Is the college premium differ for female vs. males? Explain.  
+
+**g.** Is the effect of ```age``` on earnings different for man than women? Using the variables ```ln_ahe```, ```female```, ```bachelor```, and ```age```. Specify and estimate a regression that you can use to answer this question. Report the regression and explain your results. 
+
+**Header for the R script** 
+
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment5``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data sets ```df1``` and ```df2``` in your enviroment. Conduct the analysis below the header. 
+
+```{r echo = T, eval=F}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# Save the R script to the assignment 1 folder before this
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to my birthday for replication
+set.seed(06061983)
+###############################################################################
+#get the data urls 
+df1.url <- 'https://wps.pearsoned.com/wps/media/objects/11422/11696965/empirical/empex_tb/cps08.xlsx'
+#download the data 
+GET(df1.url, write_disk(tdf1 <- tempfile(fileext = ".xlsx")))
+#check if it worked
+df1 <- read_excel(tdf1)
+head(df1)
+
+
+#CONDUCT THE ANALYSIS BELOW
+
+```
+
+# Lecture notes, updates, and corrections: 
+
+## Week1
+
+Define a binary random variable $Y$ for flipping a fair coin. Calculate the expected value and the variance. Flip the the coin for $\times 10$ and $\times 10000$, calculate the sample mean and sample variance. 
+
+```{r echo = T, eval=T}
+
+#Bernouilli trails 
+coin <- c("H","T")
+#flip a coin 
+sample(coin,1)
+
+#flip a coin 10 times
+sample(coin,10, replace=TRUE)
+
+#create the random variable Y 
+
+out1 <- sample(coin,10, replace=TRUE)
+Y1 <- as.data.frame(out1)
+Y1$val <- 0 
+Y1$val[Y1$out1=="T"] <- 1 
+
+out2 <- sample(coin,10000, replace=TRUE)
+Y2 <- as.data.frame(out2)
+Y2$val <- 0 
+Y2$val[Y2$out2=="T"] <- 1 
+
+mean(Y1$val)
+var(Y1$val)
+
+mean(Y2$val)
+var(Y2$val)
+
+
+```
+
+## Week2 
+
+If $Y \sim N(1,4)$, standardize Y, interpret and calculate $Pr \leq 2$ Find the upper and lower tail range that yield 95% probability within the interval of these two values. Calculate $Pr(1\leq Y \leq 2)$.
+
+
+```{r echo = T, eval=T}
+
+
+pnorm(2,mean=1,sd=2, lower.tail = TRUE)
+pnorm(2,mean=1,sd=2, lower.tail = TRUE) - pnorm(1,mean=1,sd=2, lower.tail = TRUE)
+
+#the tails 
+qnorm(0.025, mean=1, sd=2, lower.tail = TRUE)
+qnorm(0.975, mean=1, sd=2, lower.tail = TRUE)
+
+
+
+
+
+```
+
+
+Generate normally distributed random variables and variable with chi-squared 
+
+```{r echo = T, eval=T}
+#x1 is a normally distributed RV
+x1 <- rnorm(100000,0,1)
+#x2 is a normally distributed RV 
+x2 <- rnorm(100000,0,1)
+#z1 is the square of x1 
+z1 <- x1^2
+#z2 is the sum of squared xs
+z2 <- x1^2 + x2^2
+
+par(mfrow=c(2,2))
+hist(x1, prob=TRUE)
+hist(x2, prob=TRUE)
+hist(z1, prob=TRUE)
+hist(z2, prob=TRUE)
+
+# plot the density for M=1
+curve(dchisq(x, df = 1), 
+      xlim = c(0, 15), 
+      xlab = "x", 
+      ylab = "Density", 
+      main = "Chi-Square Distributed Random Variables")
+
+# add densities for M=2,...,7 to the plot using a 'for()' loop 
+for (M in 2:7) {
+  curve(dchisq(x, df = M),
+        xlim = c(0, 15), 
+        add = T, 
+        col = M)
+}
+
+# add a legend
+legend("topright", 
+       as.character(1:7), 
+       col = 1:7 , 
+       lty = 1, 
+       title = "D.F.")
+
+
+# plot the standard normal density
+curve(dnorm(x), 
+      xlim = c(-4, 4), 
+      xlab = "x", 
+      lty = 2, 
+      ylab = "Density", 
+      main = "Densities of t Distributions")
+
+# plot the t density for M=2
+curve(dt(x, df = 2), 
+      xlim = c(-4, 4), 
+      col = 2, 
+      add = T)
+
+# plot the t density for M=4
+curve(dt(x, df = 4), 
+      xlim = c(-4, 4), 
+      col = 3, 
+      add = T)
+
+# plot the t density for M=25
+curve(dt(x, df = 25), 
+      xlim = c(-4, 4), 
+      col = 4, 
+      add = T)
+
+# add a legend
+legend("topright", 
+       c("N(0, 1)", "M=2", "M=4", "M=25"), 
+       col = 1:4, 
+       lty = c(2, 1, 1, 1))
+
+
+# define coordinate vectors for vertices of the polygon
+x <- c(2, seq(2, 10, 0.01), 10)
+y <- c(0, df(seq(2, 10, 0.01), 3, 14), 0)
+
+# draw density of F_{3, 14}
+curve(df(x ,3 ,14), 
+      ylim = c(0, 0.8), 
+      xlim = c(0, 10), 
+      ylab = "Density",
+      main = "Density Function")
+
+# draw the polygon
+polygon(x, y, col = "orange")
+
+```
+
+
+
+
+
+```{r echo = T, eval=T}
+# Vector of outcomes
+S <- 2:12
+
+# Vector of probabilities
+PS <- c(1:6, 5:1) / 36
+
+# divide the plotting area into one row with two columns
+par(mfrow = c(1, 2))
+
+# plot the distribution of S
+barplot(PS, 
+        ylim = c(0, 0.2), 
+        xlab = "S", 
+        ylab = "Probability", 
+        col = "white", 
+        space = 0, 
+        main = "Sum of Two Dice Rolls")
+
+# plot the distribution of D 
+probability <- rep(1/6, 6)
+names(probability) <- 1:6
+
+barplot(probability, 
+        ylim = c(0, 0.2), 
+        xlab = "D", 
+        col = "white", 
+        space = 0, 
+        main = "Outcome of a Single Dice Roll")
+
+```
+
+
+```{r echo = T, eval=T}
+# set sample size and number of samples
+n <- 10000
+reps <- 20000
+
+sample(1:6, 10, replace=TRUE)
+
+# perform random sampling
+samples <- replicate(reps,sample(1:6,n,replace=TRUE)) # 10 x 10000 sample matrix
+
+# compute sample means
+sample.avgs <- colMeans(samples)
+hist(sample.avgs, freq=FALSE)
+
+hist((sample.avgs-3.5)/sqrt(2.91/n), freq=FALSE)
+
+
+curve(dnorm(x, sd = 1), 
+      col = "red", 
+      lwd = "2", 
+      add = T)
+
+```
+
+
+
+* Handout answer Q2 (h-l) 
+
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+
+# Generate the data for coin experiment 
+n <- 100
+n1 <- 61 
+n2 <- 39 
+
+#create the data of 100 obs with 61=1 and 39=0 
+df1 <- as.data.frame(c(rep(1,n1),rep(0,n2))) 
+names(df1) <- "Y"
+#scramble so it looks random 
+
+df1$Y <- sample(df1$Y)
+View(df1)
+
+df1$Y.bar <- mean(df1$Y) 
+df1$sq.dev <- (df1$Y - df1$Y.bar)^2 
+
+sample.mean <- mean(df1$Y)
+sample.var <- sum(df1$sq.dev)/(n-1)
+sample.std <- sqrt(sample.var)
+sample.se <- sample.std/sqrt(n)
+
+mean(df1$Y)
+var(df1$Y)
+
+#describe(df1$Y)
+
+#t-statistic 
+t.statistic <- -((sample.mean-0.5)/sample.se)
+print(t.statistic)
+
+pt(t.statistic, n-1,lower.tail = TRUE)*2
+
+qt(0.025, n-1, lower.tail = TRUE)
+
+#much easier way to do it 
+t.test(df1$Y,mu=0.5)
+
+lb95<- sample.mean + qt(0.025, n-1, lower.tail = TRUE)*sample.se
+ub95<- sample.mean - qt(0.025, n-1, lower.tail = TRUE)*sample.se
+
+print(c(lb95,ub95))
+
+```
+
+## Week3
+
+
+
+
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+df1 <- read.csv("https://www.dropbox.com/s/c9aj0kjftso7qzi/birth19682002.csv?dl=1") %>%
+  filter(bwei<9000 & is.na(bwei)==FALSE)
+
+df2 <- df1[df1$yearb==1968 & df1$race3=='black', ]
+df3 <- df2[df1$yearb==1968 & df1$race3=='white', ]
+
+black.mean.1968 <- mean(df2$bwei, na.rm = TRUE)
+black.var.1968 <- var(df2$bwei, na.rm = TRUE)
+white.mean.1968 <- mean(df3$bwei, na.rm = TRUE)
+white.var.1968 <- var(df3$bwei, na.rm = TRUE)
+
+
+
+race.gap.1968 <-  white.mean.1968 - black.mean.1968
+race.gap.1968.se <- sqrt((black.var.1968/447) + (white.var.1968/2462)) 
+race.gap.1968.ub <- race.gap.1968 + (1.96*race.gap.1968.se)
+race.gap.1968.lb <- race.gap.1968 - (1.96*race.gap.1968.se)
+
+res <- c(black.mean.1968,white.mean.1968,race.gap.1968, race.gap.1968.lb, race.gap.1968.ub  )
+print(round(res,0))
+
+t1 <- t.test(df1$bwei, df2$bwei, na.rm = TRUE)
+t1$estimate
+t1$stderr
+t1$conf.int
+
+
+
+df4 <- df1 %>%
+  filter(race3!='oth') %>%
+  dplyr::select(yearb,bwei,race3) %>%
+  group_by(race3,yearb) %>%
+  summarise_each(funs(mean,n(),sd,se=sd(.)/sqrt(n()))) 
+
+df5 <- cbind(df4[df4$race3=='black',], df4[df4$race3=='white',] ) %>%
+  mutate(dif=mean1-mean) %>%
+  mutate(dif.se=sqrt((sd1^2/n1 + sd^2/n))) %>%
+  ggplot(aes(x=yearb,y=dif)) + 
+  geom_point() + 
+  geom_errorbar(aes(ymin=dif-1.96*dif.se, ymax=dif+1.96*dif.se), width=0.5) +
+  theme_bw() + 
+  ylim(c(50,450))
+
+df5
+
+
+```
+
+
+## Week4
+
+* See the data called Anscombe's Quartet below for four pairs of $x$ and $y$: $(x1,y1), (x2,y2), (x3, y3), (x4,y4)$
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+df1 <- anscombe
+print(df1)
+
+```
+
+
+* Interpret the estimated sample covariance and correlation coefficients below. 
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+#summarize the variables in the data set 
+df1.summary <- df1 %>%
+  summarise_all(list(mean,sd)) 
+
+df1.s1 <- as.data.frame(round(df1.summary,2))
+print(df1.s1)
+
+#calculate sample covariance and correlatio between pairs of 
+#(x1,y1), (x2,y2), (x3,y3), and (x4,y4)
+
+
+df1.s2 <- round(c(cov(df1$x1,df1$y1), cov(df1$x2,df1$y2), cov(df1$x3,df1$y3), cov(df1$x4,df1$y4)),2)
+df1.s3 <- round(c(cor(df1$x1,df1$y1), cor(df1$x2,df1$y2), cor(df1$x3,df1$y3), cor(df1$x4,df1$y4)),2)
+
+print(df1.s2)
+print(df1.s3)
+
+
+
+```
+
+
+* Below is the scatter plot for each pair of $x$ and $y$, how do you reconcile the difference in graphs and the correlation coefficients shown above? 
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+par(mfrow=c(2,2))
+plot(df1$x1,df1$y1)
+plot(df1$x2,df1$y2)
+plot(df1$x3,df1$y3)
+plot(df1$x4,df1$y4)
+
+x <- 11:35 
+x <- sample(x,size=10,replace=FALSE)
+y <- round(690 - 3.1*x + rnorm(10,mean=10,sd=5))
+
+ggplot() +
+geom_point(aes(x,y), size=2) + 
+geom_smooth(method = "lm", se = FALSE) +
+theme_bw()  
+
+df2 <- foreign::read.dta('http://fmwww.bc.edu/ec-p/data/stockwatson/caschool.dta')
+
+par(mfrow=c(1,2))
+hist(df2$str)
+hist(df2$testscr)
+ 
+```
+
+
+## Week5
+
+Suppose that a researcher, using data on class size (CS) and average test scores from 100 third-grade classes, estimates the following OLS regression: 
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+#set the model parameters
+set.seed(01012000)
+n <- 100  
+b0_hat <- 520.4 
+b1_hat <- -5.82 
+u_hat <-  rnorm(n, mean = 0, sd = 100)
+CS <- sample(10:30,n,TRUE )
+TestScore <-  b0_hat + b1_hat*CS + u_hat
+
+df1 <- as.data.frame(cbind(TestScore,CS)) 
+mo1 <- lm(TestScore~CS)
+summary(mo1) 
+
+summary(CS)
+confint.lm(mo1,level=0.99)
+
+
+df1$small.CS <- 0 
+df1$small.CS[df1$CS<20] <- 1
+
+head(df1)
+
+mo2 <- lm(df1$TestScore~df1$small.CS)
+summary(mo2) 
+
+```
+
+
+## Week 6
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+data("CASchools")
+
+View(CASchools)
+
+CASchools$str <- CASchools$students/CASchools$teachers
+
+mo1 <- lm(CASchools$math~CASchools$str)
+summary(mo1)
+CASchools$math.hat <- predict.lm(mo1)
+
+g1 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=str,y=math),   size=2) + 
+  geom_line(aes(x=str,y=math.hat),   size=2, colour='red') 
+
+CASchools$small <- 0 
+CASchools$small[CASchools$str>=20] <- 1
+
+plot(g1)
+
+mo2 <- lm(CASchools$math~CASchools$small)
+summary(mo2)
+
+CASchools$math.hat2 <- predict.lm(mo2)
+
+g2 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=str,y=math),   size=2) + 
+  geom_line(aes(x=str,y=math.hat2),   size=2, colour='red') + 
+  geom_point(aes(x=str,y=math.hat),   shape=1, size=2, colour='blue') 
+
+plot(g2)  
+
+table(CASchools$math.hat2)
+
+```
+
+## Week 7
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+data("CPS1988") 
+df1 <- CPS1988 %>%
+  filter(experience==10)
+
+g2 <- ggplot(data=df1) + 
+  geom_point(aes(x=education,y=wage),   size=2) 
+
+plot(g2)
+
+mo1 <- lm(data=df1, formula=wage ~ education)
+
+summary(mo1)
+
+#homoskedastic
+coeftest(mo1)
+
+#Breusch-Pagan test 
+bptest(mo1)
+
+coeftest(mo1, vcov = vcovHC(mo1, "HC1"))  
+
+data(CASchools)
+
+CASchools$str <- CASchools$students/CASchools$teachers
+
+g2 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=english,y=read),   size=2) 
+
+plot(g2)
+
+g2 <- ggplot(data=CASchools) + 
+  geom_point(aes(x=english,y=str),   size=2) 
+
+plot(g2)
+
+CASchools$small <- 0 
+CASchools$small[CASchools$str<20] <- 1 
+
+mo1 <- lm(data=CASchools, formula=read~small)
+summary(mo1)
+
+
+mo2 <- lm(data=CASchools[CASchools$english<1.9,], formula=read~small)
+mo3 <- lm(data=CASchools[CASchools$english>1.9 & CASchools$english<8.8,], formula=read~small)
+mo4 <- lm(data=CASchools[CASchools$english>8.8 & CASchools$english<23,], formula=read~small)
+mo5 <- lm(data=CASchools[CASchools$english<23,], formula=read~small)
+
+summary(mo2)
+summary(mo3)
+summary(mo4)
+summary(mo5)
+
+
+
+mo2 <- lm(data=CASchools, formula=read~str)
+summary(mo2)
+
+mo3 <- lm(data=CASchools, formula=read~str+english)
+summary(mo3)
+
+mo4 <- lm(data=CASchools, formula=english~str)
+summary(mo4)
+
+
+
+
+```
+
+## Week 10
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+options(scipen=999)
+data(CASchools)
+set.seed(03302020)
+
+CASchools$noise1 <- sample(1000, size = nrow(CASchools), replace = TRUE)
+CASchools$noise2 <- sample(1000, size = nrow(CASchools), replace = TRUE)
+CASchools$noise3 <- sample(1000, size = nrow(CASchools), replace = TRUE)
+CASchools$str <- CASchools$students/CASchools$teachers
+
+CASchools1 <- CASchools %>%
+  dplyr::select(read,str, english, lunch, expenditure)
+
+
+
+mo1 <- lm(data=CASchools, formula=read~str+english)
+summary(mo1)
+
+mo2 <- lm(data=CASchools, formula=read~str+english+noise1+noise2+noise3)
+summary(mo2)
+
+data("CPS1988") 
+
+CPS1988$educ2 <- 2*CPS1988$education 
+CPS1988$white <- 0 
+CPS1988$white[CPS1988$ethnicity=='cauc'] <- 1
+CPS1988$non.white <- 0 
+CPS1988$non.white[CPS1988$white==0] <- 1 
+  
+mo3 <-  lm(data=CPS1988, formula=wage~education)
+mo4 <-  lm(data=CPS1988, formula=wage~education + educ2)
+
+summary(mo3)
+summary(mo4)
+
+mo5 <-  lm(data=CPS1988, formula=wage~education+white)
+summary(mo5)
+
+mo6 <-  lm(data=CPS1988, formula=wage~ education + non.white + white)
+summary(mo6)
+
+mo7 <- lm(data=CASchools, formula=read~str+english+lunch+expenditure)
+
+summary(mo7)
+cor(CASchools1)
+vif(mo7)
+
+linearHypothesis(mo7, c("str=0", "expenditure=0"))
+
+mo8 <- lm(data=CASchools, formula=read~str+english+lunch+expenditure)
+mo9 <- lm(data=CASchools, formula=read~english+lunch)
+
+summary(mo8)
+summary(mo9)
+
+```
+
+## Week 11
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+data(CASchools)
+
+g1 <- ggplot(data=CASchools, aes(x=income, y=math)) + 
+  geom_point() + 
+  theme_minimal() + 
+  geom_smooth(method='lm', formula= y~x, se=FALSE, colour='blue') 
+
+g2 <- ggplot(data=CASchools, aes(x=income, y=math)) + 
+  geom_point() + 
+  theme_minimal() + 
+  geom_smooth(method='lm', formula=  y ~ x + I(x^2), se=FALSE, colour='red') 
+
+g3 <- ggplot(data=CASchools, aes(x=income, y=math)) + 
+  geom_point() + 
+  theme_minimal() + 
+  geom_smooth(method='lm', formula=  y ~ x + I(x^2) + I(x^3), se=FALSE, colour='#4a1486') 
+
+plot(g1)
+plot(g2)
+plot(g3)
+
+CASchools$income.sq <- CASchools$income^2
+CASchools$income.cu <- CASchools$income^3
+
+mo1 <- lm(data=CASchools, formula=math ~ income)
+mo2 <- lm(data=CASchools, formula=math ~ income + income.sq)
+mo3 <- lm(data=CASchools, formula=math ~ income + income.sq + income.cu)
+
+stargazer::stargazer(mo1,mo2,mo3, type='text')
+mean(CASchools$math)
+mean(CASchools$income)
+
+linearHypothesis(mo3, c("income.sq=0", "income.cu=0"))
+linearHypothesis(mo3, c("income.cu=0"))
+
+```
+
+## Week 12
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+
+data(CASchools)
+
+CASchools$ln.income<- log(CASchools$income)
+CASchools$ln.math <- log(CASchools$math)
+CASchools$str <- CASchools$students/CASchools$teachers
+CASchools$small <- 0
+CASchools$small[CASchools$str<20] <- 1 
+
+
+mo1 <- lm(data=CASchools, formula=math ~ ln.income)
+mo2 <- lm(data=CASchools, formula=ln.math ~ income)
+mo3 <- lm(data=CASchools, formula=ln.math ~ ln.income)
+mo4 <- lm(data=CASchools, formula=math ~ small)
+mo5 <-  lm(data=CASchools, formula=ln.math ~ small)
+
+stargazer::stargazer(mo1,mo2,mo3,mo4,mo5, type='text')
+
+```
+
+
+
+## Week 13
+
+```{r eval=T, echo=T, message=FALSE, warning=FALSE, paged.print=TRUE}
+hmda <- read_dta("http://fmwww.bc.edu/ec-p/data/stockwatson/hmda_sw.dta")
+
+hmda <- hmda %>% 
+  mutate(black = ifelse(s13==3, 1, 0),
+         deny  = ifelse(s7==3, 1, 0),
+         PI    = s46/100)
+
+hmda <- hmda %>%
+  mutate(hse_inc  = s45/100,
+         loan_val = s6/s50,
+         ccred    = s43,
+         mcred    = s42,
+         pubrec   = 1*(s44>0),
+         denpmi   = 1*(s53==1),
+         selfemp  = 1*(s27a==1),
+         married  = 1*(s23a=="M"),
+         single   = 1*(married==0),
+         hischl   = 1*(school>=12),
+         probunmp = uria,
+         condo    = 1*(s51 == 1))
+
+hmda <- hmda %>% 
+  dplyr::select(PI, hse_inc, loan_val, ccred, mcred, pubrec, denpmi, selfemp,
+                    single, hischl, probunmp, condo, black, deny)
+
+mo1 <- lm(data=hmda, formula=deny ~ PI)
+mo2 <- lm(data=hmda, formula=deny ~ black)
+mo3 <- lm(data=hmda, formula=deny ~ black + PI)
+
+set.seed(1234)
+
+sub.g1 <- hmda %>%
+  sample_n(1000) %>%
+  ggplot(aes(x=PI,y=deny)) + 
+  geom_point(colour='black', size=0.3, alpha=0.4) + 
+  geom_smooth(method=lm, se = FALSE, colour='red') + 
+  stat_smooth(method="glm", method.args=list(family="binomial"), se=FALSE)
+
+sub.g2 <- hmda %>%
+  filter(PI>0.20) %>%
+  sample_n(100) %>%
+  ggplot(aes(x=black,y=deny)) + 
+  geom_point(colour='blue') + 
+  geom_smooth(method=lm, se = FALSE, colour='red')
+
+
+stargazer(mo1,mo2,mo3, type='text')
+
+
+
+mo1 <- lm(data=hmda, formula=deny ~ PI)
+mo2 <- lm(data=hmda, formula=deny ~ PI + black)
+mo3 <- glm(data=hmda, formula=deny ~ PI ,family=binomial(link='probit')) 
+mo4 <- glm(data=hmda, formula=deny ~ PI + black,family=binomial(link='probit')) 
+
+
+stargazer(mo1,mo2,mo3,mo4, type='text')
+
+values <- data.frame(PI=c(0.25,0.25,0.35,0.35), black=c(0,1))
+
+values$y.hat.lpm1 <-    predict(mo1, newdata = values[1]) 
+values$y.hat.lpm2 <-    predict(mo2, newdata = values) 
+
+values$y.hat.probit.mo3 <- predict(mo3, newdata = values[1], type="response") 
+values$y.hat.probit.mo4 <- predict(mo4, newdata = values, type="response") 
+
+```
+
+# Post-covid syllabus update 
+
+
+* April 2
+  + Imperfect collinearity - Ch 6  
+  + Hypothesis Tests and Confidence Intervals in Multiple Regression - Ch 7
+          
+* April 6 
+  + Hypothesis Tests and Confidence Intervals in Multiple Regression - Ch 7
+
+* April 9 
+  + Hypothesis Tests and Confidence Intervals in Multiple Regression - Ch 7
+  + Nonlinear Regression Functions – Ch. 8
+          
+* April 13 
+  + Nonlinear Regression Functions – Ch. 8
+
+* April 21 
+  + Nonlinear Regression Functions – Ch. 8
+           
+* April 23  
+  + Regression with a Binary Dependent Variable - Ch. 11
+
+* April 27 
+  + Regression with a Binary Dependent Variable - Ch. 11
+
+
+
+
+
+
+
+

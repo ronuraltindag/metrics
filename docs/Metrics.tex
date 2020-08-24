@@ -114,7 +114,7 @@
 
 \title{EC282: Introduction to Econometrics}
 \author{Onur Altındağ}
-\date{Last update: 2020-08-21}
+\date{Last update: 2020-08-24}
 
 \begin{document}
 \maketitle
@@ -131,17 +131,9 @@
 \section*{Course description}\label{course-desctiption}}
 \addcontentsline{toc}{section}{Course description}
 
-This course aims to introduce 21st century econometric analysis to business students. It provides tools to infer meaningful information from data using descriptive and regression analyses. In the first half of the semester, we will review the basic statistics used in econometrics and introduce mechanics of univariate and multivariate regressions. In the second half, we will focus on two central issues in econometric analysis:
+This course aims to introduce 21st century econometric analysis to business students. It provides tools to infer meaningful information from data using descriptive and regression analyses. In the first half of the semester, we will review the basic statistics used in econometrics and introduce mechanics of univariate and multivariate regressions. In the second half, we focus on causal interpretation of regression results, measures of fit, choice of functional form, multicollinearity and issues related to overfitting a prediction model and how to fix them.
 
-\begin{itemize}
-\tightlist
-\item
-  causal interpretation of a statistical relationship
-\item
-  overfitting a prediction model
-\end{itemize}
-
-These two problems are the most common ones that you will need to tackle when analyzing either cause and effect or predicting an outcome using the existing data. At the end of the semester, I expect you to be familiar with \textbf{R} and \textbf{RStudio} interface, basic data manipulation, obtaining and interpreting sample statistics, conduct meaningful regression analysis and prediction. Importantly, I expect you to have a clear understanding of the distinction between correlation and causation, and in what conditions the former implies the latter.
+At the end of the semester, I expect you to be familiar with \textbf{R} and \textbf{RStudio} interface, basic data manipulation, obtaining and interpreting sample statistics, conduct meaningful regression analysis and prediction. Importantly, I expect you to have a clear understanding of the distinction between correlation and causation, and the conditions in which the former implies the latter.
 
 \hypertarget{knowledge}{%
 \subsection*{Knowledge and Skills}\label{knowledge}}
@@ -164,7 +156,7 @@ These two problems are the most common ones that you will need to tackle when an
 \item
   Interpret the regression coefficients on models with interaction variables.
 \item
-  Comparing a prediction model based on in-sample and out-of-sample performance.
+  Understand the concept of overfitting and the difference between in-sample and out-of-sample performance of a prediction model.
 \end{itemize}
 
 \hypertarget{perspectives}{%
@@ -172,11 +164,10 @@ These two problems are the most common ones that you will need to tackle when an
 \addcontentsline{toc}{subsection}{Perspectives}
 
 \begin{itemize}
-\tightlist
 \item
-  Learn how to conduct a regression analysis, understands its limitation in inferring a causal relationship, generalizing its results, and power in prediction an outcome that is unknown to the researcher.
+  Learn how to conduct a regression analysis, understands its limitation in inferring a causal relationship, generalize its results, and the prediction of an outcome that is unknown to the researcher.
 \item
-  Understand the regression diagnostics to choose the most appropriate definition of predictors, outcome, functional form, and
+  Understand the regression diagnostics to choose the most appropriate definition of predictors, outcome, functional form, and regressor.
 \end{itemize}
 
 \hypertarget{class-information}{%
@@ -226,7 +217,7 @@ Please go to \href{https://calendly.com/ronuraltindag/ec282?month=2020-08}{my ca
 \begin{itemize}
 \tightlist
 \item
-  Weekly homework assignments: before our Monday meetings.
+  Weekly homework assignments: Indicated on this web page, subject to change depending on our pace.\\
 \item
   Midterm exam:
 \item
@@ -269,27 +260,15 @@ Please go to \href{https://calendly.com/ronuraltindag/ec282?month=2020-08}{my ca
 \addcontentsline{toc}{subsection}{Grading}
 
 \begin{itemize}
-\tightlist
 \item
-  \textbf{High stake assessments}
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Midterm} + \textbf{Final}: Constitute half of your final grade. I will post the exams on \textbf{Black Board} and you will have \textbf{24 hours} to work on them and submit \textbf{DO NOT} try to submit the exams on last minute as the system will close after the deadline and I will not accept it.
-    You \textbf{MUST} attend the midterm and the final as there will be no make-up exams. The midterm and the final are \textbf{both} cumulative. If you miss or are likely to miss the \textbf{midterm} due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse. If you miss the final exam due to an emergency, you will receive an \textbf{incomplete} for this course. \textbf{DO NOT} take this class if you know that you will not be able to attend the final exam.
-  \end{itemize}
+  \textbf{High-stake assessments}\\
+  - \textbf{Midterm} + \textbf{Final}: Constitute half of your final grade. I will post the exams on \textbf{Black Board} and you will have \textbf{24 hours} to work on them and submit \textbf{DO NOT} try to submit the exams on last minute as the system will close after the deadline and I will not accept it.
+  You \textbf{MUST} attend the midterm and the final as there will be no make-up exams. The midterm and the final are \textbf{both} cumulative. If you miss or are likely to miss the \textbf{midterm} due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse. If you miss the final exam due to an emergency, you will receive an \textbf{incomplete} for this course. \textbf{DO NOT} take this class if you know that you will not be able to attend the final exam.
 \item
-  \textbf{Low stake assessments}
-
-  \begin{itemize}
-  \item
-    \textbf{Empirical project:} a short empirical essay that you will develop throughout the semester and execute by using the tools that you learn in this class. On Github, I will post a few topics on this web page that you can choose from that are mainly in my area of interest: health, migration, inequality, etc. If you don't like any of those, you can also choose your own. You will need to find data, clean and organize it, conduct a small scale econometrics analysis to answer an interesting empirical question. The final output should be between 1500-2500 words and 3-4 graphs/tables combined, and submitted through BlackBoard. Your interaction with me and your peers is a significant part of your grade for preparing the empirical assignment. Here is a \href{https://www.onuraltindag.info/pt-tr/posts/excess_mortality_eng/}{blog post} that I wrote in spring 2020 which was covered by \href{https://www.nytimes.com/2020/04/20/world/middleeast/coronavirus-turkey-deaths.html}{New York Times}, \href{https://www.ft.com/content/80bb222c-b6eb-40ea-8014-563cbe9e0117}{Financial Times}, \href{https://tr.euronews.com/2020/04/23/saglik-bakaninin-new-york-timesa-verdigi-yanit-olumlerdeki-artis-acikliyor-mu-covid-19}{Euro News}, \href{https://elpais.com/sociedad/2020-04-27/el-misterio-turco-uno-de-los-paises-con-mas-casos-de-covid-19-y-menos-muertes.html}{El Pais}, and in addition to many Turkish media outlets. While I don't expect you to conduct an analysis like a seasoned econometrician, I do want you to do provide mini empirical-investigation and report your findings in a similar format.\\
-  \item
-    \textbf{Weekly homework assignments:} The homework assignments are posted on this web page with the deadlines. They can be completed in groups of \textbf{maximum three} students and self-graded on pass/fail basis by you after the deadline. You can miss up to \textbf{2} assignment with no grade penalty. I will average the rest as your final assignment grade. You will assign yourself a pass/fail grade if you think that you have done enough effort to complete the assignment on this \href{Link\%20here}{google sheet} before Monday meeting after the deadline. I will go over these problems in the classroom and randomly ask students to ``help'' me with the assignment. If what you know substantially contradicts with your self-grade, I will change your grade to zero and you will receive a significant penalty on your participation grade. In other words, do the best you can with these assignments, work consistently, and do not cheat.
-  \item
-    \textbf{Collaborative participation to \href{https://github.com/}{GitHub} and classroom discussions:} You must sign up for a free account on \href{https://github.com/}{GitHub}. Github is an eco-system for web development and version control using Git. You will only need to use the \texttt{issues} tab through either creating an issue to ask or answer a question on your or your peer's empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. Your interaction on Github through receiving feedback from me and your friends on your empirical project is also part of your empirical assignment grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.
-  \end{itemize}
+  \textbf{Low-stake assessments}\\
+  - \textbf{Empirical project:} a short empirical essay that you will develop throughout the semester and execute by using the tools that you learn in this class. On Github, I will post a few topics on this web page that you can choose from that are mainly in my area of interest: health, migration, inequality, political economy, etc. If you don't like any of those, you can also choose your own. You will need to find data, clean and organize it, conduct a small scale econometrics analysis to answer an interesting empirical question. The final output should be between 1500-2500 words and 3-4 graphs/tables combined, and submitted through BlackBoard. Your interaction with me and your peers is a significant part of your grade for preparing the empirical assignment. So the process matter as much as the final output. Here is a \href{https://www.onuraltindag.info/pt-tr/posts/excess_mortality_eng/}{blog post} that I wrote in spring 2020 which was covered by \href{https://www.nytimes.com/2020/04/20/world/middleeast/coronavirus-turkey-deaths.html}{New York Times}, \href{https://www.ft.com/content/80bb222c-b6eb-40ea-8014-563cbe9e0117}{Financial Times}, \href{https://tr.euronews.com/2020/04/23/saglik-bakaninin-new-york-timesa-verdigi-yanit-olumlerdeki-artis-acikliyor-mu-covid-19}{Euro News}, \href{https://elpais.com/sociedad/2020-04-27/el-misterio-turco-uno-de-los-paises-con-mas-casos-de-covid-19-y-menos-muertes.html}{El Pais}, and in addition to many Turkish media outlets. While I don't expect you to conduct an analysis like a seasoned econometrician, I do want you to do provide mini empirical-investigation and report your findings in a similar format.\\
+  - \textbf{Bi-weekly homework assignments:} The homework assignments are posted on this web page with the deadlines. They can be completed in groups of \textbf{maximum three} students and self-graded on pass/fail basis by you after the deadline. You can miss up to \textbf{2} assignment with no grade penalty. I will average the rest as your final assignment grade. You need to post your work on the Github issue that has your group's name before Monday meeting after the deadline. I will go over these problems in the classroom and randomly ask students to ``help'' me with the assignment. If what you know substantially contradicts with what you posted online, I will change your grade to zero and you will receive a significant penalty on your participation grade. In other words, do the best you can with these assignments, work consistently, do not free ride on your friends, and do not cheat.\\
+  - \textbf{Collaborative participation to \href{https://github.com/}{GitHub} and classroom discussions:} You must sign up for a free account on \href{https://github.com/}{GitHub}. Github is an eco-system for web development and version control using Git. You will only need to use the \texttt{issues} tab through either creating an issue to ask or answer a question on your or your peer's empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. Your interaction on Github through receiving feedback from me and your friends on your empirical project is also part of your empirical assignment grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.
 \end{itemize}
 
 \hypertarget{academic-integrity}{%
@@ -340,16 +319,191 @@ Students are expected to attend classes synchronously despite potential time zon
 
 \textbf{Lecture notes}
 
-During the online lectures, I use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester.
+During the online lectures, I will use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester.
 
 \textbf{Lecture videos}
+
 I will record and post the lecture videos on Black Board.
 
 \hypertarget{tentative-schedule}{%
 \section*{Tentative Schedule}\label{tentative-schedule}}
 \addcontentsline{toc}{section}{Tentative Schedule}
 
-\textbf{\emph{Week 1}}
+The key readings from Stock and Watson are indicated for each week.
+
+\textbf{Week 1-2}\\
+\textbf{Aug 31, Sep 3, Sep 10}
+
+\begin{itemize}
+\tightlist
+\item
+  Introduction to the course, logistics, syllabus, expectations and pap-talk.\\
+\item
+  Review of Probability (Chapter 2)\\
+  - Random sampling and the Distribution of the Sample Average\\
+  - Large-Sample Approximations to Sampling Distributions
+\end{itemize}
+
+\textbf{Week 3}\\
+\textbf{Sep 14, Sep 17}
+
+\begin{itemize}
+\tightlist
+\item
+  Review of Statistics (Chapter 3)\\
+  - Hypothesis Tests Concerning the Population Mean\\
+  - Confidence Intervals for the Population Mean
+\end{itemize}
+
+\textbf{Week 4}\\
+\textbf{Sep 21, Sep 24}
+
+\begin{itemize}
+\tightlist
+\item
+  Review of Statistics (Chapter 3)\\
+  - Comparing Means from Different Populations\\
+  - Scatterplots, the Sample Covariance, and the Sample Correlation
+\end{itemize}
+
+\textbf{Week 5}\\
+\textbf{Sep 28, Oct 1}
+
+\begin{itemize}
+\tightlist
+\item
+  Linear Regression with One Regressor (Chapter 4)\\
+  - The Linear Regression Model\\
+  - Estimating the Coefficients of the Linear Regression Model\\
+  - Measures of Fit and Prediction Accuracy
+\end{itemize}
+
+\textbf{Week 6}\\
+\textbf{Oct 5, Oct 8}
+
+\begin{itemize}
+\tightlist
+\item
+  Linear Regression with One Regressor (Chapter 4)\\
+  - The Least Squares Assumptions for Causal Inference\\
+  - The Sampling Distributions of the OLS Estimators
+\end{itemize}
+
+\textbf{Week 7}\\
+\textbf{Oct 12, Oct 15}
+
+\begin{itemize}
+\tightlist
+\item
+  Wrap up, Midterm Review and \textbf{Midterm exam}
+\item
+  Deadline to post your progress report on GitHub. One or two paragraphs and a table/figure that summarizes what you have done so far
+\end{itemize}
+
+\textbf{Week 8}\\
+\textbf{Oct 19, Oct 22}
+
+\begin{itemize}
+\tightlist
+\item
+  Regression with a Single Regressor: Hypothesis Tests and Confidence Intervals (Chapter 5)\\
+  - Testing Hypotheses About One of the Regression Coefficients\\
+  - Confidence Intervals for a Regression Coefficient\\
+  - Regression when \(X\) is a Binary Variable
+\end{itemize}
+
+\textbf{Week 9}\\
+\textbf{Oct 26, Oct 29}
+
+\begin{itemize}
+\tightlist
+\item
+  Linear Regression with Multiple Regressors (Chapter 6)\\
+  - Omitted Variable Bias\\
+  - The Multiple Regression Model\\
+  - The OLS Estimator in Multiple Regression
+\end{itemize}
+
+\textbf{Week 10}\\
+\textbf{Nov 2, Nov 5}
+
+\begin{itemize}
+\tightlist
+\item
+  Linear Regression with Multiple Regressors (Chapter 6)
+  - Measures of Fit in Multiple Regression
+  - The Least Squares Assumptions for Causal Inference in Multiple Regression
+\end{itemize}
+
+\textbf{Week 11}\\
+\textbf{Nov 9, Nov 12}
+
+\begin{itemize}
+\tightlist
+\item
+  Linear Regression with Multiple Regressors (Chapter 6)
+  - The Distribution of OLS Estimators in Multiple Regression\\
+  - Multicollinearity\\
+  - Control Variables and Conditional Mean Independence
+\end{itemize}
+
+\textbf{Week 12}\\
+\textbf{Nov 16, Nov 19}
+
+\begin{itemize}
+\tightlist
+\item
+  Hypothesis Tests and Confidence Intervals in Multiple Regression (Chapter 7)\\
+  - Hypothesis Tests and Confidence Intervals for a Single Coefficients\\
+  - Tests of Joint Hypotheses\\
+  - Testing Single Restrictions Involving Multiple Coefficients
+\end{itemize}
+
+\textbf{Week 13}\\
+\textbf{Nov 23}
+
+\begin{itemize}
+\tightlist
+\item
+  Hypothesis Tests and Confidence Intervals in Multiple Regression (Chapter 7)\\
+  - Model Specification for Multiple Regression
+\end{itemize}
+
+\textbf{Week 14}\\
+\textbf{Nov 30, Dec 3}
+
+\begin{itemize}
+\tightlist
+\item
+  Nonlinear Regression Functions (Chapter 8)\\
+  - A General Strategy for Modeling Nonlinear Regression Functions\\
+  - Nonlinear Functions of a Single Independent Variable
+\end{itemize}
+
+\textbf{Week 15}\\
+\textbf{Dec 7, Dec 10}
+
+\begin{itemize}
+\tightlist
+\item
+  Nonlinear Regression Functions (Chapter 8)\\
+  - Interaction Between Independent Variables
+\end{itemize}
+
+\textbf{Week 16}\\
+\textbf{Dec 14, Dec 17}\\
+- Wrap up, last remarks, \textbf{Final Exam}.
+
+\hypertarget{lecture-notes}{%
+\section*{Lecture Notes}\label{lecture-notes}}
+\addcontentsline{toc}{section}{Lecture Notes}
+
+\begin{itemize}
+\item
+  Here are my \href{https://www.dropbox.com/s/kng2oynyxrtiir5/EC\%20282\%20SPRING\%202020.pdf?dl=0}{hand-written lecture notes from the previous time} that I thought this course
+\item
+  Here are the \href{https://www.dropbox.com/s/e5c8qax19lkrrn3/EC\%20282\%20FALL\%202020.pdf?dl=0}{lecture notes from the current semester}.
+\end{itemize}
 
 \hypertarget{general-rules-and-principles}{%
 \chapter{General Rules and Principles}\label{general-rules-and-principles}}
@@ -444,6 +598,418 @@ However, if you were working in the same .R file, and needed to access \texttt{d
 \end{Shaded}
 
 When learning R, the most important skill that you need to acquire is to be able to \textbf{google} your problem. There is probably not a single R question that you have yet has not been answered on \href{https://stackoverflow.com/}{Stack Overflow}.
+
+\hypertarget{homework-assignments}{%
+\chapter{Homework Assignments}\label{homework-assignments}}
+
+\hypertarget{how-to-submit-homework-assignments}{%
+\section{How to submit homework assignments}\label{how-to-submit-homework-assignments}}
+
+You can use a snipping tool to cut and paste the relevant output and figures from \textbf{RStudio} to the issue on \textbf{GitHub} with your group's name. If you would like to have a more elegant looking output, I encourage you to learn more the \texttt{stargazer} package that transforms your analysis into publishable formats.
+
+\hypertarget{assignment-1}{%
+\section{Assignment 1}\label{assignment-1}}
+
+\textbf{Deadline: Sep 13, 2020, Midnight}
+
+\textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 2.1\\
+\textbf{Data Description:} The data set includes the joint probability distribution of \texttt{age} and average hourly earnings \texttt{ahe} for 25- to 34-year-old full-time workers in 2015 with an education level that exceeds a high school diploma, i.e.~\(P(age=x,ahe=y)\)
+
+\textbf{Questions}
+
+\textbf{a.} Compute the marginal distribution of age, i.e \(P(age=x)\) in a new data set.
+\textbf{b.} Compute the mean of \texttt{ahe} for each value of \texttt{age}, i.e.~compute \(E[ahe|age=25]\),
+\(E[ahe|age=26]\), etc. and plot these conditional expected values of \texttt{ahe} against \texttt{age} Are they related? Briefly comment.\\
+\textbf{c.} Compute the variance of \texttt{ahe}.\\
+\textbf{d.} Compute the covariance between \texttt{age} and \texttt{age}.\\
+\textbf{e.} Compute the correlation between \texttt{age} and \texttt{ahq\ \ e}.\\
+\textbf{f.} Relate your answers in (c) and (d) to the plot that you constructed in (a)
+
+\textbf{Header for the R script}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment1} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'MASS'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/aieodljjthbdhks/Age_HourlyEarnings.xlsx?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf, }\DataTypeTok{col_names =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{skip=}\DecValTok{1}\NormalTok{)[}\DecValTok{2}\OperatorTok{:}\DecValTok{30}\NormalTok{,}\DecValTok{1}\OperatorTok{:}\DecValTok{11}\NormalTok{] }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{rename}\NormalTok{(}\DataTypeTok{ahe =} \DecValTok{1}\NormalTok{) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{ahe =} \KeywordTok{as.numeric}\NormalTok{(ahe)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{gather}\NormalTok{(}\DataTypeTok{key =} \StringTok{"age"}\NormalTok{, }\DataTypeTok{value=}\StringTok{"jointp"}\NormalTok{, }\OperatorTok{-}\KeywordTok{c}\NormalTok{(}\StringTok{"ahe"}\NormalTok{)) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{age =}  \KeywordTok{as.numeric}\NormalTok{(}\KeywordTok{gsub}\NormalTok{(}\StringTok{".*?([0-9]+).*"}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{1"}\NormalTok{, age)) }\OperatorTok{+}\StringTok{ }\DecValTok{23}\NormalTok{)}
+
+
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assignment-2}{%
+\section{Assignment 2}\label{assignment-2}}
+
+\textbf{Deadline: Sep 27, 2020, Midnight}
+
+\textbf{Source:} \textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 3.1
+
+\textbf{Data description:} You can find the \href{https://www.dropbox.com/s/7n79v2mjogzxv2j/CPS96_15_Description.pdf?dl=1}{data description here}.
+
+\textbf{Questions}
+
+\textbf{a.} In 2015, the value of the Consumer Price Index (CPI) was 237.0. In 1996, the value of the CPI was 156.9. Create a new variable in your data frame that expressed all earnings in real 2015 dollars. Use this variable to answer the next questions.
+
+\textbf{b.} Construct a 95\% confidence interval for the mean of \texttt{ahe} for high school graduates in 1996.
+
+\textbf{c.} Construct a 95\% confidence interval for the mean of \texttt{ahe} for high school graduates in 2015.
+
+\textbf{d.} Construct a 95\% confidence interval for the mean of \texttt{ahe} for college graduates in 1996.
+
+\textbf{e.} Construct a 95\% confidence interval for the mean of \texttt{ahe} for college graduates in 2015.
+
+\textbf{f.} Did the inflation adjusted wages of high school graduates increase from 1996 to 2015? Use statistical inference to answer.
+
+\textbf{g.} Did the inflation adjusted wages of collage graduates increase from 1996 to 2015? Use statistical inference to answer.
+
+\textbf{h.} Did the gap between earnings of college and high school graduates increase? Use statistical inference to answer.
+
+\textbf{Header for the R script}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment2} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'MASS'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/hbi82scuz9q4k11/CPS96_15.xlsx?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+
+
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assignment-3}{%
+\section{Assignment 3}\label{assignment-3}}
+
+\textbf{Deadline: Oct 4, 2020, Midnight}
+
+\textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 4.1
+
+\textbf{Data description:} You can find the \href{https://www.dropbox.com/s/3e24u6eymvmhldd/Growth_Description.pdf?dl=1}{data description here}.
+
+\textbf{Questions}
+
+\textbf{a.} Construct a scatterplot with a regression line fit on the top.
+
+\textbf{b.} Look at the data set and find Malta on your graph. Why is Malta an outlier?
+
+\textbf{c.} Using all the observations run a regression of \texttt{growth} on \texttt{tradeshare}. Interpret the intercept and the slope. Predict the growth rate for a country with a trade share of 0.5 and another with a trade share equal to 1.
+
+\textbf{d.} Estimate the regression without Malta and interpret the coefficients. Should Malta be excluded from the regression? Briefly comment.
+
+\textbf{Header for the R script}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment3} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'MASS'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/lbk73b0amzfj8px/Growth.xlsx?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+
+
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assignment-4}{%
+\section{Assignment 4}\label{assignment-4}}
+
+\textbf{Deadline: Oct 18, 2020, Midnight}
+
+\textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 5.3
+
+\textbf{Data description:} You can find the \href{https://www.dropbox.com/s/s0q564v6lplbexu/Birthweight_Smoking_Description.pdf?dl=1}{data description here}.
+
+\textbf{Questions}
+
+\textbf{a.} Run a regression of \texttt{birthweight} on \texttt{age}. Interpret the coefficient on age. Is the coefficients statistically significant?
+
+\textbf{b.} Estimate the mean and the standard error of birth weight for (i) mother who smoked during the pregnancy and (ii) mother who did not smoke during the pregnancy.
+
+\textbf{c.} Estimate the difference between (i) and (ii). Construct a 95\% confidence interval for the difference in the average \texttt{birthweight} for smoking and nonsmoking mothers.
+
+\textbf{d.} Run a regression of \texttt{birthweight} on on the binary variable \texttt{smoker} explain how the estimated intercept, slope related to your previous answers. How about the standard error of \(\hat{\beta}_1\)?
+
+\textbf{Header for the R script}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment4} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'MASS'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking.xlsx?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+
+
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assignment-5}{%
+\section{Assignment 5}\label{assignment-5}}
+
+\textbf{Deadline: Nov 1, 2020, Midnight}
+
+\textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 6.1
+
+\textbf{Data description:} You can find the \href{https://www.dropbox.com/s/s0q564v6lplbexu/Birthweight_Smoking_Description.pdf?dl=1}{data description here}.
+
+\textbf{Questions}
+
+\textbf{a.} Regress (i) \texttt{birthweight} on \texttt{smoker} and (ii) \texttt{birthweight} on \texttt{smoker}, \texttt{alcohol}, and \texttt{nprevist} . Compare the estimated coefficient on \texttt{smoker} in (i) and (ii). Does the regression suffer from omitted variable bias?
+
+\textbf{b.} Predict the birthweight for a child whose mother smoked during the pregnancy, did not drink alcohol, and had 8 prenatal care visits.
+
+\textbf{c.} Compare the \(R^2\) and adjusted-\(R^2\) from (ii), why are they so similar?
+
+\textbf{Header for the R script}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment5} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'MASS'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking.xlsx?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+
+
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assignment-6}{%
+\section{Assignment 6}\label{assignment-6}}
+
+\textbf{Deadline: Nov 14, 2020, Midnight}
+
+\textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 7.1
+
+\textbf{Data description:} You can find the \href{https://www.dropbox.com/s/s0q564v6lplbexu/Birthweight_Smoking_Description.pdf?dl=1}{data description here}.
+
+\textbf{Questions}
+
+\textbf{a.} Regress (i) \texttt{birthweight} on \texttt{smoker}, \texttt{alcohol},\texttt{nprevist}, and \texttt{unmarried}. Interpret the coefficient on \texttt{unmarried}.
+
+\textbf{b.} Construct a 95\% confidence interval on for the coefficient. Is it statistically significant? Is the magnitude of the coefficient large?
+
+\textbf{c.} Looking at this regression, a family advocacy group claims that higher rates of marriage will lead to healthier babies thus one obviuous public policy is to encourage marriage. Do you agree?
+
+\textbf{d.} Consider the data set that you have and briefly discuss what variables can be added to the regression to help to solve question (c).
+
+\textbf{e.} Run the regression with these additional controls. How did the coefficient on marriage has changed with these additional controls.
+
+\textbf{Header for the R script}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment6} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'MASS'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking.xlsx?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+
+
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{assignment-7}{%
+\section{Assignment 7}\label{assignment-7}}
+
+\textbf{Deadline: Nov 29, 2020, Midnight}
+
+\textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 8.1
+
+\textbf{Data description:} You can find the \href{https://www.dropbox.com/s/xdensdqj97bf2cj/Lead_Mortality_Description.pdf?dl=1}{data description here}.
+
+\textbf{Questions}
+
+\textbf{a.} Using a regression, show the average infant mortality rate \texttt{inf} for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?
+
+\textbf{b.} Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the \texttt{ph}, more asidic the water is and the more lead is leached. Run a regression of \texttt{inf} on \texttt{lead}, \texttt{ph}, and the interaction term \texttt{lead} \(times\) \texttt{ph}
+
+\textbf{c.} Does \texttt{lead} have a statistically significant effect on infant mortality? Explain.
+
+\textbf{d.} Does the effect of \texttt{lead} on infant mortality depend on \texttt{ph}? Is this dependence statistically significant?
+
+\textbf{e.} Construct a 95\% confidence interval for the effect of \texttt{lead} on infant mortality when \texttt{ph} is 6.5
 
   \bibliography{book.bib,packages.bib}
 

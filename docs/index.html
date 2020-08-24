@@ -151,11 +151,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#online-attendance"><i class="fa fa-check"></i>Online Attendance</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#tentative-schedule"><i class="fa fa-check"></i>Tentative Schedule</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-notes"><i class="fa fa-check"></i>Lecture Notes</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html"><i class="fa fa-check"></i><b>1</b> General Rules and Principles</a><ul>
 <li class="chapter" data-level="1.1" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>1.1</b> Installing R and RStudio</a></li>
 <li class="chapter" data-level="1.2" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#basic-rules-and-best-practices"><i class="fa fa-check"></i><b>1.2</b> Basic rules and best practices</a></li>
 <li class="chapter" data-level="1.3" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#header"><i class="fa fa-check"></i><b>1.3</b> Header</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="homework-assignments.html"><a href="homework-assignments.html"><i class="fa fa-check"></i><b>2</b> Homework Assignments</a><ul>
+<li class="chapter" data-level="2.1" data-path="homework-assignments.html"><a href="homework-assignments.html#how-to-submit-homework-assignments"><i class="fa fa-check"></i><b>2.1</b> How to submit homework assignments</a></li>
+<li class="chapter" data-level="2.2" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-1"><i class="fa fa-check"></i><b>2.2</b> Assignment 1</a></li>
+<li class="chapter" data-level="2.3" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-2"><i class="fa fa-check"></i><b>2.3</b> Assignment 2</a></li>
+<li class="chapter" data-level="2.4" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-3"><i class="fa fa-check"></i><b>2.4</b> Assignment 3</a></li>
+<li class="chapter" data-level="2.5" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-4"><i class="fa fa-check"></i><b>2.5</b> Assignment 4</a></li>
+<li class="chapter" data-level="2.6" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-5"><i class="fa fa-check"></i><b>2.6</b> Assignment 5</a></li>
+<li class="chapter" data-level="2.7" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-6"><i class="fa fa-check"></i><b>2.7</b> Assignment 6</a></li>
+<li class="chapter" data-level="2.8" data-path="homework-assignments.html"><a href="homework-assignments.html#assignment-7"><i class="fa fa-check"></i><b>2.8</b> Assignment 7</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -180,18 +191,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">EC282: Introduction to Econometrics</h1>
 <p class="author"><em>Onur Altındağ</em></p>
-<p class="date"><em>Last update: 2020-08-21</em></p>
+<p class="date"><em>Last update: 2020-08-24</em></p>
 </div>
 <div id="syllabus" class="section level1 unnumbered">
 <h1>Syllabus</h1>
 <div id="course-desctiption" class="section level2 unnumbered">
 <h2>Course description</h2>
-<p>This course aims to introduce 21st century econometric analysis to business students. It provides tools to infer meaningful information from data using descriptive and regression analyses. In the first half of the semester, we will review the basic statistics used in econometrics and introduce mechanics of univariate and multivariate regressions. In the second half, we will focus on two central issues in econometric analysis:</p>
-<ul>
-<li>causal interpretation of a statistical relationship</li>
-<li>overfitting a prediction model</li>
-</ul>
-<p>These two problems are the most common ones that you will need to tackle when analyzing either cause and effect or predicting an outcome using the existing data. At the end of the semester, I expect you to be familiar with <strong>R</strong> and <strong>RStudio</strong> interface, basic data manipulation, obtaining and interpreting sample statistics, conduct meaningful regression analysis and prediction. Importantly, I expect you to have a clear understanding of the distinction between correlation and causation, and in what conditions the former implies the latter.</p>
+<p>This course aims to introduce 21st century econometric analysis to business students. It provides tools to infer meaningful information from data using descriptive and regression analyses. In the first half of the semester, we will review the basic statistics used in econometrics and introduce mechanics of univariate and multivariate regressions. In the second half, we focus on causal interpretation of regression results, measures of fit, choice of functional form, multicollinearity and issues related to overfitting a prediction model and how to fix them.</p>
+<p>At the end of the semester, I expect you to be familiar with <strong>R</strong> and <strong>RStudio</strong> interface, basic data manipulation, obtaining and interpreting sample statistics, conduct meaningful regression analysis and prediction. Importantly, I expect you to have a clear understanding of the distinction between correlation and causation, and the conditions in which the former implies the latter.</p>
 <div id="knowledge" class="section level3 unnumbered">
 <h3>Knowledge and Skills</h3>
 <ul>
@@ -202,14 +209,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Basic understanding of the randomized controlled trials and the causal inference.</li>
 <li>Choose and modify the functional form of a relationship between the output and the input variables.</li>
 <li>Interpret the regression coefficients on models with interaction variables.</li>
-<li>Comparing a prediction model based on in-sample and out-of-sample performance.</li>
+<li>Understand the concept of overfitting and the difference between in-sample and out-of-sample performance of a prediction model.</li>
 </ul>
 </div>
 <div id="perspectives" class="section level3 unnumbered">
 <h3>Perspectives</h3>
 <ul>
-<li>Learn how to conduct a regression analysis, understands its limitation in inferring a causal relationship, generalizing its results, and power in prediction an outcome that is unknown to the researcher.</li>
-<li>Understand the regression diagnostics to choose the most appropriate definition of predictors, outcome, functional form, and</li>
+<li><p>Learn how to conduct a regression analysis, understands its limitation in inferring a causal relationship, generalize its results, and the prediction of an outcome that is unknown to the researcher.</p></li>
+<li><p>Understand the regression diagnostics to choose the most appropriate definition of predictors, outcome, functional form, and regressor.</p></li>
 </ul>
 </div>
 </div>
@@ -239,7 +246,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="important-dates" class="section level3 unnumbered">
 <h3>Important Dates</h3>
 <ul>
-<li>Weekly homework assignments: before our Monday meetings.</li>
+<li>Weekly homework assignments: Indicated on this web page, subject to change depending on our pace.<br />
+</li>
 <li>Midterm exam:</li>
 <li>Empirical project due:</li>
 <li>Final exam:</li>
@@ -265,18 +273,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="grading" class="section level3 unnumbered">
 <h3>Grading</h3>
 <ul>
-<li><strong>High stake assessments</strong>
-<ul>
-<li><strong>Midterm</strong> + <strong>Final</strong>: Constitute half of your final grade. I will post the exams on <strong>Black Board</strong> and you will have <strong>24 hours</strong> to work on them and submit <strong>DO NOT</strong> try to submit the exams on last minute as the system will close after the deadline and I will not accept it.
-You <strong>MUST</strong> attend the midterm and the final as there will be no make-up exams. The midterm and the final are <strong>both</strong> cumulative. If you miss or are likely to miss the <strong>midterm</strong> due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse. If you miss the final exam due to an emergency, you will receive an <strong>incomplete</strong> for this course. <strong>DO NOT</strong> take this class if you know that you will not be able to attend the final exam.</li>
-</ul></li>
-<li><strong>Low stake assessments</strong>
-<ul>
-<li><p><strong>Empirical project:</strong> a short empirical essay that you will develop throughout the semester and execute by using the tools that you learn in this class. On Github, I will post a few topics on this web page that you can choose from that are mainly in my area of interest: health, migration, inequality, etc. If you don’t like any of those, you can also choose your own. You will need to find data, clean and organize it, conduct a small scale econometrics analysis to answer an interesting empirical question. The final output should be between 1500-2500 words and 3-4 graphs/tables combined, and submitted through BlackBoard. Your interaction with me and your peers is a significant part of your grade for preparing the empirical assignment. Here is a <a href="https://www.onuraltindag.info/pt-tr/posts/excess_mortality_eng/">blog post</a> that I wrote in spring 2020 which was covered by <a href="https://www.nytimes.com/2020/04/20/world/middleeast/coronavirus-turkey-deaths.html">New York Times</a>, <a href="https://www.ft.com/content/80bb222c-b6eb-40ea-8014-563cbe9e0117">Financial Times</a>, <a href="https://tr.euronews.com/2020/04/23/saglik-bakaninin-new-york-timesa-verdigi-yanit-olumlerdeki-artis-acikliyor-mu-covid-19">Euro News</a>, <a href="https://elpais.com/sociedad/2020-04-27/el-misterio-turco-uno-de-los-paises-con-mas-casos-de-covid-19-y-menos-muertes.html">El Pais</a>, and in addition to many Turkish media outlets. While I don’t expect you to conduct an analysis like a seasoned econometrician, I do want you to do provide mini empirical-investigation and report your findings in a similar format.<br />
-</p></li>
-<li><p><strong>Weekly homework assignments:</strong> The homework assignments are posted on this web page with the deadlines. They can be completed in groups of <strong>maximum three</strong> students and self-graded on pass/fail basis by you after the deadline. You can miss up to <strong>2</strong> assignment with no grade penalty. I will average the rest as your final assignment grade. You will assign yourself a pass/fail grade if you think that you have done enough effort to complete the assignment on this <a href="Link%20here">google sheet</a> before Monday meeting after the deadline. I will go over these problems in the classroom and randomly ask students to “help” me with the assignment. If what you know substantially contradicts with your self-grade, I will change your grade to zero and you will receive a significant penalty on your participation grade. In other words, do the best you can with these assignments, work consistently, and do not cheat.</p></li>
-<li><p><strong>Collaborative participation to <a href="https://github.com/">GitHub</a> and classroom discussions:</strong> You must sign up for a free account on <a href="https://github.com/">GitHub</a>. Github is an eco-system for web development and version control using Git. You will only need to use the <code>issues</code> tab through either creating an issue to ask or answer a question on your or your peer’s empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. Your interaction on Github through receiving feedback from me and your friends on your empirical project is also part of your empirical assignment grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.</p></li>
-</ul></li>
+<li><p><strong>High-stake assessments</strong><br />
+- <strong>Midterm</strong> + <strong>Final</strong>: Constitute half of your final grade. I will post the exams on <strong>Black Board</strong> and you will have <strong>24 hours</strong> to work on them and submit <strong>DO NOT</strong> try to submit the exams on last minute as the system will close after the deadline and I will not accept it.
+You <strong>MUST</strong> attend the midterm and the final as there will be no make-up exams. The midterm and the final are <strong>both</strong> cumulative. If you miss or are likely to miss the <strong>midterm</strong> due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse. If you miss the final exam due to an emergency, you will receive an <strong>incomplete</strong> for this course. <strong>DO NOT</strong> take this class if you know that you will not be able to attend the final exam.</p></li>
+<li><p><strong>Low-stake assessments</strong><br />
+- <strong>Empirical project:</strong> a short empirical essay that you will develop throughout the semester and execute by using the tools that you learn in this class. On Github, I will post a few topics on this web page that you can choose from that are mainly in my area of interest: health, migration, inequality, political economy, etc. If you don’t like any of those, you can also choose your own. You will need to find data, clean and organize it, conduct a small scale econometrics analysis to answer an interesting empirical question. The final output should be between 1500-2500 words and 3-4 graphs/tables combined, and submitted through BlackBoard. Your interaction with me and your peers is a significant part of your grade for preparing the empirical assignment. So the process matter as much as the final output. Here is a <a href="https://www.onuraltindag.info/pt-tr/posts/excess_mortality_eng/">blog post</a> that I wrote in spring 2020 which was covered by <a href="https://www.nytimes.com/2020/04/20/world/middleeast/coronavirus-turkey-deaths.html">New York Times</a>, <a href="https://www.ft.com/content/80bb222c-b6eb-40ea-8014-563cbe9e0117">Financial Times</a>, <a href="https://tr.euronews.com/2020/04/23/saglik-bakaninin-new-york-timesa-verdigi-yanit-olumlerdeki-artis-acikliyor-mu-covid-19">Euro News</a>, <a href="https://elpais.com/sociedad/2020-04-27/el-misterio-turco-uno-de-los-paises-con-mas-casos-de-covid-19-y-menos-muertes.html">El Pais</a>, and in addition to many Turkish media outlets. While I don’t expect you to conduct an analysis like a seasoned econometrician, I do want you to do provide mini empirical-investigation and report your findings in a similar format.<br />
+- <strong>Bi-weekly homework assignments:</strong> The homework assignments are posted on this web page with the deadlines. They can be completed in groups of <strong>maximum three</strong> students and self-graded on pass/fail basis by you after the deadline. You can miss up to <strong>2</strong> assignment with no grade penalty. I will average the rest as your final assignment grade. You need to post your work on the Github issue that has your group’s name before Monday meeting after the deadline. I will go over these problems in the classroom and randomly ask students to “help” me with the assignment. If what you know substantially contradicts with what you posted online, I will change your grade to zero and you will receive a significant penalty on your participation grade. In other words, do the best you can with these assignments, work consistently, do not free ride on your friends, and do not cheat.<br />
+- <strong>Collaborative participation to <a href="https://github.com/">GitHub</a> and classroom discussions:</strong> You must sign up for a free account on <a href="https://github.com/">GitHub</a>. Github is an eco-system for web development and version control using Git. You will only need to use the <code>issues</code> tab through either creating an issue to ask or answer a question on your or your peer’s empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. Your interaction on Github through receiving feedback from me and your friends on your empirical project is also part of your empirical assignment grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.</p></li>
 </ul>
 </div>
 <div id="academic-integrity" class="section level3 unnumbered">
@@ -305,14 +308,126 @@ You <strong>MUST</strong> attend the midterm and the final as there will be no m
 <p>You are expected to be able to access all electronic course materials. It is your responsibility to review the course syllabus as soon as possible to determine what resources or materials I expect you to use in the course. If you are a student in an international location that may limit access to certain internet resources, please let me know immediately so you can find a solution.</p>
 <p>Students are expected to attend classes synchronously despite potential time zone hurdles. Solely watching recorded classes is not deemed to be acceptable course participation or completion. Course recordings are for the benefit of students who miss an occasional class or would like to watch the recording for further edification of materials. Class recordings that are posted to BB are for the sole purpose of this course. Disseminating any portion of this video in any manner is strictly prohibited.</p>
 <p><strong>Lecture notes</strong></p>
-<p>During the online lectures, I use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester.</p>
-<p><strong>Lecture videos</strong>
-I will record and post the lecture videos on Black Board.</p>
+<p>During the online lectures, I will use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester.</p>
+<p><strong>Lecture videos</strong></p>
+<p>I will record and post the lecture videos on Black Board.</p>
 </div>
 </div>
 <div id="tentative-schedule" class="section level2 unnumbered">
 <h2>Tentative Schedule</h2>
-<p><strong><em>Week 1</em></strong></p>
+<p>The key readings from Stock and Watson are indicated for each week.</p>
+<p><strong>Week 1-2</strong><br />
+<strong>Aug 31, Sep 3, Sep 10</strong></p>
+<ul>
+<li>Introduction to the course, logistics, syllabus, expectations and pap-talk.<br />
+</li>
+<li>Review of Probability (Chapter 2)<br />
+- Random sampling and the Distribution of the Sample Average<br />
+- Large-Sample Approximations to Sampling Distributions</li>
+</ul>
+<p><strong>Week 3</strong><br />
+<strong>Sep 14, Sep 17</strong></p>
+<ul>
+<li>Review of Statistics (Chapter 3)<br />
+- Hypothesis Tests Concerning the Population Mean<br />
+- Confidence Intervals for the Population Mean</li>
+</ul>
+<p><strong>Week 4</strong><br />
+<strong>Sep 21, Sep 24</strong></p>
+<ul>
+<li>Review of Statistics (Chapter 3)<br />
+- Comparing Means from Different Populations<br />
+- Scatterplots, the Sample Covariance, and the Sample Correlation</li>
+</ul>
+<p><strong>Week 5</strong><br />
+<strong>Sep 28, Oct 1</strong></p>
+<ul>
+<li>Linear Regression with One Regressor (Chapter 4)<br />
+- The Linear Regression Model<br />
+- Estimating the Coefficients of the Linear Regression Model<br />
+- Measures of Fit and Prediction Accuracy</li>
+</ul>
+<p><strong>Week 6</strong><br />
+<strong>Oct 5, Oct 8</strong></p>
+<ul>
+<li>Linear Regression with One Regressor (Chapter 4)<br />
+- The Least Squares Assumptions for Causal Inference<br />
+- The Sampling Distributions of the OLS Estimators</li>
+</ul>
+<p><strong>Week 7</strong><br />
+<strong>Oct 12, Oct 15</strong></p>
+<ul>
+<li>Wrap up, Midterm Review and <strong>Midterm exam</strong></li>
+<li>Deadline to post your progress report on GitHub. One or two paragraphs and a table/figure that summarizes what you have done so far</li>
+</ul>
+<p><strong>Week 8</strong><br />
+<strong>Oct 19, Oct 22</strong></p>
+<ul>
+<li>Regression with a Single Regressor: Hypothesis Tests and Confidence Intervals (Chapter 5)<br />
+- Testing Hypotheses About One of the Regression Coefficients<br />
+- Confidence Intervals for a Regression Coefficient<br />
+- Regression when <span class="math inline">\(X\)</span> is a Binary Variable</li>
+</ul>
+<p><strong>Week 9</strong><br />
+<strong>Oct 26, Oct 29</strong></p>
+<ul>
+<li>Linear Regression with Multiple Regressors (Chapter 6)<br />
+- Omitted Variable Bias<br />
+- The Multiple Regression Model<br />
+- The OLS Estimator in Multiple Regression</li>
+</ul>
+<p><strong>Week 10</strong><br />
+<strong>Nov 2, Nov 5</strong></p>
+<ul>
+<li>Linear Regression with Multiple Regressors (Chapter 6)
+- Measures of Fit in Multiple Regression
+- The Least Squares Assumptions for Causal Inference in Multiple Regression</li>
+</ul>
+<p><strong>Week 11</strong><br />
+<strong>Nov 9, Nov 12</strong></p>
+<ul>
+<li>Linear Regression with Multiple Regressors (Chapter 6)
+- The Distribution of OLS Estimators in Multiple Regression<br />
+- Multicollinearity<br />
+- Control Variables and Conditional Mean Independence</li>
+</ul>
+<p><strong>Week 12</strong><br />
+<strong>Nov 16, Nov 19</strong></p>
+<ul>
+<li>Hypothesis Tests and Confidence Intervals in Multiple Regression (Chapter 7)<br />
+- Hypothesis Tests and Confidence Intervals for a Single Coefficients<br />
+- Tests of Joint Hypotheses<br />
+- Testing Single Restrictions Involving Multiple Coefficients</li>
+</ul>
+<p><strong>Week 13</strong><br />
+<strong>Nov 23</strong></p>
+<ul>
+<li>Hypothesis Tests and Confidence Intervals in Multiple Regression (Chapter 7)<br />
+- Model Specification for Multiple Regression</li>
+</ul>
+<p><strong>Week 14</strong><br />
+<strong>Nov 30, Dec 3</strong></p>
+<ul>
+<li>Nonlinear Regression Functions (Chapter 8)<br />
+- A General Strategy for Modeling Nonlinear Regression Functions<br />
+- Nonlinear Functions of a Single Independent Variable</li>
+</ul>
+<p><strong>Week 15</strong><br />
+<strong>Dec 7, Dec 10</strong></p>
+<ul>
+<li>Nonlinear Regression Functions (Chapter 8)<br />
+- Interaction Between Independent Variables</li>
+</ul>
+<p><strong>Week 16</strong><br />
+<strong>Dec 14, Dec 17</strong><br />
+- Wrap up, last remarks, <strong>Final Exam</strong>.</p>
+</div>
+<div id="lecture-notes" class="section level2 unnumbered">
+<h2>Lecture Notes</h2>
+<ul>
+<li><p>Here are my <a href="https://www.dropbox.com/s/kng2oynyxrtiir5/EC%20282%20SPRING%202020.pdf?dl=0">hand-written lecture notes from the previous time</a> that I thought this course</p></li>
+<li><p>Here are the <a href="https://www.dropbox.com/s/e5c8qax19lkrrn3/EC%20282%20FALL%202020.pdf?dl=0">lecture notes from the current semester</a>.</p></li>
+</ul>
 </div>
 </div>
             </section>
@@ -371,6 +486,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
