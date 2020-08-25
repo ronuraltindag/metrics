@@ -1938,8 +1938,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 
 #this clears the workspace
 rm(list = ls()) 
-#this sets the random number generator seed to your birthday for replication
-set.seed(01011999)
+
 ###############################################################################</code></pre>
 <p>When coding, use relative references to files. Typically, any script will begin looking for files in the working directory. At any time you can type <code>getwd()</code> on your Rstudio console to see the current working directory. The header above automatically sets the working directory to the folder that the R script is included. For example, if you are working on <code>Lastname_Firstname_Assignment1_EC282.R</code> script and need to load file <code>dataset1name.Rda</code> into an object, then you would simply run:</p>
 <pre class="r"><code>load(dataset1name.Rda)</code></pre>
@@ -1986,7 +1985,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2041,7 +2040,8 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2049,7 +2049,8 @@ df1.url &lt;- &#39;https://www.dropbox.com/s/hbi82scuz9q4k11/CPS96_15.xlsx?dl=1&
 #download the data 
 GET(df1.url, write_disk(tdf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))
 #check if it worked
-df1 &lt;- read_excel(tdf)
+df1 &lt;- read_excel(tdf) %&gt;%
+  mutate(ahe = ahe + rnorm(length(ahe)))
 
 
 
@@ -2063,7 +2064,7 @@ head(df1)
 <p><strong>Source:</strong> Stock and Watson, <span class="math inline">\(4^{th}\)</span> Edition, Exercise 4.1</p>
 <p><strong>Data description:</strong> You can find the <a href="https://www.dropbox.com/s/3e24u6eymvmhldd/Growth_Description.pdf?dl=1">data description here</a>.</p>
 <p><strong>Questions</strong></p>
-<p><strong>a.</strong> Construct a scatterplot with a regression line fit on the top.</p>
+<p><strong>a.</strong> Construct a scatterplot of <code>growth</code> and <code>tradesshare</code> with a regression line fit on the top.</p>
 <p><strong>b.</strong> Look at the data set and find Malta on your graph. Why is Malta an outlier?</p>
 <p><strong>c.</strong> Using all the observations run a regression of <code>growth</code> on <code>tradeshare</code>. Interpret the intercept and the slope. Predict the growth rate for a country with a trade share of 0.5 and another with a trade share equal to 1.</p>
 <p><strong>d.</strong> Estimate the regression without Malta and interpret the coefficients. Should Malta be excluded from the regression? Briefly comment.</p>
@@ -2088,7 +2089,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2096,7 +2097,9 @@ df1.url &lt;- &#39;https://www.dropbox.com/s/lbk73b0amzfj8px/Growth.xlsx?dl=1&#3
 #download the data 
 GET(df1.url, write_disk(tdf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))
 #check if it worked
-df1 &lt;- read_excel(tdf)
+
+df1 &lt;- read_excel(tdf) %&gt;%
+  mutate(growth = growth + rnorm(length(growth))/5)
 
 
 
@@ -2135,7 +2138,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2143,7 +2146,8 @@ df1.url &lt;- &#39;https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking
 #download the data 
 GET(df1.url, write_disk(tdf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))
 #check if it worked
-df1 &lt;- read_excel(tdf)
+df1 &lt;- read_excel(tdf) %&gt;%
+  mutate(birthweight = birthweight + rnorm(length(birthweight)) * 50)
 
 
 
@@ -2181,7 +2185,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2189,7 +2193,8 @@ df1.url &lt;- &#39;https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking
 #download the data 
 GET(df1.url, write_disk(tdf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))
 #check if it worked
-df1 &lt;- read_excel(tdf)
+df1 &lt;- read_excel(tdf) %&gt;%
+    mutate(birthweight = birthweight + rnorm(length(birthweight)) * 50)
 
 
 
@@ -2229,7 +2234,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2237,7 +2242,8 @@ df1.url &lt;- &#39;https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking
 #download the data 
 GET(df1.url, write_disk(tdf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))
 #check if it worked
-df1 &lt;- read_excel(tdf)
+df1 &lt;- read_excel(tdf) %&gt;%
+    mutate(birthweight = birthweight + rnorm(length(birthweight)) * 50)
 
 
 
@@ -2251,8 +2257,8 @@ head(df1)
 <p><strong>Source:</strong> Stock and Watson, <span class="math inline">\(4^{th}\)</span> Edition, Exercise 8.1</p>
 <p><strong>Data description:</strong> You can find the <a href="https://www.dropbox.com/s/xdensdqj97bf2cj/Lead_Mortality_Description.pdf?dl=1">data description here</a>.</p>
 <p><strong>Questions</strong></p>
-<p><strong>a.</strong> Using a regression, show the average infant mortality rate <code>inf</code> for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?</p>
-<p><strong>b.</strong> Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the <code>ph</code>, more asidic the water is and the more lead is leached. Run a regression of <code>inf</code> on <code>lead</code>, <code>ph</code>, and the interaction term <code>lead</code> <span class="math inline">\(times\)</span> <code>ph</code></p>
+<p><strong>a.</strong> Using a regression, show the average infant mortality rate <code>infrate</code> for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?</p>
+<p><strong>b.</strong> Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the <code>ph</code>, more asidic the water is and the more lead is leached. Run a regression of <code>infrate</code> on <code>lead</code>, <code>ph</code>, and the interaction term <code>lead</code> <span class="math inline">\(times\)</span> <code>ph</code></p>
 <p><strong>c.</strong> Does <code>lead</code> have a statistically significant effect on infant mortality? Explain.</p>
 <p><strong>d.</strong> Does the effect of <code>lead</code> on infant mortality depend on <code>ph</code>? Is this dependence statistically significant?</p>
 <p><strong>e.</strong> Construct a 95% confidence interval for the effect of <code>lead</code> on infant mortality when <code>ph</code> is 6.5</p>
@@ -2277,7 +2283,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -2285,7 +2291,8 @@ df1.url &lt;- &#39;https://www.dropbox.com/s/5nszqnejl7uu9f5/lead_mortality.xlsx
 #download the data 
 GET(df1.url, write_disk(tdf &lt;- tempfile(fileext = &quot;.xlsx&quot;)))
 #check if it worked
-df1 &lt;- read_excel(tdf)
+df1 &lt;- read_excel(tdf) %&gt;%
+  mutate(infrate1 = infrate + rnorm(length(infrate))/50)
 
 
 

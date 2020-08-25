@@ -252,9 +252,8 @@ background-color: #ffffcf;
 <span id="cb2-15"><a href="general-rules-and-principles.html#cb2-15"></a></span>
 <span id="cb2-16"><a href="general-rules-and-principles.html#cb2-16"></a><span class="co">#this clears the workspace</span></span>
 <span id="cb2-17"><a href="general-rules-and-principles.html#cb2-17"></a><span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>()) </span>
-<span id="cb2-18"><a href="general-rules-and-principles.html#cb2-18"></a><span class="co">#this sets the random number generator seed to your birthday for replication</span></span>
-<span id="cb2-19"><a href="general-rules-and-principles.html#cb2-19"></a><span class="kw">set.seed</span>(<span class="dv">01011999</span>)</span>
-<span id="cb2-20"><a href="general-rules-and-principles.html#cb2-20"></a><span class="co">###############################################################################</span></span></code></pre></div>
+<span id="cb2-18"><a href="general-rules-and-principles.html#cb2-18"></a></span>
+<span id="cb2-19"><a href="general-rules-and-principles.html#cb2-19"></a><span class="co">###############################################################################</span></span></code></pre></div>
 <p>When coding, use relative references to files. Typically, any script will begin looking for files in the working directory. At any time you can type <code>getwd()</code> on your Rstudio console to see the current working directory. The header above automatically sets the working directory to the folder that the R script is included. For example, if you are working on <code>Lastname_Firstname_Assignment1_EC282.R</code> script and need to load file <code>dataset1name.Rda</code> into an object, then you would simply run:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="general-rules-and-principles.html#cb3-1"></a><span class="kw">load</span>(dataset1name.Rda)</span></code></pre></div>
 <p>However, if you were working in the same .R file, and needed to access <code>dataset2name.Rda</code>, you would need to point the program to a directory outside the current working directory – so, you go up one level, over one folder, and look there:</p>

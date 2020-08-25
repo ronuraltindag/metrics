@@ -578,8 +578,7 @@ At the beginning of any R script, you should have a standard header that you use
 
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
-\CommentTok{#this sets the random number generator seed to your birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{01011999}\NormalTok{)}
+
 \CommentTok{###############################################################################}
 \end{Highlighting}
 \end{Shaded}
@@ -653,7 +652,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -727,7 +726,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -735,7 +735,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#download the data }
 \KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
 \CommentTok{#check if it worked}
-\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{ahe =}\NormalTok{ ahe }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(ahe)))}
 
 
 
@@ -756,7 +757,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Questions}
 
-\textbf{a.} Construct a scatterplot with a regression line fit on the top.
+\textbf{a.} Construct a scatterplot of \texttt{growth} and \texttt{tradesshare} with a regression line fit on the top.
 
 \textbf{b.} Look at the data set and find Malta on your graph. Why is Malta an outlier?
 
@@ -789,7 +790,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -797,7 +798,9 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#download the data }
 \KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
 \CommentTok{#check if it worked}
-\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{growth =}\NormalTok{ growth }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(growth))}\OperatorTok{/}\DecValTok{5}\NormalTok{)}
 
 
 
@@ -851,7 +854,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -859,7 +862,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#download the data }
 \KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
 \CommentTok{#check if it worked}
-\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{birthweight =}\NormalTok{ birthweight }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(birthweight)) }\OperatorTok{*}\StringTok{ }\DecValTok{50}\NormalTok{)}
 
 
 
@@ -911,7 +915,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -919,7 +923,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#download the data }
 \KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
 \CommentTok{#check if it worked}
-\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{birthweight =}\NormalTok{ birthweight }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(birthweight)) }\OperatorTok{*}\StringTok{ }\DecValTok{50}\NormalTok{)}
 
 
 
@@ -975,7 +980,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -983,7 +988,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#download the data }
 \KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
 \CommentTok{#check if it worked}
-\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{birthweight =}\NormalTok{ birthweight }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(birthweight)) }\OperatorTok{*}\StringTok{ }\DecValTok{50}\NormalTok{)}
 
 
 
@@ -1004,9 +1010,9 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Questions}
 
-\textbf{a.} Using a regression, show the average infant mortality rate \texttt{inf} for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?
+\textbf{a.} Using a regression, show the average infant mortality rate \texttt{infrate} for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?
 
-\textbf{b.} Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the \texttt{ph}, more asidic the water is and the more lead is leached. Run a regression of \texttt{inf} on \texttt{lead}, \texttt{ph}, and the interaction term \texttt{lead} \(times\) \texttt{ph}
+\textbf{b.} Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the \texttt{ph}, more asidic the water is and the more lead is leached. Run a regression of \texttt{infrate} on \texttt{lead}, \texttt{ph}, and the interaction term \texttt{lead} \(times\) \texttt{ph}
 
 \textbf{c.} Does \texttt{lead} have a statistically significant effect on infant mortality? Explain.
 
@@ -1039,7 +1045,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#this clears the workspace}
 \KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
 \CommentTok{#this sets the random number generator seed to my birthday for replication}
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{06061983}\NormalTok{)}
+
 \KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \CommentTok{###############################################################################}
 \CommentTok{#get the data url }
@@ -1047,7 +1053,8 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \CommentTok{#download the data }
 \KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".xlsx"}\NormalTok{)))}
 \CommentTok{#check if it worked}
-\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf)}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_excel}\NormalTok{(tdf) }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{infrate1 =}\NormalTok{ infrate }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(infrate))}\OperatorTok{/}\DecValTok{50}\NormalTok{)}
 
 
 

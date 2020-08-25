@@ -369,8 +369,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 
 #this clears the workspace
 rm(list = ls()) 
-#this sets the random number generator seed to your birthday for replication
-set.seed(01011999)
+
 ###############################################################################
 ```
 
@@ -444,7 +443,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -522,7 +521,8 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -530,7 +530,8 @@ df1.url <- 'https://www.dropbox.com/s/hbi82scuz9q4k11/CPS96_15.xlsx?dl=1'
 #download the data 
 GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
 #check if it worked
-df1 <- read_excel(tdf)
+df1 <- read_excel(tdf) %>%
+  mutate(ahe = ahe + rnorm(length(ahe)))
 
 
 
@@ -554,7 +555,7 @@ head(df1)
 
 **Questions** 
 
-**a.** Construct a scatterplot with a regression line fit on the top. 
+**a.** Construct a scatterplot of ```growth``` and ```tradesshare``` with a regression line fit on the top. 
 
 **b.** Look at the data set and find Malta on your graph. Why is Malta an outlier? 
 
@@ -588,7 +589,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -596,7 +597,9 @@ df1.url <- 'https://www.dropbox.com/s/lbk73b0amzfj8px/Growth.xlsx?dl=1'
 #download the data 
 GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
 #check if it worked
-df1 <- read_excel(tdf)
+
+df1 <- read_excel(tdf) %>%
+  mutate(growth = growth + rnorm(length(growth))/5)
 
 
 
@@ -651,7 +654,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -659,7 +662,8 @@ df1.url <- 'https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking.xlsx?d
 #download the data 
 GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
 #check if it worked
-df1 <- read_excel(tdf)
+df1 <- read_excel(tdf) %>%
+  mutate(birthweight = birthweight + rnorm(length(birthweight)) * 50)
 
 
 
@@ -714,7 +718,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -722,7 +726,8 @@ df1.url <- 'https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking.xlsx?d
 #download the data 
 GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
 #check if it worked
-df1 <- read_excel(tdf)
+df1 <- read_excel(tdf) %>%
+    mutate(birthweight = birthweight + rnorm(length(birthweight)) * 50)
 
 
 
@@ -782,7 +787,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -790,7 +795,8 @@ df1.url <- 'https://www.dropbox.com/s/z8r6hc0r4ytt4f8/birthweight_smoking.xlsx?d
 #download the data 
 GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
 #check if it worked
-df1 <- read_excel(tdf)
+df1 <- read_excel(tdf) %>%
+    mutate(birthweight = birthweight + rnorm(length(birthweight)) * 50)
 
 
 
@@ -812,9 +818,9 @@ head(df1)
 
 **Questions** 
 
-**a.** Using a regression, show the average infant mortality rate ```inf``` for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?
+**a.** Using a regression, show the average infant mortality rate ```infrate``` for for cities with lead pipes and for cities with nonlead pipes. Is there a statistically significant different in the averages?
 
-**b.** Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the ```ph```, more asidic the water is and the more lead is leached. Run a regression of ```inf``` on ```lead```, ```ph```, and the interaction term  ```lead``` $times$ ```ph```
+**b.** Amount of lead leached from lead pipes depends on the chemistry of the water running through the pipes. Lower the ```ph```, more asidic the water is and the more lead is leached. Run a regression of ```infrate``` on ```lead```, ```ph```, and the interaction term  ```lead``` $times$ ```ph```
 
 **c.** Does ```lead``` have a statistically significant effect on infant mortality? Explain. 
 
@@ -848,7 +854,7 @@ setwd(getwd()) #change getwd() here is you need to set a different working direc
 #this clears the workspace
 rm(list = ls()) 
 #this sets the random number generator seed to my birthday for replication
-set.seed(06061983)
+
 options(scipen=999)
 ###############################################################################
 #get the data url 
@@ -856,7 +862,8 @@ df1.url <- 'https://www.dropbox.com/s/5nszqnejl7uu9f5/lead_mortality.xlsx?dl=1'
 #download the data 
 GET(df1.url, write_disk(tdf <- tempfile(fileext = ".xlsx")))
 #check if it worked
-df1 <- read_excel(tdf)
+df1 <- read_excel(tdf) %>%
+  mutate(infrate1 = infrate + rnorm(length(infrate))/50)
 
 
 
