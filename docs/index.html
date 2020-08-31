@@ -49,13 +49,12 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
@@ -64,16 +63,14 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -82,9 +79,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -150,8 +147,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#diversity-inclusion-and-support"><i class="fa fa-check"></i>Diversity Inclusion and Support</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#online-attendance"><i class="fa fa-check"></i>Online Attendance</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tentative-schedule"><i class="fa fa-check"></i>Tentative Schedule</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#lecture-notes"><i class="fa fa-check"></i>Lecture Notes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#tentative-schedule"><i class="fa fa-check"></i>Tentative Schedule</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html"><i class="fa fa-check"></i><b>1</b> General Rules and Principles</a><ul>
 <li class="chapter" data-level="1.1" data-path="general-rules-and-principles.html"><a href="general-rules-and-principles.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>1.1</b> Installing R and RStudio</a></li>
@@ -315,10 +312,6 @@ Here is a <a href="https://www.onuraltindag.info/pt-tr/posts/excess_mortality_en
 <p>I will record and post the lecture videos on Black Board.</p>
 </div>
 </div>
-<div id="tentative-schedule" class="section level2 unnumbered">
-<h2>Tentative Schedule</h2>
-<p>The key readings from Stock and Watson are indicated for each week.</p>
-</div>
 <div id="lecture-notes" class="section level2 unnumbered">
 <h2>Lecture Notes</h2>
 <p>During the online lectures, I will use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester.</p>
@@ -326,6 +319,10 @@ Here is a <a href="https://www.onuraltindag.info/pt-tr/posts/excess_mortality_en
 <li><p>Here are my <a href="https://www.dropbox.com/s/kng2oynyxrtiir5/EC%20282%20SPRING%202020.pdf?dl=0">hand-written lecture notes from the previous time</a> that I thought this course.</p></li>
 <li><p>Here are the <a href="https://www.dropbox.com/s/e5c8qax19lkrrn3/EC%20282%20FALL%202020.pdf?dl=0">lecture notes from the current semester</a>.</p></li>
 </ul>
+</div>
+<div id="tentative-schedule" class="section level2 unnumbered">
+<h2>Tentative Schedule</h2>
+<p>The key readings from Stock and Watson are indicated for each week.</p>
 <p><strong>Week 1-2</strong><br />
 <strong>Aug 31, Sep 3, Sep 10</strong></p>
 <ul>

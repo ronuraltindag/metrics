@@ -154,9 +154,7 @@ Students are expected to attend classes synchronously despite potential time zon
 
 I will record and post the lecture videos on Black Board. 
 
-## Tentative Schedule {-#tentative-schedule}
 
-The key readings from Stock and Watson are indicated for each week. 
 
 ## Lecture Notes {-#lecture-notes}
 
@@ -164,9 +162,14 @@ The key readings from Stock and Watson are indicated for each week.
 During the online lectures, I will use my iPad as a white board to teach. I will post these notes on this web page throughout the semester as well as the notes from the previous semester. 
 
 
+
 - Here are my [hand-written lecture notes from the previous time](https://www.dropbox.com/s/kng2oynyxrtiir5/EC%20282%20SPRING%202020.pdf?dl=0) that I thought this course. 
 
 - Here are the [lecture notes from the current semester](https://www.dropbox.com/s/e5c8qax19lkrrn3/EC%20282%20FALL%202020.pdf?dl=0). 
+
+## Tentative Schedule {-#tentative-schedule}
+
+The key readings from Stock and Watson are indicated for each week. 
 
 **Week 1-2**  
 **Aug 31, Sep 3, Sep 10** 
