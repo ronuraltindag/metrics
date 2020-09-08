@@ -422,7 +422,7 @@ $E[ahe|age=26]$, etc. and plot these conditional expected values of ```ahe``` ag
 **c.** Compute the variance of ```ahe```.     
 **d.** Compute the covariance between ```age``` and ```ahe```.     
 **e.** Compute the correlation between ```age``` and ```ahe```.   
-**f.** Relate your answers in (c) and (d) to the plot that you constructed in (a) 
+**f.** Relate your answers in (d) and (e) to the plot that you constructed in (a) 
 
 
 **Header for the R script** 
