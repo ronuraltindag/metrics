@@ -420,7 +420,7 @@ You can use a snipping tool to cut and paste the relevant output and figures fro
 **b.** Compute the mean of ```ahe``` for each value of ```age```, i.e. compute $E[ahe|age=25]$, 
 $E[ahe|age=26]$, etc. and plot these conditional expected values of ```ahe``` against ```age``` Are they related? Briefly comment.     
 **c.** Compute the variance of ```ahe```.     
-**d.** Compute the covariance between ```age``` and ```age```.     
+**d.** Compute the covariance between ```age``` and ```ahe```.     
 **e.** Compute the correlation between ```age``` and ```ahe```.   
 **f.** Relate your answers in (c) and (d) to the plot that you constructed in (a) 
 
