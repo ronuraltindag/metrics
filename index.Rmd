@@ -404,7 +404,7 @@ When learning R, the most important skill that you need to acquire is to be able
 
 ## How to submit homework assignments 
 
-You can use a snipping tool to cut and paste the relevant output and figures from **RStudio** to the issue on **GitHub** with your group's name. If you would like to have a more elegant looking output, I encourage you to learn more the ```stargazer``` package that transforms your analysis into publishable formats. 
+You can use a snipping tool to cut and paste the relevant output and figures from **RStudio** to the issue on **GitHub** under the assignment name. If you would like to have a more elegant looking output, I encourage you to learn more the ```stargazer``` package that transforms your analysis into publishable formats. 
 
 ## Assignment 1
 
@@ -421,13 +421,13 @@ You can use a snipping tool to cut and paste the relevant output and figures fro
 $E[ahe|age=26]$, etc. and plot these conditional expected values of ```ahe``` against ```age``` Are they related? Briefly comment.     
 **c.** Compute the variance of ```ahe```.     
 **d.** Compute the covariance between ```age``` and ```age```.     
-**e.** Compute the correlation between ```age``` and ```ahq  e```.   
+**e.** Compute the correlation between ```age``` and ```ahe```.   
 **f.** Relate your answers in (c) and (d) to the plot that you constructed in (a) 
 
 
 **Header for the R script** 
 
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment1``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment1``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header. 
 
 ```{r echo = T, eval=F}
 ###############################################################################
