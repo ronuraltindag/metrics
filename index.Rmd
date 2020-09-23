@@ -361,7 +361,7 @@ At the beginning of any R script, you should have a standard header that you use
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr')
 
 have <- need %in% rownames(installed.packages()) 
@@ -433,7 +433,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
@@ -511,7 +511,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl',  'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
@@ -579,7 +579,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
@@ -644,7 +644,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl',  'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
@@ -708,7 +708,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
@@ -777,7 +777,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
@@ -844,7 +844,7 @@ Start a new R script, copy/paste the header below and save it to ```Dropbox\EC28
 ###############################################################################
 # list the packages we need and loads them, installs them automatically if we don't have them
 # add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'MASS', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
           'stargazer','httr', 'repmis')
 
 have <- need %in% rownames(installed.packages()) 
