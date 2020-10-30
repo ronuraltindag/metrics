@@ -69,7 +69,7 @@ Please go to [my calendar](https://calendly.com/ronuraltindag/ec282?month=2020-0
 
 - Weekly homework assignments: Indicated on this web page, subject to change depending on our pace.   
 - Midterm exam due: **Oct 15, 2020, midnight**  
-- Empirical project progress report due: **Oct 15, 2020, midnight** 
+- Empirical project progress report due: **Nov 1, 2020, midnight** 
 - Empirical project final : **Dec 1, midnight**
 - Final exam: **Dec 17, midnight**
 
@@ -505,7 +505,7 @@ head(df1)
 
 **Header for the R script** 
 
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment2``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment2``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header. 
 
 ```{r echo = T, eval=F}
 ###############################################################################
@@ -573,7 +573,7 @@ head(df1)
 
 **Header for the R script** 
 
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment3``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment3``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header. 
 
 ```{r echo = T, eval=F}
 ###############################################################################
@@ -683,7 +683,7 @@ head(df1)
 
 ## Assignment 5
 
-**Deadline: Nov 1, 2020, Midnight**
+**Deadline: Nov 8, 2020, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 6.1
 
@@ -702,7 +702,7 @@ head(df1)
 
 **Header for the R script** 
 
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment5``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment5``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header. 
 
 ```{r echo = T, eval=F}
 ###############################################################################
@@ -771,7 +771,7 @@ head(df1)
 
 **Header for the R script** 
 
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment6``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment6``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header. 
 
 ```{r echo = T, eval=F}
 ###############################################################################
@@ -838,7 +838,7 @@ head(df1)
 
 **Header for the R script** 
 
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment7``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your enviroment. Conduct the analysis below the header. 
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Assignment7``` or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header. 
 
 ```{r echo = T, eval=F}
 ###############################################################################
@@ -872,6 +872,80 @@ df1 <- read_excel(tdf) %>%
   mutate(infrate1 = infrate + rnorm(length(infrate))/50)
 
 
+
+head(df1)
+
+#CONDUCT THE ANALYSIS BELOW
+
+```
+
+
+# Replication Project 
+
+## Instructions 
+
+**a.** Carefully read the study and provide a two paragraph summary that includes: 
+
+- Motivation of the study, why is it important? 
+
+- Data and empirical approach. How do researchers establish a causal inference? What data and method do they use? What do they estimate? 
+
+- Main findings and the implications of the study. 
+
+
+**b.**  Run the following regression for higher and lower quality CVs separately as well as the full sample of CVs. Prepare a regression table of the results and interpret these results within the context of the study.  
+
+$call_i = \beta_0 + \beta_1 black_i + u_i$
+
+where $black$ is a dummy variable that equals one for distinctly African-American names. 
+
+**c.** Run separate linear regressions using `call` as an outcome and `yearsexp`, `volunteer`, `military`, `email`, `empholes`, `workingschool`, `honors`, `computerskills`, and `specialskills`for CVs with African-American and White names. Prepare a regression table and interpret the results within the context of the study. Write up the results that you find interesting and related to the research question in the study, you don't  need to interpret each coefficient. 
+
+
+**d.** Conduct an additional analysis using the data that you have that offer any interesting additional findings to the reported ones in the published study. This could be a subgroup analysis, a graphical representation of a finding in the study or any empirical exploration that you find interesting and use the tools that we learned in the classroom.
+
+**e.** Conclude your replication study by 1-2 paragraphs of discussion of the results above. What do these ressults imply? What are the policy implications? 
+
+
+
+
+
+## Files: Data, codebook, study  
+
+Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Empirical_Project``` or a similar path that you created for this course. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header.
+
+- You can find the data codebook [here](https://www.dropbox.com/s/cj8b2sp9n6g6ixq/des.pdf?dl=0).
+- You can find the original study [here](https://www.dropbox.com/s/c6ybtk7v9g8dfbb/Bertrand%26Mullainathan.pdf?dl=0)
+
+```{r echo = T, eval=F}
+###############################################################################
+# list the packages we need and loads them, installs them automatically if we don't have them
+# add any package that you need to the list  
+need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
+          'stargazer','httr', 'repmis')
+
+have <- need %in% rownames(installed.packages()) 
+if(any(!have)) install.packages(need[!have]) 
+invisible(lapply(need, library, character.only=T)) 
+
+# Save the R script to the assignment 1 folder before this
+# To set up the working directory
+getwd()
+setwd(getwd()) #change getwd() here is you need to set a different working directory
+
+
+#this clears the workspace
+rm(list = ls()) 
+#this sets the random number generator seed to my birthday for replication
+
+options(scipen=999)
+###############################################################################
+#get the data url 
+df1.url <- 'https://www.dropbox.com/s/oekcvjgy4yfjv0e/lakisha_aer.dta?dl=1'
+#download the data 
+GET(df1.url, write_disk(tdf <- tempfile(fileext = ".dta")))
+#check if it worked
+df1 <- read_dta(tdf) 
 
 head(df1)
 

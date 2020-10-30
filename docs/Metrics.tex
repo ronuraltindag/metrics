@@ -114,7 +114,7 @@
 
 \title{EC282: Introduction to Econometrics}
 \author{Onur Altındağ}
-\date{Last update: 2020-09-23}
+\date{Last update: 2020-10-30}
 
 \begin{document}
 \maketitle
@@ -221,7 +221,7 @@ Please go to \href{https://calendly.com/ronuraltindag/ec282?month=2020-08}{my ca
 \item
   Midterm exam due: \textbf{Oct 15, 2020, midnight}\\
 \item
-  Empirical project progress report due: \textbf{Oct 15, 2020, midnight}
+  Empirical project progress report due: \textbf{Nov 1, 2020, midnight}
 \item
   Empirical project final : \textbf{Dec 1, midnight}
 \item
@@ -703,7 +703,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Header for the R script}
 
-Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment2} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment2} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your environment. Conduct the analysis below the header.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -767,7 +767,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Header for the R script}
 
-Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment3} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment3} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your environment. Conduct the analysis below the header.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -876,7 +876,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \hypertarget{assignment-5}{%
 \section{Assignment 5}\label{assignment-5}}
 
-\textbf{Deadline: Nov 1, 2020, Midnight}
+\textbf{Deadline: Nov 8, 2020, Midnight}
 
 \textbf{Source:} Stock and Watson, \(4^{th}\) Edition, Exercise 6.1
 
@@ -892,7 +892,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Header for the R script}
 
-Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment5} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment5} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your environment. Conduct the analysis below the header.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -957,7 +957,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Header for the R script}
 
-Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment6} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment6} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your environment. Conduct the analysis below the header.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1022,7 +1022,7 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 
 \textbf{Header for the R script}
 
-Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment7} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your enviroment. Conduct the analysis below the header.
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Assignment7} or a similar path that you created for this homework assignment. Run the R script and make sure that you have the data \texttt{df1} in your environment. Conduct the analysis below the header.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1057,6 +1057,85 @@ Start a new R script, copy/paste the header below and save it to \texttt{Dropbox
 \StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{infrate1 =}\NormalTok{ infrate }\OperatorTok{+}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\KeywordTok{length}\NormalTok{(infrate))}\OperatorTok{/}\DecValTok{50}\NormalTok{)}
 
 
+
+\KeywordTok{head}\NormalTok{(df1)}
+
+\CommentTok{#CONDUCT THE ANALYSIS BELOW}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{replication-project}{%
+\chapter{Replication Project}\label{replication-project}}
+
+\hypertarget{instructions}{%
+\section{Instructions}\label{instructions}}
+
+\textbf{a.} Carefully read the study and provide a two paragraph summary that includes:
+
+\begin{itemize}
+\item
+  Motivation of the study, why is it important?
+\item
+  Data and empirical approach. How do researchers establish a causal inference? What data and method do they use? What do they estimate?
+\item
+  Main findings and the implications of the study.
+\end{itemize}
+
+\textbf{b.} Run the following regression for higher and lower quality CVs separately as well as the full sample of CVs. Prepare a regression table of the results and interpret these results within the context of the study.
+
+\(call_i = \beta_0 + \beta_1 black_i + u_i\)
+
+where \(black\) is a dummy variable that equals one for distinctly African-American names.
+
+\textbf{c.} Run separate linear regressions using \texttt{call} as an outcome and \texttt{yearsexp}, \texttt{volunteer}, \texttt{military}, \texttt{email}, \texttt{empholes}, \texttt{workingschool}, \texttt{honors}, \texttt{computerskills}, and \texttt{specialskills}for CVs with African-American and White names. Prepare a regression table and interpret the results within the context of the study. Write up the results that you find interesting and related to the research question in the study, you don't need to interpret each coefficient.
+
+\textbf{d.} Conduct an additional analysis using the data that you have that offer any interesting additional findings to the reported ones in the published study. This could be a subgroup analysis, a graphical representation of a finding in the study or any empirical exploration that you find interesting and use the tools that we learned in the classroom.
+
+\textbf{e.} Conclude your replication study by 1-2 paragraphs of discussion of the results above. What do these ressults imply? What are the policy implications?
+
+\hypertarget{files-data-codebook-study}{%
+\section{Files: Data, codebook, study}\label{files-data-codebook-study}}
+
+Start a new R script, copy/paste the header below and save it to \texttt{Dropbox\textbackslash{}EC282\textbackslash{}Empirical\_Project} or a similar path that you created for this course. Run the R script and make sure that you have the data \texttt{df1} in your environment. Conduct the analysis below the header.
+
+\begin{itemize}
+\tightlist
+\item
+  You can find the data codebook \href{https://www.dropbox.com/s/cj8b2sp9n6g6ixq/des.pdf?dl=0}{here}.
+\item
+  You can find the original study \href{https://www.dropbox.com/s/c6ybtk7v9g8dfbb/Bertrand\%26Mullainathan.pdf?dl=0}{here}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{###############################################################################}
+\CommentTok{# list the packages we need and loads them, installs them automatically if we don't have them}
+\CommentTok{# add any package that you need to the list  }
+\NormalTok{need <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{'glue'}\NormalTok{, }\StringTok{'dplyr'}\NormalTok{,}\StringTok{'readxl'}\NormalTok{, }\StringTok{'ggplot2'}\NormalTok{,}\StringTok{'tidyr'}\NormalTok{,}\StringTok{'AER'}\NormalTok{,}\StringTok{'scales'}\NormalTok{,}\StringTok{'mvtnorm'}\NormalTok{, }
+          \StringTok{'stargazer'}\NormalTok{,}\StringTok{'httr'}\NormalTok{, }\StringTok{'repmis'}\NormalTok{)}
+
+\NormalTok{have <-}\StringTok{ }\NormalTok{need }\OperatorTok{%in%}\StringTok{ }\KeywordTok{rownames}\NormalTok{(}\KeywordTok{installed.packages}\NormalTok{()) }
+\ControlFlowTok{if}\NormalTok{(}\KeywordTok{any}\NormalTok{(}\OperatorTok{!}\NormalTok{have)) }\KeywordTok{install.packages}\NormalTok{(need[}\OperatorTok{!}\NormalTok{have]) }
+\KeywordTok{invisible}\NormalTok{(}\KeywordTok{lapply}\NormalTok{(need, library, }\DataTypeTok{character.only=}\NormalTok{T)) }
+
+\CommentTok{# Save the R script to the assignment 1 folder before this}
+\CommentTok{# To set up the working directory}
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\KeywordTok{getwd}\NormalTok{()) }\CommentTok{#change getwd() here is you need to set a different working directory}
+
+
+\CommentTok{#this clears the workspace}
+\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()) }
+\CommentTok{#this sets the random number generator seed to my birthday for replication}
+
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\CommentTok{###############################################################################}
+\CommentTok{#get the data url }
+\NormalTok{df1.url <-}\StringTok{ 'https://www.dropbox.com/s/oekcvjgy4yfjv0e/lakisha_aer.dta?dl=1'}
+\CommentTok{#download the data }
+\KeywordTok{GET}\NormalTok{(df1.url, }\KeywordTok{write_disk}\NormalTok{(tdf <-}\StringTok{ }\KeywordTok{tempfile}\NormalTok{(}\DataTypeTok{fileext =} \StringTok{".dta"}\NormalTok{)))}
+\CommentTok{#check if it worked}
+\NormalTok{df1 <-}\StringTok{ }\KeywordTok{read_dta}\NormalTok{(tdf) }
 
 \KeywordTok{head}\NormalTok{(df1)}
 
