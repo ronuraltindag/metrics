@@ -68,9 +68,9 @@ Please go to [my calendar](https://calendly.com/ronuraltindag/office_hrs) and bo
 ### Important Dates {-#important-dates}
 
 - Weekly homework assignments: Indicated on this web page, subject to change depending on our pace.   
-- First  Midterm: **Feb 22, 2020**  
-- Second Midterm : **Mar 29, 2020** 
-- Final exam: **Apr 29, 2020**
+- First  Midterm: **Feb 22, 2021**  
+- Second Midterm : **Mar 29, 2021** 
+- Final exam: **Apr 29, 2021**
 
 **Important note:**  All homework assignments should be posted under the designated **GitHub** issue.   
 
