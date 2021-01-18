@@ -53,12 +53,12 @@ At the end of the semester, I expect you to be familiar with **R** and **RStudio
 - **Instructor**: Onur Altındağ
 - **Course web**:   https://ronuraltindag.github.io/metrics/
 - **Personal web** :   [www.onuraltindag.info](https://www.onuraltindag.info/)
-- **Office**: AAC 181 - *currently NA due to pandemic*
+- **Office**: [Click here to make an appointment](https://calendly.com/ronuraltindag/office_hrs)
 - **Email**: `oaltindag@bentley.edu`       
 
 ### Office hours {-#office-hours}
 
-Please go to [my calendar](https://calendly.com/ronuraltindag/ec282?month=2020-08) and book a virtual office hour to meet me (30 minutes maximum). Email me if you need to talk to me urgently or there is no availability on my calendar. 
+Please go to [my calendar](https://calendly.com/ronuraltindag/office_hrs) and book a virtual office hour to meet me (20 minutes maximum). Email me if you need to talk to me urgently or there is no availability on my calendar. 
 
 ### Textbook {-#textbook} 
 
@@ -68,40 +68,38 @@ Please go to [my calendar](https://calendly.com/ronuraltindag/ec282?month=2020-0
 ### Important Dates {-#important-dates}
 
 - Weekly homework assignments: Indicated on this web page, subject to change depending on our pace.   
-- Midterm exam due: **Oct 15, 2020, midnight**  
-- Empirical project progress report due: **Nov 1, 2020, midnight** 
-- Empirical project final : **Dec 1, midnight**
-- Final exam: **Dec 17, midnight**
+- First  Midterm: **Feb 22, 2020**  
+- Second Midterm : **Mar 29, 2020** 
+- Final exam: **Apr 29, 2020**
 
-**Important note:** All exams and the final version of the empirical project should be submitted through Black Board. All homework assignments and the "progress report" on your project should be posted under the designated **GitHub** issue.   
+**Important note:**  All homework assignments should be posted under the designated **GitHub** issue.   
 
 ### Evaluation {-#evaluation}
 
-- Midterm exam:      20%
-- Empirical project: 20%
-- Final exam:        30%
-- Assignments:       20%
-- Participation:     10%
+- First Midterm:      20%
+- Second Midterm:     20%
+- Final exam:         30%
+- Assignments:        20%
+- Participation:      10%
 
 ### Software and Collaborative Work {-#software-and-collaborative-work}
 
 - **R** and **RStudio**:  I assume that you have a basic familiarity with or expect your effort to gain familiarity throughout the semester. The instructions installation, some basic rules and best practices on coding are on this web page. Keep in mind that this course is **not** designed to teach you R and more than anything, the best way to learn programming is to actually work on assigned problems.   
 
-- **Github**: To create a collaborative and interactive teaching environment, you need to create an account on [GitHub](https://github.com/) using your Bentley email address and accept the project invitation that you will receive from me for EC282. You will only use the very basic tools on [GitHub](https://github.com/), mainly issues tab to share your empirical work in progress, ask questions about the homework assignments, post an answer, and learn R from me and your peers through sharing your code.
+- **Github**: To create a collaborative and interactive teaching environment, you need to create an account on [GitHub](https://github.com/) using your Bentley email address and accept the project invitation that you will receive from me for EC282. You will only use the very basic tools on [GitHub](https://github.com/), mainly issues and discussions tabs to  submit your homework assignment, ask questions about them, post an answer, and learn R from me and your peers through sharing your code.
 
 ### Grading {-#grading}   
 
 - **High-stake assessments**      
-          - **Midterm** + **Final**: Constitute half of your final grade. I will post the exams on **Black Board** and you will have **24 hours** to work and submit. **DO NOT** try to submit the exams on last minute as the system will close after the deadline and I will not accept it. 
-    You **MUST** attend the midterm and the final as there will be no make-up exams. The midterm and the final are **both** cumulative. If you miss or are likely to miss the **midterm** due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse.  If you miss the final exam due to an emergency, you will receive an **incomplete** for this course. **DO NOT** take this class if you know that you will not be able to attend the final exam.     
+          - **2 Midterms** + **Final**: Constitute 70% of your final grade. I will post the exams on **Black Board** and you will have a **24 hours** submission period. **DO NOT** try to submit the exams on last minute as the system will close after the deadline and I will not accept it. 
+          
+    You **MUST** attend the midterms and the final as there will be no make-up exams. The midterms and the final are not cumulative. If you miss or are likely to miss a **midterm** due to an emergency, please contact me as soon as possible. You will need to provide supporting documentation/verification of your absence. I will re-weight your final exam if you have a valid excuse.  If you miss the final exam due to an emergency, you will receive an **incomplete** for this course. **DO NOT** take this class if you know that you will not be able to attend the final exam.     
     
               
     
 - **Low-stake assessments**     
-        - **Empirical project:** a short empirical essay that you will develop throughout the semester and execute by using the tools that you learn in this class. On Github, I will suggest some topics that are mainly in my area of interest: health, migration, inequality, political economy, etc. If you don't like any of those, you can also choose your own. You will need to find data, clean and organize it, conduct a small scale econometrics analysis to answer an interesting empirical question. The final output should be between 1500-2500 words and 3-4 graphs/tables combined,  and submitted through BlackBoard. Your interaction with me and your peers is a significant part of your grade for preparing the empirical assignment. So the process matters as much as the final output.
-Here is a [blog post](https://www.onuraltindag.info/pt-tr/posts/excess_mortality_eng/) that I wrote in spring 2020 which was covered by [New York Times](https://www.nytimes.com/2020/04/20/world/middleeast/coronavirus-turkey-deaths.html), [Financial Times](https://www.ft.com/content/80bb222c-b6eb-40ea-8014-563cbe9e0117), [Euro News](https://tr.euronews.com/2020/04/23/saglik-bakaninin-new-york-timesa-verdigi-yanit-olumlerdeki-artis-acikliyor-mu-covid-19), [El Pais](https://elpais.com/sociedad/2020-04-27/el-misterio-turco-uno-de-los-paises-con-mas-casos-de-covid-19-y-menos-muertes.html), and in addition to many Turkish media outlets. While I don't expect you to conduct an analysis like a seasoned econometrician, I do want you to do provide mini empirical-investigation and report your findings in a similar format.    
-        - **Bi-weekly homework assignments:** The homework assignments are posted on this web page with the deadlines. They can be completed in groups of **maximum two** students but each person should post separate answers under the designated **Github** issue.You need to post your work on **GitHub** before Monday meeting after the deadline. I will go over these problems in the classroom and randomly ask students to "help" me with the assignment. If what you know substantially contradicts with what you posted online, I will change your grade to zero and you will receive a significant penalty on your participation grade. In other words, do the best you can with these assignments, work consistently, do not free ride on your friends, and do not cheat. The data sets that each of you will receive are different so I will not tolerate if I see aby copied/pasted answers on GitHub.      
-        - **Collaborative participation to [GitHub](https://github.com/)  and classroom discussions:** You must sign up for a free account on [GitHub](https://github.com/). Github is an eco-system for web development and version control using Git. You will only need to use the `issues` tab through either creating an issue to ask or answer a question on your or your peer's empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. Your interaction on **Github** through receiving feedback from me and your friends on your empirical project is also part of your empirical assignment grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.           
+         - **Bi-weekly homework assignments:** The homework assignments are posted on this web page with the deadlines. They can be completed in groups of **maximum two** students but each person should post separate answers under the designated **Github** issue.You need to post your work on **GitHub** before Monday meeting after the deadline. Do the best you can with these assignments, work consistently, do not free ride on your friends, and do not cheat. The data sets that each of you will receive are different so I will not tolerate if I see aby copied/pasted answers on GitHub.      
+        - **Collaborative participation to [GitHub](https://github.com/)  and classroom discussions:** You must sign up for a free account on [GitHub](https://github.com/). Github is an eco-system for web development and version control using Git. You will only need to use the `issues` and `discussions` tab through either creating an issue to ask or answer a question on your or your peer's empirical analysis, homework assignment, or anything related to econometric analysis. I expect you to actively participate to the discussion on GitHub as it will determine your participation grade. Both asking and answering a question in a meaningful way contributes to your participation grade. To sum, you expect you to actively participate to the online community discussions on GitHub. I will do my best to facilitate the discussion yet I need your active support to make this environment useful for all.           
     
 
     
@@ -131,9 +129,10 @@ Bentley University abides by Section 504 of the Rehabilitation Act of 1973 and t
 
 The Undergraduate Academic Services (UAS) Peer Tutoring program offers online one-on-one and small group tutoring services for students who have worked with their instructors and made use of the Learning Centers, but still require additional academic support. The program goal is to help those students in true need who are willing to take responsibility for their own learning. Please reach out to me if you need more information. 
 
-**LEAF Tutoring Student Center**
+**The Howard A. Winer ‘58 Lab for Economics, Accounting and Finance (LEAF)** 
 
-This is a new center and I will post more information here when I hear from them. 
+The center provides additional support for students on course materials and learning.  For additional information, visit: 
+https://www.bentley.edu/centers/leaf
 
 
 
@@ -163,38 +162,44 @@ During the online lectures, I will use my iPad as a white board to teach. I will
 
 
 
-- Here are my [hand-written lecture notes from the previous time](https://www.dropbox.com/s/kng2oynyxrtiir5/EC%20282%20SPRING%202020.pdf?dl=0) that I thought this course. 
+- Here are my [hand-written lecture notes from the previous time](https://www.dropbox.com/s/e5c8qax19lkrrn3/EC%20282%20FALL%202020.pdf?dl=0) that I thought this course. 
 
-- Here are the [lecture notes from the current semester](https://www.dropbox.com/s/e5c8qax19lkrrn3/EC%20282%20FALL%202020.pdf?dl=0). 
+- Here are the [lecture notes from the current semester](https://www.dropbox.com/s/oecrebseyksk570/EC%20282%20SPRING%202021.pdf?dl=0). 
+
+
 
 ## Tentative Schedule {-#tentative-schedule}
 
 The key readings from Stock and Watson are indicated for each week. 
 
 **Week 1-2**  
-**Aug 31, Sep 3, Sep 10** 
+**Jan 21, Jan 25, Jan 28**
+
 
 - Introduction to the course, logistics, syllabus, expectations and pap-talk.  
 - Review of Probability (Chapter 2)   
         - Random sampling and the Distribution of the Sample Average  
         - Large-Sample Approximations to Sampling Distributions 
 
-**Week 3**   
-**Sep 14, Sep 17**  
+**Week 3**     
+**Feb 1, Feb 4** 
+
 
 - Review of Statistics (Chapter 3)   
       - Hypothesis Tests Concerning the Population Mean    
       - Confidence Intervals for the Population Mean 
 
-**Week 4**   
-**Sep 21, Sep 24**   
+**Week 4**     
+**Feb 8** 
+ 
 
 - Review of Statistics (Chapter 3)   
       - Comparing Means from Different Populations     
       - Scatterplots, the Sample Covariance, and the Sample Correlation
 
 **Week 5**   
-**Sep 28, Oct 1** 
+**Feb 15, Feb 18** 
+
 
 - Linear Regression with One Regressor (Chapter 4)  
       - The Linear Regression Model   
@@ -202,28 +207,34 @@ The key readings from Stock and Watson are indicated for each week.
       - Measures of Fit and Prediction Accuracy 
       
 **Week 6**    
-**Oct 5, Oct 8** 
+**Feb 22, Feb 25** 
+
+- **Midterm I**
 
 - Linear Regression with One Regressor (Chapter 4)   
       - The Least Squares Assumptions for Causal Inference   
       - The Sampling Distributions of the OLS Estimators    
 
 **Week 7**    
-**Oct 12, Oct 15** 
+**Mar 1, Mar 4**
 
-- Wrap up, Midterm Review and **Midterm exam**
-- Deadline to post your progress report on GitHub. One or two paragraphs and a table/figure that summarizes what you have done so far  
-
-**Week 8**  
-**Oct 19, Oct 22**  
+- Linear Regression with One Regressor (Chapter 4)   
+      - The Sampling Distributions of the OLS Estimators    
 
 - Regression with a Single Regressor: Hypothesis Tests and Confidence Intervals (Chapter 5)  
       - Testing Hypotheses About One of the Regression Coefficients   
+
+**Week 8**  
+**Mar 8, Mar 11** 
+
+
+- Regression with a Single Regressor: Hypothesis Tests and Confidence Intervals (Chapter 5)  
       - Confidence Intervals for a Regression Coefficient   
       - Regression when $X$ is a Binary Variable    
       
 **Week 9**  
-**Oct 26, Oct 29**      
+**Mar 15, Mar 18** 
+   
 
 - Linear Regression with Multiple Regressors (Chapter 6)       
       - Omitted Variable Bias   
@@ -232,39 +243,41 @@ The key readings from Stock and Watson are indicated for each week.
 
 
 **Week 10**  
-**Nov 2, Nov 5**    
+**Mar 22, Mar 25** 
+
 
 - Linear Regression with Multiple Regressors (Chapter 6)
       - Measures of Fit in Multiple Regression 
       - The Least Squares Assumptions for Causal Inference in Multiple Regression  
 
 **Week 11**  
-**Nov 9, Nov 12**    
+**Mar 29, Apr 1** 
+
+- **Midterm II**  
 
 - Linear Regression with Multiple Regressors (Chapter 6)
       - The Distribution of OLS Estimators in Multiple Regression   
       - Multicollinearity    
-      - Control Variables and Conditional Mean Independence   
 
 **Week 12**  
-**Nov 16, Nov 19**
+**Apr 5, Apr 8** 
+
+
+- Linear Regression with Multiple Regressors (Chapter 6)
+      - Control Variables and Conditional Mean Independence   
+
+**Week 13**  
+**Apr 12, Apr 15** 
+
 
 - Hypothesis Tests and Confidence Intervals in Multiple Regression (Chapter 7)        
         - Hypothesis Tests and Confidence Intervals for a Single Coefficients     
         - Tests of Joint Hypotheses      
         - Testing Single Restrictions Involving Multiple Coefficients   
-
-**Week 13**  
-**Nov 23**   
-
-- Hypothesis Tests and Confidence Intervals in Multiple Regression (Chapter 7)  
-        - Model Specification for Multiple Regression    
-       
-
-
+  
 
 **Week 14**    
-**Nov 30, Dec 3**     
+**Apr 22**     
 
 - Nonlinear Regression Functions (Chapter 8)      
         - A General Strategy for Modeling Nonlinear Regression Functions   
@@ -272,16 +285,10 @@ The key readings from Stock and Watson are indicated for each week.
 
 
 **Week 15**   
-**Dec 7, Dec 10**     
+**Apr 26, Apr 29**   
 
-- Nonlinear Regression Functions (Chapter 8)      
-        - Interaction Between Independent Variables     
-
-
-
-**Week 16**   
-**Dec 14, Dec 17**   
 - Wrap up, last remarks, **Final Exam**. 
+
 
 
 
@@ -409,7 +416,7 @@ You can use a snipping tool to cut and paste the relevant output and figures fro
 ## Assignment 1
 
 
-**Deadline: Sep 13, 2020, Midnight**
+**Deadline: Feb 7, 2021, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 2.1   
 **Data Description:** The data set includes the joint probability distribution of ```age``` and average hourly earnings ```ahe``` for 25- to 34-year-old full-time workers in 2015 with an education level that exceeds a high school diploma, i.e. $P(age=x,ahe=y)$    
@@ -475,7 +482,7 @@ head(df1)
 
 ## Assignment 2
 
-**Deadline: Sep 27, 2020, Midnight**
+**Deadline: Feb 21, 2021, Midnight**
 
 **Source:** **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 3.1   
 
@@ -551,7 +558,7 @@ head(df1)
 
 ## Assignment 3
 
-**Deadline: Oct 4, 2020, Midnight**
+**Deadline: March 7, 2021, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 4.1   
 
@@ -618,7 +625,7 @@ head(df1)
 
 ## Assignment 4
 
-**Deadline: Oct 18, 2020, Midnight**
+**Deadline: Mar 21, 2021, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 5.3   
 
@@ -683,7 +690,7 @@ head(df1)
 
 ## Assignment 5
 
-**Deadline: Nov 8, 2020, Midnight**
+**Deadline: Apr 4, 2021, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 6.1
 
@@ -746,7 +753,7 @@ head(df1)
 
 ## Assignment 6
 
-**Deadline: Nov 14, 2020, Midnight**
+**Deadline: Apr 18, 2021, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 7.1
 
@@ -815,7 +822,7 @@ head(df1)
 
 ## Assignment 7
 
-**Deadline: Nov 29, 2020, Midnight**
+**Deadline: Apr 25, 2021, Midnight**
 
 **Source:** Stock and Watson, $4^{th}$ Edition, Exercise 8.1
 
@@ -880,75 +887,3 @@ head(df1)
 ```
 
 
-# Replication Project 
-
-## Instructions 
-
-**a.** Carefully read the study and provide a two paragraph summary that includes: 
-
-- Motivation of the study, why is it important? 
-
-- Data and empirical approach. How do researchers establish a causal inference? What data and method do they use? What do they estimate? 
-
-- Main findings and the implications of the study. 
-
-
-**b.**  Run the following regression for higher and lower quality CVs separately as well as the full sample of CVs. Prepare a regression table of the results and interpret these results within the context of the study.  
-
-$call_i = \beta_0 + \beta_1 black_i + u_i$
-
-where $black$ is a dummy variable that equals one for distinctly African-American names. 
-
-**c.** Run separate linear regressions using `call` as an outcome and `yearsexp`, `volunteer`, `military`, `email`, `empholes`, `workingschool`, `honors`, `computerskills`, and `specialskills`for CVs with African-American and White names. Prepare a regression table and interpret the results within the context of the study. Write up the results that you find interesting and related to the research question in the study, you don't  need to interpret each coefficient. 
-
-
-**d.** Conduct an additional analysis using the data that you have that offer any interesting additional findings to the reported ones in the published study. This could be a subgroup analysis, a graphical representation of a finding in the study or any empirical exploration that you find interesting and use the tools that we learned in the classroom.
-
-**e.** Conclude your replication study by 1-2 paragraphs of discussion of the results above. What do these ressults imply? What are the policy implications? 
-
-
-
-
-
-## Files: Data, codebook, study  
-
-Start a new R script, copy/paste the header below and save it to ```Dropbox\EC282\Empirical_Project``` or a similar path that you created for this course. Run the R script and make sure that you have the data ```df1``` in your environment. Conduct the analysis below the header.
-
-- You can find the data codebook [here](https://www.dropbox.com/s/cj8b2sp9n6g6ixq/des.pdf?dl=0).
-- You can find the original study [here](https://www.dropbox.com/s/c6ybtk7v9g8dfbb/Bertrand%26Mullainathan.pdf?dl=0)
-
-```{r echo = T, eval=F}
-###############################################################################
-# list the packages we need and loads them, installs them automatically if we don't have them
-# add any package that you need to the list  
-need <- c('glue', 'dplyr','readxl', 'ggplot2','tidyr','AER','scales','mvtnorm', 
-          'stargazer','httr', 'repmis')
-
-have <- need %in% rownames(installed.packages()) 
-if(any(!have)) install.packages(need[!have]) 
-invisible(lapply(need, library, character.only=T)) 
-
-# Save the R script to the assignment 1 folder before this
-# To set up the working directory
-getwd()
-setwd(getwd()) #change getwd() here is you need to set a different working directory
-
-
-#this clears the workspace
-rm(list = ls()) 
-#this sets the random number generator seed to my birthday for replication
-
-options(scipen=999)
-###############################################################################
-#get the data url 
-df1.url <- 'https://www.dropbox.com/s/oekcvjgy4yfjv0e/lakisha_aer.dta?dl=1'
-#download the data 
-GET(df1.url, write_disk(tdf <- tempfile(fileext = ".dta")))
-#check if it worked
-df1 <- read_dta(tdf) 
-
-head(df1)
-
-#CONDUCT THE ANALYSIS BELOW
-
-```
